@@ -7,6 +7,14 @@ wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
 wp-content/blogs.dir/
+wp-content/cases2015/
+wp-content/caseswp/
+wp-content/pinboard/
+wp-content/responsive-child/
+wp-content/twentyeleven/
+wp-content/twentyfourteen/
+wp-content/twentythirteen/
+wp-content/twentytwelve/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
