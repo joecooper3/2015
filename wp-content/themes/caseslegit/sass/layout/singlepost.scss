@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 1, 2015, 12:22:01 PM
+    Author     : joe.cooper
+*/
+
+.entry-header-single {
+    margin: 0;
+    padding: 1px 0 0 0;
+    flex: 1 100%;
+    display: block;
+    h1 {
+        color: $color1;
+    }
+}
+
+.entry-content-single {
+    margin: 0;
+    h3 {
+        font-face: akzRoman;
+        font-weight: normal;
+    }
+}
+
+.entry-meta {
+    font-family: akzMed;
+    font-size: 1.0rem;
+    margin: 0 0 20px 0;
+}
+
+.article-whole {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+}
+
+.article-container {
+    flex: 5 0 auto;
+    max-width: 700px;
+}
+
+article { 
+    padding: 0;
+    a {
+        font-weight: bold;
+    }
+}
+
+.widget-area {
+    flex: 2 0 auto;
+    max-width: 280px;
+    
+    aside {
+        border-top: 3.0px solid $color1;
+        border-bottom: 1.5px solid #AAA;
+        margin-bottom: 4.0rem;
+    }
+    
+    h1 {
+        border-bottom: 1.5px solid #AAA;
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+        margin: 5px 0 20px 0;
+        
+    }
+    ul { 
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+.textwidget {
+    padding-bottom: 20px;
+}
+
+.posted-on::before {
+    content: url(images/lilsq.svg);
+    display: inline-block;
+    width: 12px;
+    margin: 0 10px 0 20px;
+}
+
+@media all and (max-width: 900px) {
+    .article-whole {
+        flex-flow: column wrap;
+    }
+}
+
+@media all and (min-width: 1450px) {
+    .article-whole {
+        justify-content: center;
+    }
+    .article-container {
+        margin-right: 50px;
+    }
+    .widget-area {
+        margin-left: 50px;
+    }
+}

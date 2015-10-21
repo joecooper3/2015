@@ -1,0 +1,181 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 24, 2015, 5:42:29 PM
+    Author     : joe.cooper
+*/
+
+.content-area {
+    background-color: $mywhite;
+    padding: 0 50px;
+}
+.site-main {
+    background-color: $mywhite;
+}
+
+/* Top image through referral buttons */
+
+#leadimage-container {
+    display: flex;
+    background: url(../../../images/projectreal.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#leadimage {
+    flex: 2 0 auto;
+    
+    
+}
+#mission {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    z-index: 2;
+    text-align: center;
+    color: $mywhite;
+    padding: 20px;
+    height: 100%;
+    float: right;
+    font-size: 1.2rem;
+    font-family: akzMed;
+    width: 33%;
+    background-color: $color1;
+    background-color: rgba(0,43,85,0.7);
+}
+#bonusbuttons {
+    text-align: center;
+    p { margin: 0; padding: 0;}
+    a {
+    display: inline-block;
+    width: 250px;
+    font-size: 1.1rem;
+    font-family: akzMed;
+    text-align: center;
+    text-transform: uppercase;
+    color: $mywhite;
+    padding: 10px;
+    margin: 20px;
+    background-color: $color5;
+    }
+    a:hover, a:focus {
+        background-color: $color4;
+    }
+}
+
+    /* Medium screens */
+@media all and (max-width: 980px) {
+    #leadimage-container {
+        flex-flow: row wrap;
+        background: none;
+        height: auto;
+    }
+    #leadimage {
+        flex: 1 100%;
+        height: 20rem;
+        background: url(../../../images/projectreal.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    #mission {
+        flex: 1 100%;
+        background-color: $color1;
+        padding: 0 20px;
+    }
+    .site-branding {
+        
+    }
+
+}
+    /* Smaller screens */
+@media all and (max-width: 716px) {
+    #bonusbuttons {
+        a { 
+            margin: 10px;
+        }
+    }
+}
+
+/* News and Infographics */
+
+#bigboycontainer {
+    display: flex;
+    padding: 20px 0;
+    
+}
+
+#newsstories {
+    flex: 1;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+    h4 {
+        margin: 0;
+        padding: 0;
+    }
+    .entry-date{
+        font-size: 0.8rem;
+        color: #AAA;
+        padding: 0;
+        margin: 0;
+    }
+    .entry-content {
+        margin: 0;
+    }
+    header {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#maininfo {
+    flex: 2;
+    padding: 0 50px;
+    font-family: 'Gill Sans MT';
+    font-size: 1.3rem;
+    .emp {
+        color: $color1;
+        font-size: 1.5rem;
+        font-family: akzMed;
+        
+    }
+    p {
+        margin: 0 0 15px 0;
+        padding: 0;
+    }
+    img {
+        padding-bottom: 20px;
+    }
+}
+
+@media all and (max-width: 955px) {
+    #bigboycontainer {
+        flex-flow: column wrap;
+    }
+    
+    #maininfo {
+        order: 1;
+        flex: 1 0 100%;
+    }
+    
+    #newsstories {
+        order: 2;
+        padding: 20px 50px 0 50px;
+    }
+    
+    
+}

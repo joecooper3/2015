@@ -1,0 +1,36 @@
+@font-face {
+    font-family: akzLight;
+    src: url('fonts/worksans/WorkSans-Light.woff2') format('woff2'),
+       url('fonts/worksans/WorkSans-Light.woff') format('woff'),
+       url('fonts/worksans/WorkSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: akzRoman;
+    src: url('fonts/worksans/WorkSans-Regular.woff2') format('woff2'),
+       url('fonts/worksans/WorkSans-Regular.woff') format('woff'),
+       url('fonts/worksans/WorkSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: akzMed;
+    src: url('fonts/worksans/WorkSans-Medium.woff2') format('woff2'),
+       url('fonts/worksans/WorkSans-Medium.woff') format('woff'),
+       url('fonts/worksans/WorkSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: akzSemiBold;
+    src: url('fonts/worksans/WorkSans-SemiBold.woff2') format('woff2'),
+       url('fonts/worksans/WorkSans-SemiBold.woff') format('woff'),
+       url('fonts/worksans/WorkSans-SemiBold.ttf') format('truetype');
+}
+
+
+
+$font__main: "Gill Sans MT", "Gill Sans", sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$font__sec: akzMed;

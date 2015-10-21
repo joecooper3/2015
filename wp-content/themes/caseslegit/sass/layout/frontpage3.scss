@@ -1,0 +1,294 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 24, 2015, 5:42:29 PM
+    Author     : joe.cooper
+*/
+
+.content-area {
+    margin: 0;
+    
+}
+.site-main {
+   background-color: $mywhite;
+    padding: 0 50px;
+   /* box-shadow: 5px 5px 2px #888888; */
+}
+
+
+
+/* Top image through referral buttons */
+
+$sqlength: 300px;
+
+#leadimage-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0 0 0;
+}
+
+.locat-container {
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.locat-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color1;
+    font-family: akzSemiBold;
+    font-size: 1.7rem;
+    background-size: cover;
+    background-position: center; 
+    height: auto;  
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+.locat-square:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+.sq1 {
+    background: url(images/courtroom.jpg);
+    background-size: cover;
+   background-position: center;
+   
+}
+.sq2 {
+    background: url(images/clinic.jpg);
+    background-size: cover;
+   background-position: center;
+}
+.sq3 {
+    background: url(images/communitylite.jpg);
+    background-size: cover;
+   background-position: center;
+}
+
+.locat-shade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%; 
+    background-size: cover;
+    background-position: center; 
+    background-color: rgba(255,255,255,0.8);
+    border: 3.0px solid $color1;
+}
+
+.locat-shade:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+
+.locat-caption {
+    color: $color1;
+    font-family: akzLight;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+
+#bonusbuttons {
+    text-align: center;
+    background-color: $mywhite;
+    p { margin: 0; padding: 0;}
+    a {
+    display: inline-block;
+    width: 275px;
+    font-size: 1.1rem;
+    font-family: akzMed;
+    text-align: center;
+    text-transform: uppercase;
+    color: $mywhite;
+    padding: 10px;
+    margin: 20px;
+    background-color: $color1;
+    }
+    a:hover, a:focus {
+        background-color: $color4;
+    }
+    i {
+        float: right;
+        margin: 4px 5px 0 0;
+    }
+}
+
+    /* Medium screens */
+@media all and (max-width: 980px) {
+    #leadimage-container {
+        flex-flow: row wrap;
+        background: none;
+        height: auto;
+    }
+    #leadimage {
+        flex: 1 100%;
+        height: 20rem;
+        background: url(../../../images/projectreal.jpg);
+        background-size: cover;
+        background-position: center;
+        order: 1;
+    }
+    #mission {
+        flex: 1 100%;
+        background-color: $color1;
+        padding: 0 20px;
+        order: 2;
+    }
+    .site-branding {
+        
+    }
+
+}
+    /* Smaller screens */
+@media all and (max-width: 716px) {
+    #bonusbuttons {
+        a { 
+            margin: 10px;
+        }
+    }
+}
+
+/* News and Infographics */
+
+#bigboycontainer {
+    display: flex;
+    margin:  0 0 0 0;
+    padding: 0;
+    background-color: $color1;
+    background-color: rgba(0,43,85,0);
+    /* box-shadow: 5px 5px 2px #888888; */
+}
+
+#newsstories {
+    flex: 1;
+    background-color: $mywhite;
+    margin: 25px 0 25px 12px;
+    padding: 25px 25px;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+    h4 {
+        margin: 0;
+        padding: 0;
+    }
+    .entry-date{
+        font-size: 0.8rem;
+        color: #AAA;
+        padding: 0;
+        margin: 0;
+    }
+    .entry-content {
+        margin: 0;
+    }
+    header {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#maininfo {
+    flex: 3;
+    font-family: 'akzRoman';
+    font-size: 1.3rem;
+    background-color: $mywhite;
+    margin: 25px 13px 25px 0;
+    padding: 25px 25px 25px 70px;
+    .emp {
+        color: $color1;
+        font-size: 1.5rem;
+        font-family: akzSemiBold;
+        
+    }
+    p {
+        margin: 0 0 15px 0;
+        padding: 0;
+    }
+    img {
+        padding-bottom: 20px;
+    }
+}
+
+.tab-pane {
+    display: none;
+    
+}
+.tab-pane.active {
+        display: block;
+    }
+    
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+
+.nav-tabs {
+    list-style: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+    li {
+        display: inline;
+    }
+    li.active {
+       background-color: purple;
+       a {color: $mywhite;}
+    }
+}
+
+
+
+@media all and (max-width: 955px) {
+    #bigboycontainer {
+        flex-flow: column wrap;
+    }
+    
+    #maininfo {
+        order: 1;
+        flex: 1 0 100%;
+        margin: 25px 0 25px 0;
+        padding: 25px 25px;
+    }
+    
+    #newsstories {
+        order: 2;
+        padding: 20px 50px 0 50px;
+        margin: 0 0 25px 0;
+    }
+    
+    
+}
+
+@media all and (max-width: 716px) {
+.site-main { padding: 0 10px;}
+#bigboycontainer {padding: 0;}
+}
+
+@media all and (max-width: 575px) {
+    #bigboycontainer {
+        padding: 0;
+    }
+}
