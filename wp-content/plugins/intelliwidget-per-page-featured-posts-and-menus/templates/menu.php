@@ -22,13 +22,13 @@ $iw_current_parent     = current( $iw_current_ancestors );
   <?php if ( $selected->have_posts() ) : while ( $selected->have_posts() ) : $selected->the_post(); 
     $intelliwidget_post_id    = get_the_intelliwidget_ID();
     ?>
-  <li id="intelliwidget_<?php $intelliwidget_post_id; ?>" class="intelliwidget-menu-item<?php echo ( $iw_current_post_id == $intelliwidget_post_id ? ' intelliwidget-current-menu-item' : '' ) . ( in_array( $intelliwidget_post_id, $iw_current_ancestors ) ? ' intelliwidget-current-menu-ancestor' : '' ) . ( $intelliwidget_post_id == $iw_current_parent ? ' intelliwidget-current-menu-parent' : '' ); ?>">
-    <?php if ( has_intelliwidget_image() ) : ?>
+  <li id="intelliwidget_post_<?php echo $intelliwidget_post_id; ?>" class="intelliwidget-menu-item<?php echo ( $iw_current_post_id == $intelliwidget_post_id ? ' intelliwidget-current-menu-item' : '' ) . ( in_array( $intelliwidget_post_id, $iw_current_ancestors ) ? ' intelliwidget-current-menu-ancestor' : '' ) . ( $intelliwidget_post_id == $iw_current_parent ? ' intelliwidget-current-menu-parent' : '' ); ?>">
+    <?php if ( has_intelliwidget_image() && 'none' != $instance[ 'image_size' ] ) : ?>
     <div class="intelliwidget-image-container intelliwidget-image-container-<?php echo $instance[ 'image_size' ];?> intelliwidget-align-<?php echo $instance[ 'imagealign' ]; ?>">
-      <?php the_intelliwidget_image(); ?>
+      <?php the_intelliwidget_image( empty( $instance[ 'no_img_links' ] ), $instance[ 'image_size' ] ); ?>
     </div>
     <?php endif; ?>
-    <?php the_intelliwidget_link(); ?>
+    <?php the_intelliwidget_post_link( NULL, empty( $instance[ 'keep_title' ] ) ); ?>
     <div style="clear:both"></div>
   </li>
   <?php endwhile; endif; ?>

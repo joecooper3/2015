@@ -18,13 +18,13 @@ if ( $selected->have_posts() ) : while ( $selected->have_posts() ) : $selected->
 ?>
 
 <div id="intelliwidget_<?php the_intelliwidget_ID(); ?>" class="intelliwidget-album-container">
-  <?php if ( has_intelliwidget_image() ) : ?>
+  <?php if ( has_intelliwidget_image() && 'none' != $instance[ 'image_size' ] ) : ?>
   <div class="intelliwidget-album-container-<?php echo $instance[ 'image_size' ];?> intelliwidget-align-<?php echo $instance[ 'imagealign' ]; ?>">
-    <?php the_intelliwidget_image(); ?>
+    <?php the_intelliwidget_image( empty( $instance[ 'no_img_links' ] ), $instance[ 'image_size' ] ); ?>
   </div>
   <?php endif; ?>
   <h3 id="intelliwidget_title_<?php the_intelliwidget_ID(); ?>" class="intelliwidget-title">
-    <?php the_intelliwidget_link(); ?>
+    <?php the_intelliwidget_post_link( NULL, empty( $instance[ 'keep_title' ] ) ); ?>
   </h3>
   <div style="clear:both"></div>
 </div>

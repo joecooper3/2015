@@ -59,6 +59,7 @@
 .widget_intelliwidget h3.intelliwidget-title {
     margin: .325em 0;
     font-size: .9em;
+    clear:none;
 }
 
 .widget_intelliwidget .intelliwidget-excerpt {
@@ -77,11 +78,15 @@
 
 .widget_intelliwidget img.intelliwidget-image-thumbnail, img.intelliwidget-image-thumbnail.wp-post-image {
     margin: 0;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .widget_intelliwidget .intelliwidget-more-link a {
+}
+
+.widget_intelliwidget .intelliwidget-more-link a:before {
+    content: ' ';
 }
 
 .widget_intelliwidget .intelliwidget-more-link a:after {
