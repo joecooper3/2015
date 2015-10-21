@@ -21,7 +21,7 @@ get_header();
             <div class="locat-container">
                 <div class="locat-square sq1">
                     <div class="locat-shade">
-                        Courtroom</div>
+                        <div class="hvr-underline-from-center">Courtroom</div></div>
                 </div>
                 <div class="locat-caption">
                     a new vision for justice
@@ -29,7 +29,7 @@ get_header();
             </div>
             <div class="locat-container">
                 <div class="locat-square sq2">
-                    <div class="locat-shade">Clinic
+                    <div class="locat-shade"><div class="hvr-underline-from-center">Clinic</div>
                     </div></div>
                 <div class="locat-caption">
                     an effective pathway to recovery
@@ -37,7 +37,7 @@ get_header();
             </div>
             <div class="locat-container">
                 <div class="locat-square sq3"> <div class="locat-shade">
-                        Community</div>
+                        <div class="hvr-underline-from-center">Community</div></div>
                 </div>
                 <div class="locat-caption">
                     a New York City safer for every citizen
