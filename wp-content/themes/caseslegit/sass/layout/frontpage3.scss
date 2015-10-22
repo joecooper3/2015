@@ -128,6 +128,15 @@ $sqlength: 300px;
     }
 }
 
+/* This is just for the headings in the locat squares, because I'm dumb */
+@media all and (max-width: 1175px) {
+    .locat-square {
+        font-size: 1.4rem;
+    }
+    .locat-caption {
+        font-size: 1.1rem;
+    }
+}
     /* Medium screens */
 @media all and (max-width: 980px) {
     #leadimage-container {
@@ -135,26 +144,17 @@ $sqlength: 300px;
         background: none;
         height: auto;
     }
-    #leadimage {
-        flex: 1 100%;
-        height: 20rem;
-        background: url(../../../images/projectreal.jpg);
-        background-size: cover;
-        background-position: center;
-        order: 1;
+    
+    .locat-container {
+        margin: 0 10px
     }
-    #mission {
-        flex: 1 100%;
-        background-color: $color1;
-        padding: 0 20px;
-        order: 2;
-    }
-    .site-branding {
-        
+    
+    .site-main { 
+        padding: 0 5px;
     }
     
     .locat-square {
-        
+        font-size: 1.1rem;
     }
 
 }
