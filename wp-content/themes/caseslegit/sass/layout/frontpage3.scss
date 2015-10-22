@@ -160,12 +160,43 @@ $sqlength: 300px;
 }
     /* Smaller screens */
 @media all and (max-width: 716px) {
+    .site-main {
+        padding: 0;
+    }
+    
     #bonusbuttons {
         a { 
             margin: 10px;
         }
     }
+    #leadimage-container {
+        flex-direction: column;
+    }
+    .locat-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    .locat-square {
+        flex: 1;
+        color: $mywhite;
+    }
+    .locat-shade {
+        width: 100%;
+        border: 0;
+        background-color: rgba(0,43,85,0.6);
+        
+    }
+    
+    .locat-caption {
+        flex: 2;
+    }
+    #bonusbuttons {
+        padding: 15px 0;
+    }
+    
 }
+
+
 
 /* News and Infographics */
 
@@ -287,7 +318,6 @@ $sqlength: 300px;
 }
 
 @media all and (max-width: 716px) {
-.site-main { padding: 0 10px;}
 #bigboycontainer {padding: 0;}
 }
 

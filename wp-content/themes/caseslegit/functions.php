@@ -139,7 +139,7 @@ function caseslegit_scripts() {
 
         wp_enqueue_script( 'caseslegit-mobile-nav', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20150624', true ); 
         
-        wp_enqueue_script( 'caseslegit-mobile-nav', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true ); 
+        wp_enqueue_script( 'caseslegit-mobile-nav2', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true ); 
         
         wp_enqueue_script( 'my-picturefill', get_template_directory_uri() . '/js/picturefill.min.js', '20150710', false);
         

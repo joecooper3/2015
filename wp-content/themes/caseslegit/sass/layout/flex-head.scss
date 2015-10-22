@@ -248,6 +248,12 @@ input[type="search"] {
         .site-title {color: blue;}
     }
     .main-navigation ul ul li:hover {left: auto;}
+    #socialMedia { 
+        display: none;
+    }
+    .search-box {
+        margin: 10px 0 0 0;
+    }
 }
 @media all and (max-width: 575px) {
     .site-branding { 

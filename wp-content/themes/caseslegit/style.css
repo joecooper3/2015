@@ -1196,6 +1196,14 @@ input[type="search"] {
   .main-navigation ul ul li:hover {
     left: auto;
   }
+
+  #socialMedia {
+    display: none;
+  }
+
+  .search-box {
+    margin: 10px 0 0 0;
+  }
 }
 @media all and (max-width: 575px) {
   .site-branding {
@@ -1390,8 +1398,50 @@ and open the template in the editor.
 }
 /* Smaller screens */
 @media all and (max-width: 716px) {
+  .site-main {
+    padding: 0;
+  }
+
   #bonusbuttons a {
     margin: 10px;
+  }
+
+  #leadimage-container {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .locat-container {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .locat-square {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    color: #fdfdfd;
+  }
+
+  .locat-shade {
+    width: 100%;
+    border: 0;
+    background-color: rgba(0, 43, 85, 0.6);
+  }
+
+  .locat-caption {
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+
+  #bonusbuttons {
+    padding: 15px 0;
   }
 }
 /* News and Infographics */
@@ -1522,10 +1572,6 @@ and open the template in the editor.
   }
 }
 @media all and (max-width: 716px) {
-  .site-main {
-    padding: 0 10px;
-  }
-
   #bigboycontainer {
     padding: 0;
   }
