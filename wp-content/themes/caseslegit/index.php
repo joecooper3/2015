@@ -65,10 +65,15 @@ get_header();
                     <a href="#who" aria-controls="who" role="tab" data-toggle="tab">Who We Serve</a> </li>
                 <li> <a href="#what" aria-controls="what" role="tab" data-toggle="tab">What's Goin On</a> </li></ul>
 
-            <div role="tabpanel" class="tab-pane fade in active" id="who"><picture>
+            <div role="tabpanel" class="tab-pane fade in active" id="who">
+                <!-- <picture>
                     <img srcset="wp-content/themes/caseslegit/images/fakegraph1x.png, wp-content/themes/caseslegit/images/fakegraph2.png 2x" alt="Teacher helping student">
-                </picture></div> 
-            <div role="tabpanel" class="tab-pane fade" id="what"><img src="images/fakeassgraphic.png" alt="The stat is f'real, tho."/></div>
+                </picture>-->
+                <picture>
+                <img srcset="wp-content/themes/caseslegit/images/Infographic2.png" alt="Teacher helping student">
+                </picture>
+            </div> 
+            <div role="tabpanel" class="tab-pane fade" id="what"><img src="images/fakeassgraphic.png" alt="The stat is real, tho."/></div>
             <p>Alright, so, as I said, sign up for our mailing list probably. Or donate. 
                 Anything like that. Still filling space. I should maybe try to construct some longer sentences&mdash;I'm 
                 sure we will not be quite as pithy with the final copy.
