@@ -66,12 +66,10 @@ get_header();
                 <li> <a href="#what" aria-controls="what" role="tab" data-toggle="tab">What's Goin On</a> </li></ul>
 
             <div role="tabpanel" class="tab-pane fade in active" id="who">
-                <!-- <picture>
-                    <img srcset="wp-content/themes/caseslegit/images/fakegraph1x.png, wp-content/themes/caseslegit/images/fakegraph2.png 2x" alt="Teacher helping student">
-                </picture>-->
                 <picture>
-                <img srcset="wp-content/themes/caseslegit/images/Infographic2.png" alt="Teacher helping student">
+                    <img srcset="wp-content/themes/caseslegit/images/Infographic1.png, wp-content/themes/caseslegit/images/Infographic12x.png 2x" alt="I just want one night">
                 </picture>
+                
             </div> 
             <div role="tabpanel" class="tab-pane fade" id="what"><img src="images/fakeassgraphic.png" alt="The stat is real, tho."/></div>
             <p>Alright, so, as I said, sign up for our mailing list probably. Or donate. 
