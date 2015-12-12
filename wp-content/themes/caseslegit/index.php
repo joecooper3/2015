@@ -55,6 +55,7 @@ get_header();
 
 
         <div id="maininfo">
+            <div id="submaininfo">
             <p><span class="emp">Everyone deserves a second chance.</span> At CASES, we believe in the power of people to 
                 change&mdash;regardless of past choices, present struggles, or future obstacles.
                 We specialize in providing alternatives to incarceration and re-entry services to New York City's
@@ -69,13 +70,13 @@ get_header();
                 <picture>
                     <img srcset="wp-content/themes/caseslegit/images/Infographic1.png, wp-content/themes/caseslegit/images/Infographic12x.png 2x" alt="I just want one night">
                 </picture>
-                
             </div> 
+            
             <div role="tabpanel" class="tab-pane fade" id="what"><img src="images/fakeassgraphic.png" alt="The stat is real, tho."/></div>
             <p>Alright, so, as I said, sign up for our mailing list probably. Or donate. 
                 Anything like that. Still filling space. I should maybe try to construct some longer sentences&mdash;I'm 
                 sure we will not be quite as pithy with the final copy.
-        </div>
+        </div> </div>
         <div id="newsstories">
             <?php if (have_posts()) : ?>
 

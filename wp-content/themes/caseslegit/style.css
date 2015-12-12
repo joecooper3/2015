@@ -1245,6 +1245,8 @@ and open the template in the editor.
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px 0 0 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .locat-container {
@@ -1511,6 +1513,11 @@ and open the template in the editor.
 }
 #maininfo img {
   padding-bottom: 20px;
+}
+
+#submaininfo {
+  max-width: 950px;
+  float: right;
 }
 
 .tab-pane {

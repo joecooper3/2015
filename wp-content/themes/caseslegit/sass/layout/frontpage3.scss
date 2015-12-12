@@ -30,6 +30,8 @@ $sqlength: 300px;
     flex-direction: row;
     justify-content: center;
     padding: 10px 0 0 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .locat-container {
@@ -262,7 +264,10 @@ $sqlength: 300px;
         padding-bottom: 20px;
     }
 }
-
+#submaininfo {
+    max-width: 950px;
+    float: right;
+}
 .tab-pane {
     display: none;
     
