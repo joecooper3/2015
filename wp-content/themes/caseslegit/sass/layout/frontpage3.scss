@@ -55,13 +55,12 @@ $sqlength: 300px;
     height: auto;  
     text-align: center;
     vertical-align: middle;
-    
 }
 
 .locat-square:before {
-    content:'';
-    float:left;
+    content:''; 
     padding-top:100%;
+    display:table;
 }
 .sq1 {
     background: url(images/courtroom.jpg);
@@ -94,6 +93,7 @@ $sqlength: 300px;
 .locat-shade:before {
     content:'';
     float:left;
+    display:table;
     padding-top:100%;
 }
 
@@ -181,6 +181,7 @@ $sqlength: 300px;
     .locat-square {
         flex: 1;
         color: $mywhite;
+        font-size: 1.0rem;
     }
     .locat-shade {
         width: 100%;
@@ -191,9 +192,14 @@ $sqlength: 300px;
     
     .locat-caption {
         flex: 2;
+        padding-left: 10px;
     }
     #bonusbuttons {
         padding: 15px 0;
+    }
+    .locat-container {
+        margin: 0;
+        padding: 0 5px;
     }
     
 }
@@ -241,6 +247,9 @@ $sqlength: 300px;
         margin: 0;
         padding: 0;
     }
+    img {
+        width:100%;
+    }
 }
 
 #maininfo {
@@ -267,6 +276,9 @@ $sqlength: 300px;
 #submaininfo {
     max-width: 950px;
     float: right;
+    img {
+        width: 100%;
+    }
 }
 .tab-pane {
     display: none;

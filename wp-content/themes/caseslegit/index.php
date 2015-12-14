@@ -67,9 +67,15 @@ get_header();
                 <li> <a href="#what" aria-controls="what" role="tab" data-toggle="tab">What's Goin On</a> </li></ul>
 
             <div role="tabpanel" class="tab-pane fade in active" id="who">
-                <picture>
-                    <img srcset="wp-content/themes/caseslegit/images/Infographic1.png, wp-content/themes/caseslegit/images/Infographic12x.png 2x" alt="I just want one night">
-                </picture>
+                
+                    <img src="wp-content/themes/caseslegit/images/raceinfo-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/raceinfo-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/raceinfo-s.png 660w,
+                        wp-content/themes/caseslegit/images/raceinfo-m.png 950w,
+                        wp-content/themes/caseslegit/images/raceinfo-l.png 1900w,
+                        wp-content/themes/caseslegit/images/raceinfo-xl.png 3800w"
+                        alt="I just want one night">
+                
             </div> 
             
             <div role="tabpanel" class="tab-pane fade" id="what"><img src="images/fakeassgraphic.png" alt="The stat is real, tho."/></div>
