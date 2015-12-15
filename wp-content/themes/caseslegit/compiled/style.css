@@ -915,6 +915,10 @@ and open the template in the editor.
 .site-title {
   text-align: left;
 }
+.site-title img {
+  width: 100%;
+  max-width: 550px;
+}
 
 #socialMedia {
   flex: 3 250px;
@@ -1010,8 +1014,8 @@ input[type="search"] {
 /* Medium screens */
 @media all and (max-width: 1030px) {
   #masthead {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 @media all and (max-width: 900px) {

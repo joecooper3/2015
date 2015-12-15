@@ -25,7 +25,10 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="images/logo.png"></a></h1>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                            <img src="wp-content/themes/caseslegit/images/logo-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/logo-s.png 660w, wp-content/themes/caseslegit/images/logo-m.png 950w, wp-content/themes/caseslegit/images/logo-l.png 1900w, wp-content/themes/caseslegit/images/logo-xl.png 3800w"
+                        alt="I just want one night"></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div><!-- .site-branding -->
                 
