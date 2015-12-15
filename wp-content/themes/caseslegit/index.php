@@ -64,26 +64,72 @@ get_header();
             <ul class="nav nav-tabs">
                 <li class="active">
                     <a href="#who" aria-controls="who" role="tab" data-toggle="tab">Who We Serve</a> </li>
-                <li> <a href="#what" aria-controls="what" role="tab" data-toggle="tab">What's Goin On</a> </li></ul>
-
+                <li>&#8226;</li>
+                <li> <a href="#what" aria-controls="what" role="tab" data-toggle="tab">The Challenge</a> </li>
+                <li>&#8226;</li>
+            <li> <a href="#outcomes" aria-controls="outcomes" role="tab" data-toggle="tab">Our Outcomes</a> </li></ul>
+            
             <div role="tabpanel" class="tab-pane fade in active" id="who">
-                
+                <div class="infog-container">
+                    <div class="infog-box">
                     <img src="wp-content/themes/caseslegit/images/raceinfo-m.png" 
                         srcset="wp-content/themes/caseslegit/images/raceinfo-xs.png 400w, 
                         wp-content/themes/caseslegit/images/raceinfo-s.png 660w,
                         wp-content/themes/caseslegit/images/raceinfo-m.png 950w,
                         wp-content/themes/caseslegit/images/raceinfo-l.png 1900w,
                         wp-content/themes/caseslegit/images/raceinfo-xl.png 3800w"
-                        alt="I just want one night">
+                        alt="I just want one night"></div>
+                    <div class="infog-link">
+                        <p><a href="#">Read more about CASES' youth programs <i class="fa fa-arrow-right"></a></p></i>
+                    </div>
+                    <div class="infog-box">
+                    <img src="wp-content/themes/caseslegit/images/mentalinfo-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/mentalinfo-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/mentalinfo-s.png 660w,
+                        wp-content/themes/caseslegit/images/mentalinfo-m.png 950w,
+                        wp-content/themes/caseslegit/images/mentalinfo-l.png 1900w,
+                        wp-content/themes/caseslegit/images/mentalinfo-xl.png 3800w"
+                        alt="I just want one night"></div>
+                    <div class="infog-link">
+                        <p><a href="#">Read more about CASES' behavioral health programs <i class="fa fa-arrow-right"></a></p></i>
+                    </div>
                 
-            </div> 
+            </div> </div>
             
-            <div role="tabpanel" class="tab-pane fade" id="what"><img src="images/fakeassgraphic.png" alt="The stat is real, tho."/></div>
+            <div role="tabpanel" class="tab-pane fade" id="what">
+                <div class="infog-container">
+                    <div class="infog-box">
+                    <img src="wp-content/themes/caseslegit/images/unempinfo-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/unempinfo-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/unempinfo-s.png 660w,
+                        wp-content/themes/caseslegit/images/unempinfo-m.png 950w,
+                        wp-content/themes/caseslegit/images/unempinfo-l.png 1900w,
+                        wp-content/themes/caseslegit/images/unempinfo-xl.png 3800w"
+                        alt="I just want one night"></div>
+                    <div class="infog-link">
+                        <p><a href="#">Read more about CASES' employment services <i class="fa fa-arrow-right"></a></p></i>
+                    </div>
+                    <div class="infog-box">
+                    <img src="wp-content/themes/caseslegit/images/gradinfo-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/gradinfo-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/gradinfo-s.png 660w,
+                        wp-content/themes/caseslegit/images/gradinfo-m.png 950w,
+                        wp-content/themes/caseslegit/images/gradinfo-l.png 1900w,
+                        wp-content/themes/caseslegit/images/gradinfo-xl.png 3800w"
+                        alt="I just want one night"></div>
+                    <div class="infog-link">
+                        <p><a href="#">Read more about CASES' education services <i class="fa fa-arrow-right"></a></p></i>
+                    </div>
+                
+            </div>
+                
+            </div>
             <p>Alright, so, as I said, sign up for our mailing list probably. Or donate. 
                 Anything like that. Still filling space. I should maybe try to construct some longer sentences&mdash;I'm 
                 sure we will not be quite as pithy with the final copy.
         </div> </div>
         <div id="newsstories">
+            <div id='subnewsstories'>
             <?php if (have_posts()) : ?>
 
                 <?php /* Start the Loop */ ?>
@@ -107,7 +153,7 @@ get_header();
                 <?php get_template_part('template-parts/content', 'none'); ?>
 
             <?php endif; ?> 
-        </div>
+            </div></div>
     </div>
 </main><!-- #main -->
 </div><!-- #primary -->

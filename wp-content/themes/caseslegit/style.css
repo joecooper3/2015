@@ -60,6 +60,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   font-family: akzSemiBold;
   src: url("fonts/worksans/WorkSans-SemiBold.woff2") format("woff2"), url("fonts/worksans/WorkSans-SemiBold.woff") format("woff"), url("fonts/worksans/WorkSans-SemiBold.ttf") format("truetype");
 }
+@font-face {
+  font-family: akzBold;
+  src: url("fonts/worksans/WorkSans-Bold.woff2") format("woff2"), url("fonts/worksans/WorkSans-Bold.woff") format("woff"), url("fonts/worksans/WorkSans-Bold.ttf") format("truetype");
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -1503,6 +1507,11 @@ and open the template in the editor.
   width: 100%;
 }
 
+#subnewsstories {
+  max-width: 320px;
+  float: left;
+}
+
 #maininfo {
   -webkit-flex: 3;
       -ms-flex: 3;
@@ -1521,9 +1530,6 @@ and open the template in the editor.
 #maininfo p {
   margin: 0 0 15px 0;
   padding: 0;
-}
-#maininfo img {
-  padding-bottom: 20px;
 }
 
 #submaininfo {
@@ -1552,18 +1558,54 @@ and open the template in the editor.
 }
 
 .nav-tabs {
+  text-align: center;
+  font-family: akzSemiBold;
   list-style: none;
   margin: 0 0 30px 0;
   padding: 0;
 }
 .nav-tabs li {
   display: inline;
-}
-.nav-tabs li.active {
-  background-color: purple;
+  margin: 0 10px;
 }
 .nav-tabs li.active a {
-  color: #fdfdfd;
+  color: #D18300;
+  border-bottom: 2px solid #D18300;
+}
+
+.infog-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.infog-box {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.infog-link {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 100%;
+  padding: 10px 0 5px 0;
+  margin-bottom: 25px;
+  border-bottom: 2.0px solid #eee;
+}
+.infog-link p {
+  text-align: right;
+  font-size: 1.0rem;
 }
 
 @media all and (max-width: 955px) {

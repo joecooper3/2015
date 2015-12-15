@@ -26,6 +26,13 @@
        url('fonts/worksans/WorkSans-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: akzBold;
+    src: url('fonts/worksans/WorkSans-Bold.woff2') format('woff2'),
+       url('fonts/worksans/WorkSans-Bold.woff') format('woff'),
+       url('fonts/worksans/WorkSans-Bold.ttf') format('truetype');
+}
+
 
 
 $font__main: "Gill Sans MT", "Gill Sans", sans-serif;
