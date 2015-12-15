@@ -1746,14 +1746,14 @@ and open the template in the editor.
   background-color: #fdfdfd;
 }
 
-#leadimage-container2 {
+.leadimage-container2 {
   display: block;
   position: relative;
   height: 350px;
   width: 100%;
   margin: 0 auto;
 }
-#leadimage-container2 h1 {
+.leadimage-container2 h1 {
   width: 100%;
   display: block;
   font-size: 3.0rem;

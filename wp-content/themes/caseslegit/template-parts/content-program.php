@@ -11,7 +11,7 @@
     <?php
 $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' );
 ?>
-    <div id="leadimage-container2" style="background: url(<?php echo $src[0]; ?>); background-size: cover; background-position: center;">
+    <div class="leadimage-container2" style="background: url(<?php echo $src[0]; ?>); background-size: cover; background-position: center;">
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </header><!-- .entry-header --></div>

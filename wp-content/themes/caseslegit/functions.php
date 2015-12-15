@@ -39,15 +39,15 @@ function caseslegit_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-        add_image_size('serv-xs', 400, 200, true);
-        add_image_size('serv-s', 800, 350, true);
-        add_image_size('serv-m', 1280, 350, true);
-        add_image_size('serv-l', 1800, 700, true);
-        add_image_size('serv-xl', 2400, 1050, true);
-        add_image_size('news-m', 700, 525, true);
-        add_image_size('news-l', 1400, 1050, true);
-        add_image_size('news-xl', 2100, 1575, true);
-
+        add_image_size('serv_xs', 400, 200, true);
+        add_image_size('serv_s', 800, 350, true);
+        add_image_size('serv_m', 1280, 350, true);
+        add_image_size('serv_l', 1800, 700, true);
+        add_image_size('serv_xl', 2400, 1050, true);
+        add_image_size('news_m', 700, 525, true);
+        add_image_size('news_l', 1400, 1050, true);
+        add_image_size('news_xl', 2100, 1575, true);
+       
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'caseslegit' ),
@@ -85,6 +85,29 @@ function caseslegit_setup() {
 }
 endif; // caseslegit_setup
 add_action( 'after_setup_theme', 'caseslegit_setup' );
+
+/* Thank you for bring a friend, Steven Slack
+ * http://s2webpress.com/responsive-featured-image-function-in-wordpress-themes/
+ */
+
+function responsive_background() {
+     // call the global post variable
+    global $post;
+ 
+    if ( has_post_thumbnail( $post->ID ) ) : // checks whether the post has the featured image set
+ 
+    // get the post thumbnail ID for the page or post
+    $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+ 
+    // store the image sizes in an array. You can also add your own image sizes with the add_image_size function
+    $img_sizes = array( 'serv-xs', 'serv-s', 'serv-m', 'serv-l', 'serv-xl' );
+
+    foreach ( $img_sizes as $img_size ) {
+        ${ 'img_' . $img_size } = wp_get_attachment_image_src( $post_thumbnail_id, $img_size );
+    }
+    endif;
+} // end the function
+add_action( 'wp_head', 'responsive_background' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
