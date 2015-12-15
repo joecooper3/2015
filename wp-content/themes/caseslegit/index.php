@@ -144,7 +144,7 @@ get_header();
                         wp-content/themes/caseslegit/images/youthrecid-xl.png 3800w"
                         alt="I just want one night"></div>
                     <div class="infog-link">
-                        <p><a href="#">Read more how CASES keeps its participants out of jail <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="#">Read more about how CASES keeps its participants in the community <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                 
             </div>  </div>

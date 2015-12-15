@@ -39,10 +39,14 @@ function caseslegit_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-        add_image_size('mainfellow', 1200, 9999, true);
-        add_image_size('large-thumb', 955, 585, true);
-        add_image_size('medium-thumb', 800, 490);
-        add_image_size('small-thumb', 400, 245);
+        add_image_size('serv-xs', 400, 200, true);
+        add_image_size('serv-s', 800, 350, true);
+        add_image_size('serv-m', 1280, 350, true);
+        add_image_size('serv-l', 1800, 700, true);
+        add_image_size('serv-xl', 2400, 1050, true);
+        add_image_size('news-m', 700, 525, true);
+        add_image_size('news-l', 1400, 1050, true);
+        add_image_size('news-xl', 2100, 1575, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
