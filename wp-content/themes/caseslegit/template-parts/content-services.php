@@ -21,18 +21,20 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
         .serv-container { 
          background: url(<?php echo $src[0]; ?>); 
          background-size: cover; 
-         background-position: center;}
+         background-position: center;
+        
+        }
     </style>
-    <div class="leadimage-container2 serv-container">my baby
+    <div class="leadimage-container2 serv-container">
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?> Services</h1>
         </header><!-- .entry-header --></div>
 
 	<div class="entry-content-serv">
-         
-            <h2><?php echo $src_xs[0] ?></h2>
+         <div class="serv-body">
+            <h2><?php echo $src_s[0] ?></h2>
             
-		<?php the_content(); ?>
+		<?php the_content(); ?></div>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'caseslegit' ),
