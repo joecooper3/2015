@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("serv-container"); ?>>
     <?php
 $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' );
 $src_xs = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xs, false, '' );
@@ -18,23 +18,24 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 
 ?>
     <style type="text/css" media="screen">
-        .serv-container { 
+        .serv-bgimage { 
          background: url(<?php echo $src[0]; ?>); 
          background-size: cover; 
          background-position: center;
         
         }
     </style>
-    <div class="leadimage-container2 serv-container">
+    <div class="leadimage-container2 serv-bgimage">
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?> Services</h1>
         </header><!-- .entry-header --></div>
 
 	<div class="entry-content-serv">
          <div class="serv-body">
-            <h2><?php echo $src_s[0] ?></h2>
+            <!-- <h2><?php echo $src_s[0] ?></h2>-->
             
-		<?php the_content(); ?></div>
+		<?php the_content(); ?>
+         </div>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'caseslegit' ),

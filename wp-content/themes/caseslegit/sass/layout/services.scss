@@ -9,11 +9,58 @@ and open the template in the editor.
 */
 
 .entry-content-serv {
-    margin: 50px 75px;
-    background-color: $mywhite;
+    display: flex;
+    width: 100%;
+    height: auto;
+    
 }
 .serv-body {
-    flex: 1 0 auto;
-    padding: 0 0 0 50px;
-    max-width: 700px;
+    margin: 0 50px;
+    padding: 0 0 0 225px;
+    max-width: 1100px;
+    
+    aside {
+        font-family:akzRoman;
+        font-size:0.85rem;
+        float: right;
+        border-top: 1.0px solid #ddd;
+        border-bottom: 1.0px solid #ddd;
+        margin: 20px;
+        padding: 20px;
+        width: 350px;
+        text-align: center;
+        background-color: $mywhite;
+        em {
+            font-family: akzSemiBold;
+            font-style: normal;
+        }
+        li {
+        padding-right:0;
+        }
+        
+    }
+    .longer {
+            text-align: left;
+        }
+    h2 {
+        clear: none;
+        color: $color1;
+    }
+    p {
+        font-size: 1.1rem;
+        padding-right: 250px;
+        
+    }
+    ul {
+        margin: 0;
+    }
+    li {
+        padding-right:250px;
+        }
+}
+
+.infog-numbers {
+    font-size: 1.8rem;
+    color: $color1;
+    font-family: akzSemiBold;
 }

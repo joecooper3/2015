@@ -1210,19 +1210,19 @@ and open the template in the editor.
 }
 
 .sq1 {
-  background: url(images/courtroom.jpg);
+  background: url(images/courtbox.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .sq2 {
-  background: url(images/clinic.jpg);
+  background: url(images/clinicbox.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .sq3 {
-  background: url(images/communitylite.jpg);
+  background: url(images/community.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -1750,7 +1750,6 @@ and open the template in the editor.
   display: block;
   position: relative;
   height: 350px;
-  width: 100%;
   margin: 0 auto;
 }
 .leadimage-container2 h1 {
@@ -1784,12 +1783,55 @@ and open the template in the editor.
     Author     : Joe Cooper
 */
 .entry-content-serv {
-  margin: 50px 75px;
-  background-color: #fdfdfd;
+  display: flex;
+  width: 100%;
+  height: auto;
 }
 
 .serv-body {
-  flex: 1 0 auto;
-  padding: 0 0 0 50px;
-  max-width: 700px;
+  margin: 0 50px;
+  padding: 0 0 0 225px;
+  max-width: 1100px;
+}
+.serv-body aside {
+  font-family: akzRoman;
+  font-size: 0.85rem;
+  float: right;
+  border-top: 1.0px solid #ddd;
+  border-bottom: 1.0px solid #ddd;
+  margin: 20px;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+  background-color: #fdfdfd;
+}
+.serv-body aside em {
+  font-family: akzSemiBold;
+  font-style: normal;
+}
+.serv-body aside li {
+  padding-right: 0;
+}
+.serv-body .longer {
+  text-align: left;
+}
+.serv-body h2 {
+  clear: none;
+  color: #002B55;
+}
+.serv-body p {
+  font-size: 1.1rem;
+  padding-right: 250px;
+}
+.serv-body ul {
+  margin: 0;
+}
+.serv-body li {
+  padding-right: 250px;
+}
+
+.infog-numbers {
+  font-size: 1.8rem;
+  color: #002B55;
+  font-family: akzSemiBold;
 }
