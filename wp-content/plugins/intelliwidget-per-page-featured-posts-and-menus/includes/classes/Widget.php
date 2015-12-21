@@ -23,20 +23,22 @@ class IntelliWidgetWidget extends WP_Widget {
         $control_ops         = array( 'width' => 400, 'height' => 350 );
         if ( is_admin() )
             $this->admin = new IntelliWidgetWidgetAdmin();
-        add_action( 'intelliwidget_action_post_list',   array( $this, 'action_post_list' ),     10, 3 );
-        add_action( 'intelliwidget_action_nav_menu',    array( $this, 'action_nav_menu' ),      10, 3 );
-        add_action( 'intelliwidget_action_tax_menu',    array( $this, 'action_taxonomy_menu' ), 10, 3 );
-        add_filter( 'intelliwidget_before_widget',      array( $this, 'filter_before_widget' ), 10, 3 );
-        add_filter( 'intelliwidget_title',              array( $this, 'filter_title' ),         10, 3 );
-        add_filter( 'intelliwidget_custom_text',        array( $this, 'filter_custom_text' ),   10, 3 );
-        add_filter( 'intelliwidget_classes',            array( $this, 'filter_classes' ),       10, 3 );
-        add_filter( 'intelliwidget_content',            array( $this, 'filter_content' ),       10, 3 );
-        add_filter( 'intelliwidget_trim_excerpt',       array( $this, 'filter_trim_excerpt' ),  10, 3 );
-        // default content actions
-        add_action( 'intelliwidget_above_content',      array( $this, 'action_addltext_above' ),10, 3 );
-        add_action( 'intelliwidget_below_content',      array( $this, 'action_addltext_below' ),10, 3 );
-        if ( !defined( 'INTELLIWIDGET_PRO_VERSION' ) || INTELLIWIDGET_PRO_VERSION >= '2.0.0' ):
-            add_filter( 'theme_mod_nav_menu_locations',     array( $this, 'theme_mod_nav_menu_locations' ), 10 );
+        // only add hooks once in case widget init fires more than once
+        if ( ! has_action( 'intelliwidget_action_post_list' ) ):
+            // default content actions
+            add_action( 'intelliwidget_action_post_list',   array( $this, 'action_post_list' ),             10, 3 );
+            add_action( 'intelliwidget_action_nav_menu',    array( $this, 'action_nav_menu' ),              10, 3 );
+            add_action( 'intelliwidget_action_tax_menu',    array( $this, 'action_taxonomy_menu' ),         10, 3 );
+            add_action( 'intelliwidget_above_content',      array( $this, 'action_addltext_above' ),        10, 3 );
+            add_action( 'intelliwidget_below_content',      array( $this, 'action_addltext_below' ),        10, 3 );
+            add_filter( 'intelliwidget_before_widget',      array( $this, 'filter_before_widget' ),         10, 3 );
+            add_filter( 'intelliwidget_title',              array( $this, 'filter_title' ),                 10, 3 );
+            add_filter( 'intelliwidget_custom_text',        array( $this, 'filter_custom_text' ),           10, 3 );
+            add_filter( 'intelliwidget_classes',            array( $this, 'filter_classes' ),               10, 3 );
+            add_filter( 'intelliwidget_content',            array( $this, 'filter_content' ),               10, 3 );
+            add_filter( 'intelliwidget_trim_excerpt',       array( $this, 'filter_trim_excerpt' ),          10, 3 );
+            if ( !defined( 'INTELLIWIDGET_PRO_VERSION' ) || INTELLIWIDGET_PRO_VERSION >= '2.0.0' )
+                add_filter( 'theme_mod_nav_menu_locations', array( $this, 'theme_mod_nav_menu_locations' ), 10 );
         endif;
         parent::__construct( 'intelliwidget', $this->iw()->pluginName, $widget_ops, $control_ops );
     }
@@ -66,7 +68,7 @@ class IntelliWidgetWidget extends WP_Widget {
      * Output Widget form
      */
     function form( $instance ) {
-        $this->admin->render_form( $this, $instance );
+        if ( is_object( $this->admin ) ) $this->admin->render_form( $this, $instance );
     }
                 
     function filter_custom_text( $custom_text, $instance = array(), $args = array() ) {

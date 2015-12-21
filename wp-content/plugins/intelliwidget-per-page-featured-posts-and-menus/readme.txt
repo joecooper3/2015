@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: content aware, navigation menu, vertical menu, featured post, page menu, custom menu, taxonomy menu, custom post types, custom sidebar, dynamic sidebar, per page, widget area, dynamic widget, custom widget
 Requires at least: 3.5
 Tested up to: 4.4 
-Stable tag: 2.3.7.1
+Stable tag: 2.3.7.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -192,6 +192,14 @@ Content aware means plugin decides what to display based on the other content on
 5. Example of the Custom Data Fields Panel.
 
 == Changelog ==
+= 2.3.7.5 =
+* Fix: added test for admin object before rendering form
+= 2.3.7.4 =
+* Tweak: Using get_queried_object in Query class instead of global $post in case secondary query was not reset
+= 2.3.7.3 =
+* Tweak: added test for existence of actions in case themes do widgets_init action is incorrectly called by a theme.
+= 2.3.7.2 =
+* Fix: Added unique handles for custom stylesheets that were not being loaded.
 = 2.3.7.1 =
 * Fix: added default argument for post_title to eliminate warnings when the_title filter is applied without second argument.
 = 2.3.7 =
@@ -427,7 +435,7 @@ Content aware means plugin decides what to display based on the other content on
 * Packaged for public consumption
 
 == Upgrade Notice ==
-2.3.7 Added ability to apply Nav Menus to Menu Location on per page basis.
+2.3.7.5 Fix: added test for admin object before rendering form
 
 == Getting Started ==
 

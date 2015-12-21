@@ -6,7 +6,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
     Plugin Name: Per Page Custom Menus and Featured Posts IntelliWidget 
     Plugin URI: http://www.lilaeamedia.com/plugins/intelliwidget
     Description: Display content aware dynamic sidebars with custom menus, featured posts, custom post types and other dynamic content on a per page, per post or site-wide basis.
-    Version: 2.3.7.1
+    Version: 2.3.7.5
     Author: Lilaea Media
     Author URI: http://www.lilaeamedia.com/
     Text Domain: intelliwidget
@@ -433,13 +433,13 @@ class IntelliWidget {
         wp_enqueue_style( 'intelliwidget', trailingslashit( INTELLIWIDGET_URL ) . 'templates/intelliwidget.css', array(), INTELLIWIDGET_VERSION );
         $file   = 'intelliwidget/intelliwidget.css';
         if ( is_child_theme() && file_exists( trailingslashit( get_template_directory() ) . $file ) )
-            wp_enqueue_style( 'intelliwidget', trailingslashit( get_template_directory_uri() ) . $file, array(), INTELLIWIDGET_VERSION );
+            wp_enqueue_style( 'intelliwidget-custom-parent', trailingslashit( get_template_directory_uri() ) . $file, array(), INTELLIWIDGET_VERSION );
         if ( file_exists( trailingslashit( get_stylesheet_directory() ) . $file ) )
-            wp_enqueue_style( 'intelliwidget', trailingslashit( get_stylesheet_directory_uri() ) . $file, array(), INTELLIWIDGET_VERSION );
+            wp_enqueue_style( 'intelliwidget-custom', trailingslashit( get_stylesheet_directory_uri() ) . $file, array(), INTELLIWIDGET_VERSION );
     }
 }
-
-define( 'INTELLIWIDGET_VERSION', '2.3.7.1' );
+defined( 'LF' ) || define( 'LF', "\n" );
+define( 'INTELLIWIDGET_VERSION', '2.3.7.5' );
 defined( 'LILAEAMEDIA_URL' ) || define( 'LILAEAMEDIA_URL', 'http://www.lilaeamedia.com' );
 define( 'INTELLIWIDGET_DIR', dirname( __FILE__ ) );
 define( 'INTELLIWIDGET_MAX_MENU_POSTS', 200 );

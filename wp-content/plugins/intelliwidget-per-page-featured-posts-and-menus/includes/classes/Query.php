@@ -243,7 +243,7 @@ LEFT JOIN {$wpdb->postmeta} pm2 ON pm2.post_id = p1.ID
     function get_posts( $instance ) {
         // $time_adj = gmdate( 'Y-m-d H:i', current_time( 'timestamp' ) ); // do not use for now (2.3.4)
         
-        global $wpdb, $post;
+        global $wpdb;
         //if ( ! ( $query = $instance[ 'querystr' ] ) ) // do not use for now (2.3.4)
             $query = $this->iw_query( $instance );
         // $query = str_replace( '[current_time]', $time_adj, $query ); // do not use for now (2.3.4)
@@ -304,8 +304,11 @@ LEFT JOIN {$wpdb->postmeta} pm7 ON pm7.post_id = p1.ID
             " );
             $clauses[] = '(p1.ID IN ('. implode(',', $res ) . ') )';
             /* Remove current page from list of pages if set */
-            if ( is_singular() && $instance[ 'skip_post' ] )
-                $clauses[] = "(p1.ID != {$post->ID})";
+            if ( is_singular() && $instance[ 'skip_post' ] ):
+                // 2.3.7.4: using get_queried_object instead of global $post in case secondary query was not reset
+                $qo = get_queried_object();
+                $clauses[] = "(p1.ID != {$qo->ID})";
+            endif;
             $query = $select . implode( ' ', $joins ) . ' WHERE ' . implode( "\n AND ", $clauses ) . $this->orderby( $instance );
             $res      = $wpdb->get_results( $wpdb->prepare( $query, $prepargs ), OBJECT );
         endif;
