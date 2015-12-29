@@ -201,7 +201,6 @@ $sqlength: 300px;
         margin: 0;
         padding: 0 5px;
     }
-    
 }
 
 
@@ -335,7 +334,7 @@ $sqlength: 300px;
     align-items: center;
 }
 
-.infog-box {
+.infog-boxfp {
     flex: 1 0 auto;
 }
 
@@ -379,5 +378,32 @@ $sqlength: 300px;
 @media all and (max-width: 575px) {
     #bigboycontainer {
         padding: 0;
+    }
+    #maininfo {
+        font-size: 1.0rem;
+        padding: 25px 5px;
+        .emp {
+            font-size: 1.0rem;
+        }
+    }
+    #submaininfo {
+        p {
+            padding: 0 10px 0 15px;
+        }
+    }
+    .infog-link {
+        p {
+            font-size: 0.7rem;
+        }
+    }
+    .nav-tabs {
+        li {
+            display: inline;
+            font-size: 0.75rem;
+            margin: 0 5px;
+        }
+        li.dot {
+                display:none;
+            }
     }
 }

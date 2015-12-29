@@ -30,7 +30,6 @@ and open the template in the editor.
         padding: 10px 10px 10px 10px;
         width: 350px;
         text-align: center;
-        
         border-bottom: 3.0px solid #ddd;
         em {
             font-family: akzSemiBold;
@@ -50,6 +49,7 @@ and open the template in the editor.
     font-size: 0.9rem;
     text-transform: uppercase;
     padding-bottom: 5px;
+    margin-bottom: 10px;
     border-bottom: 2.0px solid $color1;
 }
     .bodybox {
@@ -106,4 +106,54 @@ and open the template in the editor.
     font-size: 1.8rem;
     color: $color1;
     font-family: akzSemiBold;
+}
+
+@media all and (max-width: 1000px) {
+ .serv-body {
+     max-width: 1000px;
+     aside {
+         margin: 0 auto;
+     }
+    .bodybox {
+        flex: 1 0 100%;
+    }   
+    .infogbox {
+        flex: 1 0 100%;
+        margin: 50px 100px;
+        align-self: center;
+    }
+}
+}
+@media all and (max-width: 800px) {
+    .serv-body {
+        margin: 20px;
+        max-width: 100%;
+        .infogbox {
+        margin: 10px 0 50px 0;
+        }
+    }
+    .leadimage-container2 {
+        height:250px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .serv-body {
+        margin: 10px;
+        max-width: 100%;
+        aside {
+            width:100%;
+        }
+        .infogbox {
+        margin: 10px 0 50px 0;
+    }
+    }
+    .leadimage-container2 {
+    height: 200px;
+    h1 {
+        font-size: 2.0rem;
+        padding: 0 0 10px 10px;
+    }
+    
+    }
 }

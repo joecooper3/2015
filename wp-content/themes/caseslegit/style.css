@@ -1602,7 +1602,7 @@ and open the template in the editor.
           align-items: center;
 }
 
-.infog-box {
+.infog-boxfp {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -1656,6 +1656,31 @@ and open the template in the editor.
 @media all and (max-width: 575px) {
   #bigboycontainer {
     padding: 0;
+  }
+
+  #maininfo {
+    font-size: 1.0rem;
+    padding: 25px 5px;
+  }
+  #maininfo .emp {
+    font-size: 1.0rem;
+  }
+
+  #submaininfo p {
+    padding: 0 10px 0 15px;
+  }
+
+  .infog-link p {
+    font-size: 0.7rem;
+  }
+
+  .nav-tabs li {
+    display: inline;
+    font-size: 0.75rem;
+    margin: 0 5px;
+  }
+  .nav-tabs li.dot {
+    display: none;
   }
 }
 /*
@@ -1988,6 +2013,7 @@ and open the template in the editor.
   font-size: 0.9rem;
   text-transform: uppercase;
   padding-bottom: 5px;
+  margin-bottom: 10px;
   border-bottom: 2px solid #002B55;
 }
 .serv-body .bodybox {
@@ -2026,4 +2052,60 @@ and open the template in the editor.
   font-size: 1.8rem;
   color: #002B55;
   font-family: akzSemiBold;
+}
+
+@media all and (max-width: 1000px) {
+  .serv-body {
+    max-width: 1000px;
+  }
+  .serv-body aside {
+    margin: 0 auto;
+  }
+  .serv-body .bodybox {
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+  .serv-body .infogbox {
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    margin: 50px 100px;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+}
+@media all and (max-width: 800px) {
+  .serv-body {
+    margin: 20px;
+    max-width: 100%;
+  }
+  .serv-body .infogbox {
+    margin: 10px 0 50px 0;
+  }
+
+  .leadimage-container2 {
+    height: 250px;
+  }
+}
+@media all and (max-width: 400px) {
+  .serv-body {
+    margin: 10px;
+    max-width: 100%;
+  }
+  .serv-body aside {
+    width: 100%;
+  }
+  .serv-body .infogbox {
+    margin: 10px 0 50px 0;
+  }
+
+  .leadimage-container2 {
+    height: 200px;
+  }
+  .leadimage-container2 h1 {
+    font-size: 2.0rem;
+    padding: 0 0 10px 10px;
+  }
 }

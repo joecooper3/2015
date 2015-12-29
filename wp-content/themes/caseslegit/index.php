@@ -64,14 +64,14 @@ get_header();
             <ul class="nav nav-tabs">
                 <li class="active">
                     <a href="#who" aria-controls="who" role="tab" data-toggle="tab">Who We Serve</a> </li>
-                <li>&#8226;</li>
+                <li class="dot">&#8226;</li>
                 <li> <a href="#what" aria-controls="what" role="tab" data-toggle="tab">The Challenge</a> </li>
-                <li>&#8226;</li>
+                <li class="dot">&#8226;</li>
             <li> <a href="#outcomes" aria-controls="outcomes" role="tab" data-toggle="tab">Our Outcomes</a> </li></ul>
             
             <div role="tabpanel" class="tab-pane fade in active" id="who">
                 <div class="infog-container">
-                    <div class="infog-box">
+                    <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/raceinfo-m.png" 
                         srcset="wp-content/themes/caseslegit/images/raceinfo-xs.png 400w, 
                         wp-content/themes/caseslegit/images/raceinfo-s.png 660w,
@@ -82,7 +82,7 @@ get_header();
                     <div class="infog-link">
                         <p><a href="#">Read more about CASES' youth programs <i class="fa fa-arrow-right"></a></p></i>
                     </div>
-                    <div class="infog-box">
+                    <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/mentalinfo-m.png" 
                         srcset="wp-content/themes/caseslegit/images/mentalinfo-xs.png 400w, 
                         wp-content/themes/caseslegit/images/mentalinfo-s.png 660w,
@@ -98,7 +98,7 @@ get_header();
             
             <div role="tabpanel" class="tab-pane fade" id="what">
                 <div class="infog-container">
-                    <div class="infog-box">
+                    <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/unempinfo-m.png" 
                         srcset="wp-content/themes/caseslegit/images/unempinfo-xs.png 400w, 
                         wp-content/themes/caseslegit/images/unempinfo-s.png 660w,
@@ -109,7 +109,7 @@ get_header();
                     <div class="infog-link">
                         <p><a href="#">Read more about CASES' employment services <i class="fa fa-arrow-right"></a></p></i>
                     </div>
-                    <div class="infog-box">
+                    <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/gradinfo-m.png" 
                         srcset="wp-content/themes/caseslegit/images/gradinfo-xs.png 400w, 
                         wp-content/themes/caseslegit/images/gradinfo-s.png 660w,
@@ -124,7 +124,7 @@ get_header();
             </div>  </div>
             <div role="tabpanel" class="tab-pane fade" id="outcomes">
                 <div class="infog-container">
-                    <div class="infog-box">
+                    <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/moneyinfo-m.png" 
                         srcset="wp-content/themes/caseslegit/images/moneyinfo-xs.png 400w, 
                         wp-content/themes/caseslegit/images/moneyinfo-s.png 660w,
@@ -135,7 +135,7 @@ get_header();
                     <div class="infog-link">
                         <p><a href="#">Read more about the outcomes of CASES clients <i class="fa fa-arrow-right"></a></p></i>
                     </div>
-                    <div class="infog-box">
+                    <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/youthrecid-m.png" 
                         srcset="wp-content/themes/caseslegit/images/youthrecid-xs.png 400w, 
                         wp-content/themes/caseslegit/images/youthrecid-s.png 660w,
