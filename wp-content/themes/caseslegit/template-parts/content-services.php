@@ -22,7 +22,6 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
          background: url(<?php echo $src[0]; ?>); 
          background-size: cover; 
          background-position: center;
-        
         }
     </style>
     <div class="leadimage-container2 serv-bgimage">
@@ -33,8 +32,18 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 	<div class="entry-content-serv">
          <div class="serv-body">
             <!-- <h2><?php echo $src_s[0] ?></h2>-->
-            
-		<?php the_content(); ?>
+             <div class="challenge bodybox"><h2>The Challenge</h2>
+            <p><?php the_field('the_challenge') ?></p></div>
+             <div class="challenge-infographic infogbox">
+            <?php the_field('challenge_infographic') ?></div>
+              <div class="approach bodybox"><h2>Our Approach</h2>
+            <p><?php the_field('our_approach') ?></p></div>
+             <div class="approach-infographic infogbox">
+            <?php the_field('approach_infographic') ?></div>
+             <div class="outcomes bodybox"><h2>Outcomes</h2>
+            <p><?php the_field('outcomes') ?></p></div>
+             <div class="outcomes-infographic infogbox">
+            <?php the_field('outcomes_infographic') ?></div>	
          </div>
 		<?php
 			wp_link_pages( array(

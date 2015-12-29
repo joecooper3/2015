@@ -153,7 +153,7 @@ get_header();
                 sure we will not be quite as pithy with the final copy.
         </div> </div>
         <div id="newsstories">
-            <div id='subnewsstories'>
+            <div id='subnewsstories'><span class="latestnews">Latest News</span>
             <?php if (have_posts()) : ?>
 
                 <?php /* Start the Loop */ ?>

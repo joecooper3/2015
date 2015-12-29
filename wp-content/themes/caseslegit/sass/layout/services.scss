@@ -15,21 +15,23 @@ and open the template in the editor.
     
 }
 .serv-body {
-    margin: 0 50px;
-    padding: 0 0 0 100px;
-    max-width: 1100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 100px 0 100px;
+    max-width: 1300px;
+    
     
     aside {
         font-family:akzRoman;
         font-size:0.85rem;
-        float: right;
-        border-top: 1.0px solid #ddd;
-        border-bottom: 1.0px solid #ddd;
-        margin: 20px;
-        padding: 20px;
+        margin: 0 0 20px 0;
+        padding: 10px 10px 10px 10px;
         width: 350px;
         text-align: center;
-        background-color: $mywhite;
+        
+        border-bottom: 3.0px solid #ddd;
         em {
             font-family: akzSemiBold;
             font-style: normal;
@@ -39,23 +41,64 @@ and open the template in the editor.
         }
         
     }
+    
+ .asidetitle {
+    font-family: akzSemiBold;
+    display: block;
+    text-align: left;
+    color: $color1;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2.0px solid $color1;
+}
+    .bodybox {
+        flex: 2 0 60%;
+    }
+    .infogbox {
+        flex: 1 0 30%;
+        margin: 0 0 0 50px;
+    }
+    
+    .challenge {
+       
+    }
+    .challenge-infographic {
+      
+    }
+    .approach {
+        
+    }
+    .approach-infographic {
+        
+    }
+    .outcomes {
+        
+    }
+    .outcomes-infographic {
+        
+    }
+    
     .longer {
             text-align: left;
         }
     h2 {
         clear: none;
         color: $color1;
+        padding-bottom: 10px;
+        width: 70%;
+        border-bottom: 3.0px solid #ddd;
     }
     p {
-        font-size: 1.1rem;
-        padding-right: 250px;
+        font-size: 1.1rem;     
         
     }
     ul {
         margin: 0;
     }
     li {
-        padding-right:250px;
+        padding-right:50px;
+        margin:10px 0;
         }
 }
 
