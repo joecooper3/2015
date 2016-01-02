@@ -1953,10 +1953,25 @@ and open the template in the editor.
 .about-container {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 50px;
+}
+.about-container h2 {
+  font-size: 2.0rem;
+  color: #002B55;
+  width: 70%;
+  margin: 40px 0 10px 0;
+  border-bottom: 3.0px solid #ddd;
+}
+.about-container ul {
+  margin: 0;
+}
+.about-container li {
+  padding-right: 50px;
+  margin: 10px 0;
 }
 
 .leadimage-container3 {
-  flex: 4 0 100%;
+  flex: 0 0 100%;
   position: relative;
 }
 .leadimage-container3 h1 {
@@ -1972,11 +1987,25 @@ and open the template in the editor.
 }
 
 .entry-content-about {
-  margin: 0;
-  padding: 10px 20px 10px 200px;
-  flex: 2 0 850px;
+  margin: 0 auto;
+  max-width: 800px;
+  flex: 1 1 auto;
 }
 
 .sidebar-about {
-  flex: 1 0 400px;
+  margin: 0 auto;
+  flex: 0 0 300px;
+}
+
+.vision {
+  font-family: akzRoman;
+}
+
+.intelli-about-link {
+  margin: 10px 0;
+  text-align: right;
+  font-family: akzMed;
+}
+.intelli-about-link .fa {
+  margin-left: 5px;
 }

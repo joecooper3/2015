@@ -11,10 +11,25 @@ and open the template in the editor.
 .about-container {
     display: flex;
     flex-flow: row wrap;
+    margin: 0 50px;
+    h2 {
+        font-size: 2.0rem;
+        color: $color1;
+        width: 70%;
+        margin: 40px 0 10px 0;
+        border-bottom: 3.0px solid #ddd;
+    }
+    ul {
+        margin: 0;
+    }
+    li {
+        padding-right: 50px;
+        margin: 10px 0;
+    }
 }
 
 .leadimage-container3 {
-   flex: 4 0 100%;
+   flex: 0 0 100%;
    position: relative; 
     h1 {
         width: 60%;
@@ -27,14 +42,28 @@ and open the template in the editor.
         color: $color1;
         border-bottom: 3.0px solid $color1;
     }
+    
 }
 
 .entry-content-about {
-    margin: 0;
-    padding: 10px 20px 10px 200px;
-    flex: 2 0 850px;
+    margin: 0 auto;
+    max-width: 800px;
+    flex: 1 1 auto;
 }
 
 .sidebar-about {
-    flex: 1 0 400px;
+    margin: 0 auto;
+    flex: 0 0 300px;
+}
+
+.vision {
+    font-family: akzRoman;
+}
+.intelli-about-link {
+    margin: 10px 0;
+    text-align: right;
+    font-family: akzMed;
+    .fa {
+        margin-left: 5px;
+    }
 }

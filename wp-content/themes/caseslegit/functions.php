@@ -145,8 +145,26 @@ function caseslegit_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+        register_sidebar( array(
+		'name'          => esc_html__( 'SidebarAbout', 'caseslegit' ),
+		'id'            => 'sidebar-3',
+		'description'   => 'About',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'caseslegit_widgets_init' );
+
+
+/**
+ * Enables the Excerpt meta box in Page edit screen.
+ */
+function wpcodex_add_excerpt_support_for_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 /**
  * Enqueue scripts and styles.

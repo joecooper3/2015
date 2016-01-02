@@ -115,7 +115,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
      * @global <object> $intelliwidget_post
      * @return <string>
      */
-    function get_the_intelliwidget_excerpt( $length = 15, $tags = '' ) {
+    function get_the_intelliwidget_excerpt( $length = 60, $tags = '' ) {
         // FIXME: phase out globals
         global $intelliwidget_post;
         // use excerpt text if it exists otherwise parse the main content
@@ -128,7 +128,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
     /**
      * Display the excerpt for the featured post.
      */
-    function the_intelliwidget_excerpt( $length = 15, $tags = '' ) {
+    function the_intelliwidget_excerpt( $length = 60, $tags = '' ) {
         echo get_the_intelliwidget_excerpt( $length, $tags );
     }
 

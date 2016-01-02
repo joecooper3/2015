@@ -32,7 +32,8 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 			) );
 		?>
 	</div><!-- .entry-content -->
-        <div class="sidebar-about"></div>
+        <div class="sidebar-about"><?php get_sidebar('about'); ?>
+</div>
 </div>
 	<footer class="entry-footer">
 		<?php edit_post_link( esc_html__( 'Edit', 'caseslegit' ), '<span class="edit-link">', '</span>' ); ?>
