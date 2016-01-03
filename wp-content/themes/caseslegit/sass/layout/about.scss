@@ -11,7 +11,8 @@ and open the template in the editor.
 .about-container {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 50px;
+    max-width: 1200px;
+    margin: 0 auto;
     h2 {
         font-size: 2.0rem;
         color: $color1;
@@ -33,6 +34,7 @@ and open the template in the editor.
    position: relative; 
     h1 {
         width: 60%;
+        max-width: 800px;
         display: block;
         font-size: 3.5rem;
         position: relative;
@@ -46,24 +48,74 @@ and open the template in the editor.
 }
 
 .entry-content-about {
-    margin: 0 auto;
-    max-width: 800px;
-    flex: 1 1 auto;
+    background-color: $mywhite;
+    padding: 0 50px;
+    max-width: 900px;
+    flex: 2 1 500px;
 }
 
 .sidebar-about {
+    flex: 1 1 300px;
+    max-width: 300px;
     margin: 0 auto;
-    flex: 0 0 300px;
+    padding: 0 20px;  
 }
 
-.vision {
-    font-family: akzRoman;
-}
 .intelli-about-link {
     margin: 10px 0;
     text-align: right;
     font-family: akzMed;
     .fa {
         margin-left: 5px;
+    }
+}
+
+.intelliwidget3-title {
+    font-size: 1.2rem;
+    padding: 5px 0;
+        border-top: 3.0px solid $color1;
+        border-bottom: 1.5px solid #aaa;
+}
+
+.intelliwidget3-container {
+    border-bottom: 1.5px solid #aaa;
+}
+
+.vision {
+    font-family: akzRoman;
+}
+
+/* Executive Team page gets its own dang code  */
+
+#post-141 {
+    .entry-content-about {
+        .wp-post-image {
+            display: none;
+        }
+        h2 {
+            font-size: 1.3rem;
+            clear: none;
+            margin: 0 auto;
+        }
+    }
+}
+
+.eteam-portrait {
+    max-width: 300px;
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+/* I'm the idiotic way Wordpress makes everything a paragraph */
+
+.thankswp {
+    margin: 0;
+    padding: 0;
+}
+
+@media all and (max-width: 800px) {
+    .sidebar-about {
+        max-width: 500px;
+        margin-top: 30px;
     }
 }

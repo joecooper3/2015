@@ -21,7 +21,8 @@ get_header();
             <div class="locat-container">
                 <div class="locat-square sq1">
                     <div class="locat-shade">
-                        Courtroom</div>
+                    <a class="hvr-underline-from-center" href="?page_id=684">Courtroom</a>
+                    </div>
                 </div>
                 <div class="locat-caption">
                     a new vision for justice
@@ -29,7 +30,8 @@ get_header();
             </div>
             <div class="locat-container">
                 <div class="locat-square sq2">
-                    <div class="locat-shade">Clinic
+                    <div class="locat-shade">
+                        <a class="hvr-underline-from-center" href="#!">Clinic</a>
                     </div></div>
                 <div class="locat-caption">
                     an effective pathway to recovery
@@ -37,7 +39,8 @@ get_header();
             </div>
             <div class="locat-container">
                 <div class="locat-square sq3"> <div class="locat-shade">
-                        Community</div>
+                        <a class="hvr-underline-from-center" href="#!">Community</a>
+                    </div>
                 </div>
                 <div class="locat-caption">
                     a New York City safer for every citizen

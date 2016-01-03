@@ -172,21 +172,25 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 function caseslegit_scripts() {
 	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri() );
         
+        wp_enqueue_style( 'caseslegit-hober', get_template_directory_uri() . '/hover.css' );
+        
         wp_enqueue_style( 'caseslegit-icons', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
-	/* wp_enqueue_script( 'caseslegit-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true ); 
+	/* wp_enqueue_script( 'caseslegit-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true ); */
 
         wp_enqueue_script( 'caseslegit-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20150623', true ); 
         
         wp_enqueue_script( 'caseslegit-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('caseslegit-superfish'), '20150623', true );
         
-        wp_enqueue_script( 'caseslegit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true ); */
+       /* wp_enqueue_script( 'caseslegit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true ); */
 
         wp_enqueue_script( 'caseslegit-mobile-nav', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20150624', true ); 
         
         wp_enqueue_script( 'caseslegit-mobile-nav2', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true ); 
         
         wp_enqueue_script( 'my-picturefill', get_template_directory_uri() . '/js/picturefill.min.js', '20150710', false);
+        
+        wp_enqueue_script( 'boxes', get_template_directory_uri() . '/js/boxes.js', array('jquery'), '20160102', true);
         
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

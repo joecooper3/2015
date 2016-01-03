@@ -16,10 +16,11 @@ if ( !defined( 'ABSPATH' ) ) exit;
 <?php
 if ( $selected->have_posts() ) : while ( $selected->have_posts() ) : $selected->the_post();
 ?>
-<h1 id="intelliwidget_title_<?php the_intelliwidget_ID(); ?>" class="intelliwidget-title widget-title">
-    <a href="<?php get_the_intelliwidget_link() ?>"> Our <?php the_intelliwidget_title(); ?></a>
+<?php $ohbrother = get_the_intelliwidget_title(); ?>
+<h1 id="intelliwidget_title_<?php the_intelliwidget_ID(); ?>" class="intelliwidget3-title widget-title">
+    <?php the_intelliwidget_link(NULL, "Our $ohbrother", NULL); ?>
   </h1>
-<div id="intelliwidget_<?php the_intelliwidget_ID(); ?>" class="intelliwidget-album-container">
+<div id="intelliwidget_<?php the_intelliwidget_ID(); ?>" class="intelliwidget3-container">
   <?php if ( has_intelliwidget_image() ) : ?>
   <div class="intelliwidget-album-container-<?php echo $instance[ 'image_size' ];?> intelliwidget-align-<?php echo $instance[ 'imagealign' ]; ?>">
     <?php the_intelliwidget_image(); ?>

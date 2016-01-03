@@ -42,6 +42,7 @@ and open the template in the editor.
 .article-container {
     flex: 5 0 auto;
     max-width: 700px;
+    margin: 0 auto;
 }
 
 article { 
@@ -52,6 +53,7 @@ article {
 }
 
 .widget-area {
+    margin: 0 auto;
     flex: 2 0 auto;
     max-width: 280px;
     

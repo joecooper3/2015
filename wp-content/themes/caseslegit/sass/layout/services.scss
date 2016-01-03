@@ -17,16 +17,17 @@ and open the template in the editor.
 .serv-body {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 20px 100px 0 100px;
-    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 1200px;
     
     
     aside {
         font-family:akzRoman;
         font-size:0.85rem;
-        margin: 0 0 20px 0;
+        margin: 0 auto;
         padding: 10px 10px 10px 10px;
         width: 350px;
         text-align: center;
@@ -53,11 +54,13 @@ and open the template in the editor.
     border-bottom: 2.0px solid $color1;
 }
     .bodybox {
-        flex: 2 0 60%;
+        flex: 2 0 auto;
+        max-width: 800px;
+        padding: 0 50px;
     }
     .infogbox {
-        flex: 1 0 30%;
-        margin: 0 0 0 50px;
+        flex: 1 0 300px;
+        margin: 0 auto;
     }
     
     .challenge {
@@ -128,12 +131,18 @@ and open the template in the editor.
     .serv-body {
         margin: 20px;
         max-width: 100%;
+        .bodybox {
+            padding: 0 20px;
+        }
         .infogbox {
         margin: 10px 0 50px 0;
         }
     }
     .leadimage-container2 {
         height:250px;
+        h1 {
+            font-size: 2.2rem;
+        }
     }
 }
 
@@ -143,6 +152,9 @@ and open the template in the editor.
         max-width: 100%;
         aside {
             width:100%;
+        }
+        .bodybox {
+            padding: 0 10px;
         }
         .infogbox {
         margin: 10px 0 50px 0;

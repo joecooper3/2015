@@ -1281,6 +1281,42 @@ and open the template in the editor.
   margin: 4px 5px 0 0;
 }
 
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #002b55;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
 /* This is just for the headings in the locat squares, because I'm dumb */
 @media all and (max-width: 1175px) {
   .locat-square {
@@ -1706,6 +1742,7 @@ and open the template in the editor.
 .article-container {
   flex: 5 0 auto;
   max-width: 700px;
+  margin: 0 auto;
 }
 
 article {
@@ -1716,6 +1753,7 @@ article a {
 }
 
 .widget-area {
+  margin: 0 auto;
   flex: 2 0 auto;
   max-width: 280px;
 }
@@ -1826,15 +1864,16 @@ and open the template in the editor.
 .serv-body {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 20px 100px 0 100px;
-  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 1200px;
 }
 .serv-body aside {
   font-family: akzRoman;
   font-size: 0.85rem;
-  margin: 0 0 20px 0;
+  margin: 0 auto;
   padding: 10px 10px 10px 10px;
   width: 350px;
   text-align: center;
@@ -1859,11 +1898,13 @@ and open the template in the editor.
   border-bottom: 2px solid #002B55;
 }
 .serv-body .bodybox {
-  flex: 2 0 60%;
+  flex: 2 0 auto;
+  max-width: 800px;
+  padding: 0 50px;
 }
 .serv-body .infogbox {
-  flex: 1 0 30%;
-  margin: 0 0 0 50px;
+  flex: 1 0 300px;
+  margin: 0 auto;
 }
 .serv-body .longer {
   text-align: left;
@@ -1913,12 +1954,18 @@ and open the template in the editor.
     margin: 20px;
     max-width: 100%;
   }
+  .serv-body .bodybox {
+    padding: 0 20px;
+  }
   .serv-body .infogbox {
     margin: 10px 0 50px 0;
   }
 
   .leadimage-container2 {
     height: 250px;
+  }
+  .leadimage-container2 h1 {
+    font-size: 2.2rem;
   }
 }
 @media all and (max-width: 400px) {
@@ -1928,6 +1975,9 @@ and open the template in the editor.
   }
   .serv-body aside {
     width: 100%;
+  }
+  .serv-body .bodybox {
+    padding: 0 10px;
   }
   .serv-body .infogbox {
     margin: 10px 0 50px 0;
@@ -1953,7 +2003,8 @@ and open the template in the editor.
 .about-container {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .about-container h2 {
   font-size: 2.0rem;
@@ -1976,6 +2027,7 @@ and open the template in the editor.
 }
 .leadimage-container3 h1 {
   width: 60%;
+  max-width: 800px;
   display: block;
   font-size: 3.5rem;
   position: relative;
@@ -1987,18 +2039,17 @@ and open the template in the editor.
 }
 
 .entry-content-about {
-  margin: 0 auto;
-  max-width: 800px;
-  flex: 1 1 auto;
+  background-color: #fdfdfd;
+  padding: 0 50px;
+  max-width: 900px;
+  flex: 2 1 500px;
 }
 
 .sidebar-about {
+  flex: 1 1 300px;
+  max-width: 300px;
   margin: 0 auto;
-  flex: 0 0 300px;
-}
-
-.vision {
-  font-family: akzRoman;
+  padding: 0 20px;
 }
 
 .intelli-about-link {
@@ -2008,4 +2059,48 @@ and open the template in the editor.
 }
 .intelli-about-link .fa {
   margin-left: 5px;
+}
+
+.intelliwidget3-title {
+  font-size: 1.2rem;
+  padding: 5px 0;
+  border-top: 3px solid #002B55;
+  border-bottom: 1.5px solid #aaa;
+}
+
+.intelliwidget3-container {
+  border-bottom: 1.5px solid #aaa;
+}
+
+.vision {
+  font-family: akzRoman;
+}
+
+/* Executive Team page gets its own dang code  */
+#post-141 .entry-content-about .wp-post-image {
+  display: none;
+}
+#post-141 .entry-content-about h2 {
+  font-size: 1.3rem;
+  clear: none;
+  margin: 0 auto;
+}
+
+.eteam-portrait {
+  max-width: 300px;
+  float: left;
+  margin: 0 30px 0 0;
+}
+
+/* I'm the idiotic way Wordpress makes everything a paragraph */
+.thankswp {
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (max-width: 800px) {
+  .sidebar-about {
+    max-width: 500px;
+    margin-top: 30px;
+  }
 }
