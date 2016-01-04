@@ -1478,6 +1478,12 @@ and open the template in the editor.
     border: 0;
     background-color: rgba(0, 43, 85, 0.6);
   }
+  .locat-shade a, .locat-shade a:visited {
+    color: #fdfdfd;
+  }
+  .locat-shade .hvr-underline-from-center:before {
+    background-color: #fdfdfd;
+  }
 
   .locat-caption {
     -webkit-flex: 2;
@@ -1985,10 +1991,16 @@ and open the template in the editor.
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin: 20px 0 0 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .entry-content-prog {
-  margin: 50px 75px;
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 900px;
 }
 
 /*

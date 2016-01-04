@@ -2457,9 +2457,6 @@
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
-  a {
-      color: #fdfdfd;
-  }
 }
 .hvr-underline-from-center:before {
   content: "";

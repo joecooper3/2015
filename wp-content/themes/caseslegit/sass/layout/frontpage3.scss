@@ -104,6 +104,7 @@ $sqlength: 300px;
     text-align: center;
     padding: 10px 0 0 0;
 }
+    
 
 #bonusbuttons {
     text-align: center;
@@ -221,6 +222,12 @@ $sqlength: 300px;
         width: 100%;
         border: 0;
         background-color: rgba(0,43,85,0.6);
+        a, a:visited {
+            color: $mywhite;
+        }
+        .hvr-underline-from-center:before {
+            background-color: $mywhite;
+        }
         
     }
     
