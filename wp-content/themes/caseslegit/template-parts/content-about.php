@@ -23,7 +23,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 		<?php the_title( '<h1 class="entry-title">Our ' ); ?></h1>
         </header><!-- .entry-header --></div>
 	<div class="entry-content-about">
-            <?php the_post_thumbnail('news_xl'); ?>
+            <?php the_post_thumbnail('serv_xl'); ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
