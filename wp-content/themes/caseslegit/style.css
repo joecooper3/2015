@@ -2469,3 +2469,31 @@ tbody.collapse.in {
 .faqs #a1, .faqs #a2, .faqs #a3, .faqs #a4, .faqs #a5, .faqs #a6, .faqs #a7, .faqs #a8, .faqs #a9, .faqs #a10 {
   margin-bottom: 20px;
 }
+
+.donatebutton {
+  appearance: button;
+  background-color: #002B55;
+  font-family: akzMed;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  box-shadow: none;
+  transition: all 0.3s ease 0s;
+}
+.donatebutton:visited {
+  color: #fdfdfd;
+}
+.donatebutton:hover {
+  opacity: 0.75;
+  color: #fdfdfd;
+  box-shadow: none;
+}
+
+.largerfont {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}

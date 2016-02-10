@@ -164,3 +164,30 @@ tbody.collapse.in {
         margin-bottom: 20px;
     }
 }
+
+.donatebutton {
+    appearance: button;
+    background-color: $color1;
+    font-family: akzMed;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    box-shadow: none;
+    transition: all 0.3s ease 0s;
+    &:visited {
+        color: $mywhite;
+    }
+    &:hover {
+        opacity: 0.75;
+        color: $mywhite;
+        box-shadow: none;
+    }
+}
+.largerfont {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}

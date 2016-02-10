@@ -3,7 +3,7 @@ Contributors: Desertsnowman, Shelob9
 Tags: forms, formbuilder, form builder, contact form, contact, custom form, custom forms, forms creator, caldera forms, calderawp, wp form, responsive, forms, form, drag and drop, email, awesome, wordpress free form builder, form builder plugin wordpress, wordpress builder plugin, wordpress forms builder, form builder wordpress, contact form builder wordpress, bootstrap, bootstrap form builder, bootstrap forms
 Requires at least: 4.0
 Tested up to: 4.4.1
-Stable tag: 1.3.2
+Stable tag: 1.3.2.1
 License: GPLv2
 
 Build forms differently.  So easy, it’s fun!
@@ -122,20 +122,21 @@ Once you have created a form, insert it in a page or post via the Shortcode inse
 
 == Changelog ==
 
-<<<<<<< HEAD
-= 1.3.1.2 (November 18, 2015 ) =
-* FIXED: Annoying little bug that broke reCaptcha due to new script loading.
+= 1.3.2.1 ( January 14, 2015 ) =
+* FIXED: Bug that caused calculations using checkboxes or Radio buttons to fail
 
-=======
 = 1.3.2 ( January 14, 2015 ) =
 * FIXED: Bug preventing AJAX submissions on certain Apache configurations with ugly permalinks enabled in WordPress
 * FIXED: Calculation fields with hidden fields not calculating.
 * ADDED: "caldera_forms_cf_ajax_api_url" filter -- Filter the URL for AJAX submissions
 * ADDED: Fallback for failed AJAX submissions -- 404s now cause submission via a synchronous request.
+* ADDED: Entry Editing.
 * FIXED: Menu display conflict with Sensi plugin
 * FIXED: Validation errors triggered prematurely on multi-page forms
 * FIXED: Use WordPress' setting for database collation. Hi Chris.
->>>>>>> current-dev
+
+= 1.3.1.2 (November 18, 2015 ) =
+* FIXED: Annoying little bug that broke reCaptcha due to new script loading.
 
 = 1.3.1.1 (November 12, 2015 ) =
 * FIXED: Annoying little bug that broke the "Next" button if you have a required Checkbox or Radio on a later page. (I know right?)

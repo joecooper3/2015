@@ -11,10 +11,11 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <style type="text/css" media="screen">
-        .serv-bgimage { 
+        .resc-bgimage { 
          background: url(<?php echo $src[0]; ?>); 
          background-size: cover; 
          background-position: center;
+         height: 300px;
         }
     </style>
 <div class="about-container">
@@ -23,7 +24,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 		<?php the_title( '<h1 class="entry-title">' ); ?></h1>
         </header><!-- .entry-header --></div>
 	<div class="entry-content-about">
-            <?php the_post_thumbnail('news_xl'); ?>
+            <div class="resc-bgimage"></div>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
