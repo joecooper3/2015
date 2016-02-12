@@ -182,12 +182,20 @@ tbody.collapse.in {
         color: $mywhite;
     }
     &:hover {
-        opacity: 0.75;
+        background-color: $color4;
         color: $mywhite;
         box-shadow: none;
     }
 }
 .largerfont {
     margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.entry-content-resources {
+    background-color: $mywhite;
+    padding: 0 50px;
+    max-width: 900px;
+    flex: 2 1 500px;
     font-size: 1.1rem;
 }

@@ -14,12 +14,48 @@ and open the template in the editor.
 	padding: 10px 20px;
 	text-align:center;
         background-color: $color1;
+        
+	}
+        
+.menu-footer-menu-container {
+        
         ul {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            text-align: left;
             list-style-type: none;
             padding: 0;
             margin: 0;
+            
+            li {
+                flex: 1 0 150px;
+                text-transform:uppercase;
+                font-size:10pt;
+                font-family: akzSemiBold;
+                margin: 0 10px 15px 10px;
+                max-width: 150px;
+                display: block;
+                padding-top: 5px;
+                border-top: 2.0px solid $mywhite;
+                ul {
+                    display: list-item;
+                    padding-top: 10px;
+                    li {
+                        font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+                        margin-bottom:5px;
+                        font-size:10pt;
+                        padding: 0 0 0 5px;
+                        border-top: 0;
+                        text-transform: none;
+                        border-right: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+            
         }
-	}
+}
 
 .footer p {
 	text-align: center;
@@ -28,55 +64,12 @@ and open the template in the editor.
 
 .footer a, .footer a:visited, .footer a:hover { color:#fff;}
 
-.footitem {
-	text-align:left;
-	vertical-align:top;
-	display:inline-block;
-	border-top: 2.0px solid #fff;
-	width:150px;
-	padding: 10px 5px 15px 5px;
-	margin: 10px;
-}
-
 .footleft {
 	position:relative;
 	float:left;
 	width:90px;
 	background-color: $color1;
         background-color: rgba(0,43,85,0.7);
-}
-
-.footitem ul, .footitem li {
-	margin-bottom:5px;
-	font-size:10pt;
-	padding: 0 0 0 5px;
-}
-
-
-.footitem ul li a, .footitem ul li a:visited {
-	color:#fff;
-	text-decoration: none;
-}
-
-.footitem ul li ul li a, .footitem ul li ul li a:visited {
-	color:#fff;
-	margin-left:-20px;
-	padding: 0 0 0 0;
-}
-
-.footitemfirst {
-	text-transform:uppercase;
-	font-size:10pt;
-	font-face: akzRoman;
-        font-weight: bold;
-	color:#fff;
-	margin-bottom:15px;
-	
-}
-
-
-.footitemsub {
-	display:inline-block;
 }
 
 
@@ -91,13 +84,14 @@ padding: 0 30px 0 0;
 .socialfoot {
     font-size: 1.8rem;
 }
-@media only screen and (max-width: 767px) { 
-.footitem { display:none }
+
+.footmobi {
+    display: none;
 }
 
-.footmobi { display:none }
-
 @media only screen and (max-width: 767px) { 
+.menu-footer-menu-container { display:none }
+
 .footmobi { 
 	display:block;
 	font-size:16pt;

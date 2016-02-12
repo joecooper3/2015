@@ -23,7 +23,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?></h1>
         </header><!-- .entry-header --></div>
-	<div class="entry-content-about">
+	<div class="entry-content-resources">
             <div class="resc-bgimage"></div>
 		<?php the_content(); ?>
 		<?php

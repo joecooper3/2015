@@ -1738,10 +1738,48 @@ and open the template in the editor.
   text-align: center;
   background-color: #002B55;
 }
-.footer ul {
+
+.menu-footer-menu-container ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.menu-footer-menu-container ul li {
+  -webkit-flex: 1 0 150px;
+      -ms-flex: 1 0 150px;
+          flex: 1 0 150px;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-family: akzSemiBold;
+  margin: 0 10px 15px 10px;
+  max-width: 150px;
+  display: block;
+  padding-top: 5px;
+  border-top: 2px solid #fdfdfd;
+}
+.menu-footer-menu-container ul li ul {
+  display: list-item;
+  padding-top: 10px;
+}
+.menu-footer-menu-container ul li ul li {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  margin-bottom: 5px;
+  font-size: 10pt;
+  padding: 0 0 0 5px;
+  border-top: 0;
+  text-transform: none;
+  border-right: 0;
+  margin-right: 0;
 }
 
 .footer p {
@@ -1753,52 +1791,12 @@ and open the template in the editor.
   color: #fff;
 }
 
-.footitem {
-  text-align: left;
-  vertical-align: top;
-  display: inline-block;
-  border-top: 2.0px solid #fff;
-  width: 150px;
-  padding: 10px 5px 15px 5px;
-  margin: 10px;
-}
-
 .footleft {
   position: relative;
   float: left;
   width: 90px;
   background-color: #002B55;
   background-color: rgba(0, 43, 85, 0.7);
-}
-
-.footitem ul, .footitem li {
-  margin-bottom: 5px;
-  font-size: 10pt;
-  padding: 0 0 0 5px;
-}
-
-.footitem ul li a, .footitem ul li a:visited {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footitem ul li ul li a, .footitem ul li ul li a:visited {
-  color: #fff;
-  margin-left: -20px;
-  padding: 0 0 0 0;
-}
-
-.footitemfirst {
-  text-transform: uppercase;
-  font-size: 10pt;
-  font-face: akzRoman;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-.footitemsub {
-  display: inline-block;
 }
 
 .footright {
@@ -1813,16 +1811,15 @@ and open the template in the editor.
   font-size: 1.8rem;
 }
 
-@media only screen and (max-width: 767px) {
-  .footitem {
-    display: none;
-  }
-}
 .footmobi {
   display: none;
 }
 
 @media only screen and (max-width: 767px) {
+  .menu-footer-menu-container {
+    display: none;
+  }
+
   .footmobi {
     display: block;
     font-size: 16pt;
@@ -2489,12 +2486,22 @@ tbody.collapse.in {
   color: #fdfdfd;
 }
 .donatebutton:hover {
-  opacity: 0.75;
+  background-color: #194D7F;
   color: #fdfdfd;
   box-shadow: none;
 }
 
 .largerfont {
   margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.entry-content-resources {
+  background-color: #fdfdfd;
+  padding: 0 50px;
+  max-width: 900px;
+  -webkit-flex: 2 1 500px;
+      -ms-flex: 2 1 500px;
+          flex: 2 1 500px;
   font-size: 1.1rem;
 }
