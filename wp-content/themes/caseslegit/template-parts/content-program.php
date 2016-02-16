@@ -15,9 +15,9 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </header><!-- .entry-header --></div>
-
-	<div class="entry-content-prog">Test test test
-		<?php the_content(); ?>
+<div class="entry-content-serv">
+	<div class="entry-content-prog">
+            <?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'caseslegit' ),
@@ -25,7 +25,10 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 			) );
 		?>
 	</div><!-- .entry-content -->
-
+        <div class="sidebar-about">Only one can win
+</div>
+</div>
+    
 	<footer class="entry-footer">
 		<?php edit_post_link( esc_html__( 'Edit', 'caseslegit' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
