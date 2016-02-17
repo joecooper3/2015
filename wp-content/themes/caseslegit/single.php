@@ -12,9 +12,10 @@ get_header(); ?>
         <div class="article-whole">
             
                 <?php while (have_posts()) : the_post(); ?>
+            
 
                     <?php get_template_part('template-parts/content', 'single'); ?>
-
+<?php if(function_exists('wp_print')) { print_link(); } ?>
                     <?php the_post_navigation(); ?>
 
                     <?php

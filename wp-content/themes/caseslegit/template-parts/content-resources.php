@@ -25,7 +25,8 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
         </header><!-- .entry-header --></div>
 	<div class="entry-content-resources">
             <div class="resc-bgimage"></div>
-		<?php the_content(); ?>
+		<?php if(function_exists('wp_print')) { print_link(); } ?>
+                <?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'caseslegit' ),

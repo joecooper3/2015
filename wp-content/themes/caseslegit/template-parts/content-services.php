@@ -28,7 +28,7 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?> Services</h1>
         </header><!-- .entry-header --></div>
-
+<?php if(function_exists('wp_print')) { print_link(); } ?>
 	<div class="entry-content-serv">
          <div class="serv-body">
             <!-- <h2><?php echo $src_s[0] ?></h2>-->
