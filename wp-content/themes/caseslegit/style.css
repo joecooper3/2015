@@ -2101,6 +2101,51 @@ and open the template in the editor.
   font-family: akzSemiBold;
 }
 
+/* Related Programs Widget */
+#intelliwidget-4 {
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intelliwidget4-title {
+  font-family: akzRoman;
+  font-size: 1.0rem;
+  padding: 5px 0 0 0;
+}
+
+.intelliwidget4-container {
+  -webkit-flex: 1 0 200px;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+  max-width: 200px;
+  margin: 0px 20px 10px 20px;
+  padding: 0 20px 0 20px;
+  border: 1.0px solid #ccc;
+}
+
+.relprog-title {
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  font-family: akzMed;
+  font-size: 1.2rem;
+  margin: 20px 0px;
+  padding: 0 0 5px 0;
+  color: #002B55;
+  border-bottom: 1.0px solid #aaa;
+}
+
+/* Responsive queries etc etc */
 @media all and (max-width: 1000px) {
   .serv-body {
     max-width: 1000px;
