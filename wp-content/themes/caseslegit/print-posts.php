@@ -45,7 +45,7 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 ?>
     <style type="text/css" media="screen">
         .serv-bgimage { 
-         background: url(<?php echo $src[0]; ?>); 
+         background: url(<?php echo $src_m; ?>); 
          background-size: cover; 
          background-position: center;
          width: 600px;
@@ -76,11 +76,10 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 		</header>	
 
 		<div class="entry-content">
-<div class="serv-bgimage"></div>
 			<?php print_content(); ?>
 
 		</div>
-    
+    <div class="print-image"><img src="<?php echo $src_xs[0]; ?>" /></div>
                     <?php if( get_field('the_challenge') ): ?>
 <div class="entry-content-serv">
     
