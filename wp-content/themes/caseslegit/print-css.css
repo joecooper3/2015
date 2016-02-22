@@ -184,3 +184,7 @@ pre {
   color: #002B55;
   font-family: akzSemiBold;
 }
+.print-image {
+    margin: 0 auto;
+    width: 400px;
+}
