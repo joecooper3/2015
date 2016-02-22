@@ -44,7 +44,9 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
             <p><?php the_field('outcomes') ?></p></div>
              <div class="outcomes-infographic infogbox">
             <?php the_field('outcomes_infographic') ?></div>	
+         <?php get_sidebar('relprog'); ?>
          </div>
+            
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'caseslegit' ),
