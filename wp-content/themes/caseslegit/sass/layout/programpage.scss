@@ -30,15 +30,31 @@ and open the template in the editor.
 }
 
 .progContainer {
-    display:flex;
     width:100%;
-    margin: 20px 0 0 0;
+    margin: 0px 0 0 0;
    justify-content: center;
+   
+   .content-area {
+       box-sizing: content-box;
+   }
+   .entry-content-serv {
+       flex-flow: row wrap;
+       justify-content: center;
+       
+   }
+   .sidebar-about {
+       margin: 0;
+   }
+   .entry-title {
+       box-sizing: border-box;
+   }
 }
 .entry-content-prog {
-    margin: 0 auto;
-    padding: 20px 50px;
-    max-width: 900px;
+    
+    padding: 50px;
+    flex: 2 0 800px;
+    max-width: 700px;
+    
 }
 .leadimage-container4 {
     display: block;
@@ -55,5 +71,45 @@ and open the template in the editor.
         bottom: 0px;
         color: $mywhite;
         background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    }
+}
+.sidebar-program {
+    flex: 1 0 250px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 0;
+    aside {
+        font-family:akzRoman;
+        font-size:0.85rem;
+        padding: 40px 10px 0px 10px;
+        border-bottom: 3.0px solid #ddd;
+        flex: 1 0 250px;
+        em {
+            font-family: akzSemiBold;
+            font-style: normal;
+        }
+        li {
+            padding-right:0;
+        }  
+        img {
+            padding-top: 10px;
+        }
+    }
+}
+
+@media all and (max-width: 1140px) {
+    .sidebar-program {
+        flex: 2 0 800px;
+        justify-content: space-around;
+    }
+    .progContainer {
+        .sidebar-about {
+            max-width: 800px;
+            aside {
+                max-width: 250px;
+            }
+        }
     }
 }

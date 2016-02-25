@@ -1828,16 +1828,28 @@ and open the template in the editor.
 }
 
 .progContainer {
-  display: flex;
   width: 100%;
-  margin: 20px 0 0 0;
+  margin: 0px 0 0 0;
   justify-content: center;
+}
+.progContainer .content-area {
+  box-sizing: content-box;
+}
+.progContainer .entry-content-serv {
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.progContainer .sidebar-about {
+  margin: 0;
+}
+.progContainer .entry-title {
+  box-sizing: border-box;
 }
 
 .entry-content-prog {
-  margin: 0 auto;
-  padding: 20px 50px;
-  max-width: 900px;
+  padding: 50px;
+  flex: 2 0 800px;
+  max-width: 700px;
 }
 
 .leadimage-container4 {
@@ -1858,6 +1870,45 @@ and open the template in the editor.
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
+.sidebar-program {
+  flex: 1 0 250px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0;
+}
+.sidebar-program aside {
+  font-family: akzRoman;
+  font-size: 0.85rem;
+  padding: 40px 10px 0px 10px;
+  border-bottom: 3.0px solid #ddd;
+  flex: 1 0 250px;
+}
+.sidebar-program aside em {
+  font-family: akzSemiBold;
+  font-style: normal;
+}
+.sidebar-program aside li {
+  padding-right: 0;
+}
+.sidebar-program aside img {
+  padding-top: 10px;
+}
+
+@media all and (max-width: 1140px) {
+  .sidebar-program {
+    flex: 2 0 800px;
+    justify-content: space-around;
+  }
+
+  .progContainer .sidebar-about {
+    max-width: 800px;
+  }
+  .progContainer .sidebar-about aside {
+    max-width: 250px;
+  }
+}
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -1871,6 +1922,18 @@ and open the template in the editor.
   display: flex;
   width: 100%;
   height: auto;
+}
+
+.asidetitle {
+  font-family: akzSemiBold;
+  display: block;
+  text-align: left;
+  color: #002B55;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #002B55;
 }
 
 .serv-body {
@@ -1897,17 +1960,6 @@ and open the template in the editor.
 }
 .serv-body aside li {
   padding-right: 0;
-}
-.serv-body .asidetitle {
-  font-family: akzSemiBold;
-  display: block;
-  text-align: left;
-  color: #002B55;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #002B55;
 }
 .serv-body .bodybox {
   flex: 2 0 auto;
@@ -1962,9 +2014,15 @@ and open the template in the editor.
 .intelliwidget4-container {
   flex: 1 0 200px;
   max-width: 200px;
+  color: #002B55;
   margin: 0px 20px 10px 20px;
   padding: 0 20px 0 20px;
   border: 1.0px solid #ccc;
+  transition: all 0.7s ease 0s;
+}
+.intelliwidget4-container:hover {
+  background-color: #eee;
+  box-shadow: none;
 }
 
 .relprog-title {
@@ -1974,7 +2032,14 @@ and open the template in the editor.
   margin: 20px 0px;
   padding: 0 0 5px 0;
   color: #002B55;
-  border-bottom: 1.0px solid #aaa;
+}
+
+.relprog-line {
+  background-color: #aaa;
+  height: 1px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 8px;
 }
 
 /* Responsive queries etc etc */
