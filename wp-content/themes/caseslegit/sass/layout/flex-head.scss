@@ -12,7 +12,8 @@ and open the template in the editor.
 }
 #responsiveCheck {
     display: none;
-    content: "L";
+    content: 'L';
+    width: 51px;
 }
 
 #masthead {
@@ -171,7 +172,7 @@ input[type="search"] {
         flex-flow: column wrap;
     }
 
-    #responsiveCheck { content: "S"; }
+    #responsiveCheck { content: 'S'; width: 50px; }
 
     /* Baby Navigation */
 

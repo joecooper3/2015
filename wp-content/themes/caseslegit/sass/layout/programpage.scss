@@ -54,6 +54,12 @@ and open the template in the editor.
     padding: 50px;
     flex: 2 0 800px;
     max-width: 700px;
+    ul {
+        margin: 0;
+    }
+    li {
+        margin-bottom: 15px;
+    }
     
 }
 .leadimage-container4 {
@@ -96,6 +102,12 @@ and open the template in the editor.
         img {
             padding-top: 10px;
         }
+        .phonenumber {
+            text-align: center;
+            font-family: akzSemiBold;
+            color: $color1;
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -111,5 +123,22 @@ and open the template in the editor.
                 max-width: 250px;
             }
         }
+    }
+}
+@media all and (max-width: 800px) {
+    .progContainer {
+        .entry-content-serv {
+            
+            box-sizing: border-box;
+        }
+    }
+    
+    .entry-content-prog {
+        flex: 2 0 100%;
+    }
+}
+@media all and (max-width: 500px) {
+    .entry-content-prog {
+        padding: 10px 20px;
     }
 }

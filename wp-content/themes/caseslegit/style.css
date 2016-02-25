@@ -894,7 +894,8 @@ and open the template in the editor.
 
 #responsiveCheck {
   display: none;
-  content: "L";
+  content: 'L';
+  width: 51px;
 }
 
 #masthead {
@@ -1115,7 +1116,8 @@ input[type="search"] {
   }
 
   #responsiveCheck {
-    content: "S";
+    content: 'S';
+    width: 50px;
   }
 
   /* Baby Navigation */
@@ -2010,6 +2012,12 @@ and open the template in the editor.
           flex: 2 0 800px;
   max-width: 700px;
 }
+.entry-content-prog ul {
+  margin: 0;
+}
+.entry-content-prog li {
+  margin-bottom: 15px;
+}
 
 .leadimage-container4 {
   display: block;
@@ -2066,6 +2074,12 @@ and open the template in the editor.
 .sidebar-program aside img {
   padding-top: 10px;
 }
+.sidebar-program aside .phonenumber {
+  text-align: center;
+  font-family: akzSemiBold;
+  color: #002B55;
+  font-size: 1.2rem;
+}
 
 @media all and (max-width: 1140px) {
   .sidebar-program {
@@ -2082,6 +2096,22 @@ and open the template in the editor.
   }
   .progContainer .sidebar-about aside {
     max-width: 250px;
+  }
+}
+@media all and (max-width: 800px) {
+  .progContainer .entry-content-serv {
+    box-sizing: border-box;
+  }
+
+  .entry-content-prog {
+    -webkit-flex: 2 0 100%;
+        -ms-flex: 2 0 100%;
+            flex: 2 0 100%;
+  }
+}
+@media all and (max-width: 500px) {
+  .entry-content-prog {
+    padding: 10px 20px;
   }
 }
 /*
@@ -2241,6 +2271,10 @@ and open the template in the editor.
   width: 300px;
   margin: 0 auto;
   margin-top: 8px;
+}
+
+.refbutton {
+  text-align: center;
 }
 
 /* Responsive queries etc etc */
@@ -2632,6 +2666,10 @@ tbody.collapse.in {
   background-color: #194D7F;
   color: #fdfdfd;
   box-shadow: none;
+}
+
+.caldera-grid .donatebutton {
+  color: #fdfdfd;
 }
 
 .largerfont {

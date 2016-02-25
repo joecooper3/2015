@@ -3,41 +3,41 @@
  * you're looking at this source and want to steal
  * it, that's fine. Give me a hat-tip in the comments if you want.
  */
-jQuery(document).ready(function ($) {
 
 //This function only triggers if a breakpoint is reached
     var resValue, resChange;
     resChange = function () {
-        if ($("#responsiveCheck").css("content") !== resValue) {
+        if (jQuery("#responsiveCheck").css("width") !== resValue) {
             //The below represents the menu on larger screens. Make sure it comes back up.
-            if ($("#responsiveCheck").css("content") === '"L"') {
-                $(".main-navigation").find("ul").css("display", "block");
+            if (jQuery("#responsiveCheck").css("width") === '51px') {
+                jQuery(".main-navigation").find("ul").css("display", "block");
+                console.log('I did it');
                
             }
             else {
                 //This one's for the mobile screens. Hide the menu, which is now a column.
-                $(".main-navigation").find("ul").css("display", "none");
+                jQuery(".main-navigation").find("ul").css("display", "none");
+                	console.log('gone 3 gar');
             }
-            resValue = $("#responsiveCheck").css("content");
+            resValue = jQuery("#responsiveCheck").css("width");
+            console.log(resValue);
         }
 
     };
     //Displays new column menu on button click
-    $(".menu-toggle").click(function () {
-        $("#primary-menu").slideToggle("fast");
+    jQuery(".menu-toggle").click(function () {
+        jQuery("#primary-menu").slideToggle("fast");
     });
     
     //First sub-menu clicks
-    $("#primary-menu").children('li').find('a').click(function () {
-        $(this).siblings(".sub-menu").slideToggle("fast");
+    jQuery("#primary-menu").children('li').find('a').click(function () {
+        jQuery(this).siblings(".sub-menu").slideToggle("fast");
     });
     
     // run test on initial page load
     resChange();
 
     // run test on resize of the window
-    $(window).resize(resChange);
+    jQuery(window).resize(resChange);
 
 
-
-});

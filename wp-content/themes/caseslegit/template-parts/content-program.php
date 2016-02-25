@@ -30,7 +30,12 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
             <aside>
                 <?php if( get_field('box1') ): ?>
                 <span class="asidetitle"><?php the_field('box1_title') ?></span>
-            <?php the_field('box1') ?></aside>
+            <?php the_field('box1') ?>
+                <?php if( get_field('referral_form_shortcode') ): ?>
+                <?php $dotheref = get_field("referral_form_shortcode"); ?>
+            <?php echo do_shortcode($dotheref); ?>
+                <?php endif; ?>
+            </aside>
                 <?php endif; ?>
             <?php if( get_field('box2') ): ?>
             <aside>
