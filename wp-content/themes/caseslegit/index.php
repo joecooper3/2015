@@ -31,7 +31,7 @@ get_header();
             <div class="locat-container">
                 <div class="locat-square sq2">
                     <div class="locat-shade">
-                        <a class="hvr-underline-from-center" href="#!">Clinic</a>
+                        <a class="hvr-underline-from-center" href="http://localhost/2015/?page_id=1014">Clinic</a>
                     </div></div>
                 <div class="locat-caption">
                     an effective pathway to recovery
@@ -39,7 +39,7 @@ get_header();
             </div>
             <div class="locat-container">
                 <div class="locat-square sq3"> <div class="locat-shade">
-                        <a class="hvr-underline-from-center" href="#!">Community</a>
+                        <a class="hvr-underline-from-center" href="http://localhost/2015/?page_id=882">Community</a>
                     </div>
                 </div>
                 <div class="locat-caption">
