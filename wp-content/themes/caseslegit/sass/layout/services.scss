@@ -160,6 +160,27 @@ and open the template in the editor.
     text-align: center;
 }
 
+.clinictable {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    
+    .clinicitem {
+        flex: 1;
+        margin: 0 40px;
+        padding: 0 10px;
+        img {
+            width: 100%;
+        }
+        h5 {
+            font-family: akzSemiBold;
+        }
+    }
+}
+
 /* Responsive queries etc etc */
 
 @media all and (max-width: 1000px) {

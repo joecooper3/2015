@@ -28,9 +28,17 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?></h1>
         </header><!-- .entry-header --></div>
-<?php if(function_exists('wp_print')) { print_link(); } ?>
+
+    
     <div class="progContainer">
+        
         <div class="entry-content-serv">
+            <div class="social-media-container">
+            <div class="social-item"><?php if(function_exists('wp_print')) { print_link(); } ?></div>
+            <div class="social-item"><i class="fa fa-facebook-square"></i></div>
+            <div class="social-item"><a href="http://twitter.com/share?text=The+Nathaniel+Clinic&url=http://www.cases.org">
+                    <i class="fa fa-twitter"></i></a></div>
+        </div>
          <div class="entry-content-prog">
             <?php the_content(); ?>	
          

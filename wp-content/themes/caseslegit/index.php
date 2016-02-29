@@ -63,7 +63,7 @@ get_header();
                 change&mdash;regardless of past choices, present struggles, or future obstacles.
                 We specialize in providing alternatives to incarceration and re-entry services to New York City's
                 most vulnerable populations, including at-risk youth and persons with behavioral health needs.</p>
-            <p>You guys have any idea what's going on with Rikers right now? Check this infographic:</p>
+            
             <ul class="nav nav-tabs">
                 <li class="active">
                     <a href="#who" aria-controls="who" role="tab" data-toggle="tab">Who We Serve</a> </li>
@@ -151,9 +151,7 @@ get_header();
                     </div>
                 
             </div>  </div>
-            <p>Alright, so, as I said, sign up for our mailing list probably. Or donate. 
-                Anything like that. Still filling space. I should maybe try to construct some longer sentences&mdash;I'm 
-                sure we will not be quite as pithy with the final copy.
+            <!-- Text after infographics, if we want it -->
         </div> </div>
         <div id="newsstories">
             <div id='subnewsstories'><span class="latestnews">Latest News</span>

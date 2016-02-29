@@ -96,6 +96,10 @@ and open the template in the editor.
             font-family: akzSemiBold;
             font-style: normal;
         }
+        ul {
+            margin:15px 0 20px 0;
+            
+        }
         li {
             padding-right:0;
         }  
@@ -107,7 +111,36 @@ and open the template in the editor.
             font-family: akzSemiBold;
             color: $color1;
             font-size: 1.2rem;
+            .progname {
+                font-family: akzRoman;
+                font-size: 1.0rem;
+                color: $color2;
+            }
         }
+    }
+}
+
+.cepref {
+    padding: 0 0 0 10px;
+    list-style-type: none;
+    li {
+        padding-bottom: 9px;
+    }
+    ul {
+                padding-left: 20px;
+                font-size: 0.65rem;
+                
+                
+            }
+}
+.cepcontact {
+    font-family: akzRoman;
+    text-size: 0.7rem;
+    color: $color1;
+    list-style-type: none;
+    padding-left: 15px;
+    strong {
+        font-family: akzSemiBold;
     }
 }
 

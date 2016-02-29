@@ -117,7 +117,7 @@ function print_link($print_post_text = '', $print_page_text = '', $echo = true) 
             break;
         // Text Link Only
         case 3:
-            $output = '<a href="'.$print_link.'" title="'.$print_text.'" rel="nofollow">'.$print_text.'</a>';
+            $output = '<a href="'.$print_link.'" title="'.$print_text.'" rel="nofollow"><i class="fa fa-print"></i></a>';
             break;
         case 4:
             $print_html = str_replace("%PRINT_URL%", $print_link, $print_html);

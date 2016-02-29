@@ -1897,6 +1897,9 @@ and open the template in the editor.
   font-family: akzSemiBold;
   font-style: normal;
 }
+.sidebar-program aside ul {
+  margin: 15px 0 20px 0;
+}
 .sidebar-program aside li {
   padding-right: 0;
 }
@@ -1908,6 +1911,34 @@ and open the template in the editor.
   font-family: akzSemiBold;
   color: #002B55;
   font-size: 1.2rem;
+}
+.sidebar-program aside .phonenumber .progname {
+  font-family: akzRoman;
+  font-size: 1.0rem;
+  color: #060461;
+}
+
+.cepref {
+  padding: 0 0 0 10px;
+  list-style-type: none;
+}
+.cepref li {
+  padding-bottom: 9px;
+}
+.cepref ul {
+  padding-left: 20px;
+  font-size: 0.65rem;
+}
+
+.cepcontact {
+  font-family: akzRoman;
+  text-size: 0.7rem;
+  color: #002B55;
+  list-style-type: none;
+  padding-left: 15px;
+}
+.cepcontact strong {
+  font-family: akzSemiBold;
 }
 
 @media all and (max-width: 1140px) {
@@ -2072,6 +2103,26 @@ and open the template in the editor.
 
 .refbutton {
   text-align: center;
+}
+
+.clinictable {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.clinictable .clinicitem {
+  flex: 1;
+  margin: 0 40px;
+  padding: 0 10px;
+}
+.clinictable .clinicitem img {
+  width: 100%;
+}
+.clinictable .clinicitem h5 {
+  font-family: akzSemiBold;
 }
 
 /* Responsive queries etc etc */
@@ -2470,4 +2521,50 @@ tbody.collapse.in {
   max-width: 900px;
   flex: 2 1 500px;
   font-size: 1.1rem;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 27, 2016, 12:43:59 PM
+    Author     : coopers
+*/
+.social-media-container {
+  left: 0;
+  top: 0;
+  position: relative;
+  padding-top: 125px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: flex-start;
+}
+
+.social-item {
+  flex: 1 0 0px;
+  text-align: center;
+  border: 1.0px solid #eee;
+  margin: 2px;
+}
+.social-item .fa {
+  font-size: 1.85rem;
+  padding: 7px 7px;
+  transition: 0.4s ease;
+}
+
+@media all and (max-width: 750px) {
+  .social-media-container {
+    flex-flow: row wrap;
+    padding-top: 25px;
+  }
+
+  .social-item {
+    border: 0;
+  }
+
+  .entry-content-prog {
+    padding-top: 10px;
+  }
 }
