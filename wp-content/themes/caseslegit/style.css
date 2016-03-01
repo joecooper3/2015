@@ -2746,6 +2746,47 @@ tbody.collapse.in {
   font-size: 1.1rem;
 }
 
+.directory {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.directory .dir-col {
+  -webkit-flex: 1 300px;
+      -ms-flex: 1 300px;
+          flex: 1 300px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.directory .dir-col .dir-item {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.directory strong {
+  font-family: akzMed;
+  color: #002B55;
+  padding-top: 0.9em;
+}
+.directory p {
+  font-size: 1.0rem;
+  margin-bottom: 0.8em;
+}
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates

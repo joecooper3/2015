@@ -204,3 +204,28 @@ tbody.collapse.in {
     flex: 2 1 500px;
     font-size: 1.1rem;
 }
+
+.directory {
+    display:flex; 
+    width:100%;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    .dir-col {
+        flex: 1 300px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        .dir-item {
+            flex: 1
+        }
+    }
+    strong {
+                font-family: akzMed;
+                color: $color1;
+                padding-top: 0.9em;
+            }
+            p {
+                font-size: 1.0rem;
+                margin-bottom: 0.8em;
+            }
+}

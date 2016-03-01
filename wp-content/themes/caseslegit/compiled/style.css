@@ -2523,6 +2523,31 @@ tbody.collapse.in {
   font-size: 1.1rem;
 }
 
+.directory {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+.directory .dir-col {
+  flex: 1 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+.directory .dir-col .dir-item {
+  flex: 1;
+}
+.directory strong {
+  font-family: akzMed;
+  color: #002B55;
+  padding-top: 0.9em;
+}
+.directory p {
+  font-size: 1.0rem;
+  margin-bottom: 0.8em;
+}
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
