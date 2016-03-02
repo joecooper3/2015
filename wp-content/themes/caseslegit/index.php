@@ -31,7 +31,7 @@ get_header();
             <div class="locat-container">
                 <div class="locat-square sq2">
                     <div class="locat-shade">
-                        <a class="hvr-underline-from-center" href="http://localhost/2015/?page_id=1014">Clinic</a>
+                        <a class="hvr-underline-from-center" href="?page_id=1014">Clinic</a>
                     </div></div>
                 <div class="locat-caption">
                     an effective pathway to recovery
@@ -39,7 +39,7 @@ get_header();
             </div>
             <div class="locat-container">
                 <div class="locat-square sq3"> <div class="locat-shade">
-                        <a class="hvr-underline-from-center" href="http://localhost/2015/?page_id=882">Community</a>
+                        <a class="hvr-underline-from-center" href="?page_id=882">Community</a>
                     </div>
                 </div>
                 <div class="locat-caption">
@@ -50,7 +50,7 @@ get_header();
         
         <div id="bonusbuttons">
             <p><a href="?page_id=849"> Referrals <i class="fa fa-arrow-right"></i></a>
-                <a href="#">The Nathaniel Clinic <i class="fa fa-arrow-right"></i></a></p>
+                <a href="?page_id=1014">The Nathaniel Clinic <i class="fa fa-arrow-right"></i></a></p>
         </div> </main>
     
     <div id="bigboycontainer">
@@ -83,7 +83,7 @@ get_header();
                         wp-content/themes/caseslegit/images/raceinfo-xl.png 3800w"
                         alt="I just want one night"></div>
                     <div class="infog-link">
-                        <p><a href="#">Read more about CASES' youth programs <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="?page_id=691">Read more about CASES' youth programs <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                     <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/mentalinfo-m.png" 
@@ -94,7 +94,7 @@ get_header();
                         wp-content/themes/caseslegit/images/mentalinfo-xl.png 3800w"
                         alt="I just want one night"></div>
                     <div class="infog-link">
-                        <p><a href="#">Read more about CASES' behavioral health programs <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="?page_id=675">Read more about CASES' behavioral health programs <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                 
             </div> </div>
@@ -147,7 +147,7 @@ get_header();
                         wp-content/themes/caseslegit/images/youthrecid-xl.png 3800w"
                         alt="I just want one night"></div>
                     <div class="infog-link">
-                        <p><a href="#">Read more about how CASES keeps its participants in the community <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="?page_id=882">Read more about how CASES keeps its participants in the community <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                 
             </div>  </div>
