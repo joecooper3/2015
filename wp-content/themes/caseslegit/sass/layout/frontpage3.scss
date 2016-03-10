@@ -398,13 +398,14 @@ $sqlength: 300px;
     
     #maininfo {
         order: 1;
-        flex: 1 0 100%;
+        flex: 1;
         margin: 25px 0 25px 0;
         padding: 25px 25px;
     }
     
     #newsstories {
         order: 2;
+        flex: 1;
         padding: 20px 50px 0 50px;
         margin: 0 0 25px 0;
     }
