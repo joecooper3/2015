@@ -2338,6 +2338,9 @@ and open the template in the editor.
   max-width: 1200px;
   flex: 2 1 500px;
   display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
 }
 
 /* I'm the idiotic way Wordpress makes everything a paragraph */
