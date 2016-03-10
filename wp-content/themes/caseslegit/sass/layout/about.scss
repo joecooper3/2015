@@ -107,6 +107,60 @@ and open the template in the editor.
     margin: 0 30px 0 0;
 }
 
+.keystaff-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    .keystaff-item {
+        flex: 1 0 175px;
+        max-width: 175px;
+        height: 175px;
+        margin: 3px;
+        position: relative;
+        box-sizing: border-box;
+        background-position: center; 
+        background-size: cover;
+        .keystaff-shade {
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: rgba(0,43,85,0.7);
+            color: $mywhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        .keystaff-portrait {
+            width:100%;
+        }
+    }
+    .joel {
+            background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
+        }
+        .joe {
+            background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
+        }
+}
+
+.keystaff-words {
+    padding-top: 30px;
+    max-width: 800px;
+}
+
+.entry-content-keystaff {
+    background-color: $mywhite;
+    padding: 0 50px;
+    max-width: 1200px;
+    flex: 2 1 500px;
+    display: flex;
+}
+
 /* I'm the idiotic way Wordpress makes everything a paragraph */
 
 .thankswp {
