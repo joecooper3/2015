@@ -28,7 +28,7 @@ and open the template in the editor.
 .serv-body {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding-top: 20px;
@@ -194,7 +194,6 @@ and open the template in the editor.
     }   
     .infogbox {
         flex: 1 0 100%;
-        margin: 50px 100px;
         align-self: center;
     }
 }

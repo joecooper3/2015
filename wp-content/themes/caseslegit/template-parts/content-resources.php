@@ -23,9 +23,14 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?></h1>
         </header><!-- .entry-header --></div>
+    <div class="social-media-container">
+            <div class="social-item"><?php if(function_exists('wp_print')) { print_link(); } ?></div>
+            <div class="social-item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook-square"></i></a></div>
+            <div class="social-item"><a href="http://twitter.com/share?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>">
+                    <i class="fa fa-twitter"></i></a></div>
+        </div>
 	<div class="entry-content-resources">
             <div class="resc-bgimage"></div>
-		<?php if(function_exists('wp_print')) { print_link(); } ?>
                 <?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

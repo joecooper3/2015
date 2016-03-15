@@ -109,10 +109,6 @@ and open the template in the editor.
 
 .keystaff-grid {
     display: flex;
-<<<<<<< HEAD
-    flex-flow: row nowrap;
-}
-=======
     flex-flow: row wrap;
     align-items: center;
     .keystaff-item {
@@ -145,10 +141,10 @@ and open the template in the editor.
         }
     }
     .joel {
-            background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
+            background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
         }
         .joe {
-            background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
+            background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
         }
 }
 
@@ -168,7 +164,7 @@ and open the template in the editor.
     justify-content: center;
 }
 
->>>>>>> origin/master
+
 /* I'm the idiotic way Wordpress makes everything a paragraph */
 
 .thankswp {

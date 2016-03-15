@@ -21,15 +21,29 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
         .serv-bgimage { 
          background: url(<?php echo $src[0]; ?>); 
          background-size: cover; 
-         background-position: center;
+         background-position: center; 
+       }
+        @media all and (max-width: 800px) {
+            .serv-bgimage {
+                background-image: url(<?php echo $src_s[0]; ?>);
+        }
+        @media all and (max-width: 400px) {
+            .serv-bgimage {
+                background-image: url(<?php echo $src_xs[0]; ?>);
         }
     </style>
     <div class="leadimage-container2 serv-bgimage">
+        
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?> Services</h1>
         </header><!-- .entry-header --></div>
-<?php if(function_exists('wp_print')) { print_link(); } ?>
 	<div class="entry-content-serv">
+            <div class="social-media-container">
+            <div class="social-item"><?php if(function_exists('wp_print')) { print_link(); } ?></div>
+            <div class="social-item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook-square"></i></a></div>
+            <div class="social-item"><a href="http://twitter.com/share?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>">
+                    <i class="fa fa-twitter"></i></a></div>
+        </div>
          <div class="serv-body">
             <!-- <h2><?php echo $src_s[0] ?></h2>-->
              <div class="challenge bodybox"><h2>The Challenge</h2>

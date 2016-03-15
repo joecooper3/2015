@@ -21,7 +21,16 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
         .serv-bgimage { 
          background: url(<?php echo $src[0]; ?>); 
          background-size: cover; 
-         background-position: center;
+         background-position: center; 
+       }
+        @media all and (max-width: 800px) {
+            .serv-bgimage {
+                background-image: url(<?php echo $src_s[0]; ?>);
+        }
+        @media all and (max-width: 400px) {
+            .serv-bgimage {
+                background-image: url(<?php echo $src_xs[0]; ?>);
+        }
         }
     </style>
     <div class="leadimage-container2 serv-bgimage">
@@ -35,8 +44,8 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
         <div class="entry-content-serv">
             <div class="social-media-container">
             <div class="social-item"><?php if(function_exists('wp_print')) { print_link(); } ?></div>
-            <div class="social-item"><i class="fa fa-facebook-square"></i></div>
-            <div class="social-item"><a href="http://twitter.com/share?text=The+Nathaniel+Clinic&url=http://www.cases.org">
+            <div class="social-item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook-square"></i></a></div>
+            <div class="social-item"><a href="http://twitter.com/share?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>">
                     <i class="fa fa-twitter"></i></a></div>
         </div>
          <div class="entry-content-prog">

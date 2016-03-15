@@ -165,6 +165,12 @@ $sqlength: 300px;
   right: 0;
 }
 
+.nav-previous {
+    font-family: akzBold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 /* This is just for the headings in the locat squares, because I'm dumb */
 @media all and (max-width: 1175px) {
     .locat-square {
@@ -254,6 +260,7 @@ $sqlength: 300px;
     padding: 0;
     background-color: $color1;
     background-color: rgba(0,43,85,0);
+
     /* box-shadow: 5px 5px 2px #888888; */
 }
 
@@ -262,6 +269,8 @@ $sqlength: 300px;
     background-color: $mywhite;
     margin: 25px 0 25px 12px;
     padding: 15px 25px 25px 25px;
+    max-width: 400px;
+    
     p {
         margin: 0;
         padding: 0;
@@ -394,6 +403,7 @@ $sqlength: 300px;
 @media all and (max-width: 955px) {
     #bigboycontainer {
         flex-flow: column wrap;
+        align-items: center;
     }
     
     #maininfo {

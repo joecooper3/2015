@@ -1314,6 +1314,12 @@ and open the template in the editor.
   right: 0;
 }
 
+.nav-previous {
+  font-family: akzBold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 /* This is just for the headings in the locat squares, because I'm dumb */
 @media all and (max-width: 1175px) {
   .locat-square {
@@ -1410,6 +1416,7 @@ and open the template in the editor.
   background-color: #fdfdfd;
   margin: 25px 0 25px 12px;
   padding: 15px 25px 25px 25px;
+  max-width: 400px;
 }
 #newsstories p {
   margin: 0;
@@ -1542,6 +1549,7 @@ and open the template in the editor.
 @media all and (max-width: 955px) {
   #bigboycontainer {
     flex-flow: column wrap;
+    align-items: center;
   }
 
   #maininfo {
@@ -1999,7 +2007,7 @@ and open the template in the editor.
 .serv-body {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding-top: 20px;
@@ -2139,7 +2147,6 @@ and open the template in the editor.
   }
   .serv-body .infogbox {
     flex: 1 0 100%;
-    margin: 50px 100px;
     align-self: center;
   }
 }
@@ -2289,9 +2296,6 @@ and open the template in the editor.
 
 .keystaff-grid {
   display: flex;
-<<<<<<< HEAD
-  flex-flow: row nowrap;
-=======
   flex-flow: row wrap;
   align-items: center;
 }
@@ -2325,10 +2329,10 @@ and open the template in the editor.
   width: 100%;
 }
 .keystaff-grid .joel {
-  background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
+  background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
 }
 .keystaff-grid .joe {
-  background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
+  background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
 }
 
 .keystaff-words {
@@ -2345,7 +2349,6 @@ and open the template in the editor.
   flex-flow: column nowrap;
   align-content: center;
   justify-content: center;
->>>>>>> origin/master
 }
 
 /* I'm the idiotic way Wordpress makes everything a paragraph */
@@ -2626,6 +2629,7 @@ and open the template in the editor.
   padding-top: 125px;
   display: flex;
   flex-flow: column nowrap;
+  margin: 0 10px 0 10px;
   align-self: flex-start;
 }
 

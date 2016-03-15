@@ -10,7 +10,35 @@
 <?php
 if ( $wp_query->current_post == 0 && !is_paged() & is_front_page() ): ?> 
 <a href="<?php echo post_permalink(get_the_ID()); ?>"> 
-    <?php echo simone_the_responsive_thumbnail(get_the_ID()); ?></a>
+    <?php
+$src_xs = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xs, false, '' );
+$src_s = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_s, false, '' );
+$src_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_m, false, '' );
+$src_l = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_l, false, '' );
+$src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl, false, '' );
+$news_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), news_m, false, '' );
+?>
+    <style type="text/css" media="screen">
+        .news-bgimage { 
+         background: url(<?php echo $news_m[0]; ?>); 
+         background-size: cover; 
+         height: 150px;
+         margin-bottom: 10px;
+         background-position: center; 
+         
+       }
+        @media all and (max-width: 800px) {
+            .news-bgimage {
+                background-image: url(<?php echo $src_s[0]; ?>);
+        }
+        @media all and (max-width: 400px) {
+            .news-bgimage {
+                background-image: url(<?php echo $src_xs[0]; ?>);
+        }
+        }
+    </style>
+    <div class="news-bgimage"></div>
+</a>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>

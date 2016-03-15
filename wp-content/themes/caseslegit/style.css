@@ -1405,6 +1405,12 @@ and open the template in the editor.
   right: 0;
 }
 
+.nav-previous {
+  font-family: akzBold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 /* This is just for the headings in the locat squares, because I'm dumb */
 @media all and (max-width: 1175px) {
   .locat-square {
@@ -1517,6 +1523,7 @@ and open the template in the editor.
   background-color: #fdfdfd;
   margin: 25px 0 25px 12px;
   padding: 15px 25px 25px 25px;
+  max-width: 400px;
 }
 #newsstories p {
   margin: 0;
@@ -1663,6 +1670,9 @@ and open the template in the editor.
     -webkit-flex-flow: column wrap;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   #maininfo {
@@ -2184,9 +2194,9 @@ and open the template in the editor.
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2356,7 +2366,6 @@ and open the template in the editor.
     -webkit-flex: 1 0 100%;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
-    margin: 50px 100px;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center;
@@ -2520,11 +2529,6 @@ and open the template in the editor.
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-=======
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -2570,10 +2574,10 @@ and open the template in the editor.
   width: 100%;
 }
 .keystaff-grid .joel {
-  background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
+  background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
 }
 .keystaff-grid .joe {
-  background-image: url("http://localhost/2015/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
+  background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
 }
 
 .keystaff-words {
@@ -2600,7 +2604,6 @@ and open the template in the editor.
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
->>>>>>> origin/master
 }
 
 /* I'm the idiotic way Wordpress makes everything a paragraph */
@@ -2897,6 +2900,7 @@ and open the template in the editor.
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  margin: 0 10px 0 10px;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
