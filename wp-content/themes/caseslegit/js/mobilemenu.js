@@ -11,16 +11,16 @@
             //The below represents the menu on larger screens. Make sure it comes back up.
             if (jQuery("#responsiveCheck").css("width") === '51px') {
                 jQuery(".main-navigation").find("ul").css("display", "block");
-                console.log('I did it');
+                
                
             }
             else {
                 //This one's for the mobile screens. Hide the menu, which is now a column.
                 jQuery(".main-navigation").find("ul").css("display", "none");
-                	console.log('gone 3 gar');
+                	
             }
             resValue = jQuery("#responsiveCheck").css("width");
-            console.log(resValue);
+            
         }
 
     };

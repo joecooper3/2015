@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 16, 2016, 11:57:25 AM
+    Author     : coopers
+*/
+
+.entry-content-referrals {
+    flex: 1 0 100%;
+    padding: 0 30px 0 30px;
+}
+
+.program-check {
+    padding: 8px;
+    font-family: akzMed;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border: 3.0px solid #e1e1e1;
+    text-align: center;
+    box-sizing: border-box;
+    &:hover {
+        background-color: #f3f3f3;
+    }
+    input {
+        opacity: 0;
+    }
+   &:after {
+    content: "";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    background: $mywhite;
+    border: 2px solid #ddd;
+    display: inline-block; 
+    width: 25px;
+    height: 25px;
+    margin-left: -10px;
+    font-size: 15px;
+    padding: 2px 0 0 0;
+    margin-right: 20px;
+    text-align: center;
+    vertical-align: middle;
+    }
+    .checkbox {
+        margin: 0;
+    }
+    
+    label:after {
+        clear: both;
+    }
+    img {
+        width: 90%;
+        padding-top: 20px;
+        max-height: 200px;
+        max-width: 150px;
+    }
+}
+
+.ref-selected {
+    border: 3.0px solid $color1 !important;
+    background-color: #f3f3f3 !important;
+}
+
+.ref-selected-box:after {
+        content: "\f00c" !important;
+        border: 2px solid $color1;
+        padding-top: 0px;
+}
