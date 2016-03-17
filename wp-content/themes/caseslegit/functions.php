@@ -184,6 +184,8 @@ function caseslegit_scripts() {
         
         wp_enqueue_style( 'caseslegit-hober', get_template_directory_uri() . '/hover.css' );
         
+        wp_enqueue_style( 'caseslegit-ref', get_template_directory_uri() . '/referrals.css' );
+        
         wp_enqueue_style( 'caseslegit-icons', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
 	/* wp_enqueue_script( 'caseslegit-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true ); */
@@ -197,6 +199,8 @@ function caseslegit_scripts() {
       wp_enqueue_script( 'caseslegit-mobile-nav', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20150624', true );
         
        wp_enqueue_script( 'caseslegit-mobile-nav2', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true );
+       
+       wp_enqueue_script( 'caseslegit-referrals', get_template_directory_uri() . '/js/referrals.js', array('jquery'), '20160316', true );
         
         wp_enqueue_script( 'my-picturefill', get_template_directory_uri() . '/js/picturefill.min.js', '20150710', false);
         
