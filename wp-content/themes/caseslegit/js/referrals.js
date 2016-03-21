@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-jQuery(function ($) {
+var referralChange;
+jQuery(function($) {
+referralChange = function () {
 $("input[type='checkbox']").change(function(){
     if($(this).is(":checked")){
         $(this).closest(".program-check").addClass("ref-selected"); 
@@ -16,4 +17,7 @@ $("input[type='checkbox']").change(function(){
         console.log("rollercoaster");
     }
 });
+};
+referralChange();
+$(".caldera-forms-conditional-field").bind("DOMSubtreeModified",referralChange);
 });
