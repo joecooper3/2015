@@ -2964,26 +2964,15 @@ and open the template in the editor.
 .program-check:hover {
   background-color: #f3f3f3;
 }
-.program-check input {
-  opacity: 0.3;
+.program-check input[type="checkbox"] {
+  display: none;
 }
-.program-check:after {
-  content: "";
-  font-family: 'FontAwesome';
-  position: absolute;
-  top: 15px;
-  left: 30px;
-  background: #fdfdfd;
-  border: 2px solid #ddd;
-  display: inline-block;
-  width: 25px;
+.program-check .custom-checkbox {
+  float: left;
   height: 25px;
-  margin-left: -10px;
-  font-size: 15px;
-  padding: 2px 0 0 0;
-  margin-right: 20px;
-  text-align: center;
-  vertical-align: middle;
+  width: 25px;
+  background: url("http://www.localhost/2015/wp-content/themes/caseslegit/images/checkoff.png");
+  margin: 0;
 }
 .program-check .checkbox {
   margin: 0;
@@ -2997,14 +2986,15 @@ and open the template in the editor.
   max-height: 200px;
   max-width: 150px;
 }
+.program-check label {
+  padding-left: 0px !important;
+}
 
 .ref-selected {
   border: 3px solid #002B55 !important;
   background-color: #f3f3f3 !important;
 }
 
-.ref-selected-box:after {
-  content: "\f00c" !important;
-  border: 2px solid #002B55;
-  padding-top: 0px;
+.caldera-grid h2 {
+  margin-bottom: 30px;
 }
