@@ -26,11 +26,11 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <img src="wp-content/themes/caseslegit/images/logo-m.png" 
-                        srcset="wp-content/themes/caseslegit/images/logo-s.png 660w, 
-                        wp-content/themes/caseslegit/images/logo-m.png 950w, 
-                        wp-content/themes/caseslegit/images/logo-l.png 1900w, 
-                        wp-content/themes/caseslegit/images/logo-xl.png 3800w"
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-m.png" 
+                        <?php echo get_stylesheet_directory_uri(); ?>/images/logo-s.png 660w, 
+                        <?php echo get_stylesheet_directory_uri(); ?>/images/logo-m.png 950w, 
+                        <?php echo get_stylesheet_directory_uri(); ?>/images/logo-l.png 1900w, 
+                        <?php echo get_stylesheet_directory_uri(); ?>/images/logo-xl.png 3800w"
                         alt="CASES logo"></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div><!-- .site-branding -->

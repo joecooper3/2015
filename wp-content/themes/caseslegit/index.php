@@ -81,7 +81,7 @@ get_header();
                         wp-content/themes/caseslegit/images/raceinfo-m.png 950w,
                         wp-content/themes/caseslegit/images/raceinfo-l.png 1900w,
                         wp-content/themes/caseslegit/images/raceinfo-xl.png 3800w"
-                        alt="I just want one night"></div>
+                        alt="95% of prison sentences for 16- and 17-year olds are served by black and Hispanic youth."></div>
                     <div class="infog-link">
                         <p><a href="?page_id=691">Read more about CASES' youth programs <i class="fa fa-arrow-right"></a></p></i>
                     </div>
@@ -92,7 +92,7 @@ get_header();
                         wp-content/themes/caseslegit/images/mentalinfo-m.png 950w,
                         wp-content/themes/caseslegit/images/mentalinfo-l.png 1900w,
                         wp-content/themes/caseslegit/images/mentalinfo-xl.png 3800w"
-                        alt="I just want one night"></div>
+                        alt="37% of New York City's jail population suffers from mental illness."></div>
                     <div class="infog-link">
                         <p><a href="?page_id=675">Read more about CASES' behavioral health programs <i class="fa fa-arrow-right"></a></p></i>
                     </div>
@@ -108,7 +108,8 @@ get_header();
                         wp-content/themes/caseslegit/images/unempinfo-m.png 950w,
                         wp-content/themes/caseslegit/images/unempinfo-l.png 1900w,
                         wp-content/themes/caseslegit/images/unempinfo-xl.png 3800w"
-                        alt="I just want one night"></div>
+                        alt="60-75% of formerly incarcerated individuals are unemployed
+                        up to a year after being released."></div>
                     <div class="infog-link">
                         <p><a href="#">Read more about CASES' employment services <i class="fa fa-arrow-right"></a></p></i>
                     </div>
@@ -119,7 +120,8 @@ get_header();
                         wp-content/themes/caseslegit/images/gradinfo-m.png 950w,
                         wp-content/themes/caseslegit/images/gradinfo-l.png 1900w,
                         wp-content/themes/caseslegit/images/gradinfo-xl.png 3800w"
-                        alt="I just want one night"></div>
+                        alt="Of youth ATI participants, 85% were engaged in school, job training,
+                        employment and/or treatment programs at their CASES exit."></div>
                     <div class="infog-link">
                         <p><a href="#">Read more about CASES' education services <i class="fa fa-arrow-right"></a></p></i>
                     </div>
@@ -134,7 +136,8 @@ get_header();
                         wp-content/themes/caseslegit/images/moneyinfo-m.png 950w,
                         wp-content/themes/caseslegit/images/moneyinfo-l.png 1900w,
                         wp-content/themes/caseslegit/images/moneyinfo-xl.png 3800w"
-                        alt="I just want one night"></div>
+                        alt="Jail-diversion programs in New York City showed an average of $7,083
+                        lower jail costs per person."></div>
                     <div class="infog-link">
                         <p><a href="#">Read more about the outcomes of CASES clients <i class="fa fa-arrow-right"></a></p></i>
                     </div>
@@ -145,7 +148,8 @@ get_header();
                         wp-content/themes/caseslegit/images/youthrecid-m.png 950w,
                         wp-content/themes/caseslegit/images/youthrecid-l.png 1900w,
                         wp-content/themes/caseslegit/images/youthrecid-xl.png 3800w"
-                        alt="I just want one night"></div>
+                        alt="Only 16% of CASES youth ATI participants have a new criminal conviction
+                        after two years of completing services."></div>
                     <div class="infog-link">
                         <p><a href="?page_id=882">Read more about how CASES keeps its participants in the community <i class="fa fa-arrow-right"></a></p></i>
                     </div>
