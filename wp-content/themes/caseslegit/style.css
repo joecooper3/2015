@@ -64,6 +64,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   font-family: akzBold;
   src: url("fonts/worksans/WorkSans-Bold.woff2") format("woff2"), url("fonts/worksans/WorkSans-Bold.woff") format("woff"), url("fonts/worksans/WorkSans-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: gillMed;
+  src: url("fonts/gillsans/GillMed.otf") format("opentype");
+}
+@font-face {
+  font-family: gillBook;
+  src: url("fonts/gillsans/GillBook.otf") format("opentype");
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -916,14 +924,15 @@ and open the template in the editor.
           justify-content: center;
   background-color: #fdfdfd;
   padding: 0 50px 20px 50px;
-  box-shadow: 5px 5px 2px #888888;
 }
 
 .site-branding {
-  -webkit-flex: 5 400px;
-      -ms-flex: 5 400px;
-          flex: 5 400px;
+  -webkit-flex: 1 1 300px;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  max-width: 400px;
   margin: 0 15px;
+  padding-right: 100px;
 }
 
 .main-navigation {
@@ -1363,6 +1372,7 @@ and open the template in the editor.
   padding: 10px;
   margin: 30px 20px 20px 20px;
   background-color: #002B55;
+  transition: 0.3s ease;
 }
 #bonusbuttons a:hover, #bonusbuttons a:focus {
   background-color: #194D7F;
@@ -1825,6 +1835,20 @@ and open the template in the editor.
   display: none;
 }
 
+.footadd {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.footadd .footadditem {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 @media only screen and (max-width: 767px) {
   .menu-footer-menu-container {
     display: none;
@@ -1898,7 +1922,28 @@ and open the template in the editor.
 article {
   padding: 0;
 }
-article a {
+
+.serv-body a, .entry-content-prog a, .entry-content-resources a {
+  color: #404040;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
+  background-size: .05em 1px,.05em 1px,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  background-position: 0 95%,100% 95%,0 95%;
+  transition: color .15s;
+  font-weight: 500;
+  font-family: gillMed;
+}
+.serv-body a img, .entry-content-prog a img, .entry-content-resources a img {
+  background: 0 0;
+  border-bottom: 0;
+}
+.serv-body a:hover, .entry-content-prog a:hover, .entry-content-resources a:hover {
+  color: #D18300;
+  background: 0 0;
+}
+
+aside a {
+  background: 0;
   font-weight: bold;
 }
 
@@ -1973,6 +2018,7 @@ and open the template in the editor.
 */
 .main2 {
   background-color: #fdfdfd;
+  padding-bottom: 30px;
 }
 
 .leadimage-container2 {
@@ -2029,7 +2075,18 @@ and open the template in the editor.
   margin: 0;
 }
 .entry-content-prog li {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.citation:before {
+  font-family: FontAwesome;
+  content: "\f02e";
+  white-space: nowrap;
+  font-size: 50%;
+  cursor: pointer;
+  vertical-align: super;
+  line-height: 1;
+  margin: 0 2px 0 2px;
 }
 
 .leadimage-container4 {
@@ -2052,14 +2109,21 @@ and open the template in the editor.
 
 .prog-intro {
   font-family: akzRoman;
-  margin: 25px 0 30px 0;
-  font-size: 1.1rem;
+  margin: 20px 0 20px 0;
+  font-size: 0.9rem;
 }
 .prog-intro strong {
   font-family: akzSemiBold;
 }
 .prog-intro p {
-  margin-bottom: 1.0em;
+  margin-bottom: 0.5rem;
+}
+
+.prog-emp {
+  font-family: akzMed;
+  font-size: 1.0rem;
+  color: #002B55;
+  display: inline;
 }
 
 .sidebar-program {
@@ -2287,6 +2351,9 @@ and open the template in the editor.
       -ms-flex-pack: center;
           justify-content: center;
 }
+#intelliwidget-4 a {
+  background: 0 0;
+}
 
 .intelliwidget4-title {
   font-family: akzRoman;
@@ -2361,6 +2428,13 @@ and open the template in the editor.
   font-family: akzSemiBold;
 }
 
+.serv-emp {
+  font-family: akzMed;
+  font-size: 1.1rem;
+  color: #002B55;
+  display: inline;
+}
+
 /* Responsive queries etc etc */
 @media all and (max-width: 1000px) {
   .serv-body {
@@ -2400,6 +2474,12 @@ and open the template in the editor.
   }
   .leadimage-container2 h1 {
     font-size: 2.2rem;
+  }
+
+  .entry-content-serv {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media all and (max-width: 400px) {
@@ -2469,10 +2549,10 @@ and open the template in the editor.
   width: 60%;
   max-width: 800px;
   display: block;
-  font-size: 3.5rem;
+  font-size: 3.1rem;
   position: relative;
   margin: 0 0 30px 50px;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 0 0;
   bottom: 0px;
   color: #002B55;
   border-bottom: 3px solid #002B55;
@@ -2549,16 +2629,17 @@ and open the template in the editor.
           align-items: center;
 }
 .keystaff-grid .keystaff-item {
-  -webkit-flex: 1 0 175px;
-      -ms-flex: 1 0 175px;
-          flex: 1 0 175px;
-  max-width: 175px;
-  height: 175px;
+  display: block;
+  -webkit-flex: 1 0 130px;
+      -ms-flex: 1 0 130px;
+          flex: 1 0 130px;
+  max-width: 130px;
+  height: 130px;
   margin: 3px;
   position: relative;
-  box-sizing: border-box;
   background-position: center;
   background-size: cover;
+  padding: 5px;
 }
 .keystaff-grid .keystaff-item .keystaff-shade {
   z-index: 2;
@@ -2566,6 +2647,8 @@ and open the template in the editor.
   height: 100%;
   text-align: center;
   background-color: rgba(0, 43, 85, 0.7);
+  font-size: 0.7rem;
+  font-family: akzRoman;
   color: #fdfdfd;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2576,30 +2659,201 @@ and open the template in the editor.
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   transition: opacity 0.3s ease;
   opacity: 0;
+  padding: 4px;
 }
 .keystaff-grid .keystaff-item .keystaff-shade:hover {
   opacity: 1;
 }
+.keystaff-grid .keystaff-item .keystaff-shade strong {
+  font-family: akzSemiBold;
+  display: inline;
+  font-size: 0.8rem;
+}
+.keystaff-grid .keystaff-item .keystaff-shade br {
+  content: "";
+}
 .keystaff-grid .keystaff-item .keystaff-portrait {
   width: 100%;
 }
+.keystaff-grid .active {
+  border: 5px solid #002B55;
+}
 .keystaff-grid .joel {
-  background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/joelsq2x.jpg");
+  background-image: url("images/keystaff/joelsq2x.jpg");
 }
 .keystaff-grid .joe {
-  background-image: url("http://cases.org/newsite/wp-content/themes/caseslegit/images/keystaff/itme.jpg");
+  background-image: url("images/keystaff/itme.jpg");
+}
+.keystaff-grid .rukia {
+  background-image: url("images/keystaff/rukiasq2x.jpg");
+}
+.keystaff-grid .quinn {
+  background-image: url("images/keystaff/quinnsq2x.jpg");
+}
+.keystaff-grid .joanna {
+  background-image: url("images/keystaff/joannasq2x.jpg");
+}
+.keystaff-grid .aml {
+  background-image: url("images/keystaff/amlsq2x.jpg");
+}
+.keystaff-grid .lucie {
+  background-image: url("images/keystaff/luciesq2x.jpg");
+}
+.keystaff-grid .rebeccalw {
+  background-image: url("images/keystaff/rebeccalwsq2x.jpg");
+}
+.keystaff-grid .loyal {
+  background-image: url("images/keystaff/loyalsq2x.jpg");
+}
+.keystaff-grid .jessica {
+  background-image: url("images/keystaff/jessicasq2x.jpg");
+}
+.keystaff-grid .rob {
+  background-image: url("images/keystaff/robsq2x.jpg");
+}
+.keystaff-grid .george {
+  background-image: url("images/keystaff/georgesq2x.jpg");
+}
+.keystaff-grid .rebecca {
+  background-image: url("images/keystaff/rebeccasq2x.jpg");
+}
+.keystaff-grid .holly {
+  background-image: url("images/keystaff/hollysq2x.jpg");
 }
 
-.keystaff-words {
+.keystaff-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   padding-top: 30px;
-  max-width: 800px;
+  width: 100%;
+}
+.keystaff-content .lucie {
+  background-image: url("images/keystaff/lucielg1x.jpg");
+}
+.keystaff-content .rob {
+  background-image: url("images/keystaff/roblg1x.jpg");
+}
+.keystaff-content .jessica {
+  background-image: url("images/keystaff/jessicalg1x.jpg");
+}
+.keystaff-content .rebeccalw {
+  background-image: url("images/keystaff/rebeccalwlg1x.jpg");
+}
+.keystaff-content .quinn {
+  background-image: url("images/keystaff/quinnlg1x.jpg");
+}
+.keystaff-content .loyal {
+  background-image: url("images/keystaff/loyallg1x.jpg");
+}
+.keystaff-content .joel {
+  background-image: url("images/keystaff/joellg1x.jpg");
+}
+.keystaff-content .george {
+  background-image: url("images/keystaff/georgelg1x.jpg");
+}
+.keystaff-content .rebecca {
+  background-image: url("images/keystaff/rebeccalg1x.jpg");
+}
+.keystaff-content .holly {
+  background-image: url("images/keystaff/hollylg1x.jpg");
+}
+.keystaff-content .joanna {
+  background-image: url("images/keystaff/joannalg1x.jpg");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .keystaff-content .lucie {
+    background-image: url("images/keystaff/lucielg2x.jpg");
+  }
+  .keystaff-content .rob {
+    background-image: url("images/keystaff/roblg2x.jpg");
+  }
+  .keystaff-content .jessica {
+    background-image: url("images/keystaff/jessicalg2x.jpg");
+  }
+  .keystaff-content .rebeccalw {
+    background-image: url("images/keystaff/rebeccalwlg2x.jpg");
+  }
+  .keystaff-content .quinn {
+    background-image: url("images/keystaff/quinnlg2x.jpg");
+  }
+  .keystaff-content .loyal {
+    background-image: url("images/keystaff/loyallg2x.jpg");
+  }
+  .keystaff-content .joel {
+    background-image: url("images/keystaff/joellg2x.jpg");
+  }
+  .keystaff-content .george {
+    background-image: url("images/keystaff/georgelg2x.jpg");
+  }
+  .keystaff-content .rebecca {
+    background-image: url("images/keystaff/rebeccalg2x.jpg");
+  }
+  .keystaff-content .holly {
+    background-image: url("images/keystaff/hollylg2x.jpg");
+  }
+  .keystaff-content .joanna {
+    background-image: url("images/keystaff/joannalg2x.jpg");
+  }
+}
+.keystaff-lg-portrait {
+  -webkit-flex: 1 0 300px;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
+  background-size: cover;
+  background-position: center top;
+  max-width: 300px;
+  height: 420px;
+  margin-top: 50px;
+}
+
+@media all and (max-width: 1150px) {
+  .keystaff-lg-portrait {
+    max-width: 550px;
+    height: 275px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+.keystaff-words {
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  max-width: 750px;
+  padding-left: 20px;
+}
+.keystaff-words h2 {
+  margin-top: 0;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.keystaff-words h3 {
+  border-bottom: 2.0px solid #aaa;
+  width: 80%;
+  font-family: akzRoman;
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+.keystaff-words p {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .entry-content-keystaff {
   background-color: #fdfdfd;
-  padding: 0 50px;
+  padding: 0 25px;
   max-width: 1200px;
   -webkit-flex: 2 1 500px;
       -ms-flex: 2 1 500px;
@@ -2616,6 +2870,10 @@ and open the template in the editor.
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.entry-content-keystaff ul {
+  list-style: none;
+  list-style-type: none;
 }
 
 /* I'm the idiotic way Wordpress makes everything a paragraph */
@@ -2668,7 +2926,7 @@ tbody.collapse.in {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: akzRoman;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -2856,39 +3114,50 @@ tbody.collapse.in {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
-.directory .dir-col {
-  -webkit-flex: 1 300px;
-      -ms-flex: 1 300px;
-          flex: 1 300px;
+.directory .dir-row {
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
+  font-family: akzSemiBold;
+  font-size: 1.7rem;
+  color: #002B55;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  border-bottom: 2.0px solid #aaa;
 }
-.directory .dir-col .dir-item {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.directory .dir-item {
+  -webkit-flex: 1 0 225px;
+      -ms-flex: 1 0 225px;
+          flex: 1 0 225px;
+  margin: 10px 10px 10px 0;
+  max-width: 225px;
 }
 .directory strong {
-  font-family: akzMed;
+  font-family: akzRoman;
   color: #002B55;
   padding-top: 0.9em;
 }
 .directory p {
-  font-size: 1.0rem;
+  font-size: 0.9rem;
   margin-bottom: 0.8em;
 }
 
@@ -2958,9 +3227,9 @@ and open the template in the editor.
     Author     : coopers
 */
 .entry-content-referrals {
-  -webkit-flex: 1 0 100%;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
+  -webkit-flex: 1 0 700px;
+      -ms-flex: 1 0 700px;
+          flex: 1 0 700px;
   padding: 0 30px 0 30px;
 }
 

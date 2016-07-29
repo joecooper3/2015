@@ -39,7 +39,7 @@ tbody.collapse.in {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: akzRoman;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -208,24 +208,35 @@ tbody.collapse.in {
 .directory {
     display:flex; 
     width:100%;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: flex-start;
-    .dir-col {
-        flex: 1 300px;
+    justify-content: space-around;
+    .dir-row {
+        flex: 1 100%;
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
         align-items: flex-start;
-        .dir-item {
-            flex: 1
-        }
+        font-family: akzSemiBold;
+        font-size: 1.7rem;
+        color: $color1;
+        padding-bottom: 5px;
+        margin-top: 20px;
+        border-bottom: 2.0px solid #aaa;
+        
     }
+    .dir-item {
+            flex: 1 0 225px;
+            margin: 10px 10px 10px 0;
+            max-width: 225px;
+            
+        }
     strong {
-                font-family: akzMed;
+                font-family: akzRoman;
                 color: $color1;
                 padding-top: 0.9em;
             }
             p {
-                font-size: 1.0rem;
+                font-size: 0.9rem;
                 margin-bottom: 0.8em;
             }
 }

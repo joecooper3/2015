@@ -10,6 +10,7 @@ and open the template in the editor.
 
 .main2 {
     background-color: $mywhite;
+    padding-bottom: 30px;
 }
 
 .leadimage-container2 {
@@ -58,9 +59,19 @@ and open the template in the editor.
         margin: 0;
     }
     li {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
+}
+.citation:before {
     
+    font-family: FontAwesome;
+    content: "\f02e";  
+    white-space: nowrap;
+    font-size: 50%;
+    cursor: pointer;
+    vertical-align: super;
+    line-height: 1;
+    margin: 0 2px 0 2px;
 }
 .leadimage-container4 {
     display: block;
@@ -82,14 +93,21 @@ and open the template in the editor.
 
 .prog-intro {
     font-family: akzRoman;
-    margin: 25px 0 30px 0;
-    font-size: 1.1rem;
+    margin: 20px 0 20px 0;
+    font-size: 0.9rem;
     strong {
         font-family: akzSemiBold;
     }
     p {
-        margin-bottom: 1.0em;
+        margin-bottom: 0.5rem;
     }
+}
+
+.prog-emp {
+    font-family: akzMed;
+    font-size: 1.0rem;
+    color: $color1;
+    display: inline;
 }
 
 .sidebar-program {

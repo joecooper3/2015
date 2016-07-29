@@ -33,7 +33,14 @@
        url('fonts/worksans/WorkSans-Bold.ttf') format('truetype');
 }
 
-
+@font-face {
+    font-family: gillMed;
+    src: url('fonts/gillsans/GillMed.otf') format('opentype');
+}
+@font-face {
+    font-family: gillBook;
+    src: url('fonts/gillsans/GillBook.otf') format('opentype');
+}
 
 $font__main: "Gill Sans MT", "Gill Sans", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;

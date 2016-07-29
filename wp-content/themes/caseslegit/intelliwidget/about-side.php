@@ -18,7 +18,7 @@ if ( $selected->have_posts() ) : while ( $selected->have_posts() ) : $selected->
 ?>
 <?php $ohbrother = get_the_intelliwidget_title(); ?>
 <h1 id="intelliwidget_title_<?php the_intelliwidget_ID(); ?>" class="intelliwidget3-title widget-title">
-    <?php the_intelliwidget_link(NULL, "Our $ohbrother", NULL); ?>
+    <?php the_intelliwidget_link(NULL, "$ohbrother", NULL); ?>
   </h1>
 <div id="intelliwidget_<?php the_intelliwidget_ID(); ?>" class="intelliwidget3-container">
   <?php if ( has_intelliwidget_image() ) : ?>

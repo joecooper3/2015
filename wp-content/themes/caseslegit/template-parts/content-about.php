@@ -7,30 +7,46 @@
 
 ?>
 <?php
-$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' ); ?>
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' );
+$src_xs = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xs, false, '' );
+$src_s = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_s, false, '' );
+$src_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_m, false, '' );
+$src_l = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_l, false, '' );
+$src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl, false, '' );
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <style type="text/css" media="screen">
-        .serv-bgimage { 
-         background: url(<?php echo $src[0]; ?>); 
-         background-size: cover; 
-         background-position: center; 
-       }
-        @media all and (max-width: 800px) {
-            .serv-bgimage {
-                background-image: url(<?php echo $src_s[0]; ?>);
+        .leadimage-container4 { 
+            background: url(<?php echo $src[0]; ?>); 
+            background-size: cover; 
+            background-position: center; 
         }
+        @media all and (max-width: 1800px) {
+            .leadimage-container4 {
+                background-image: url(<?php echo $src_l[0]; ?>);
+            }
+        }
+        @media all and (max-width: 1200px) {
+            .leadimage-container4 {
+                background-image: url(<?php echo $src_m[0]; ?>);
+            }
+        }
+        @media all and (max-width: 800px) {
+            .leadimage-container4 {
+                background-image: url(<?php echo $src_s[0]; ?>);
+            }
         }
         @media all and (max-width: 400px) {
-            .serv-bgimage {
+            .leadimage-container4 {
                 background-image: url(<?php echo $src_xs[0]; ?>);
-        }
+            }
         }
     </style>
 <div class="about-container">
     <div class="leadimage-container3">
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">Our ' ); ?></h1>
+		<?php the_title( '<h1 class="entry-title">' ); ?></h1>
         </header><!-- .entry-header --></div><div class="social-media-container">
             <div class="social-item"><?php if(function_exists('wp_print')) { print_link(); } ?></div>
             <div class="social-item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook-square"></i></a></div>
@@ -38,7 +54,8 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
                     <i class="fa fa-twitter"></i></a></div>
         </div>
 	<div class="entry-content-about">
-            <?php the_post_thumbnail('serv_xl'); ?>
+            <div class="leadimage-container4"></div>
+           
             
 		<?php the_content(); ?>
 		<?php

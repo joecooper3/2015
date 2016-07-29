@@ -24,12 +24,13 @@ and open the template in the editor.
     justify-content: center;
     background-color: $mywhite;
     padding: 0 50px 20px 50px;
-    box-shadow: 5px 5px 2px #888888;
 }
 
 .site-branding {
-    flex: 5 400px;
+    flex: 1 1 300px;
+    max-width: 400px;
     margin: 0 15px;
+    padding-right: 100px;
 }
 .main-navigation {
     flex: 3 690px;

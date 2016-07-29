@@ -5,17 +5,16 @@
         <group>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/header.php</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/about.scss</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content-program.php</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/search.php</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/programpage.scss</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/referrals.scss</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/functions.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/js/referrals.js</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/socialmedia.scss</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content-keystaff.php</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/resources.scss</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/services.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/inc/responsive-image.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/index.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/page_clinic.php</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/singlepost.scss</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/js/mobilemenu.js</file>
         </group>
     </open-files>
 </project-private>

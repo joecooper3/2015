@@ -6,7 +6,13 @@
  */
 
 ?>
-
+<script type="text/javascript">
+    jQuery(function($){
+        $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+    });
+</script>
 <article id="post-<?php the_ID(); ?>" <?php post_class("serv-container"); ?>>
     <?php
 $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' );
@@ -19,17 +25,29 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 ?>
     <style type="text/css" media="screen">
         .serv-bgimage { 
-         background: url(<?php echo $src[0]; ?>); 
-         background-size: cover; 
-         background-position: center; 
-       }
+            background: url(<?php echo $src[0]; ?>); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        @media all and (max-width: 1800px) {
+            .serv-bgimage {
+                background-image: url(<?php echo $src_l[0]; ?>);
+            }
+        }
+        @media all and (max-width: 1200px) {
+            .serv-bgimage {
+                background-image: url(<?php echo $src_m[0]; ?>);
+            }
+        }
         @media all and (max-width: 800px) {
             .serv-bgimage {
                 background-image: url(<?php echo $src_s[0]; ?>);
+            }
         }
         @media all and (max-width: 400px) {
             .serv-bgimage {
                 background-image: url(<?php echo $src_xs[0]; ?>);
+            }
         }
     </style>
     <div class="leadimage-container2 serv-bgimage">

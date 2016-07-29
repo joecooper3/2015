@@ -32,10 +32,16 @@
                     <a href="http://www.linkedin.com/companies/659695"><i class="fa fa-linkedin-square"></i></a>
                     <a href="http://www.youtube.com/user/casesnyc/"><i class="fa fa-youtube-square"></i></a>
 </div>
-<p>151 Lawrence Street<br>
+<div class="footadd">
+    <div class="footadditem"><p>151 Lawrence Street<br>
 Brooklyn, NY 11201<br>
 (212) 553-6300
-</p>
+        </p></div>
+<div class="footadditem"><p>2090 Adam Clayton Powell Jr.<br/> Boulevard<br>
+New York, NY 10027<br>
+(212) 553-6300
+        </p></div>
+</div>
 <p>&copy; 2016 CASES</p></div><!-- #colophon -->
 </div><!-- #page -->
 
