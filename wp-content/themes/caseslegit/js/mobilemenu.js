@@ -31,7 +31,9 @@
     
     //First sub-menu clicks
     jQuery("#primary-menu").children('li').find('a').click(function () {
+        if (jQuery("#responsiveCheck").css("width") === '50px') {
         jQuery(this).siblings(".sub-menu").slideToggle("fast");
+    }
     });
     
     // run test on initial page load
@@ -39,5 +41,26 @@
 
     // run test on resize of the window
     jQuery(window).resize(resChange);
+  
+
+    // sliding component of navbar
+    //
+    
+    var previousScroll = 0;
+
+jQuery(window).scroll(function () {
+    var currentScroll = jQuery(this).scrollTop();
+    if (currentScroll > 300) {
+        if (currentScroll > previousScroll) {
+            jQuery('#masthead-fade').fadeOut();
+        } else {
+            jQuery('#masthead-fade').fadeIn();
+        }
+    } 
+    previousScroll = currentScroll;
+    if (currentScroll < 300) {
+        jQuery('#masthead-fade').slideUp(100);
+    }
+});
 
 

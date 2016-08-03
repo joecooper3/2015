@@ -16,59 +16,67 @@ and open the template in the editor.
     width: 51px;
 }
 
-#masthead {
+#masthead
+{
+    width:100%;
+    background-color: $mywhite;
+}
+.nav-container {
+    padding: 20px 0;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: $mywhite;
-    padding: 0 50px 20px 50px;
+    max-width: 1200px;
 }
 
 .site-branding {
-    flex: 1 1 300px;
-    max-width: 400px;
-    margin: 0 15px;
-    padding-right: 100px;
+    flex: 0 0 400px;
+    max-width: 380px;
+    margin: 0 15px 0 5px;
+    padding-right: 10px;
+    line-height: 0;
 }
+
 .main-navigation {
-    flex: 3 690px;
+    flex: 1 1 650px;
+    background-color: $color1;
+    max-width: 750px;
+    i {
+       width:30px;
+       height:30px;
+       padding: 6px 0;
+       border: 0.5px solid #aaa;
+       background-color:$color1;
+       float:left;
+       font-size: 18px;
+       text-align: center;
+       margin-left: 10px;
+       transition: 0.2s background-color;
+       &:hover {
+           background-color: $color4;
+       }
+    }
+    .fa-search {
+        border: 0;
+        margin-left: 0;
+        background: none;
+    &:hover {
+        background: none;
+    }
+    }
+    .nopad {
+        padding: 0;
+    }
 }
 .site-title {
     text-align: left;
+    margin: 0;
     img {
         width: 100%;
         max-width: 550px;
-    }
-}
-
-#socialMedia {
-    flex: 3 250px;
-    margin: 0 15px;
-    text-align: right;
-    font-size: 3rem;
-    .fa {
-        margin: 5px;
-    }
-    a {
-        color: $color1;
-
-        &:visited {
-            color: $color1;
-        }
-        &:hover,
-            &:focus,
-            &:active {
-            color: $color4;
-        }
-        &:focus {
-            outline: thin dotted;
-        }
-        &:hover,
-            &:active {
-            outline: 0;
-        }
     }
 }
 
@@ -78,10 +86,14 @@ input[type="search"] {
     box-sizing: border-box;
     width: 100%;
 }
-
 .search-box-wrapper {
-    flex: 2 200px;
-    width: 100%;
+    flex: 2 0 100%;
+}
+.search-box-wrapper2 {
+    max-width: 400px;
+    padding: 10px 0 10px 25px;
+    background-color: $color4;
+    float:right;
 }
 
 .search-box {
@@ -90,48 +102,89 @@ input[type="search"] {
 }
 
 .search-box .search-field {
-
-    background: url('images/magglass.svg') no-repeat 12px 7px;
-    background-size: 20px 20px;
-    max-width: 250px;
-    float: right;
-    padding: 0.2rem 1rem 0.2rem 2.8rem;
-    font-size: 12px;
-    font-size: 1.2rem;
+    max-width: 200px;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    font-family: akzLight;
+    font-size: 16px;
     background-color: #fcfcfc;
     border-radius: 25px;
-    border: 2px solid $color1;
+    border: 2px solid $color4;
 }
 
-.magglass {
-    z-index: 2;
-    color: #333333;
-    position: relative;
+#search-link {
+    padding: 8px 10px;
+    background-color: $color4;
+    margin-left: 5px;
+    align-self: stretch;
+    
 }
-
+.collapsed {
+    background-color: $color1 !important;
+}
 .error404 .search-submit,
 .search .search-submit,
 .search-box .search-submit { 
     display: none; 
 }
 
-/* Bigger than medium screens */
-@media all and (max-width: 1120px) {
-    .site-branding { order: 1; }
-    .main-navigation { 
-        order: 3;
-        flex: 5 690px;
-    }
-    #socialMedia { 
-        order: 4; 
-        flex: 1 0 auto;
-        text-align: right; 
-        font-size: 2rem; 
-        .fa {
-            margin: 2px;
+/*Fading navbar */
+#masthead-fade
+{
+    display: none;
+    top:0;
+    position:fixed;
+    width:100%;
+    background-color: $color1;
+    z-index: 99999;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
+.nav-container-fade {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color1;
+    max-width: 1200px;
+}
+
+.site-branding-fade {
+    flex: 0 0 250px;
+    max-width: 250px;
+    margin: 0 15px 0 5px;
+    padding: 5px 10px;
+    line-height: 0;
+}
+
+#site-navigation-fade {
+    font-size: 15px;
+    .total-navigation {
+        .menu-main-container {
+            ul {
+                li {
+                    a {
+                        padding: 10px 15px;
+                    }
+                }
+            }
         }
     }
-    .search-box-wrapper { order: 2; }
+}
+
+#search-link-fade {
+    padding: 0 20px;
+}
+
+/* Bigger than medium screens */
+@media all and (max-width: 1106px) {
+    .site-branding { padding-bottom: 20px; }
+    .nav-container { justify-content: center; }
+    #search-container {
+        order: 3;
+        max-width: 750px;
+    }
+    
 }
 
 /* Medium screens */
@@ -149,17 +202,11 @@ input[type="search"] {
     }
     .main-navigation { 
         order: 2; 
-        padding-bottom: 15px; 
         align-self: center;
         flex: none; 
     }
-    #socialMedia { 
-        order: 3; 
-        text-align: auto;
-    }
+    
     .search-box-wrapper { 
-        order: 4; 
-        text-align: center;
     }
     #masthead {align-content: center;}
     .search-box .search-field {float: none;}
@@ -167,10 +214,20 @@ input[type="search"] {
 
 /* Medium 2 screens? */
 @media all and (max-width: 716px) {
-
+    .nav-container {
+        justify-content: space-between;
+    }
     .menu-main-container {
         flex-direction: column;
         flex-flow: column wrap;
+        flex: 100%;
+        margin: 0;
+    }
+    .social-media-menu-container {
+        display: none;
+    }
+    #search-link {
+        display: none;
     }
 
     #responsiveCheck { content: 'S'; width: 50px; }
@@ -178,10 +235,21 @@ input[type="search"] {
     /* Baby Navigation */
 
     /* Unclicked styles */
-    .menu-toggle { width: 100%; }
+    .menu-toggle {
+        width: 50px;
+        height: 50px;
+        order: 2;
+        margin-bottom: 20px;
+        color: $color1;
+        font-size: 2.3em;
+        border: 0;
+        padding: 0;
+        background: $mywhite;
+    }
     .main-navigation { 
         ul {
             display: none; 
+            padding-left: 0;
 
             li {
                 clear: both;
@@ -263,7 +331,14 @@ input[type="search"] {
 }
 @media all and (max-width: 575px) {
     .site-branding { 
-        flex: 1 0 100%;
-        padding: 0 10px;
+        flex: 1 1 150px;
+        padding: 0;
+    }
+    .menu-toggle {
+        flex: 1 1 50px;
+        margin: 0;
+        max-width: 70px;
+        padding: 0;
+        font-size: 1.5em;
     }
 }

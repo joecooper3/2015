@@ -43,7 +43,7 @@ get_header();
                     </div>
                 </div>
                 <div class="locat-caption">
-                    a New York City safer for every citizen
+                    a New York City<br/> safer for every citizen
                 </div>
             </div>
         </div>
