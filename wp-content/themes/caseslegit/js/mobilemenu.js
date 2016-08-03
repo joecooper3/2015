@@ -63,4 +63,15 @@ jQuery(window).scroll(function () {
     }
 });
 
-
+/* jQuery(".locat-shade").mouseenter( 
+        function() {
+    jQuery(this).find(".hvr-underline-from-center-before").css("left","0");
+   jQuery(this).find(".hvr-underline-from-center-before").css("right","0");
+            console.log("already 3 o clock");
+});
+jQuery(".locat-shade").mouseleave ( 
+        function() {
+    jQuery(this).find(".hvr-underline-from-center-before").css("left","50%");
+    jQuery(this).find(".hvr-underline-from-center-before").css("right","50%");
+            console.log("not gettin fuck at all");
+}); */

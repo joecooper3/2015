@@ -182,7 +182,7 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 function caseslegit_scripts() {
 	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri() );
         
-        wp_enqueue_style( 'caseslegit-hober', get_template_directory_uri() . '/hover.css' );
+       /* wp_enqueue_style( 'caseslegit-hober', get_template_directory_uri() . '/hover.css' ); */
         
         wp_enqueue_style( 'caseslegit-icons', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 

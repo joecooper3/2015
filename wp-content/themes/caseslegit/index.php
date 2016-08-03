@@ -20,9 +20,10 @@ get_header();
             swear to man -->
             <div class="locat-container">
                 <div class="locat-square sq1">
-                    <div class="locat-shade">
-                    <a class="hvr-underline-from-center" href="?page_id=684">Courtroom</a>
-                    </div>
+                    <a href="?page_id=684" class="locat-shade">
+                            <span class="hvr-underline-from-center-before"></span>
+                            <span class="hvr-underline-from-center">Courtroom</span>
+                        </a>
                 </div>
                 <div class="locat-caption">
                     a new vision for justice
@@ -30,18 +31,21 @@ get_header();
             </div>
             <div class="locat-container">
                 <div class="locat-square sq2">
-                    <div class="locat-shade">
-                        <a class="hvr-underline-from-center" href="?page_id=1014">Clinic</a>
-                    </div></div>
+                    
+                        <a class="locat-shade" href="?page_id=1014">
+                            <span class="hvr-underline-from-center-before"></span>
+                            <span class="hvr-underline-from-center">Clinic</span>
+                        </a>
+                    </div>
                 <div class="locat-caption">
                     an effective pathway to recovery
                 </div>
             </div>
             <div class="locat-container">
-                <div class="locat-square sq3"> <div class="locat-shade">
-                        <a class="hvr-underline-from-center" href="?page_id=882">Community</a>
+                <div class="locat-square sq3"> <a href="?page_id=882" class="locat-shade">
+                        <span class="hvr-underline-from-center-before"></span>
+                        <span class="hvr-underline-from-center">Community</span></a>
                     </div>
-                </div>
                 <div class="locat-caption">
                     a New York City<br/> safer for every citizen
                 </div>

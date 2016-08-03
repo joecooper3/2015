@@ -1330,6 +1330,16 @@ and open the template in the editor.
   background-position: center;
   background-color: rgba(255, 255, 255, 0.8);
   border: 3px solid #002B55;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.locat-shade:hover {
+  background-color: white;
 }
 
 .locat-shade:before {
@@ -1390,7 +1400,29 @@ and open the template in the editor.
   overflow: hidden;
 }
 
-.hvr-underline-from-center:before {
+.hvr-underline-from-center-before {
+  content: "";
+  position: absolute;
+  z-index: 12;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #002b55;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center-before:hover {
+  left: 0;
+  right: 0;
+}
+
+/* .hvr-underline-from-center:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1406,12 +1438,10 @@ and open the template in the editor.
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
-}
-
+} */
 .nav-previous {
   font-family: akzBold;
   text-align: center;
