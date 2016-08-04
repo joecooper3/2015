@@ -175,6 +175,17 @@ and open the template in the editor.
     }
 }
 
+.all-programs {
+    list-style-type: none;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    column-count: 2;
+    column-gap: 30px;
+    ul {
+        list-style-type: none;
+    }
+}
+
 @media all and (max-width: 1140px) {
     .sidebar-program {
         flex: 2 0 800px;
@@ -204,5 +215,8 @@ and open the template in the editor.
 @media all and (max-width: 500px) {
     .entry-content-prog {
         padding: 10px 20px;
+    }
+    .all-programs {
+        column-count: 1;
     }
 }

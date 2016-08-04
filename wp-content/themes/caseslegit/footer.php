@@ -34,10 +34,12 @@
 </div>
 <div class="footadd">
     <div class="footadditem"><p>151 Lawrence Street<br>
+            3rd Floor<br>
 Brooklyn, NY 11201<br>
 (212) 553-6300
         </p></div>
-<div class="footadditem"><p>2090 Adam Clayton Powell Jr.<br/> Boulevard<br>
+<div class="footadditem"><p>2090 Adam Clayton Powell Jr., Boulevard<br>
+        4th Floor<br>
 New York, NY 10027<br>
 (212) 553-6300
         </p></div>

@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/* Green */
 /* Lighter blue */
 /* Orange */
 @font-face {
@@ -589,6 +590,12 @@ a:hover, a:active {
 .main-navigation .donate a {
   background-color: #D18300;
 }
+.main-navigation .donate ul li a {
+  background-color: #002B55;
+}
+.main-navigation .donate ul li a:hover {
+  background-color: #194D7F;
+}
 
 .total-navigation {
   display: flex;
@@ -893,7 +900,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-# CASES Custom
+# Flex-Head
 --------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -933,7 +940,7 @@ and open the template in the editor.
 .site-branding {
   flex: 0 0 400px;
   max-width: 380px;
-  margin: 0 15px 0 5px;
+  margin: 0 15px 0 10px;
   padding-right: 10px;
   line-height: 0;
 }
@@ -1028,14 +1035,28 @@ input[type="search"] {
   display: none;
 }
 
+.all-prog-nav a {
+  background-color: #001B35;
+  text-transform: uppercase !important;
+}
+
 /*Fading navbar */
 #masthead-fade {
   display: none;
   top: 0;
   position: fixed;
   width: 100%;
-  background-color: #002B55;
   z-index: 99999;
+}
+
+.both-row-fade {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.top-row-fade {
+  background-color: #002B55;
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -1062,11 +1083,25 @@ input[type="search"] {
   font-size: 15px;
 }
 #site-navigation-fade .total-navigation .menu-main-container ul li a {
+  padding: 15px 15px;
+}
+#site-navigation-fade .total-navigation .menu-main-container ul li ul {
+  top: 3.1em;
+}
+#site-navigation-fade .total-navigation .menu-main-container ul li ul li a {
   padding: 10px 15px;
 }
 
 #search-link-fade {
-  padding: 0 20px;
+  background-color: #194D7F;
+  margin-left: 5px;
+  align-self: stretch;
+}
+
+#search-container-fade {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 /* Bigger than medium screens */
@@ -1245,6 +1280,9 @@ input[type="search"] {
     font-size: 1.5em;
   }
 }
+/*--------------------------------------------------------------
+# Frontpage3
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -1609,7 +1647,7 @@ and open the template in the editor.
 }
 
 #submaininfo {
-  max-width: 950px;
+  max-width: 800px;
   float: right;
 }
 #submaininfo img {
@@ -1639,7 +1677,7 @@ and open the template in the editor.
   text-align: center;
   font-family: akzSemiBold;
   list-style: none;
-  margin: 0 0 30px 0;
+  margin: 30px 0 30px 0;
   padding: 0;
 }
 .nav-tabs li {
@@ -1729,6 +1767,9 @@ and open the template in the editor.
     display: none;
   }
 }
+/*--------------------------------------------------------------
+# Footflex
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -1772,13 +1813,14 @@ and open the template in the editor.
 }
 .menu-footer-menu-container ul li ul li {
   font-family: "Gill Sans", "Gill Sans MT", sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 10pt;
   padding: 0 0 0 5px;
   border-top: 0;
   text-transform: none;
   border-right: 0;
   margin-right: 0;
+  line-height: 15px;
 }
 
 .footer p {
@@ -1839,6 +1881,9 @@ and open the template in the editor.
     text-decoration: none;
   }
 }
+/*--------------------------------------------------------------
+# Single post
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -1966,6 +2011,9 @@ aside a {
     margin-left: 50px;
   }
 }
+/*--------------------------------------------------------------
+# Program page
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -2114,7 +2162,7 @@ and open the template in the editor.
 .sidebar-program aside .phonenumber .progname {
   font-family: akzRoman;
   font-size: 1.0rem;
-  color: #060461;
+  color: #001B35;
 }
 
 .cepref {
@@ -2138,6 +2186,17 @@ and open the template in the editor.
 }
 .cepcontact strong {
   font-family: akzSemiBold;
+}
+
+.all-programs {
+  list-style-type: none;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  column-count: 2;
+  column-gap: 30px;
+}
+.all-programs ul {
+  list-style-type: none;
 }
 
 @media all and (max-width: 1140px) {
@@ -2166,7 +2225,14 @@ and open the template in the editor.
   .entry-content-prog {
     padding: 10px 20px;
   }
+
+  .all-programs {
+    column-count: 1;
+  }
 }
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -2230,6 +2296,12 @@ and open the template in the editor.
 }
 .serv-body .longer {
   text-align: left;
+}
+.serv-body .longer p {
+  font-size: 0.85rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: auto;
 }
 .serv-body h2 {
   clear: none;
@@ -2396,6 +2468,9 @@ and open the template in the editor.
     padding: 0 0 10px 10px;
   }
 }
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -2733,6 +2808,9 @@ and open the template in the editor.
     margin-top: 30px;
   }
 }
+/*--------------------------------------------------------------
+# Resources
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -2992,6 +3070,9 @@ tbody.collapse.in {
   margin-bottom: 0.8em;
 }
 
+/*--------------------------------------------------------------
+# Social media
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -3038,6 +3119,9 @@ and open the template in the editor.
     padding-top: 10px;
   }
 }
+/*--------------------------------------------------------------
+# Referrals
+--------------------------------------------------------------*/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates

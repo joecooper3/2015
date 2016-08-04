@@ -82,9 +82,22 @@
     .current-menu-item > a,
     .current_page_ancestor > a {
     }
-    .donate a {
+    .donate { 
+    a {
         background-color: $color5;
+        
     }
+    ul {
+            li {
+                a {
+                    background-color: $color1;
+                    &:hover {
+                        background-color: $color4;
+                    }
+                }
+            }
+        }
+}
 }
 .total-navigation {
     display: flex;

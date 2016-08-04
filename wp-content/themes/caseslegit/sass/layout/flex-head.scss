@@ -35,7 +35,7 @@ and open the template in the editor.
 .site-branding {
     flex: 0 0 400px;
     max-width: 380px;
-    margin: 0 15px 0 5px;
+    margin: 0 15px 0 10px;
     padding-right: 10px;
     line-height: 0;
 }
@@ -127,6 +127,13 @@ input[type="search"] {
     display: none; 
 }
 
+.all-prog-nav {
+    a {
+    background-color: $color2;
+    text-transform: uppercase !important;
+    }
+}
+
 /*Fading navbar */
 #masthead-fade
 {
@@ -134,10 +141,19 @@ input[type="search"] {
     top:0;
     position:fixed;
     width:100%;
-    background-color: $color1;
     z-index: 99999;
+    
+}
+.both-row-fade {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+.top-row-fade {
+    background-color: $color1;
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
+
 .nav-container-fade {
     padding: 0;
     margin: 0 auto;
@@ -164,18 +180,31 @@ input[type="search"] {
             ul {
                 li {
                     a {
-                        padding: 10px 15px;
+                        padding: 15px 15px;
+                    }
+                    ul {
+                        top: 3.1em;
+                        li {
+                            a {
+                                padding: 10px 15px;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
-
 #search-link-fade {
-    padding: 0 20px;
+    background-color: $color4;
+    margin-left: 5px;
+    align-self: stretch;
 }
-
+#search-container-fade {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
 /* Bigger than medium screens */
 @media all and (max-width: 1106px) {
     .site-branding { padding-bottom: 20px; }

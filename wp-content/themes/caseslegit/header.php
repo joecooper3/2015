@@ -61,6 +61,8 @@
             
             <!-- the menu on scroll up -->
             <div id="masthead-fade" class="site-header" role="banner">
+                <div class="both-row-fade">
+                    <div class="top-row-fade">
                 <div class="nav-container-fade">	
                     <div class="site-branding-fade">
                         <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
@@ -80,17 +82,17 @@
                             <div class="social-media-menu-container"><a href="https://www.facebook.com/casesnyc/"  class="nopad" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="http://www.twitter.com/casesnyc/" class="nopad" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             </div>
-<a href="#search-container" id="search-link-fade" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="search-container"><i class="fa fa-search" aria-hidden="true"></i></a>
+<a href="#search-container-fade" id="search-link-fade" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="search-container"><i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
 
                     </nav><!-- #site-navigation -->
-                    <div id="search-container" class="search-box-wrapper collapse">
+                    
+                </div>  </div>
+<div id="search-container-fade" class="search-box-wrapper collapse">
                         <div class="search-box-wrapper2">
                             <div class="search-box">
                                 <?php get_search_form(); ?>
-                            </div> </div></div>
-                </div>  
-
+                            </div> </div></div></div>
             </div>
 
             <div id="content" class="site-content">

@@ -63,10 +63,18 @@ get_header();
 
         <div id="maininfo">
             <div id="submaininfo">
-            <p><span class="emp">Everyone deserves a second chance.</span> At CASES, we believe in the power of people to 
-                change&mdash;regardless of past choices, present struggles, or future obstacles.
-                We specialize in providing alternatives to incarceration and re-entry services to New York City's
-                most vulnerable populations, including at-risk youth and persons with behavioral health needs.</p>
+                <p>
+                    <span class="emp">New York City’s Rikers Island jail is currently home to more than 9,000 people every day,
+                    including large numbers 
+                    of young people age 16-24 tried as adults and men and women with serious mental illness and other behavioral health 
+                    conditions. </span></p>
+                <p>Many of the people in these subpopulations have become involved in the criminal justice system as the result
+                    of factors including poverty, challenging family situations, low education levels, lack of employment opportunities, 
+                    homelessness, untreated mental illness, and addiction. Once involved in 
+                    the criminal justice system these individuals face significant challenges 
+                    if they are to overcome the experience of incarceration, the consequences of a 
+                    criminal record, and the disruption of community networks and—for young people—the traditional course of youth development.
+                 </p>
             
             <ul class="nav nav-tabs">
                 <li class="active">
@@ -106,33 +114,46 @@ get_header();
             <div role="tabpanel" class="tab-pane fade" id="what">
                 <div class="infog-container">
                     <div class="infog-boxfp">
-                    <img src="wp-content/themes/caseslegit/images/unempinfo-m.png" 
-                        srcset="wp-content/themes/caseslegit/images/unempinfo-xs.png 400w, 
-                        wp-content/themes/caseslegit/images/unempinfo-s.png 660w,
-                        wp-content/themes/caseslegit/images/unempinfo-m.png 950w,
-                        wp-content/themes/caseslegit/images/unempinfo-l.png 1900w,
-                        wp-content/themes/caseslegit/images/unempinfo-xl.png 3800w"
-                        alt="60-75% of formerly incarcerated individuals are unemployed
-                        up to a year after being released."></div>
+                    <img src="wp-content/themes/caseslegit/images/gradjail-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/gradjail-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/gradjail-s.png 660w,
+                        wp-content/themes/caseslegit/images/gradjail-m.png 950w,
+                        wp-content/themes/caseslegit/images/gradjail-l.png 1900w,
+                        wp-content/themes/caseslegit/images/gradjail-xl.png 3800w"
+                        alt="Low-income young people of color are more likely to me incarcerated than employed at any future
+                        point of their lives."></div>
                     <div class="infog-link">
-                        <p><a href="#">Read more about CASES' employment services <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="../youth/">Read more about CASES' youth services <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                     <div class="infog-boxfp">
-                    <img src="wp-content/themes/caseslegit/images/gradinfo-m.png" 
-                        srcset="wp-content/themes/caseslegit/images/gradinfo-xs.png 400w, 
-                        wp-content/themes/caseslegit/images/gradinfo-s.png 660w,
-                        wp-content/themes/caseslegit/images/gradinfo-m.png 950w,
-                        wp-content/themes/caseslegit/images/gradinfo-l.png 1900w,
-                        wp-content/themes/caseslegit/images/gradinfo-xl.png 3800w"
-                        alt="Of youth ATI participants, 85% were engaged in school, job training,
-                        employment and/or treatment programs at their CASES exit."></div>
+                    <img src="wp-content/themes/caseslegit/images/detained-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/detained-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/detained-s.png 660w,
+                        wp-content/themes/caseslegit/images/detained-m.png 950w,
+                        wp-content/themes/caseslegit/images/deetained-l.png 1900w,
+                        wp-content/themes/caseslegit/images/detained-xl.png 3800w"
+                        alt="People with mental illness are detained twice as long as people without mental illness
+                        when all other factors are similar."></div>
                     <div class="infog-link">
-                        <p><a href="#">Read more about CASES' education services <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="../adult-behavioral-health/">Read more about CASES' adult behavioral health services <i class="fa fa-arrow-right"></a></p></i>
                     </div>
+                    
                 
             </div>  </div>
             <div role="tabpanel" class="tab-pane fade" id="outcomes">
                 <div class="infog-container">
+                    <div class="infog-boxfp">
+                    <img src="wp-content/themes/caseslegit/images/youthrecid-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/youthrecid-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/youthrecid-s.png 660w,
+                        wp-content/themes/caseslegit/images/youthrecid-m.png 950w,
+                        wp-content/themes/caseslegit/images/youthrecid-l.png 1900w,
+                        wp-content/themes/caseslegit/images/youthrecid-xl.png 3800w"
+                        alt="Only 16% of CASES youth ATI participants have a new criminal conviction
+                        after two years of completing services."></div>
+                    <div class="infog-link">
+                        <p><a href="../youth/">Read more about CASES youth programs <i class="fa fa-arrow-right"></a></p></i>
+                    </div>
                     <div class="infog-boxfp">
                     <img src="wp-content/themes/caseslegit/images/moneyinfo-m.png" 
                         srcset="wp-content/themes/caseslegit/images/moneyinfo-xs.png 400w, 
@@ -145,18 +166,7 @@ get_header();
                     <div class="infog-link">
                         <p><a href="#">Read more about the outcomes of CASES clients <i class="fa fa-arrow-right"></a></p></i>
                     </div>
-                    <div class="infog-boxfp">
-                    <img src="wp-content/themes/caseslegit/images/youthrecid-m.png" 
-                        srcset="wp-content/themes/caseslegit/images/youthrecid-xs.png 400w, 
-                        wp-content/themes/caseslegit/images/youthrecid-s.png 660w,
-                        wp-content/themes/caseslegit/images/youthrecid-m.png 950w,
-                        wp-content/themes/caseslegit/images/youthrecid-l.png 1900w,
-                        wp-content/themes/caseslegit/images/youthrecid-xl.png 3800w"
-                        alt="Only 16% of CASES youth ATI participants have a new criminal conviction
-                        after two years of completing services."></div>
-                    <div class="infog-link">
-                        <p><a href="?page_id=882">Read more about how CASES keeps its participants in the community <i class="fa fa-arrow-right"></a></p></i>
-                    </div>
+                    
                 
             </div>  </div>
             <!-- Text after infographics, if we want it -->
