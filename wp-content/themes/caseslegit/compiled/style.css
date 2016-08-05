@@ -917,8 +917,9 @@ and open the template in the editor.
 
 #responsiveCheck {
   display: none;
-  content: 'L';
+  content: 'X';
   width: 51px;
+  height: 51px;
 }
 
 #masthead {
@@ -1145,6 +1146,12 @@ input[type="search"] {
 
   .search-box .search-field {
     float: none;
+  }
+}
+/*stricly for hiding the fade menu when it breaks - hopefully will change one day */
+@media all and (max-width: 964px) {
+  #responsiveCheck {
+    height: 50px;
   }
 }
 /* Medium 2 screens? */
@@ -2358,6 +2365,18 @@ and open the template in the editor.
   box-shadow: none;
 }
 
+.serv-body .relprog-list {
+  list-style-type: none;
+  text-align: left;
+  font-size: 1.1rem;
+  column-count: 2;
+  column-gap: 30px;
+  margin-bottom: 25px;
+}
+.serv-body .relprog-list a {
+  font-family: akzMed;
+}
+
 .relprog-title {
   flex: 1 100%;
   font-family: akzMed;
@@ -2424,7 +2443,7 @@ and open the template in the editor.
 }
 @media all and (max-width: 800px) {
   .serv-body {
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     max-width: 100%;
   }
   .serv-body .bodybox {
@@ -2665,6 +2684,9 @@ and open the template in the editor.
 .keystaff-grid .holly {
   background-image: url("images/keystaff/hollysq2x.jpg");
 }
+.keystaff-grid .dawn {
+  background-image: url("images/keystaff/dawnsq2x.jpg");
+}
 
 .keystaff-content {
   display: flex;
@@ -2692,54 +2714,69 @@ and open the template in the editor.
   background-image: url("images/keystaff/loyallg1x.jpg");
 }
 .keystaff-content .joel {
-  background-image: url("images/keystaff/joellg1x.jpg");
+  background-image: url("images/keystaff/joelsq1x.jpg");
 }
 .keystaff-content .george {
-  background-image: url("images/keystaff/georgelg1x.jpg");
+  background-image: url("images/keystaff/georgesq1x.jpg");
+}
+.keystaff-content .rukia {
+  background-image: url("images/keystaff/rukiasq1x.jpg");
 }
 .keystaff-content .rebecca {
-  background-image: url("images/keystaff/rebeccalg1x.jpg");
+  background-image: url("images/keystaff/rebeccasq1x.jpg");
 }
 .keystaff-content .holly {
-  background-image: url("images/keystaff/hollylg1x.jpg");
+  background-image: url("images/keystaff/hollysq1x.jpg");
 }
 .keystaff-content .joanna {
-  background-image: url("images/keystaff/joannalg1x.jpg");
+  background-image: url("images/keystaff/joannasq1x.jpg");
+}
+.keystaff-content .dawn {
+  background-image: url("images/keystaff/dawnsq1x.jpg");
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .keystaff-content .lucie {
-    background-image: url("images/keystaff/lucielg2x.jpg");
+    background-image: url("images/keystaff/luciesq2x.jpg");
   }
   .keystaff-content .rob {
-    background-image: url("images/keystaff/roblg2x.jpg");
+    background-image: url("images/keystaff/robsq2x.jpg");
   }
   .keystaff-content .jessica {
-    background-image: url("images/keystaff/jessicalg2x.jpg");
+    background-image: url("images/keystaff/jessicasq2x.jpg");
   }
   .keystaff-content .rebeccalw {
-    background-image: url("images/keystaff/rebeccalwlg2x.jpg");
+    background-image: url("images/keystaff/rebeccalwsq2x.jpg");
   }
   .keystaff-content .quinn {
-    background-image: url("images/keystaff/quinnlg2x.jpg");
+    background-image: url("images/keystaff/quinnsq2x.jpg");
   }
   .keystaff-content .loyal {
-    background-image: url("images/keystaff/loyallg2x.jpg");
+    background-image: url("images/keystaff/loyalsq2x.jpg");
   }
   .keystaff-content .joel {
-    background-image: url("images/keystaff/joellg2x.jpg");
+    background-image: url("images/keystaff/joelsq2x.jpg");
   }
   .keystaff-content .george {
-    background-image: url("images/keystaff/georgelg2x.jpg");
+    background-image: url("images/keystaff/georgesq2x.jpg");
   }
   .keystaff-content .rebecca {
-    background-image: url("images/keystaff/rebeccalg2x.jpg");
+    background-image: url("images/keystaff/rebeccasq2x.jpg");
   }
   .keystaff-content .holly {
-    background-image: url("images/keystaff/hollylg2x.jpg");
+    background-image: url("images/keystaff/hollysq2x.jpg");
   }
   .keystaff-content .joanna {
-    background-image: url("images/keystaff/joannalg2x.jpg");
+    background-image: url("images/keystaff/joannasq2x.jpg");
+  }
+  .keystaff-content .dawn {
+    background-image: url("images/keystaff/dawnsq2x.jpg");
+  }
+  .keystaff-content .rukia {
+    background-image: url("images/keystaff/rukiasq2x.jpg");
+  }
+  .keystaff-content .aml {
+    background-image: url("images/keystaff/amlsq2x.jpg");
   }
 }
 .keystaff-lg-portrait {
@@ -2747,22 +2784,24 @@ and open the template in the editor.
   background-size: cover;
   background-position: center top;
   max-width: 300px;
-  height: 420px;
-  margin-top: 50px;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 150px;
 }
 
 @media all and (max-width: 1150px) {
   .keystaff-lg-portrait {
-    max-width: 550px;
+    max-width: 275px;
     height: 275px;
     margin-top: 0;
     margin-bottom: 20px;
+    border-radius: 50%;
   }
 }
 .keystaff-words {
   flex: 1 0 100%;
   max-width: 750px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 .keystaff-words h2 {
   margin-top: 0;
@@ -2777,7 +2816,6 @@ and open the template in the editor.
   padding-bottom: 10px;
 }
 .keystaff-words p {
-  padding-left: 25px;
   padding-right: 25px;
 }
 
@@ -3085,12 +3123,14 @@ and open the template in the editor.
 .social-media-container {
   left: 0;
   top: 0;
+  flex: 1 0 50px;
   position: relative;
   padding-top: 125px;
   display: flex;
   flex-flow: column nowrap;
   margin: 0 10px 0 10px;
   align-self: flex-start;
+  max-width: 50px;
 }
 
 .social-item {
@@ -3105,10 +3145,12 @@ and open the template in the editor.
   transition: 0.4s ease;
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 900px) {
   .social-media-container {
     flex-flow: row wrap;
-    padding-top: 25px;
+    padding-top: 0;
+    order: 2;
+    margin: 0 auto;
   }
 
   .social-item {
@@ -3117,6 +3159,11 @@ and open the template in the editor.
 
   .entry-content-prog {
     padding-top: 10px;
+  }
+}
+@media all and (max-width: 900px) {
+  .social-media-container {
+    max-width: 200px;
   }
 }
 /*--------------------------------------------------------------

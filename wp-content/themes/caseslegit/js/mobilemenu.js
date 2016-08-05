@@ -24,6 +24,19 @@
         }
 
     };
+    
+    
+    // Now for that freaking fade menu...
+ var resValue2, resChange2;
+    resChange2 = function ()  {         
+if (jQuery("#responsiveCheck").css("height") === '50px')
+            {
+                jQuery("#masthead-fade").css("display","none");
+            }
+            resValue2 = jQuery("#responsiveCheck").css("height");
+        };
+        
+        
     //Displays new column menu on button click
     jQuery(".menu-toggle").click(function () {
         jQuery("#primary-menu").slideToggle("fast");
@@ -38,9 +51,11 @@
     
     // run test on initial page load
     resChange();
+    resChange2();
 
     // run test on resize of the window
     jQuery(window).resize(resChange);
+    jQuery(window).resize(resChange2);
   
 
     // sliding component of navbar
@@ -50,7 +65,7 @@
 
 jQuery(window).scroll(function () {
     var currentScroll = jQuery(this).scrollTop();
-    if (currentScroll > 300) {
+    if (currentScroll > 300 && jQuery("#responsiveCheck").css("height") === '51px') {
         if (currentScroll > previousScroll) {
             jQuery('#masthead-fade').fadeOut();
         } else {

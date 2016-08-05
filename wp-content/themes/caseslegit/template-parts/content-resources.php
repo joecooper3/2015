@@ -7,15 +7,42 @@
 
 ?>
 <?php
-$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' ); ?>
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' );
+$src_xs = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xs, false, '' );
+$src_s = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_s, false, '' );
+$src_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_m, false, '' );
+$src_l = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_l, false, '' );
+$src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl, false, '' );
+
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <style type="text/css" media="screen">
         .resc-bgimage { 
-         background: url(<?php echo $src[0]; ?>); 
-         background-size: cover; 
-         background-position: center;
-         height: 300px;
+            background: url(<?php echo $src[0]; ?>); 
+            background-size: cover; 
+            background-position: center; 
+            height: 300px;
+        }
+        @media all and (max-width: 1800px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_l[0]; ?>);
+            }
+        }
+        @media all and (max-width: 1200px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_m[0]; ?>);
+            }
+        }
+        @media all and (max-width: 800px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_s[0]; ?>);
+            }
+        }
+        @media all and (max-width: 400px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_xs[0]; ?>);
+            }
         }
     </style>
 <div class="about-container">

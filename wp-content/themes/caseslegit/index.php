@@ -130,7 +130,7 @@ get_header();
                         srcset="wp-content/themes/caseslegit/images/detained-xs.png 400w, 
                         wp-content/themes/caseslegit/images/detained-s.png 660w,
                         wp-content/themes/caseslegit/images/detained-m.png 950w,
-                        wp-content/themes/caseslegit/images/deetained-l.png 1900w,
+                        wp-content/themes/caseslegit/images/detained-l.png 1900w,
                         wp-content/themes/caseslegit/images/detained-xl.png 3800w"
                         alt="People with mental illness are detained twice as long as people without mental illness
                         when all other factors are similar."></div>

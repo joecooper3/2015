@@ -147,6 +147,19 @@ and open the template in the editor.
     }
 }
 
+.serv-body {
+    .relprog-list {
+    list-style-type: none;
+    text-align: left;
+    font-size: 1.1rem;
+    column-count: 2;
+    column-gap: 30px;
+    margin-bottom: 25px;
+    a {
+        font-family: akzMed;
+    }
+}
+}
 .relprog-title {
     flex: 1 100%;
     font-family: akzMed;
@@ -154,8 +167,6 @@ and open the template in the editor.
     margin: 20px 0px;
     padding: 0 0 5px 0;
     color: $color1;
-    
-    
 }
 .relprog-line {
     background-color: #aaa;
@@ -217,7 +228,7 @@ and open the template in the editor.
 }
 @media all and (max-width: 800px) {
     .serv-body {
-        margin: 20px;
+        margin: 0 20px 20px 20px;
         max-width: 100%;
         .bodybox {
             padding: 0 20px;

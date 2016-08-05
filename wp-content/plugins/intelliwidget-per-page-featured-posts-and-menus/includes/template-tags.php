@@ -88,7 +88,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
     /**
      * Display the featured post image with link to the full image.
      */
-    function the_intelliwidget_image( $link = TRUE, $size = NULL ) {
+    function the_intelliwidget_image( $link = TRUE, $size = 'serv_s' ) {
         echo get_the_intelliwidget_image( $link, $size );
     }
 

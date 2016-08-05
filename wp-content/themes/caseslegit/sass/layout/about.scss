@@ -200,6 +200,9 @@ and open the template in the editor.
          .holly {
             background-image:url("images/keystaff/hollysq2x.jpg")
         }
+        .dawn {
+            background-image:url("images/keystaff/dawnsq2x.jpg")
+        }
 }
 .keystaff-content {
     display: flex;
@@ -226,19 +229,25 @@ and open the template in the editor.
         background-image:url("images/keystaff/loyallg1x.jpg");
     }
     .joel {
-        background-image:url("images/keystaff/joellg1x.jpg");
+        background-image:url("images/keystaff/joelsq1x.jpg");
     }
     .george {
-        background-image:url("images/keystaff/georgelg1x.jpg");
+        background-image:url("images/keystaff/georgesq1x.jpg");
+    }
+    .rukia {
+        background-image:url("images/keystaff/rukiasq1x.jpg");
     }
     .rebecca {
-        background-image:url("images/keystaff/rebeccalg1x.jpg");
+        background-image:url("images/keystaff/rebeccasq1x.jpg");
     }
     .holly {
-        background-image:url("images/keystaff/hollylg1x.jpg");
+        background-image:url("images/keystaff/hollysq1x.jpg");
     }
     .joanna {
-        background-image:url("images/keystaff/joannalg1x.jpg");
+        background-image:url("images/keystaff/joannasq1x.jpg");
+    }
+    .dawn {
+        background-image:url("images/keystaff/dawnsq1x.jpg");
     }
 }
 @media 
@@ -246,37 +255,46 @@ and open the template in the editor.
 (min-resolution: 192dpi) { 
     .keystaff-content {
         .lucie {
-            background-image:url("images/keystaff/lucielg2x.jpg");
+            background-image:url("images/keystaff/luciesq2x.jpg");
         }
         .rob {
-            background-image:url("images/keystaff/roblg2x.jpg");
+            background-image:url("images/keystaff/robsq2x.jpg");
         }
         .jessica {
-        background-image:url("images/keystaff/jessicalg2x.jpg");
+        background-image:url("images/keystaff/jessicasq2x.jpg");
     }
     .rebeccalw {
-        background-image:url("images/keystaff/rebeccalwlg2x.jpg");
+        background-image:url("images/keystaff/rebeccalwsq2x.jpg");
     }
     .quinn {
-        background-image:url("images/keystaff/quinnlg2x.jpg");
+        background-image:url("images/keystaff/quinnsq2x.jpg");
     }
     .loyal {
-        background-image:url("images/keystaff/loyallg2x.jpg");
+        background-image:url("images/keystaff/loyalsq2x.jpg");
     }
     .joel {
-        background-image:url("images/keystaff/joellg2x.jpg");
+        background-image:url("images/keystaff/joelsq2x.jpg");
     }
     .george {
-        background-image:url("images/keystaff/georgelg2x.jpg");
+        background-image:url("images/keystaff/georgesq2x.jpg");
     }
     .rebecca {
-        background-image:url("images/keystaff/rebeccalg2x.jpg");
+        background-image:url("images/keystaff/rebeccasq2x.jpg");
     }
     .holly {
-        background-image:url("images/keystaff/hollylg2x.jpg");
+        background-image:url("images/keystaff/hollysq2x.jpg");
     }
     .joanna {
-        background-image:url("images/keystaff/joannalg2x.jpg");
+        background-image:url("images/keystaff/joannasq2x.jpg");
+    }
+    .dawn {
+        background-image:url("images/keystaff/dawnsq2x.jpg");
+    }
+    .rukia {
+        background-image:url("images/keystaff/rukiasq2x.jpg");
+    }
+    .aml {
+        background-image:url("images/keystaff/amlsq2x.jpg");
     }
     }
 }
@@ -286,23 +304,26 @@ and open the template in the editor.
     background-size: cover;
     background-position: center top;
     max-width: 300px;
-    height: 420px;  
-    margin-top: 50px;
+    height: 300px;  
+    margin-top: 20px;
+    border-radius: 150px;
+    
 }
 
 @media all and (max-width: 1150px) {
     .keystaff-lg-portrait {
-        max-width: 550px;
+        max-width: 275px;
         height: 275px;
         margin-top: 0;
         margin-bottom: 20px;
+        border-radius: 50%;
     }
 }
 
 .keystaff-words {
     flex: 1 0 100%;
     max-width: 750px;
-    padding-left: 20px;
+    padding-left: 40px;
     h2 {
         
         margin-top: 0;
@@ -318,7 +339,6 @@ and open the template in the editor.
         padding-bottom: 10px;
     }
     p {
-        padding-left: 25px;
         padding-right: 25px;
     }
 }

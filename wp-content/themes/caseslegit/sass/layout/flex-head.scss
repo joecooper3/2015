@@ -12,8 +12,9 @@ and open the template in the editor.
 }
 #responsiveCheck {
     display: none;
-    content: 'L';
+    content: 'X';
     width: 51px;
+    height: 51px;
 }
 
 #masthead
@@ -239,6 +240,11 @@ input[type="search"] {
     }
     #masthead {align-content: center;}
     .search-box .search-field {float: none;}
+}
+/*stricly for hiding the fade menu when it breaks - hopefully will change one day */
+
+@media all and (max-width: 964px) {
+#responsiveCheck { height: 50px; }
 }
 
 /* Medium 2 screens? */

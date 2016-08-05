@@ -11,12 +11,14 @@ and open the template in the editor.
 .social-media-container {
     left: 0;
     top: 0;
+    flex: 1 0 50px;
     position: relative;
     padding-top: 125px;
     display: flex;
     flex-flow: column nowrap;
     margin: 0 10px 0 10px;
     align-self: flex-start;
+    max-width: 50px;
 }
 .social-item {
     flex: 1 0 0px;
@@ -29,10 +31,12 @@ and open the template in the editor.
         transition: 0.4s ease;
     }
 }
-@media all and (max-width: 750px) {
+@media all and (max-width: 900px) {
     .social-media-container {
         flex-flow: row wrap;
-        padding-top: 25px;
+        padding-top: 0;
+        order: 2;
+        margin: 0 auto;
     }
     .social-item {
         border: 0;
@@ -40,4 +44,10 @@ and open the template in the editor.
     .entry-content-prog {
         padding-top: 10px;
     }
+}
+@media all and (max-width: 900px) {
+    .social-media-container {
+        max-width: 200px;
+    }
+
 }
