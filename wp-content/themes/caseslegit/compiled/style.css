@@ -2687,6 +2687,9 @@ and open the template in the editor.
 .keystaff-grid .dawn {
   background-image: url("images/keystaff/dawnsq2x.jpg");
 }
+.keystaff-grid .karen {
+  background-image: url("images/keystaff/karensq2x.jpg");
+}
 
 .keystaff-content {
   display: flex;
@@ -2695,11 +2698,14 @@ and open the template in the editor.
   padding-top: 30px;
   width: 100%;
 }
+.keystaff-content .aml {
+  background-image: url("images/keystaff/amlsq1x.jpg");
+}
 .keystaff-content .lucie {
-  background-image: url("images/keystaff/lucielg1x.jpg");
+  background-image: url("images/keystaff/luciesq1x.jpg");
 }
 .keystaff-content .rob {
-  background-image: url("images/keystaff/roblg1x.jpg");
+  background-image: url("images/keystaff/robsq1x.jpg");
 }
 .keystaff-content .jessica {
   background-image: url("images/keystaff/jessicalg1x.jpg");
@@ -2733,6 +2739,9 @@ and open the template in the editor.
 }
 .keystaff-content .dawn {
   background-image: url("images/keystaff/dawnsq1x.jpg");
+}
+.keystaff-content .karen {
+  background-image: url("images/keystaff/karensq1x.jpg");
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -2889,136 +2898,6 @@ tbody.collapse.in {
   transition-timing-function: ease;
 }
 
-.tooltip {
-  position: absolute;
-  z-index: 1070;
-  display: block;
-  font-family: akzRoman;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: normal;
-  line-break: auto;
-  line-height: 1.42857143;
-  text-align: left;
-  text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  white-space: normal;
-  word-break: normal;
-  word-spacing: normal;
-  word-wrap: normal;
-  font-size: 12px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-.tooltip.in {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-
-.tooltip.top {
-  margin-top: -3px;
-  padding: 5px 0;
-}
-
-.tooltip.right {
-  margin-left: 3px;
-  padding: 0 5px;
-}
-
-.tooltip.bottom {
-  margin-top: 3px;
-  padding: 5px 0;
-}
-
-.tooltip.left {
-  margin-left: -3px;
-  padding: 0 5px;
-}
-
-.tooltip-inner {
-  max-width: 200px;
-  padding: 3px 8px;
-  color: #ffffff;
-  text-align: center;
-  background-color: #000000;
-  border-radius: 4px;
-}
-
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-
-.tooltip.top .tooltip-arrow {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
-}
-
-.tooltip.top-left .tooltip-arrow {
-  bottom: 0;
-  right: 5px;
-  margin-bottom: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
-}
-
-.tooltip.top-right .tooltip-arrow {
-  bottom: 0;
-  left: 5px;
-  margin-bottom: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
-}
-
-.tooltip.right .tooltip-arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-width: 5px 5px 5px 0;
-  border-right-color: #000000;
-}
-
-.tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #000000;
-}
-
-.tooltip.bottom .tooltip-arrow {
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
-}
-
-.tooltip.bottom-left .tooltip-arrow {
-  top: 0;
-  right: 5px;
-  margin-top: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
-}
-
-.tooltip.bottom-right .tooltip-arrow {
-  top: 0;
-  left: 5px;
-  margin-top: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
-}
-
 .faqs {
   margin-top: 20px;
 }
@@ -3032,29 +2911,6 @@ tbody.collapse.in {
 }
 .faqs #a1, .faqs #a2, .faqs #a3, .faqs #a4, .faqs #a5, .faqs #a6, .faqs #a7, .faqs #a8, .faqs #a9, .faqs #a10 {
   margin-bottom: 20px;
-}
-
-.donatebutton {
-  appearance: button;
-  background-color: #002B55;
-  font-family: akzMed;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.5rem;
-  box-shadow: none;
-  transition: all 0.3s ease 0s;
-}
-.donatebutton:visited {
-  color: #fdfdfd;
-}
-.donatebutton:hover {
-  background-color: #194D7F;
-  color: #fdfdfd;
-  box-shadow: none;
 }
 
 .caldera-grid .donatebutton {
@@ -3073,6 +2929,28 @@ tbody.collapse.in {
   flex: 2 1 500px;
   font-size: 1.1rem;
 }
+.entry-content-resources .donatebutton {
+  appearance: button;
+  background-color: #002B55;
+  font-family: akzMed;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  box-shadow: none;
+  transition: all 0.3s ease 0s;
+}
+.entry-content-resources .donatebutton:visited {
+  color: #fdfdfd;
+}
+.entry-content-resources .donatebutton:hover {
+  background-color: #194D7F;
+  color: #fdfdfd;
+  box-shadow: none;
+}
 
 .directory {
   display: flex;
@@ -3080,6 +2958,11 @@ tbody.collapse.in {
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-around;
+}
+.directory .info-at-cases {
+  flex: 100%;
+  margin-top: 30px;
+  font-family: akzMed;
 }
 .directory .dir-row {
   flex: 1 100%;
@@ -3097,6 +2980,10 @@ tbody.collapse.in {
   flex: 1 0 225px;
   margin: 10px 10px 10px 0;
   max-width: 225px;
+}
+.directory .dir-four {
+  flex: 1 0 50%;
+  max-width: 50%;
 }
 .directory strong {
   font-family: akzRoman;

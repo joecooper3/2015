@@ -189,19 +189,22 @@ and open the template in the editor.
             background-image:url("images/keystaff/jessicasq2x.jpg");
         }
         .rob {
-            background-image:url("images/keystaff/robsq2x.jpg")
+            background-image:url("images/keystaff/robsq2x.jpg");
         }
         .george {
-            background-image:url("images/keystaff/georgesq2x.jpg")
+            background-image:url("images/keystaff/georgesq2x.jpg");
         }
         .rebecca {
-            background-image:url("images/keystaff/rebeccasq2x.jpg")
+            background-image:url("images/keystaff/rebeccasq2x.jpg");
         }
          .holly {
-            background-image:url("images/keystaff/hollysq2x.jpg")
+            background-image:url("images/keystaff/hollysq2x.jpg");
         }
         .dawn {
-            background-image:url("images/keystaff/dawnsq2x.jpg")
+            background-image:url("images/keystaff/dawnsq2x.jpg");
+        }
+        .karen {
+            background-image:url("images/keystaff/karensq2x.jpg");
         }
 }
 .keystaff-content {
@@ -210,11 +213,14 @@ and open the template in the editor.
     flex-flow: row wrap;
     padding-top: 30px;
     width: 100%;
-   .lucie {
-        background-image:url("images/keystaff/lucielg1x.jpg");
+   .aml {
+        background-image:url("images/keystaff/amlsq1x.jpg");
+    }
+    .lucie {
+        background-image:url("images/keystaff/luciesq1x.jpg");
     }
     .rob {
-        background-image:url("images/keystaff/roblg1x.jpg");
+        background-image:url("images/keystaff/robsq1x.jpg");
     }
     .jessica {
         background-image:url("images/keystaff/jessicalg1x.jpg");
@@ -248,6 +254,9 @@ and open the template in the editor.
     }
     .dawn {
         background-image:url("images/keystaff/dawnsq1x.jpg");
+    }
+    .karen {
+        background-image:url("images/keystaff/karensq1x.jpg");
     }
 }
 @media 
