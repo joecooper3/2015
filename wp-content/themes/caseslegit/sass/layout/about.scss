@@ -51,7 +51,7 @@ and open the template in the editor.
     background-color: $mywhite;
     padding: 0 50px;
     max-width: 900px;
-    flex: 2 1 500px;
+    flex: 1 1 700px;
 }
 
 .sidebar-about {
@@ -304,6 +304,9 @@ and open the template in the editor.
     }
     .aml {
         background-image:url("images/keystaff/amlsq2x.jpg");
+    }
+    .karen {
+        background-image:url("images/keystaff/karensq2x.jpg");
     }
     }
 }

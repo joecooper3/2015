@@ -21,6 +21,9 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
             background: url(<?php echo $src[0]; ?>); 
             background-size: cover; 
             background-position: center; 
+            <?php if( get_field('background-position_attribute') ): ?>
+            background-position: <?php the_field('background-position_attribute') ?>;
+            <?php endif; ?>
         }
         @media all and (max-width: 1800px) {
             .leadimage-container4 {
@@ -66,6 +69,12 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 		?>
 	</div><!-- .entry-content -->
         <div class="sidebar-about"><?php get_sidebar('about'); ?>
+            <?php if( get_field('extra_box_body') ): ?>
+            <aside class="widget widget_intelliwidget">
+                <h1 class="intelliwidget3-title"><?php the_field('extra_box_title') ?></h1>
+                <div class="intelliwidget3-container"><?php the_field('extra_box_body') ?></div>
+            </aside>
+            <?php endif; ?>
 </div>
 </div>
 	<footer class="entry-footer">

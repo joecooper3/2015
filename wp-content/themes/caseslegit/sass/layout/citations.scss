@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 9, 2016, 11:31:38 AM
+    Author     : coopers
+*/
+.serv-body {
+    .cit-number {
+        vertical-align: super;
+        font-size: 0.65em;
+        background: none;
+        font-family:akzMed;
+        color: $color1;
+    }
+}
+.entry-content-prog {
+    .cit-number {
+        vertical-align: super;
+        font-size: 0.65em;
+        background: none;
+        font-family:akzMed;
+        color: $color1;
+    }
+}
+.prog-citations-bottom-container {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: akzRoman;
+    h2 {
+        font-family:akzMed;
+        font-size: 1.1rem;
+    }
+    .prog-citations-bottom {
+        font-size:0.7rem;
+        flex: 2 0 800px;
+        max-width: 700px;
+        margin-right: 100px;
+        border-top: 2.0px solid #ccc;
+        p {
+            margin-bottom:1.0em;
+        }
+        .cit-number {
+            font-size: 0.5em;
+        }
+    }
+    .prog-citations-bottom-spacer {
+        flex: 1 0 250px;
+        margin: 0;
+        max-width: 250px;
+    }
+    .cit-arrow {
+        margin-left: 5px;
+    }
+}
+.serv-container {
+    .prog-citations-bottom-container {
+        .prog-citations-bottom {
+            border-top: 0;
+        }
+    }
+    
+}
+@media all and (max-width: 1140px) {
+    .prog-citations-bottom-container {
+        margin-top: 40px;
+        .prog-citations-bottom {
+            margin-right: 0;   
+            flex: 100%;
+            padding: 0 30px;
+        }
+        .prog-citations-bottom-spacer {
+            display: none;
+        }
+    }
+
+}

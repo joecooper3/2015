@@ -85,6 +85,13 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
             <aside><span class="asidetitle"> <?php the_field('box3_title') ?></span>
             <?php the_field('box3') ?></aside>
             <?php endif; ?></div>
+            <?php if( get_field('citations') ): ?>
+        <div class="prog-citations-bottom-container">
+            <div class="prog-citations-bottom"><h2>Footnotes</h2>
+                <?php the_field('citations') ?></div>  
+            <div class="prog-citations-bottom-spacer"></div>
+        </div>
+        <?php endif; ?>
 </div><!-- .entry-content -->
 
 	<footer class="entry-footer">

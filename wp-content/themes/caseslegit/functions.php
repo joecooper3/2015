@@ -39,11 +39,11 @@ function caseslegit_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-        add_image_size('serv_xs', 400, 200, true);
-        add_image_size('serv_s', 800, 350, true);
-        add_image_size('serv_m', 1280, 350, true);
-        add_image_size('serv_l', 1800, 700, true);
-        add_image_size('serv_xl', 2400, 1050, true);
+        add_image_size('serv_xs', 401);
+        add_image_size('serv_s', 801);
+        add_image_size('serv_m', 1281);
+        add_image_size('serv_l', 1801);
+        add_image_size('serv_xl', 2401);
         add_image_size('news_m', 700, 525, true);
         add_image_size('news_l', 1400, 1050, true);
         add_image_size('news_xl', 2100, 1575, true);

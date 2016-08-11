@@ -2406,6 +2406,11 @@ and open the template in the editor.
   align-items: center;
   margin: 0 auto;
 }
+.clinictable a, .clinictable a:visited {
+  font-family: akzMed;
+  color: #002B55;
+  background: none;
+}
 .clinictable .clinicitem {
   flex: 1;
   margin: 0 40px;
@@ -2541,7 +2546,7 @@ and open the template in the editor.
   background-color: #fdfdfd;
   padding: 0 50px;
   max-width: 900px;
-  flex: 2 1 500px;
+  flex: 1 1 700px;
 }
 
 .sidebar-about {
@@ -2786,6 +2791,9 @@ and open the template in the editor.
   }
   .keystaff-content .aml {
     background-image: url("images/keystaff/amlsq2x.jpg");
+  }
+  .keystaff-content .karen {
+    background-image: url("images/keystaff/karensq2x.jpg");
   }
 }
 .keystaff-lg-portrait {
@@ -3303,4 +3311,82 @@ and open the template in the editor.
 
 .caldera-grid h2 {
   margin-bottom: 30px;
+}
+
+/*--------------------------------------------------------------
+# Referrals
+--------------------------------------------------------------*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 9, 2016, 11:31:38 AM
+    Author     : coopers
+*/
+.serv-body .cit-number {
+  vertical-align: super;
+  font-size: 0.65em;
+  background: none;
+  font-family: akzMed;
+  color: #002B55;
+}
+
+.entry-content-prog .cit-number {
+  vertical-align: super;
+  font-size: 0.65em;
+  background: none;
+  font-family: akzMed;
+  color: #002B55;
+}
+
+.prog-citations-bottom-container {
+  flex: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: akzRoman;
+}
+.prog-citations-bottom-container h2 {
+  font-family: akzMed;
+  font-size: 1.1rem;
+}
+.prog-citations-bottom-container .prog-citations-bottom {
+  font-size: 0.7rem;
+  flex: 2 0 800px;
+  max-width: 700px;
+  margin-right: 100px;
+  border-top: 2.0px solid #ccc;
+}
+.prog-citations-bottom-container .prog-citations-bottom p {
+  margin-bottom: 1.0em;
+}
+.prog-citations-bottom-container .prog-citations-bottom .cit-number {
+  font-size: 0.5em;
+}
+.prog-citations-bottom-container .prog-citations-bottom-spacer {
+  flex: 1 0 250px;
+  margin: 0;
+  max-width: 250px;
+}
+.prog-citations-bottom-container .cit-arrow {
+  margin-left: 5px;
+}
+
+.serv-container .prog-citations-bottom-container .prog-citations-bottom {
+  border-top: 0;
+}
+
+@media all and (max-width: 1140px) {
+  .prog-citations-bottom-container {
+    margin-top: 40px;
+  }
+  .prog-citations-bottom-container .prog-citations-bottom {
+    margin-right: 0;
+    flex: 100%;
+    padding: 0 30px;
+  }
+  .prog-citations-bottom-container .prog-citations-bottom-spacer {
+    display: none;
+  }
 }
