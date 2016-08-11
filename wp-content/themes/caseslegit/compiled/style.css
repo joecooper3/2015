@@ -1431,6 +1431,14 @@ and open the template in the editor.
   margin: 4px 5px 0 0;
 }
 
+.news-archive-link {
+  font-family: akzMed;
+  font-size: 1.0rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* Underline From Center */
 .hvr-underline-from-center {
   display: inline-block;
@@ -2592,10 +2600,15 @@ and open the template in the editor.
   margin: 0 30px 0 0;
 }
 
+.keystaff-description {
+  flex: 100%;
+}
+
 .keystaff-grid {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: center;
 }
 .keystaff-grid .keystaff-item {
   display: block;
@@ -2808,7 +2821,7 @@ and open the template in the editor.
   }
 }
 .keystaff-words {
-  flex: 1 0 100%;
+  flex: 1 0 550px;
   max-width: 750px;
   padding-left: 40px;
 }
@@ -2843,6 +2856,19 @@ and open the template in the editor.
   list-style-type: none;
 }
 
+@media all and (max-width: 1070px) {
+  .entry-content-keystaff {
+    order: 2;
+  }
+
+  .keystaff-description {
+    order: 3;
+  }
+
+  .sidebar-keystaff {
+    order: 4;
+  }
+}
 /* I'm the idiotic way Wordpress makes everything a paragraph */
 .thankswp {
   margin: 0;
@@ -3303,4 +3329,22 @@ and open the template in the editor.
 
 .caldera-grid h2 {
   margin-bottom: 30px;
+}
+
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 11, 2016, 4:02:34 PM
+    Author     : joe.cooper
+*/
+.entry-content-archives {
+  flex: 1 0 700px;
+  padding: 0 60px 0 60px;
+  max-width: 850px;
 }

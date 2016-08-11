@@ -107,10 +107,15 @@ and open the template in the editor.
     margin: 0 30px 0 0;
 }
 
+.keystaff-description {
+    flex: 100%;
+}
+
 .keystaff-grid {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
     
     .keystaff-item {
         display: block;
@@ -330,7 +335,7 @@ and open the template in the editor.
 }
 
 .keystaff-words {
-    flex: 1 0 100%;
+    flex: 1 0 550px;
     max-width: 750px;
     padding-left: 40px;
     h2 {
@@ -367,6 +372,17 @@ and open the template in the editor.
     }
 }
 
+@media all and (max-width: 1070px) {
+    .entry-content-keystaff {
+        order: 2;
+    }
+    .keystaff-description {
+        order: 3;
+    }
+    .sidebar-keystaff {
+        order: 4;
+    }
+}
 
 /* I'm the idiotic way Wordpress makes everything a paragraph */
 

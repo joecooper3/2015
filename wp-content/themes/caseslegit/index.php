@@ -188,8 +188,8 @@ get_header();
                     ?>
 
                 <?php endwhile; ?>
-
-                <?php the_posts_navigation(); ?>
+                <a href="../news-archive" class="news-archive-link">News Archive</a>
+                
 
             <?php else : ?>
 

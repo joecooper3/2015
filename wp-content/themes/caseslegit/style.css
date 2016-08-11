@@ -1542,6 +1542,14 @@ and open the template in the editor.
   margin: 4px 5px 0 0;
 }
 
+.news-archive-link {
+  font-family: akzMed;
+  font-size: 1.0rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* Underline From Center */
 .hvr-underline-from-center {
   display: inline-block;
@@ -2856,6 +2864,12 @@ and open the template in the editor.
   margin: 0 30px 0 0;
 }
 
+.keystaff-description {
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
 .keystaff-grid {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2866,6 +2880,9 @@ and open the template in the editor.
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .keystaff-grid .keystaff-item {
   display: block;
@@ -3096,9 +3113,9 @@ and open the template in the editor.
   }
 }
 .keystaff-words {
-  -webkit-flex: 1 0 100%;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
+  -webkit-flex: 1 0 550px;
+      -ms-flex: 1 0 550px;
+          flex: 1 0 550px;
   max-width: 750px;
   padding-left: 40px;
 }
@@ -3143,6 +3160,25 @@ and open the template in the editor.
   list-style-type: none;
 }
 
+@media all and (max-width: 1070px) {
+  .entry-content-keystaff {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .keystaff-description {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .sidebar-keystaff {
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
 /* I'm the idiotic way Wordpress makes everything a paragraph */
 .thankswp {
   margin: 0;
@@ -3637,4 +3673,24 @@ and open the template in the editor.
 
 .caldera-grid h2 {
   margin-bottom: 30px;
+}
+
+/*--------------------------------------------------------------
+# Archives
+--------------------------------------------------------------*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 11, 2016, 4:02:34 PM
+    Author     : joe.cooper
+*/
+.entry-content-archives {
+  -webkit-flex: 1 0 700px;
+      -ms-flex: 1 0 700px;
+          flex: 1 0 700px;
+  padding: 0 60px 0 60px;
+  max-width: 850px;
 }

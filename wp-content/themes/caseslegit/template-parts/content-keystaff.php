@@ -73,15 +73,14 @@
                 <li class="keystaff-item lucie"><a href="#lucie" aria-controls="lucie" role="tab" data-toggle="tab"><div class="keystaff-shade">
                             <strong>Lucie Swinnerton</strong><br/>Deputy Director of Planning, Evaluation, and Research</div>
                     </a> </li>
-                
-                
-                
-            </ul>
+                  
+            </ul></div>
+<div class="sidebar-about sidebar-keystaff"><?php get_sidebar('about'); ?>
+</div>
 
-
-
+<div class="keystaff-description">
 <?php the_content(); ?>
-
+</div>
             <?php
             wp_link_pages(array(
                 'before' => '<div class="page-links">' . esc_html__('Pages:', 'caseslegit'),
