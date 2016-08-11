@@ -187,6 +187,12 @@ and open the template in the editor.
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
+    a, a:visited {
+        font-family: akzMed;
+        color: $color1;
+        background: none;
+        
+    }
     
     .clinicitem {
         flex: 1;

@@ -28,6 +28,9 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
             background: url(<?php echo $src[0]; ?>); 
             background-size: cover; 
             background-position: center; 
+            <?php if( get_field('background-position_attribute') ): ?>
+            background-position: <?php the_field('background-position_attribute') ?>;
+            <?php endif; ?>
         }
         @media all and (max-width: 1800px) {
             .leadimage-container4 {
@@ -91,6 +94,13 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
             <?php the_field('box3') ?></aside>
             <?php endif; ?>
 </div>
+        <?php if( get_field('citations') ): ?>
+        <div class="prog-citations-bottom-container">
+            <div class="prog-citations-bottom"><h2>Footnotes</h2>
+                <?php the_field('citations') ?></div>  
+            <div class="prog-citations-bottom-spacer"></div>
+        </div>
+        <?php endif; ?>
 </div>
     
 	<footer class="entry-footer">

@@ -22,6 +22,9 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
             background: url(<?php echo $src[0]; ?>); 
             background-size: cover; 
             background-position: center; 
+            <?php if( get_field('background-position_attribute') ): ?>
+            background-position: <?php the_field('background-position_attribute') ?>;
+            <?php endif; ?>
             height: 300px;
         }
         @media all and (max-width: 1800px) {

@@ -126,12 +126,12 @@ get_header();
                         <p><a href="../youth/">Read more about CASES' youth services <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                     <div class="infog-boxfp">
-                    <img src="wp-content/themes/caseslegit/images/detained-m.png" 
-                        srcset="wp-content/themes/caseslegit/images/detained-xs.png 400w, 
-                        wp-content/themes/caseslegit/images/detained-s.png 660w,
-                        wp-content/themes/caseslegit/images/detained-m.png 950w,
-                        wp-content/themes/caseslegit/images/detained-l.png 1900w,
-                        wp-content/themes/caseslegit/images/detained-xl.png 3800w"
+                    <img src="wp-content/themes/caseslegit/images/detained2-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/detained2-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/detained2-s.png 660w,
+                        wp-content/themes/caseslegit/images/detained2-m.png 950w,
+                        wp-content/themes/caseslegit/images/detained2-l.png 1900w,
+                        wp-content/themes/caseslegit/images/detained2-xl.png 3800w"
                         alt="People with mental illness are detained twice as long as people without mental illness
                         when all other factors are similar."></div>
                     <div class="infog-link">
@@ -152,19 +152,20 @@ get_header();
                         alt="Only 16% of CASES youth ATI participants have a new criminal conviction
                         after two years of completing services."></div>
                     <div class="infog-link">
-                        <p><a href="../youth/">Read more about CASES youth programs <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="../youth/">Read more about CASES' youth services <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                     <div class="infog-boxfp">
-                    <img src="wp-content/themes/caseslegit/images/moneyinfo-m.png" 
-                        srcset="wp-content/themes/caseslegit/images/moneyinfo-xs.png 400w, 
-                        wp-content/themes/caseslegit/images/moneyinfo-s.png 660w,
-                        wp-content/themes/caseslegit/images/moneyinfo-m.png 950w,
-                        wp-content/themes/caseslegit/images/moneyinfo-l.png 1900w,
-                        wp-content/themes/caseslegit/images/moneyinfo-xl.png 3800w"
-                        alt="Jail-diversion programs in New York City showed an average of $7,083
-                        lower jail costs per person."></div>
+                    <img src="wp-content/themes/caseslegit/images/convictions-m.png" 
+                        srcset="wp-content/themes/caseslegit/images/convictions-xs.png 400w, 
+                        wp-content/themes/caseslegit/images/convictions-s.png 660w,
+                        wp-content/themes/caseslegit/images/convictions-m.png 950w,
+                        wp-content/themes/caseslegit/images/convictions-l.png 1900w,
+                        wp-content/themes/caseslegit/images/convictions-xl.png 3800w"
+                        alt="At intake, men and women in CASES’ Nathaniel ACT program for adults with serious mental illness 
+                        have an average of at least eight lifetime arrests and are facing on average 4.5 years in prison 
+                        for felony convictions."></div>
                     <div class="infog-link">
-                        <p><a href="#">Read more about the outcomes of CASES clients <i class="fa fa-arrow-right"></a></p></i>
+                        <p><a href="../adult-behavioral-health/">Read more about CASES' behavioral health programs <i class="fa fa-arrow-right"></a></p></i>
                     </div>
                     
                 
