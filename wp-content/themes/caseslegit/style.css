@@ -1411,7 +1411,7 @@ and open the template in the editor.
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 0 0 0;
+  padding: 40px 0 0 0;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -1655,6 +1655,7 @@ and open the template in the editor.
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 10px 0 0 0;
   }
 
   .locat-container {
@@ -1672,6 +1673,12 @@ and open the template in the editor.
             flex: 1;
     color: #fdfdfd;
     font-size: 1.0rem;
+  }
+  .locat-square a, .locat-square a:visited {
+    color: #fdfdfd;
+  }
+  .locat-square a:hover {
+    color: #002B55;
   }
 
   .locat-shade {
@@ -2222,7 +2229,7 @@ and open the template in the editor.
 .leadimage-container2 {
   display: block;
   position: relative;
-  height: 350px;
+  height: 450px;
   margin: 0 auto;
 }
 .leadimage-container2 h1 {
@@ -2616,6 +2623,9 @@ and open the template in the editor.
      -moz-column-gap: 30px;
           column-gap: 30px;
   margin-bottom: 25px;
+}
+.serv-body .relprog-list li {
+  margin: 10px 0 0 0;
 }
 .serv-body .relprog-list a {
   font-family: akzMed;

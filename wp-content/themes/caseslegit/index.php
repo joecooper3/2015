@@ -64,16 +64,16 @@ get_header();
         <div id="maininfo">
             <div id="submaininfo">
                 <p>
-                    <span class="emp">New York City’s Rikers Island jail is currently home to more than 9,000 people every day,
-                    including large numbers 
-                    of young people age 16-24 tried as adults and men and women with serious mental illness and other behavioral health 
-                    conditions. </span></p>
-                <p>Many of the people in these subpopulations have become involved in the criminal justice system as the result
-                    of factors including poverty, challenging family situations, low education levels, lack of employment opportunities, 
-                    homelessness, untreated mental illness, and addiction. Once involved in 
-                    the criminal justice system these individuals face significant challenges 
-                    if they are to overcome the experience of incarceration, the consequences of a 
-                    criminal record, and the disruption of community networks and—for young people—the traditional course of youth development.
+                    <span class="emp">New York City’s Rikers Island correctional facility 
+                        currently houses more than 9,000 people every day, including young people 
+                        age 16-17 tried as adults and thousands of men and women with mental illness.  </span></p>
+                <p>Many of these people have become involved in the criminal justice system 
+                    as the result of factors including poverty, low education levels, lack of employment 
+                    opportunities, homelessness, untreated mental illness, and addiction. Once 
+                    involved in the criminal justice system these individuals face significant 
+                    challenges if they are to overcome the experience of incarceration, the 
+                    consequences of a criminal record, and the disruption of community networks 
+                    and—for young people—of the traditional course of youth development.
                  </p>
             
             <ul class="nav nav-tabs">

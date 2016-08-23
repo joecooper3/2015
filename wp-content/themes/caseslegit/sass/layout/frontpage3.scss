@@ -29,7 +29,7 @@ $sqlength: 300px;
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    padding: 10px 0 0 0;
+    padding: 40px 0 0 0;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -253,6 +253,7 @@ $sqlength: 300px;
     }
     #leadimage-container {
         flex-direction: column;
+        padding: 10px 0 0 0;
     }
     .locat-container {
         flex-direction: row;
@@ -262,6 +263,12 @@ $sqlength: 300px;
         flex: 1;
         color: $mywhite;
         font-size: 1.0rem;
+        a, a:visited {
+            color: $mywhite;
+        }
+        a:hover {
+            color: $color1;
+        }
     }
     .locat-shade {
         width: 100%;
@@ -358,13 +365,13 @@ $sqlength: 300px;
 #maininfo {
     flex: 3;
     font-family: 'akzRoman';
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background-color: $mywhite;
     margin: 25px 13px 25px 0;
     padding: 25px 25px 25px 70px;
     .emp {
         color: $color1;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: akzSemiBold;
         
     }
