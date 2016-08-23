@@ -40,8 +40,6 @@
                 <li class="keystaff-item karen"><a href="#karen" aria-controls="karen" role="tab" data-toggle="tab"><div class="keystaff-shade">
                             <strong>Karen Dubin-McKnight</strong><br/>Director of Court Operations</div></a>
                 </li>
-                <li class="keystaff-item joanna"><a href="#joanna" aria-controls="joanna" role="tab" data-toggle="tab"><div class="keystaff-shade"><strong>Joanna Fahey</strong><br/>Director of the Nathaniel Clinic</div></a>
-                </li>
                 <li class="keystaff-item holly"><a href="#holly" aria-controls="holly" role="tab" data-toggle="tab">
                         <div class="keystaff-shade"><strong>Holly Francis-Merritt</strong><br/>Director of Human Resources</div>
                     </a></li>
@@ -53,8 +51,8 @@
                     <li class="keystaff-item rebeccalw"><a href="#rebeccalw" aria-controls="rebeccalw" role="tab" data-toggle="tab"><div class="keystaff-shade"><strong>Rebecca Linn-Walton</strong><br/>Director of Planning, Research, and Evaluation</div></a>
                 </li>
                     
-                <li class="keystaff-item aml"><a href="#aml" aria-controls="aml" role="tab" data-toggle="tab"><div class="keystaff-shade">Ann-
-                            <strong>Marie Louison</strong><br/>Director of Adult Behavioral Health</div></a>
+                <li class="keystaff-item aml"><a href="#aml" aria-controls="aml" role="tab" data-toggle="tab"><div class="keystaff-shade">
+                            <strong>Ann-Marie Louison</strong><br/>Director of Adult Behavioral Health</div></a>
                 </li>
                 <li class="keystaff-item rukia"><a href="#rukia" aria-controls="rukia" role="tab" data-toggle="tab">
                         <div class="keystaff-shade"><strong>Rukia Lumumba</strong><br/>
@@ -71,17 +69,16 @@
 
 
                 <li class="keystaff-item lucie"><a href="#lucie" aria-controls="lucie" role="tab" data-toggle="tab"><div class="keystaff-shade">
-                            <strong>Lucie Swinnerton</strong><br/>Deputy Director of Planning, Evaluation, and Research</div>
+                            <strong>Lucie Swinnerton</strong><br/>Deputy Director of Planning, Research, and Evaluation</div>
                     </a> </li>
-                
-                
-                
-            </ul>
+                  
+            </ul></div>
+<div class="sidebar-about sidebar-keystaff"><?php get_sidebar('about'); ?>
+</div>
 
-
-
+<div class="keystaff-description">
 <?php the_content(); ?>
-
+</div>
             <?php
             wp_link_pages(array(
                 'before' => '<div class="page-links">' . esc_html__('Pages:', 'caseslegit'),
