@@ -91,7 +91,7 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 	</div><!-- .entry-content -->
         <?php if( get_field('citations') ): ?>
 <div class="prog-citations-bottom-container">
-            <div class="prog-citations-bottom"><h2>Footnotes</h2>
+            <div class="prog-citations-bottom"><h2>References</h2>
                 <?php the_field('citations') ?></div>  
             <div class="prog-citations-bottom-spacer"></div>
         </div>

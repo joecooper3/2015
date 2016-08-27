@@ -6,6 +6,9 @@
  */
 
 ?>
+<?php
+            $news_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), news_m, false, '' );
+?>
 <header class="entry-header-single">
     <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
@@ -24,7 +27,7 @@
 
         <div class="entry-content-single">
             
-            <?php echo simone_the_responsive_thumbnail(get_the_ID()); ?>
+            <img src="<?php echo $news_m[0]; ?>">
             
             <?php the_content(); ?>
             

@@ -122,6 +122,15 @@ aside {
     }
 }
 
+@media all and (max-width: 710px) {
+    .entry-content-single {
+        p {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
 @media all and (min-width: 1450px) {
     .article-whole {
         justify-content: center;

@@ -30,8 +30,8 @@ and open the template in the editor.
 }
 
 .leadimage-container3 {
-   flex: 0 0 100%;
-   position: relative; 
+    flex: 0 0 100%;
+    position: relative; 
     h1 {
         width: 60%;
         max-width: 800px;
@@ -44,7 +44,7 @@ and open the template in the editor.
         color: $color1;
         border-bottom: 3.0px solid $color1;
     }
-    
+
 }
 
 .entry-content-about {
@@ -73,8 +73,8 @@ and open the template in the editor.
 .intelliwidget3-title {
     font-size: 1.2rem;
     padding: 5px 0;
-        border-top: 3.0px solid $color1;
-        border-bottom: 1.5px solid #aaa;
+    border-top: 3.0px solid $color1;
+    border-bottom: 1.5px solid #aaa;
 }
 
 .intelliwidget3-container {
@@ -116,7 +116,7 @@ and open the template in the editor.
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    
+
     .keystaff-item {
         display: block;
         flex: 1 0 130px;
@@ -127,7 +127,7 @@ and open the template in the editor.
         background-position: center; 
         background-size: cover;
         padding: 5px;
-        
+
         .keystaff-shade {
             z-index: 2;
             width: 100%;
@@ -161,56 +161,59 @@ and open the template in the editor.
         }
     }
     .active {
-            border: 5.0px solid $color1;
-        }
+        border: 5.0px solid $color1;
+    }
     .joel {
-            background-image: url("images/keystaff/joelsq2x.jpg");
-        }
-        .joe {
-            background-image: url("images/keystaff/itme.jpg");
-        }
-        .rukia {
-            background-image: url("images/keystaff/rukiasq2x.jpg");
-        }
-        .quinn {
-            background-image: url("images/keystaff/quinnsq2x.jpg");
-        }
-        .joanna {
-            background-image: url("images/keystaff/joannasq2x.jpg");
-        }
-        .aml {
-            background-image:url("images/keystaff/amlsq2x.jpg");
-        }
-        .lucie {
-            background-image:url("images/keystaff/luciesq2x.jpg");
-        }
-        .rebeccalw {
-            background-image:url("images/keystaff/rebeccalwsq2x.jpg");
-        }
-        .loyal {
-            background-image:url("images/keystaff/loyalsq2x.jpg");
-        }
-        .jessica {
-            background-image:url("images/keystaff/jessicasq2x.jpg");
-        }
-        .rob {
-            background-image:url("images/keystaff/robsq2x.jpg");
-        }
-        .george {
-            background-image:url("images/keystaff/georgesq2x.jpg");
-        }
-        .rebecca {
-            background-image:url("images/keystaff/rebeccasq2x.jpg");
-        }
-         .holly {
-            background-image:url("images/keystaff/hollysq2x.jpg");
-        }
-        .dawn {
-            background-image:url("images/keystaff/dawnsq2x.jpg");
-        }
-        .karen {
-            background-image:url("images/keystaff/karensq2x.jpg");
-        }
+        background-image: url("images/keystaff/joelsq2x.jpg");
+    }
+    .joe {
+        background-image: url("images/keystaff/itme.jpg");
+    }
+    .rukia {
+        background-image: url("images/keystaff/rukiasq2x.jpg");
+    }
+    .quinn {
+        background-image: url("images/keystaff/quinnsq2x.jpg");
+    }
+    .joanna {
+        background-image: url("images/keystaff/joannasq2x.jpg");
+    }
+    .aml {
+        background-image:url("images/keystaff/amlsq2x.jpg");
+    }
+    .lucie {
+        background-image:url("images/keystaff/luciesq2x.jpg");
+    }
+    .rebeccalw {
+        background-image:url("images/keystaff/rebeccalwsq2x.jpg");
+    }
+    .loyal {
+        background-image:url("images/keystaff/loyalsq2x.jpg");
+    }
+    .jessica {
+        background-image:url("images/keystaff/jessicasq2x.jpg");
+    }
+    .rob {
+        background-image:url("images/keystaff/robsq2x.jpg");
+    }
+    .george {
+        background-image:url("images/keystaff/georgesq2x.jpg");
+    }
+    .rebecca {
+        background-image:url("images/keystaff/rebeccasq2x.jpg");
+    }
+    .holly {
+        background-image:url("images/keystaff/hollysq2x.jpg");
+    }
+    .dawn {
+        background-image:url("images/keystaff/dawnsq2x.jpg");
+    }
+    .karen {
+        background-image:url("images/keystaff/karensq2x.jpg");
+    }
+    .mardoche {
+        background-image:url("images/keystaff/mardochesq1x.jpg");
+    }
 }
 .keystaff-content {
     display: flex;
@@ -218,7 +221,7 @@ and open the template in the editor.
     flex-flow: row wrap;
     padding-top: 30px;
     width: 100%;
-   .aml {
+    .aml {
         background-image:url("images/keystaff/amlsq1x.jpg");
     }
     .lucie {
@@ -263,6 +266,9 @@ and open the template in the editor.
     .karen {
         background-image:url("images/keystaff/karensq1x.jpg");
     }
+    .mardoche {
+        background-image:url("images/keystaff/mardochesq1x.jpg");
+    }
 }
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
@@ -275,44 +281,44 @@ and open the template in the editor.
             background-image:url("images/keystaff/robsq2x.jpg");
         }
         .jessica {
-        background-image:url("images/keystaff/jessicasq2x.jpg");
-    }
-    .rebeccalw {
-        background-image:url("images/keystaff/rebeccalwsq2x.jpg");
-    }
-    .quinn {
-        background-image:url("images/keystaff/quinnsq2x.jpg");
-    }
-    .loyal {
-        background-image:url("images/keystaff/loyalsq2x.jpg");
-    }
-    .joel {
-        background-image:url("images/keystaff/joelsq2x.jpg");
-    }
-    .george {
-        background-image:url("images/keystaff/georgesq2x.jpg");
-    }
-    .rebecca {
-        background-image:url("images/keystaff/rebeccasq2x.jpg");
-    }
-    .holly {
-        background-image:url("images/keystaff/hollysq2x.jpg");
-    }
-    .joanna {
-        background-image:url("images/keystaff/joannasq2x.jpg");
-    }
-    .dawn {
-        background-image:url("images/keystaff/dawnsq2x.jpg");
-    }
-    .rukia {
-        background-image:url("images/keystaff/rukiasq2x.jpg");
-    }
-    .aml {
-        background-image:url("images/keystaff/amlsq2x.jpg");
-    }
-    .karen {
-        background-image:url("images/keystaff/karensq2x.jpg");
-    }
+            background-image:url("images/keystaff/jessicasq2x.jpg");
+        }
+        .rebeccalw {
+            background-image:url("images/keystaff/rebeccalwsq2x.jpg");
+        }
+        .quinn {
+            background-image:url("images/keystaff/quinnsq2x.jpg");
+        }
+        .loyal {
+            background-image:url("images/keystaff/loyalsq2x.jpg");
+        }
+        .joel {
+            background-image:url("images/keystaff/joelsq2x.jpg");
+        }
+        .george {
+            background-image:url("images/keystaff/georgesq2x.jpg");
+        }
+        .rebecca {
+            background-image:url("images/keystaff/rebeccasq2x.jpg");
+        }
+        .holly {
+            background-image:url("images/keystaff/hollysq2x.jpg");
+        }
+        .joanna {
+            background-image:url("images/keystaff/joannasq2x.jpg");
+        }
+        .dawn {
+            background-image:url("images/keystaff/dawnsq2x.jpg");
+        }
+        .rukia {
+            background-image:url("images/keystaff/rukiasq2x.jpg");
+        }
+        .aml {
+            background-image:url("images/keystaff/amlsq2x.jpg");
+        }
+        .karen {
+            background-image:url("images/keystaff/karensq2x.jpg");
+        }
     }
 }
 
@@ -324,7 +330,7 @@ and open the template in the editor.
     height: 300px;  
     margin-top: 20px;
     border-radius: 150px;
-    
+
 }
 
 @media all and (max-width: 1150px) {
@@ -342,14 +348,14 @@ and open the template in the editor.
     max-width: 750px;
     padding-left: 40px;
     h2 {
-        
+
         margin-top: 0;
         border-bottom: 0;
         margin-bottom: 0;
     }
     h3 {
         border-bottom: 2.0px solid #aaa;
-        
+
         width: 80%;
         font-family: akzRoman;
         margin-top: 0;
@@ -371,7 +377,7 @@ and open the template in the editor.
     justify-content: center;
     ul {
         list-style: none;
-    list-style-type: none;
+        list-style-type: none;
     }
 }
 

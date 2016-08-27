@@ -1779,14 +1779,14 @@ and open the template in the editor.
       -ms-flex: 3;
           flex: 3;
   font-family: 'akzRoman';
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   background-color: #fdfdfd;
   margin: 25px 13px 25px 0;
   padding: 25px 25px 25px 70px;
 }
 #maininfo .emp {
   color: #002B55;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: akzSemiBold;
 }
 #maininfo p {
@@ -2000,6 +2000,19 @@ and open the template in the editor.
   margin-right: 0;
   line-height: 15px;
 }
+.menu-footer-menu-container ul li ul .clinic-label {
+  -webkit-flex: 1 0 150px;
+      -ms-flex: 1 0 150px;
+          flex: 1 0 150px;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-family: akzSemiBold;
+  margin: 25px 10px 15px 10px;
+  max-width: 150px;
+  display: block;
+  padding: 5px 0 0 0;
+  border-top: 2px solid #fdfdfd;
+}
 
 .footer p {
   text-align: center;
@@ -2192,6 +2205,12 @@ aside a {
     -webkit-flex-flow: column wrap;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+  }
+}
+@media all and (max-width: 710px) {
+  .entry-content-single p {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media all and (min-width: 1450px) {
@@ -2667,24 +2686,16 @@ and open the template in the editor.
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  padding-bottom: 15px;
 }
 .clinictable a, .clinictable a:visited {
   font-family: akzMed;
   color: #002B55;
   background: none;
 }
-.clinictable .clinicitem {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 40px;
-  padding: 0 10px;
-}
-.clinictable .clinicitem img {
-  width: 100%;
-}
-.clinictable .clinicitem h5 {
-  font-family: akzSemiBold;
+.clinictable h5 {
+  padding-top: 10px;
+  margin: 0;
 }
 
 .serv-emp {
@@ -3002,6 +3013,9 @@ and open the template in the editor.
 .keystaff-grid .karen {
   background-image: url("images/keystaff/karensq2x.jpg");
 }
+.keystaff-grid .mardoche {
+  background-image: url("images/keystaff/mardochesq1x.jpg");
+}
 
 .keystaff-content {
   display: -webkit-flex;
@@ -3060,6 +3074,9 @@ and open the template in the editor.
 }
 .keystaff-content .karen {
   background-image: url("images/keystaff/karensq1x.jpg");
+}
+.keystaff-content .mardoche {
+  background-image: url("images/keystaff/mardochesq1x.jpg");
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -3313,9 +3330,9 @@ tbody.collapse.in {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .directory .info-at-cases {
   -webkit-flex: 100%;
@@ -3516,134 +3533,6 @@ and open the template in the editor.
 .prog-info .btn:focus {
   background-color: #194D7F;
   color: #fdfdfd;
-}
-.prog-info .popover {
-  width: 300px;
-  background-color: #fdfdfd;
-  font-size: 14px;
-  border: 1.0px solid #ebebeb;
-  z-index: 4;
-  border-radius: 15px;
-  box-shadow: 2px 2px 3px 0 #aaa;
-}
-.prog-info .popover p {
-  margin-bottom: 0;
-}
-
-.popover.top {
-  margin-top: -10px;
-}
-
-.popover.right {
-  margin-left: 10px;
-}
-
-.popover.bottom {
-  margin-top: 10px;
-}
-
-.popover.left {
-  margin-left: -10px;
-}
-
-.popover-title {
-  padding: 8px 14px;
-  margin: 0;
-  font-size: 14px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0;
-}
-
-.popover-content {
-  padding: 9px 14px;
-}
-
-.popover > .arrow,
-.popover > .arrow:after {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-
-.popover > .arrow {
-  border-width: 11px;
-}
-
-.popover > .arrow:after {
-  content: "";
-  border-width: 10px;
-}
-
-.popover.top > .arrow {
-  bottom: -11px;
-  left: 50%;
-  margin-left: -11px;
-  border-top-color: #999;
-  border-top-color: rgba(0, 0, 0, 0.25);
-  border-bottom-width: 0;
-}
-
-.popover.top > .arrow:after {
-  bottom: 1px;
-  margin-left: -10px;
-  content: " ";
-  border-top-color: #fff;
-  border-bottom-width: 0;
-}
-
-.popover.right > .arrow {
-  top: 50%;
-  left: -11px;
-  margin-top: -11px;
-  border-right-color: #999;
-  border-right-color: rgba(0, 0, 0, 0.25);
-  border-left-width: 0;
-}
-
-.popover.right > .arrow:after {
-  bottom: -10px;
-  left: 1px;
-  content: " ";
-  border-right-color: #fff;
-  border-left-width: 0;
-}
-
-.popover.bottom > .arrow {
-  top: -11px;
-  left: 50%;
-  margin-left: -11px;
-  border-top-width: 0;
-  border-bottom-color: #999;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
-}
-
-.popover.bottom > .arrow:after {
-  top: 1px;
-  margin-left: -10px;
-  content: " ";
-  border-top-width: 0;
-  border-bottom-color: #fff;
-}
-
-.popover.left > .arrow {
-  top: 50%;
-  right: -11px;
-  margin-top: -11px;
-  border-right-width: 0;
-  border-left-color: #999;
-  border-left-color: rgba(0, 0, 0, 0.25);
-}
-
-.popover.left > .arrow:after {
-  right: 1px;
-  bottom: -10px;
-  content: " ";
-  border-right-width: 0;
-  border-left-color: #fff;
 }
 
 .program-check {

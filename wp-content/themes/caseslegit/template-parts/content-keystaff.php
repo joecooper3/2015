@@ -67,6 +67,9 @@
                             Communications</div></a>
                 </li>
 
+                <li class="keystaff-item mardoche"><a href="#mardoche" aria-controls="mardoche" role="tab" data-toggle="tab"><div class="keystaff-shade">
+                            <strong>Mardoche Sidor</strong><br/>Medical Director</div>
+                    </a> </li>
 
                 <li class="keystaff-item lucie"><a href="#lucie" aria-controls="lucie" role="tab" data-toggle="tab"><div class="keystaff-shade">
                             <strong>Lucie Swinnerton</strong><br/>Deputy Director of Planning, Research, and Evaluation</div>

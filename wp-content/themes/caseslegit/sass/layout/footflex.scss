@@ -52,6 +52,17 @@ and open the template in the editor.
                         margin-right: 0;
                         line-height: 15px;
                     }
+                    .clinic-label {
+                       flex: 1 0 150px;
+                text-transform:uppercase;
+                font-size:10pt;
+                font-family: akzSemiBold;
+                margin: 25px 10px 15px 10px;
+                max-width: 150px;
+                display: block;
+                padding: 5px 0 0 0;
+                border-top: 2.0px solid $mywhite; 
+                    }
                 }
             }
             
