@@ -2036,6 +2036,10 @@ aside a {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .entry-content-single ul {
+    margin-left: 1.0em;
+    padding-right: 30px;
+  }
 }
 @media all and (min-width: 1450px) {
   .article-whole {
@@ -2410,6 +2414,29 @@ and open the template in the editor.
 }
 .serv-body .relprog-list a {
   font-family: akzMed;
+}
+
+aside .clinic-link {
+  background-color: #002B55;
+  font-family: akzMed;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.0rem;
+  box-shadow: none;
+  border-radius: 3px;
+  transition: all 0.3s ease 0s;
+}
+aside .clinic-link:visited {
+  color: #fdfdfd;
+}
+aside .clinic-link:hover {
+  background-color: #194D7F;
+  color: #fdfdfd;
+  box-shadow: none;
 }
 
 .relprog-title {
@@ -2891,6 +2918,28 @@ and open the template in the editor.
   list-style-type: none;
 }
 
+.clinic-link {
+  background-color: #002B55;
+  font-family: akzMed;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.25rem;
+  box-shadow: none;
+  transition: all 0.3s ease 0s;
+}
+.clinic-link:visited {
+  color: #fdfdfd;
+}
+.clinic-link:hover {
+  background-color: #194D7F;
+  color: #fdfdfd;
+  box-shadow: none;
+}
+
 @media all and (max-width: 1070px) {
   .entry-content-keystaff {
     order: 2;
@@ -2914,6 +2963,12 @@ and open the template in the editor.
   .sidebar-about {
     max-width: 500px;
     margin-top: 30px;
+  }
+}
+@media all and (max-width: 500px) {
+  .leadimage-container3 h1 {
+    font-size: 2.0rem;
+    margin-left: 25px;
   }
 }
 /*--------------------------------------------------------------
@@ -2991,7 +3046,6 @@ tbody.collapse.in {
   font-size: 1.1rem;
 }
 .entry-content-resources .donatebutton {
-  appearance: button;
   background-color: #002B55;
   font-family: akzMed;
   border: none;
@@ -3056,6 +3110,11 @@ tbody.collapse.in {
   margin-bottom: 0.8em;
 }
 
+@media all and (max-width: 500px) {
+  .entry-content-resources {
+    padding: 0 15px;
+  }
+}
 /*--------------------------------------------------------------
 # Social media
 --------------------------------------------------------------*/

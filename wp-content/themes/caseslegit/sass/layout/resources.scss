@@ -68,7 +68,6 @@ tbody.collapse.in {
     flex: 2 1 500px;
     font-size: 1.1rem;
     .donatebutton {
-    appearance: button;
     background-color: $color1;
     font-family: akzMed;
     border: none;
@@ -134,4 +133,9 @@ tbody.collapse.in {
                 font-size: 0.9rem;
                 margin-bottom: 0.8em;
             }
+}
+@media all and (max-width: 500px) {
+.entry-content-resources {
+        padding: 0 15px;
+    }
 }

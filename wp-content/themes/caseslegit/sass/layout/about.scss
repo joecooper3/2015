@@ -380,6 +380,27 @@ and open the template in the editor.
         list-style-type: none;
     }
 }
+.clinic-link {
+    background-color: $color1;
+    font-family: akzMed;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    box-shadow: none;
+    transition: all 0.3s ease 0s;
+    &:visited {
+        color: $mywhite;
+    }
+    &:hover {
+        background-color: $color4;
+        color: $mywhite;
+        box-shadow: none;
+    }
+}
 
 @media all and (max-width: 1070px) {
     .entry-content-keystaff {
@@ -405,4 +426,13 @@ and open the template in the editor.
         max-width: 500px;
         margin-top: 30px;
     }
+}
+
+@media all and (max-width: 500px) {
+    .leadimage-container3 {
+        h1 {
+            font-size: 2.0rem;
+            margin-left: 25px;
+        }
+    } 
 }

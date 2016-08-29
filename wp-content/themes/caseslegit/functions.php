@@ -198,11 +198,11 @@ function caseslegit_scripts() {
         
        wp_enqueue_script( 'caseslegit-mobile-nav2', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true );
        
-       wp_enqueue_script( 'caseslegit-referrals', get_template_directory_uri() . '/js/referrals.js', array('jquery'), '20160316', true );
+       /* wp_enqueue_script( 'caseslegit-referrals', get_template_directory_uri() . '/js/referrals.js', array('jquery'), '20160316', true ); */
         
         wp_enqueue_script( 'my-picturefill', get_template_directory_uri() . '/js/picturefill.min.js', '20150710', false);
         
-        wp_enqueue_script( 'boxes', get_template_directory_uri() . '/js/boxes.js', array('jquery'), '20160102', true);
+       /* wp_enqueue_script( 'boxes', get_template_directory_uri() . '/js/boxes.js', array('jquery'), '20160102', true); */
         
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
