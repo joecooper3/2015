@@ -76,6 +76,16 @@ aside {
             font-weight: bold;
         }
     }
+    
+.widget_recent_entries {
+        ul {
+            li {
+                a, a:visited {
+                    font-family: akzRoman;
+                }
+            }
+        }
+    }
 
 .widget-area {
     margin: 0 auto;

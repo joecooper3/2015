@@ -38,6 +38,9 @@ and open the template in the editor.
                 display: block;
                 padding-top: 5px;
                 border-top: 2.0px solid $mywhite;
+                a:hover {
+                    cursor: default;
+                }
                 ul {
                     display: list-item;
                     padding-top: 10px;
@@ -51,6 +54,9 @@ and open the template in the editor.
                         border-right: 0;
                         margin-right: 0;
                         line-height: 15px;
+                        a:hover {
+                            cursor: pointer;
+                        }
                     }
                     .clinic-label {
                        flex: 1 0 150px;
@@ -62,6 +68,9 @@ and open the template in the editor.
                 display: block;
                 padding: 5px 0 0 0;
                 border-top: 2.0px solid $mywhite; 
+                a:hover {
+                    cursor: default;
+                }
                     }
                 }
             }

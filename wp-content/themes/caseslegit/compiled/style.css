@@ -536,6 +536,9 @@ a:hover, a:active {
   padding-left: 15px;
   /** CONTROLS NAV MENU HOVER **/
 }
+.main-navigation ul li a:hover {
+  cursor: default;
+}
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -550,6 +553,9 @@ a:hover, a:active {
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
+}
+.main-navigation ul ul li a:hover {
+  cursor: pointer;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
@@ -1010,12 +1016,11 @@ input[type="search"] {
 }
 
 .search-box .search-field {
-  max-width: 200px;
+  max-width: 300px;
   padding: 0.2rem 1rem 0.2rem 1rem;
   font-family: akzLight;
   font-size: 16px;
   background-color: #fcfcfc;
-  border-radius: 25px;
   border: 2px solid #194D7F;
 }
 
@@ -1829,6 +1834,9 @@ and open the template in the editor.
   padding-top: 5px;
   border-top: 2px solid #fdfdfd;
 }
+.menu-footer-menu-container ul li a:hover {
+  cursor: default;
+}
 .menu-footer-menu-container ul li ul {
   display: list-item;
   padding-top: 10px;
@@ -1844,6 +1852,9 @@ and open the template in the editor.
   margin-right: 0;
   line-height: 15px;
 }
+.menu-footer-menu-container ul li ul li a:hover {
+  cursor: pointer;
+}
 .menu-footer-menu-container ul li ul .clinic-label {
   flex: 1 0 150px;
   text-transform: uppercase;
@@ -1854,6 +1865,9 @@ and open the template in the editor.
   display: block;
   padding: 5px 0 0 0;
   border-top: 2px solid #fdfdfd;
+}
+.menu-footer-menu-container ul li ul .clinic-label a:hover {
+  cursor: default;
 }
 
 .footer p {
@@ -1988,6 +2002,10 @@ article {
 aside a {
   background: 0;
   font-weight: bold;
+}
+
+.widget_recent_entries ul li a, .widget_recent_entries ul li a:visited {
+  font-family: akzRoman;
 }
 
 .widget-area {
@@ -3065,6 +3083,12 @@ tbody.collapse.in {
   background-color: #194D7F;
   color: #fdfdfd;
   box-shadow: none;
+}
+.entry-content-resources .srSearch {
+  height: 50px;
+}
+.entry-content-resources .srSearchForm {
+  height: 40px;
 }
 
 .directory {

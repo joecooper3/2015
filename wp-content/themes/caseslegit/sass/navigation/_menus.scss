@@ -6,6 +6,12 @@
         list-style: none;
         margin: 0;
         padding-left: 15px;
+        
+        li {
+            a:hover {
+            cursor: default;
+            }
+        }
 
         ul {
             box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -24,7 +30,9 @@
             }
 
             li {
-          
+                a:hover {
+                    cursor: pointer;
+                }
                 &:hover > ul,
                     &.focus > ul {
                     left: 100%; 
