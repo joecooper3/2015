@@ -17,7 +17,7 @@
 	
 <div class="footmobi">
 	
-	<a href="http://www.casesnyc.org/test/sitemap-2/">Mobile Sitemap</a>
+	<a href="https://www.cases.org/sitemap/">Mobile Sitemap</a>
 
 	</div>
 

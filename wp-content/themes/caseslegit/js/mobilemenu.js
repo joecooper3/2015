@@ -67,26 +67,13 @@ jQuery(window).scroll(function () {
     var currentScroll = jQuery(this).scrollTop();
     if (currentScroll > 300 && jQuery("#responsiveCheck").css("height") === '51px') {
         if (currentScroll > previousScroll) {
-            jQuery('#masthead-fade').fadeOut();
+            jQuery('#masthead-fade').fadeOut(100);
         } else {
-            jQuery('#masthead-fade').fadeIn();
+            jQuery('#masthead-fade').fadeIn(200);
         }
     } 
-    previousScroll = currentScroll;
+    setTimeout( function() { previousScroll = currentScroll}, 200);
     if (currentScroll < 300) {
         jQuery('#masthead-fade').slideUp(100);
     }
 });
-
-/* jQuery(".locat-shade").mouseenter( 
-        function() {
-    jQuery(this).find(".hvr-underline-from-center-before").css("left","0");
-   jQuery(this).find(".hvr-underline-from-center-before").css("right","0");
-            console.log("already 3 o clock");
-});
-jQuery(".locat-shade").mouseleave ( 
-        function() {
-    jQuery(this).find(".hvr-underline-from-center-before").css("left","50%");
-    jQuery(this).find(".hvr-underline-from-center-before").css("right","50%");
-            console.log("not gettin fuck at all");
-}); */

@@ -6,9 +6,19 @@
  */
 
 ?>
+<?php $args = array(
+    'category_name' => 'news',
+    'posts_per_page' => 5
+);
+$query = new WP_Query($args);  
+while ( $query->have_posts() ) :
+    $query->the_post();
+?>
 
 <?php
-if ( $wp_query->current_post == 0 && !is_paged() & is_front_page() ): ?> 
+
+if ( $query->current_post === 0 && !is_paged() & is_front_page() ): ?> 
+
 <a href="<?php echo post_permalink(get_the_ID()); ?>"> 
     <?php
 $src_xs = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xs, false, '' );
@@ -43,8 +53,8 @@ $news_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), news_m,
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
+		<?php if ( 'post' == get_post_type() ) : ?>	
+            <div class="entry-meta">
 			<?php caseslegit_posted_on_front(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -59,6 +69,7 @@ $news_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), news_m,
 		?>
 </article>
 <?php elseif ( 'post' == get_post_type() ) :?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
@@ -84,3 +95,6 @@ $news_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), news_m,
 <!--	</footer> <!-- .entry-footer --> 
 </article><!-- #post-## -->
 <?php endif; ?>
+<?php endwhile;
+wp_reset_postdata();
+?>

@@ -1794,6 +1794,23 @@ and open the template in the editor.
     display: none;
   }
 }
+/* Big screens */
+@media all and (min-width: 1450px) {
+  #maininfo {
+    flex: 2;
+  }
+
+  #newsstories {
+    flex: 1;
+  }
+
+  #newsstories {
+    max-width: none;
+  }
+  #newsstories .featured-bgimage, #newsstories article {
+    max-width: 400px;
+  }
+}
 /*--------------------------------------------------------------
 # Footflex
 --------------------------------------------------------------*/
@@ -1956,6 +1973,23 @@ and open the template in the editor.
 .entry-content-single h3 {
   font-face: akzRoman;
   font-weight: normal;
+}
+.entry-content-single h3 a, .entry-content-single h3 a:visited {
+  font-family: akzMed;
+}
+.entry-content-single a, .entry-content-single a:visited {
+  color: #404040;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
+  background-size: .05em 1px,.05em 1px,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  background-position: 0 95%,100% 95%,0 95%;
+  transition: color .15s;
+  font-weight: 500;
+  font-family: gillMed;
+}
+.entry-content-single a:hover {
+  color: #D18300;
+  background: 0 0;
 }
 
 .entry-meta {
@@ -2161,7 +2195,7 @@ and open the template in the editor.
   font-size: 2.5rem;
   position: absolute;
   margin: 0;
-  padding: 50px 0 10px 20px;
+  padding: 50px 20px 10px 20px;
   bottom: 0px;
   color: #fdfdfd;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
@@ -3210,8 +3244,18 @@ and open the template in the editor.
     Author     : coopers
 */
 .entry-content-referrals {
-  flex: 1 0 700px;
+  flex: 1 0 300px;
   padding: 0 30px 0 30px;
+}
+.entry-content-referrals .nath-clinic-ref {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #EAEAEA;
+  max-width: 700px;
+  margin-bottom: 25px;
+}
+.entry-content-referrals .nath-clinic-ref a, .entry-content-referrals .nath-clinic-ref a:visited {
+  font-weight: 700;
 }
 
 .ref-container input[type="text"] {
@@ -3222,13 +3266,14 @@ and open the template in the editor.
   border: solid 1px #ddd;
   border-bottom: solid 2px #c9c9c9;
   transition: border 0.3s;
+  max-width: 300px;
 }
 .ref-container input[type="text"]:focus {
   border-bottom: solid 2px #002B55;
   border-color: #002B55;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 8px rgba(0, 43, 85, 0.4);
 }
-.ref-container .age-field {
+.ref-container .age-field input {
   width: 50px;
 }
 .ref-container .phone-field {
@@ -3317,10 +3362,18 @@ and open the template in the editor.
   background-color: #f3f3f3 !important;
 }
 
+.caldera-grid {
+  max-width: 800px;
+}
 .caldera-grid h2 {
   margin-bottom: 30px;
 }
 
+@media all and (max-width: 500px) {
+  .entry-content-referrals {
+    padding: 0;
+  }
+}
 /*--------------------------------------------------------------
 # Archives
 --------------------------------------------------------------*/

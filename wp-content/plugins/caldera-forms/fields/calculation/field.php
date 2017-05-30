@@ -22,8 +22,8 @@ $thousand_separator = $field['config']['thousand_separator'];
 ?><?php echo $wrapper_before; ?>
 	<?php echo $field_label; ?>
 	<?php echo $field_before; ?>
-		<<?php echo $elementType; ?> class="<?php echo $field['config']['classes']; ?>"><?php echo $field['config']['before']; ?><span id="<?php echo $field_id; ?>"><?php echo $field_value; ?></span><?php echo $field['config']['after']; ?></<?php echo $elementType; ?>>
-		<input type="hidden" name="<?php echo $field_name; ?>" value="0" data-field="<?php echo $field_base_id; ?>" >
+		<<?php echo $elementType . $field_structure['aria']; ?> class="<?php echo $field['config']['classes']; ?>"><?php echo $field['config']['before']; ?><span id="<?php echo esc_attr( $field_id ); ?>"><?php echo $field_value; ?></span><?php echo $field['config']['after']; ?></<?php echo $elementType; ?>>
+		<input type="hidden" name="<?php echo esc_attr( $field_name ); ?>" value="0" data-field="<?php echo esc_attr( $field_base_id ); ?>" >
 		<?php echo $field_caption; ?>
 	<?php echo $field_after; ?>
 <?php echo $wrapper_after; ?>
@@ -49,6 +49,23 @@ if(!empty($field['config']['manual'])){
 	}
 	// fix POW
 	$formula = str_replace('pow(', 'Math.pow(', $formula);
+	$formula = str_replace('abs(', 'Math.abs(', $formula);
+	$formula = str_replace('acos(', 'Math.acos(', $formula);
+	$formula = str_replace('asin(', 'Math.asin(', $formula);
+	$formula = str_replace('atan(', 'Math.atan(', $formula);
+	$formula = str_replace('atan2(', 'Math.atan2(', $formula);
+	$formula = str_replace('ceil(', 'Math.ceil(', $formula);
+	$formula = str_replace('cos(', 'Math.cos(', $formula);
+	$formula = str_replace('exp(', 'Math.exp(', $formula);
+	$formula = str_replace('floor(', 'Math.floor(', $formula);
+	$formula = str_replace('log(', 'Math.log(', $formula);
+	$formula = str_replace('max(', 'Math.max(', $formula);
+	$formula = str_replace('min(', 'Math.min(', $formula);
+	$formula = str_replace('random(', 'Math.random(', $formula);
+	$formula = str_replace('round(', 'Math.round(', $formula);
+	$formula = str_replace('sin(', 'Math.sin(', $formula);
+	$formula = str_replace('sqrt(', 'Math.sqrt(', $formula);
+	$formula = str_replace('tan(', 'Math.tan(', $formula);
 }
 $formula = str_replace("\r",'', str_replace("\n",'', str_replace(' ','', trim( Caldera_Forms::do_magic_tags( $formula ) ) ) ) );
 $binds = array();
@@ -101,12 +118,19 @@ if(!empty($binds)){
 				}
 				return x1 + x2;
 			}
+
+			if( 'number' != typeof  total ){
+				total = parseInt( total, 10 );
+			}
+
 			total = total.toFixed(2);
 			view_total = addCommas( total );
 			<?php } ?>
-
+			if( view_total.toString().length > 18 ){
+				view_total = Math.round( view_total );
+			}
 			$('#<?php echo $field_id; ?>').html( view_total );
-			$('[data-field="<?php echo $field_base_id; ?>"]').val( total ).trigger('change');
+			$('[data-field="<?php echo esc_attr( $field_base_id ); ?>"]').val( total ).trigger('change');
 
 		}
 		$('body').on('change keyup', '<?php echo implode(',', $bindtriggers); ?>', function(e){

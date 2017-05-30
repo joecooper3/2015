@@ -54,10 +54,6 @@
                 <li class="keystaff-item aml"><a href="#aml" aria-controls="aml" role="tab" data-toggle="tab"><div class="keystaff-shade">
                             <strong>Ann-Marie Louison</strong><br/>Director of Adult Behavioral Health</div></a>
                 </li>
-                <li class="keystaff-item rukia"><a href="#rukia" aria-controls="rukia" role="tab" data-toggle="tab">
-                        <div class="keystaff-shade"><strong>Rukia Lumumba</strong><br/>
-                            Director of Youth Programs</div></a>
-                </li>
                 <a href="#dawn" aria-controls="dawn" role="tab" data-toggle="tab"><li class="keystaff-item dawn"><div class="keystaff-shade"><strong>Dawn J. McClary</strong><br/>Legal Counsel</div></a>
                 </li>
 
@@ -69,12 +65,7 @@
 
                 <li class="keystaff-item mardoche"><a href="#mardoche" aria-controls="mardoche" role="tab" data-toggle="tab"><div class="keystaff-shade">
                             <strong>Mardoche Sidor</strong><br/>Medical Director</div>
-                    </a> </li>
-
-                <li class="keystaff-item lucie"><a href="#lucie" aria-controls="lucie" role="tab" data-toggle="tab"><div class="keystaff-shade">
-                            <strong>Lucie Swinnerton</strong><br/>Deputy Director of Planning, Research, and Evaluation</div>
-                    </a> </li>
-                  
+                    </a> </li>                  
             </ul></div>
 <div class="sidebar-about sidebar-keystaff"><?php get_sidebar('about'); ?>
 </div>

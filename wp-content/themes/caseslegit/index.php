@@ -173,11 +173,24 @@ get_header();
             <!-- Text after infographics, if we want it -->
         </div> </div>
         <div id="newsstories">
-            <div id='subnewsstories'><span class="latestnews">Latest News</span>
-            <?php if (have_posts()) : ?>
+            <?php // Begin main loop
+while ( have_posts() ) : the_post(); ?>
+                
 
-                <?php /* Start the Loop */ ?>
-                <?php while (have_posts()) : the_post(); ?>
+                    <?php
+                    /*
+                     * Include the Post-Format-specific template for the content.
+                     * If you want to override this in a child theme, then include a file
+                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                     */
+                    get_template_part('template-parts/contentf', get_post_format());
+                    ?>
+
+                <?php endwhile; ?>
+            <div id='subnewsstories'><span class="latestnews">Latest News</span>
+             <?php // Begin main loop
+while ( have_posts() ) : the_post(); ?>
+                
 
                     <?php
                     /*
@@ -191,12 +204,6 @@ get_header();
                 <?php endwhile; ?>
                 <a href="../news-archive" class="news-archive-link">News Archive</a>
                 
-
-            <?php else : ?>
-
-                <?php get_template_part('template-parts/content', 'none'); ?>
-
-            <?php endif; ?> 
             </div></div>
     </div>
 </main><!-- #main -->

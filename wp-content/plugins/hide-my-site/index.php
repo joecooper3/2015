@@ -2,7 +2,7 @@
 /*
 Plugin Name: Hide My Site
 Description: Choose a single password to protect your entire wordpress site. Only visitors who know the password will be able to access your wordpress site. This is a great tool for someone setting up a development version of a wordpress site or anyone else looking to hide their site from the public, search engines, etc...Set your site-wide password by going to <strong>Settings > Hide My Site > Set Your Password</strong>. If you want to disable password protection uncheck the box at <strong>Settings > Hide My Site > Enable Password Protection</strong>.
-Version: 1.6.2
+Version: 2.0.5
 Author: Justin Saad
 Author URI: http://www.clevelandwebdeveloper.com
 License: GPL2
@@ -49,6 +49,10 @@ class hide_my_site{
 			add_action('admin_footer', array($this,'motech_imagepicker_admin_jquery'));
 			
 			add_action( 'admin_enqueue_scripts', array($this, 'enqueue_color_picker') ); //enqueue color picker
+			
+			//admin messages
+			add_action('admin_notices', array($this,'admin_show_message'));
+			add_action('admin_init', array($this,'adminmessage_init'));
 		}
 		
     }
@@ -63,6 +67,34 @@ class hide_my_site{
 			wp_enqueue_media();
 			wp_register_script('motech_imageupload-js', plugins_url( 'js/motech_imageupload.js' , __FILE__ ), array('jquery'));
 			wp_enqueue_script('motech_imageupload-js');
+		}
+	}
+	
+	function admin_show_message()
+	{
+		$user_id = get_current_user_id();
+		//there is no default spacer height set, and nag message not ignored...
+		//$checkdefault = get_option($this->plugin_slug . '_default_height_mobile','');
+		if ( ( ! get_user_meta($user_id, 'hidemy4592_nag_ignore') ) && (current_user_can( 'manage_options' )) ) {
+			echo '<div id="message" class="updated fade notice"><p>';
+			echo "<b>".__('Create multiple passwords, track login attempts, and set expiration dates and access levels for your passwords with the Hide My Site add-on, Multipass!', 'motech-hidemy')."</b>";
+			echo "</p>";
+			echo "<p><strong><a href=\"http://www.clevelandwebdeveloper.com/?p=1001&amp;utm_medium=plugin&amp;utm_source=plugin-notice-msg&amp;utm_campaign=Hidemy+Notice+Msg&amp;utm_content=Multipass+Notice\" target=\"_blank\">".__('Create Multiple Passwords &raquo;', 'motech-hidemy')."</a> | <a class=\"dismiss-notice\" style=\"color:red;\" href=\"".get_bloginfo( 'wpurl' ) . "/wp-admin/options-general.php?page=".$this->plugin_slug."-setting-admin&hidemy4592_nag_ignore=0\" target=\"_parent\">".__('I got it. Thanks.', 'motech-hidemy')." [X]</a></strong></p></div>";
+		}
+	}
+	
+	function adminmessage_init()
+	{
+		if ( isset($_GET['hidemy4592_nag_ignore']) && '0' == $_GET['hidemy4592_nag_ignore'] ) {
+			$user_id = get_current_user_id();
+			add_user_meta($user_id, 'hidemy4592_nag_ignore', 'true', true);
+			if (wp_get_referer()) {
+				/* Redirects user to where they were before */
+				wp_safe_redirect(wp_get_referer());
+			} else {
+				/* if there is no referrer you redirect to home */
+				wp_safe_redirect(home_url());
+			}
 		}
 	}
 	
@@ -150,20 +182,46 @@ class hide_my_site{
 		if ((isset($_POST['hwsp_motech']))) {
 			$this->security->track_ip();
 		}
-				
+		do_action( 'hidemy_beforeverify', $this ); #use this hook to add additional logic before verifying password entry
 		//set access cookie if password is correct
-	 	if ((isset($_POST['hwsp_motech']) AND ($this->security->needs_to_wait != 1) AND ($_POST['hwsp_motech'] != "")) AND ($_POST['hwsp_motech'] == get_option($this->plugin_slug.'_password'))) {
+	 	if ((isset($_POST['hwsp_motech']) AND ($this->security->needs_to_wait != 1) AND ($_POST['hwsp_motech'] != "")) AND ((!empty($this->verifyother)) or ($_POST['hwsp_motech'] == get_option($this->plugin_slug.'_password'))  )) {
     		setcookie($this->get_cookie2_name(), 1, $this->get_cookie_duration(), '/');
 			$cookie_just_set = 1;
+			$this->cookie_just_set = 1;
 			$this->security->remove_ip();
+			$this->attempt_status = "accepted";
+			do_action( 'hidemy_loginattempted', $this ); #use this hook to take an action upon login acceptance...    
 		}
-		if( (empty($_COOKIE[$this->get_cookie_name()])) AND (empty($_COOKIE[$this->get_cookie2_name()])) AND (empty($cookie_just_set)) AND ($this->no_admin_bypass()) or (isset($_GET['hmspreview']) && ($_GET['hmspreview'] == 'true')) ) {
+		//if 
+		//failother is true and default cookie was not just set, or no cookie is set AND cookie was not just set
+		//AND there is no admin bypass and this is not hmspreview
+			//then show the login page
+		if(
+			(isset($_GET['hmspreview']) && ($_GET['hmspreview'] == 'true'))
+			or
+			(
+				   (
+					 ( (!empty($this->failother)) AND ($this->failother) AND (empty($cookie_just_set)) ) 
+					 or 
+					 ( (empty($_COOKIE[$this->get_cookie2_name()])) AND (empty($cookie_just_set)) )
+				   )   
+				   AND
+				   ( ($this->no_admin_bypass()) AND (!(isset($_GET['hmspreview']) && ($_GET['hmspreview'] == 'true'))) )  
+				   AND 
+				   (empty($this->open_to_public))
+			 )
+		  ) {
 				// This is the login page for the public
 				$current_hint = get_option($this->plugin_slug.'_password_hint');
 				if(!empty($current_hint)) { //there is a password hint, set the hint html
 					$hinthtml = "<div id='the_hint_wrap'><div id='the_hint_title'>Password Hint:</div><div id='the_hint'>".$current_hint."</div></div>";
 				} else { //no password hint
 					$hinthtml = "";
+				}
+				
+				if(isset($_POST['hwsp_motech'])){
+					$this->attempt_status = "rejected";
+					do_action( 'hidemy_loginattempted', $this ); #use this hook to take an action upon login rejection...  
 				}
 				
 				$current_message_override = get_option($this->plugin_slug.'_custom_messaging_banner_override');
@@ -326,12 +384,39 @@ class hide_my_site{
                 <?php /*?><?php $this->get_donate_button() ?><?php */?>
                 <?php endif ?>
             </div>
+
+	<h2 class="nav-tab-wrapper">
+            <a href="#generalhidemy" class="nav-tab nav-tab-active">General</a>
+            <?php do_action( 'hidemy_sectiontabhook' ); #use this hook to add additional section tabs ?>
+            <a href="#addons" class="nav-tab"><span class="dashicons dashicons-admin-plugins"></span> <?php _e('Add-Ons', 'motech-hidemy')?></a>
+            <a href="#licenses" class="nav-tab"><span class="dashicons dashicons-admin-network"></span> <?php _e('Licenses', 'motech-hidemy')?></a>
+           <?php /*?> <a href="#licenses" class="nav-tab"><span class="dashicons dashicons-admin-network"></span> <?php _e('Licenses', 'motech-spacer')?></a><?php */?>
+<?php /*?>            <a href="#privacy-settings" class="nav-tab">Privacy settings</a>
+            <a href="#admin-custom" class="nav-tab">Admin Customizations</a>
+            <a href="#smtp" class="nav-tab">Smtp Settings</a><?php */?>
+	</h2> 
+                
 		    <form method="post" action="options.php" class="<?php echo $this->plugin_slug ?>_form">
 		        <?php
 	            // This prints out all hidden setting fields
-			    settings_fields($this->plugin_slug.'_option_group');	
-			    do_settings_sections($this->plugin_slug.'-setting-admin');
-			?>
+			    settings_fields($this->plugin_slug.'_option_group');
+				?>
+                <div id="generalhidemy" class="metabox-holder mainsection">
+                	<?php do_settings_sections($this->plugin_slug.'-setting-admin'); ?>
+                    <div><?php do_settings_sections($this->plugin_slug.'-setting-admin-hidden'); ?></div>
+                </div>
+                <?php do_action( 'hidemy_sectionshook' ); #use this hook to add additional sections ?>
+                <div id="addons" class="metabox-holder mainsection hidden">
+
+<div class="msaddon mscol"><img src="<?php echo plugins_url( 'images/pr_banner.png' , __FILE__ ) ?>"><h2><?php _e('Premium', 'motech-hidemy') ?></h2><div class="msaddon-content"><p><?php _e('Customize your login page to give it a polished look and feel.', 'motech-hidemy') ?></p><div class="msaddon-buttons"><a href="http://www.clevelandwebdeveloper.com/wordpress-plugins/hide-site-custom-login-page-examples/&amp;utm_medium=plugin&amp;utm_source=plugin-addons-page&amp;utm_campaign=Hidemysite+Addons+Page&amp;utm_content=Premium+Learn" target="_blank" class="button-secondary msdbutton"><?php _e('Learn More', 'motech-spacer') ?></a></div></div></div>
+
+<div class="msaddon mscol"><img src="<?php echo plugins_url( 'images/multipass_banner2.png' , __FILE__ ) ?>"><h2><?php _e('Multipass', 'motech-hidemy') ?></h2><div class="msaddon-content"><p><?php _e('Create multiple passwords, track login attempts, set expiration dates and access levels for your passwords.', 'motech-hidemy') ?></p><div class="msaddon-buttons"><a href="http://www.clevelandwebdeveloper.com/?p=1001&amp;utm_medium=plugin&amp;utm_source=plugin-notice-msg&amp;utm_campaign=Hidemy+Addons+Page&amp;utm_content=Multipass+Learn" target="_blank" class="button-secondary msdbutton"><?php _e('Learn More', 'motech-spacer') ?></a></div></div></div> 
+				
+                <div style="clear:both;"></div>
+                </div>
+                <div id="licenses" class="metabox-holder mainsection hidden">
+                	<?php do_settings_sections($this->plugin_slug.'-setting-admin_licenses'); ?>             
+                </div>                           
 		        <?php submit_button(); ?>
 		    </form>
 		</div>
@@ -340,12 +425,25 @@ class hide_my_site{
 	
     public function page_init(){
 		
+		do_action( 'hidemy_sectionfieldhook', $this ); #use this hook to add additional field sections
+		
         add_settings_section(
 	    $this->plugin_slug.'_setting_section',
 	    'Configuration',
 	    array($this, 'print_section_info'),
 	    $this->plugin_slug.'-setting-admin'
-		);	
+		);
+		
+        add_settings_section(
+	    $this->plugin_slug.'_setting_section',
+	    __('Licenses', 'motech-hidemy'),
+	    array($this, 'print_section_info_licenses'),
+	    $this->plugin_slug.'-setting-admin_licenses'
+		);
+		
+		if(has_filter('hidemysite_licenses_settings')) {
+			apply_filters('hidemysite_licenses_settings','',$this);
+		}		
 
 		//add text input field
 		$field_slug = "plk";
@@ -585,6 +683,8 @@ class hide_my_site{
 			)			
 		);
 		
+		do_action( 'hidemy_general_hook', $this ); #use this hook to add additional fields to general options section
+		
 		//add text input field
 		$field_slug = "prev";
 		$field_label = "Preview Login Page";
@@ -818,6 +918,17 @@ class hide_my_site{
 				.motech_image_picker_wrap.current img, .motech_image_picker_wrap:active img {box-shadow: 0px 0px 0px 4px rgba(0, 0, 255, 0.9);}
 				.motech_image_picker_wrap {display:inline-block;cursor: pointer;margin-right:20px;margin-bottom: 30px;}
 				.motech_image_picker_wrap div {font-weight:bold;font-size:16px;margin-top:10px;color:rgba(0, 0, 0, 0.47);}
+				
+/*css for addon page*/				
+.mscol {background: #fff;border: 1px solid #ccc;border-radius: 4px;padding: 10px;}
+.msaddon {float: left;margin: 0 20px 20px 0;width: 300px;position: relative;}
+.msaddon img {margin-bottom: 10px;max-width: 100%;height: auto;}
+.wrap .msaddon h2 {font-size: 14px;padding: 8px 12px;margin: 0;line-height: 1.4;display: block;font-weight: 600;}
+.msaddon-content p {min-height: 60px;}
+.msaddon .msdbutton {float: left;}
+				</style>
+                <?php do_action('hidemy_add_to_admincss',''); ?>
+                <style>
 
 				/* Begin Responsive
 				====================================================================== */
@@ -873,11 +984,47 @@ class hide_my_site{
 		}
 	}
 	
+    public function print_section_info_licenses(){ //section summary info goes here
+		if(!has_filter('hidemysite_licenses_settings')) {
+			_e('To activate licenses for Hide My Site add ons you must first install and activate the chosen add on. License settings will then appear below.', 'motech-hidemy');
+		}
+    }		
+	
 	function motech_imagepicker_admin_jquery() {
 		if (isset($_GET['page']) && $_GET['page'] == $this->plugin_slug.'-setting-admin') { //if we are on our admin page
 			?>
 				<script>
-					jQuery(function() {
+
+					jQuery(function($) {
+									
+	 	//Tabs on click
+	 	$('.nav-tab-wrapper').on('click', 'a', function(e){
+			e.preventDefault();
+			tabContent = $(this).attr('href');
+			$('.nav-tab').removeClass('nav-tab-active');
+			//$tabBoxes.addClass('hidden');
+			//$currentTab = $($tabContent).toggleClass('hidden');
+			$(".mainsection").addClass("hidden");
+			$(tabContent+".mainsection").removeClass("hidden");
+			$(this).addClass('nav-tab-active');
+			if(window.location.hash != tabContent){
+				if(history.pushState) {
+					history.pushState(null, null, tabContent);
+				}
+				else {
+					location.hash = tabContent;
+				}				
+				//window.location.replace(tabContent);
+			}
+			if($(this).attr("href")=="#addons" || $(this).attr("href")=="#suggestionbox"){
+				$(".savebutton").hide();
+			}else{
+				$(".savebutton").show();
+			}
+
+		})
+		var hash = window.location.hash;
+		$('.nav-tab-wrapper a[href="'+hash+'"]').click();		
 
 						//jquery for color picker
 						jQuery('tr.motech-color-field').removeClass('motech-color-field');
@@ -892,6 +1039,7 @@ class hide_my_site{
 						jQuery("#<?php echo $this->plugin_slug ?>_current_theme").parent().parent().hide();
 						<?php if (get_option($this->plugin_slug . '_ihmsa','') == 'hmsia') : ?>
 							<?php
+								$useval = '';
 								if(get_option('hide_my_site_premium_expansion_plk','') != '') {
 									$useval = get_option('hide_my_site_premium_expansion_plk','');
 								} elseif(get_option($this->plugin_slug . '_plk','') != '') {
@@ -1062,7 +1210,7 @@ class hide_my_site{
 				$html .= '<option value="'.$select_option["value"].'" ' . selected( $select_option["value"], get_option($args["id"], $default), false) . '>'.$select_option["label"].'</option>';
 			}
 		$html .= '</select>';
-		if($args["desc"]) {
+		if(!empty($args["desc"])) {
 			$html .= "<p class='description'>".$args["desc"]."</p>";
 		}		
 		echo $html;

@@ -24,7 +24,7 @@
 						<option value="*" {{#is operator value="*"}}selected="selected"{{/is}}>&times;</option>
 						<option value="/" {{#is operator value="/"}}selected="selected"{{/is}}>&divide;</option>
 					</select>
-					<select class="calculation-operator-field caldera-field-bind" data-default="{{field}}" style="max-width:229px;width:229px;"></select>
+					<select class="calculation-operator-field caldera-field-bind" data-exclude="system" data-default="{{field}}" style="max-width:229px;width:229px;"></select>
 					<button class="button remove-operator-line pull-right" type="button"><i class="icon-join"></i></button>
 				</div>
 				{{/each}}
@@ -43,7 +43,7 @@ function build_calc_structure(obj){
 	if(obj.trigger.val().length){
 		config = JSON.parse(obj.trigger.val());
 		config.init = obj.trigger.data('init');
-		console.log( config );
+
 	}
 	return config;
 }
@@ -83,7 +83,7 @@ function build_calculations_formular(id, obj){
 		};
 
 	groups.each(function(k,v){
-		//console.log(v);
+
 		var lines = jQuery(v).find('.calculation-group-line'),
 			connector = jQuery(v).find('.calculation-operator'),
 			group	= {};

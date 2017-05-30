@@ -63,12 +63,13 @@ class Caldera_Forms_Processor_UI {
 	 *     @type string $desc Extra description to add to markup.
 	 *     @type bool|string|array $allow_types Type(s) of fields that are allowed to bind to this or false to allow all.
 	 *     @type bool|string|array $exclude Type(s) of fields that are NOT allowed to bind to this or false to not exclude any.
+	 *     @type bool $desc_escaped Whether description is already escaped or not. Default is false. If false, description will be passed through esc_html() which is bad if HTML is in description. If true, it is not, which may be bad if you are passing potentially unsafe strings, like translation strings.
 	 * }
 	 *
 	 * @return string|void HTML markup if input is valid. Void if not.
   	 */
 	public static function config_field( $args ) {
-		if ( ! is_array( $args ) || ! isset( $args[ 'label' ] ) || ! isset( $args[ 'id' ] ) ) {
+		if ( ! is_array( $args ) || ! isset( $args[ 'id' ] ) ) {
 			return;
 
 		}
@@ -83,11 +84,16 @@ class Caldera_Forms_Processor_UI {
 			'desc' => false,
 			'allow_types' => false,
 			'exclude' => false,
-			'print' => true
+			'print' => true,
+			'desc_escaped' => false
 		);
 
 		$args = wp_parse_args( $args, $defaults );
 
+		if( 'hidden' != 'type' &&  ! isset( $args[ 'label' ] ) )  {
+			return;
+
+		}
 
 		/**
 		 * Filter arguments for field markup
@@ -98,7 +104,7 @@ class Caldera_Forms_Processor_UI {
 		 */
 		$args = apply_filters( 'caldera_forms_addon_config_field_args', $args );
 
-		$input_type = 'simple';
+		$input_type = $args[ 'type' ];
 
 		if ( 'checkbox' == $args[ 'type'] ) {
 			$args[ 'block' ] = false;
@@ -110,26 +116,45 @@ class Caldera_Forms_Processor_UI {
 			$args[ 'extra_classes' ] = array( $args[ 'extra_classes' ] );
 		}
 
+		$classes = $args[ 'extra_classes' ];
+
 		if( $args[ 'block' ] ) {
-			$args[ 'extra_classes'][] = 'block-input';
+			$classes[] = 'block-input';
 		}
 
 		if ( $args[ 'magic'] ) {
-			$args[ 'extra_classes' ][] = 'magic-tag-enabled';
+			$classes[] = 'magic-tag-enabled';
 		}
 
 		if ( $args[ 'required' ] ) {
-			$args[ 'extra_classes' ][] = 'required';
+			$classes[] = 'required';
 		}
 
 		$args[ 'extra_classes' ][] = 'field-config';
 
-		$classes = implode( ' ', $args[ 'extra_classes' ] );
+		/**
+		 * Filter classes added to UI field
+		 *
+		 * @since 1.3.5.3
+		 *
+		 * @param array $classes Array of classes. Will be imploded
+		 * @param string $id Field ID
+		 * @param array $args field args
+		 * 
+		 */
+		$classes = implode( ' ', apply_filters( 'caldera_forms_ui_field_classes', $classes, $args[ 'id' ], $args ) );
+
 		$id = trim( $args['id'] );
 
-		$desc = false;
+		$desc = $has_desc = false;
 		if ( $args[ 'desc' ] ) {
-			$desc = sprintf( '<p class="description">%1s</p>', esc_html( $args[ 'desc' ] ) );
+			$has_desc = true;
+			if( ! $args[ 'desc_escaped'] ){
+				$desc = esc_html( $args[ 'desc' ] );
+			}else{
+				$desc = $args[ 'desc' ];
+			}
+			$desc = sprintf( '<p class="description" id="%s">%s</p>', esc_attr( self::description_id( $id ) ), $desc  );
 		}
 
 		$allow_types = '';
@@ -142,24 +167,65 @@ class Caldera_Forms_Processor_UI {
 			$required = 'required';
 		}
 
-		$field = sprintf( '
-		<div class="caldera-config-group">
-			<label for="%1s">
-				%2s
+		if ( 'hidden' != $args[ 'type' ] ) {
+			$field = sprintf('
+		<div class="caldera-config-group" id="%s">
+			<label for="%s" id="%s">
+				%s
 			</label>
 			<div class="caldera-config-field">
-				%3s
+				%s
 			</div>
-			%4s
+			%s
 		</div>',
-			esc_attr( $id ),
-			$args[ 'label' ],
-			self::input( $input_type, $args, $id, $classes, $required ),
-			$desc
-		);
+				esc_attr( $id . '-wrap'),
+				esc_attr( $id ),
+				esc_attr( self::label_id( $id ) ),
+				$args[ 'label' ],
+				self::input( $input_type, $args, $id, $classes, $required, $has_desc ),
+				$desc
+			);
+		} else {
+			$field = self::input( 'hidden', $args, $id, $classes, $required, false );
+		}
 
-		return $field;
+		/**
+		 * Modify HTML for the input field group in processor UI
+		 *
+		 * @since 1.3.5.3
+		 *
+		 * @param string $input_type ID attribute
+		 * @param string $type The type of input. This is NOT The input type. Options are simple|checkbox|advanced|dropdown
+		 * @param array $args Field args
+		 */
+		return apply_filters( 'caldera_forms_processor_ui_input_group_html', $field, $input_type, $id, $args );
 
+	}
+
+	/**
+	 * Make ID for a label element
+	 *
+	 * @since 1.3.5.3
+	 *
+	 * @param string $id ID attribute of element being labeled.
+	 *
+	 * @return string
+	 */
+	protected static function label_id( $id ){
+		return $id . '-label';
+	}
+
+	/**
+	 * Make ID for a description element
+	 *
+	 * @since 1.3.5.3
+	 *
+	 * @param string $id ID attribute of element being described.
+	 *
+	 * @return string
+	 */
+	protected static function description_id( $id ){
+		return $id . '-desc';
 	}
 
 	/**
@@ -172,18 +238,47 @@ class Caldera_Forms_Processor_UI {
 	 * @param string $id ID attribute
 	 * @param string $classes Class attribute.
 	 * @param bool|string $required If is required or not
+	 * @param bool $has_desc Does this input have a description?
 	 *
 	 * @return string HTML markup for input
 	 */
-	public static function input( $type, $args, $id, $classes, $required ) {
+	public static function input( $type, $args, $id, $classes, $required, $has_desc ) {
+
+		/**
+		 * Use to make custom HTML for admin input fields
+		 *
+		 * By returning a string, rest of this method -- Caldera_Forms_Processor_UI::input() -- is skipped
+		 *
+		 * @since 1.4.0
+		 *
+		 * @param string|null $field_html HTML to use instead of default, else null to let method to its thing.
+		 * @param array $args Field args
+		 * @param string $id ID attribute
+		 * @param string $classes Class attribute.
+		 * @param bool|string $required If is required or not
+		 * @param bool $has_desc Does this input have a description?
+		 */
+		$field_html = apply_filters( 'caldera_forms_processor_ui_input_pre_html', null, $type, $args, $id, $classes, $required, $has_desc );
+		if( is_string( $field_html ) ){
+			return $field_html;
+
+		}
+
+		$field = '';
+		$aria = sprintf( 'aria-labelledby="%s"', self::label_id( $id ) );
+		if( $has_desc ){
+			$aria .= sprintf( ' aria-describedby="%s"', self::description_id( $id ) );
+		}
+
 		switch( $type ) {
 			case 'checkbox' == $type :
-				$field = sprintf( '<input type="%1s" class="%2s" id="%3s" name="{{_name}}[%4s]" %5s>',
+				$field = sprintf( '<input type="%1s" class="%2s" id="%3s" name="{{_name}}[%4s]"  %s >',
 					$args[ 'type' ],
 					$classes,
 					esc_attr( $id ),
 					esc_attr( $id ),
-					sprintf( '{{#if %s}}checked{{/if}}', esc_attr( $id ) )
+					sprintf( '{{#if %s}}checked{{/if}}', esc_attr( $id ) ),
+					$aria
 				);
 				break;
 			case 'advanced' :
@@ -209,8 +304,6 @@ class Caldera_Forms_Processor_UI {
 					$excludes = 'all';
 				}
 
-
-
 				$field = sprintf( '{{{_field slug="%1s" type="%2s" exclude="%3s" required="%4s"}}}',
 					esc_attr( $id ),
 					$allow_types,
@@ -229,13 +322,22 @@ class Caldera_Forms_Processor_UI {
 						);
 					}
 
-					$field = sprintf( '<select class="%1s" id="%2s" name="{{_name}}[%3s]" >%4s,</select>',
+					$field = sprintf( '<select class="%s" id="%s" name="{{_name}}[%s]" %s>%s,</select>',
 						$classes,
 						esc_attr( $id ),
 						esc_attr( $id ),
+						$aria,
 						implode( "/n", $options )
 					);
 				}
+				break;
+			case 'hidden' :
+				$field = sprintf( '<input type="hidden" class="%s" id="%s" name="{{_name}}[%s]" value="%s">',
+					$classes,
+					esc_attr( $id ),
+					esc_attr( $id ),
+					'{{' . esc_attr( $id ) . '}}'
+				);
 				break;
 			default :
 				$field = sprintf( '<input type="%1s" class="%2s" id="%3s" name="{{_name}}[%4s]" value="%5s" %6s>',
@@ -249,7 +351,17 @@ class Caldera_Forms_Processor_UI {
 			break;
 		}
 
-		return $field;
+		/**
+		 * Modify HTML for the input in processor UI
+		 *
+		 * @since 1.3.5.3
+		 *
+		 *
+		 * @param string $id ID attribute
+		 * @param string $type The type of input. This is NOT The input type. Options are simple|checkbox|advanced|dropdown
+		 * @param array $args Field args
+		 */
+		return apply_filters( 'caldera_forms_processor_ui_input_html', $field, $type, $id, $args );
 
 	}
 

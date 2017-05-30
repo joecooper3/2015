@@ -298,6 +298,7 @@ $sqlength: 300px;
 
 
 
+
 /* News and Infographics */
 
 #bigboycontainer {
@@ -503,5 +504,22 @@ $sqlength: 300px;
         li.dot {
                 display:none;
             }
+    }
+}
+
+    /* Big screens */
+@media all and (min-width: 1450px) {
+    #maininfo {
+        flex: 2;
+    }
+    #newsstories {
+        flex: 1;
+    }
+    #newsstories {
+        max-width: none;
+        .featured-bgimage, article {
+            max-width: 400px;
+        }
+        
     }
 }

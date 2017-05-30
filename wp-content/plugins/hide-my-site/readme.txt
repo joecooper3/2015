@@ -3,8 +3,8 @@ Contributors: clevelandwebdeveloper
 Donate link: http://www.clevelandwebdeveloper.com/wordpress-plugins/donate.php
 Tags: password, password protection, password protect, hide, hide site, hide from search engines, hide from google
 Requires at least: 2.9
-Tested up to: 4.4
-Stable tag: 1.6.2
+Tested up to: 4.6.1
+Stable tag: 2.0.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,29 @@ Choose one of the login page styles you want to use as your baseline. For exampl
 
 == Changelog ==
 
+= 2.0.5 =
+* Resolves undefined index and undefined variable error notices
+* WP tested up to version 4.6.1
+
+= 2.0.4 =
+* Fixes preview page bug which prevented users from viewing post previews
+
+= 2.0.3 =
+* Fixes undefined property error messages
+
+= 2.0.2 =
+* Properly fixes nag message bug
+
+= 2.0.1 =
+* Fixes nag message bug
+
+= 2.0 =
+* Adds compatibility with Multipass (multiple password) add-on
+* WP tested up to version 4.5.3
+
+= 1.6.3 =
+* security enhancement
+
 = 1.6.2 =
 * resolved upgrade-functions.php bug. restored login page preview link
 
@@ -143,5 +166,5 @@ Choose one of the login page styles you want to use as your baseline. For exampl
 
 == Upgrade Notice ==
 
-= 1.6.2 =
-resolves upgrade-functions.php bug. restores login page preview link
+= 2.0.5 =
+Version 2.0.5 resolves undefined index and undefined variable error notices. WP now tested up to version 4.6.1

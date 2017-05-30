@@ -3,25 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/header.php</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/footer.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/about.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content-program.php</file>
+            <file>file:/C:/wamp/www/2015/wp-config.php</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/programpage.scss</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/referrals.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/functions.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/single.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content-keystaff.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content-services.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/services.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/singlepost.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/footflex.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/search.php</file>
             <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/frontpage3.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/inc/responsive-image.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content-single.php</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/resources.scss</file>
-            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content.php</file>
+            <file>file:/C:/wamp/www/2015/.htaccess</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/functions.php</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/page_keystaff.php</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/template-parts/content-keystaff.php</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/sass/layout/services.scss</file>
+            <file>file:/C:/wamp/www/2015/wp-content/themes/caseslegit/js/mobilemenu.js</file>
         </group>
     </open-files>
 </project-private>

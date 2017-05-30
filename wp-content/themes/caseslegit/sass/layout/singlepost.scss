@@ -23,6 +23,23 @@ and open the template in the editor.
     h3 {
         font-face: akzRoman;
         font-weight: normal;
+        a, a:visited {
+            font-family: akzMed;
+        }
+    }
+    a, a:visited {
+        color: #404040;
+        background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
+        background-size: .05em 1px,.05em 1px,1px 1px;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-position: 0 95%,100% 95%,0 95%;
+        transition: color .15s;
+        font-weight: 500;
+        font-family: gillMed;
+    }
+    a:hover {
+        color: $color5;
+        background: 0 0;
     }
 }
 

@@ -11,6 +11,13 @@ class Caldera_Forms_Widget extends WP_Widget {
 	function __construct() {
 		// Instantiate the parent object
 		parent::__construct( false, __('Caldera Form', 'caldera-forms' ) );
+
+		/**
+		 * Runs after Caldera Forms widget is initialized
+		 *
+		 * @since 1.4.0
+		 */
+		do_action( 'caldera_forms_widget_init' );
 	}
 
 	/**
@@ -72,7 +79,7 @@ class Caldera_Forms_Widget extends WP_Widget {
 
 		echo "<p><label for=\" " . $this->get_field_id('title') . "\">" . __('Title', 'caldera-forms') . ": <input class=\"widefat\" id=\"" . $this->get_field_id('title') . "\" name=\"" . $this->get_field_name('title') . "\" type=\"text\" value=\"" . esc_attr($title). "\" /></label></p>\r\n";
 		// get forms
-		$forms = Caldera_Forms::get_forms();
+		$forms = Caldera_Forms_Forms::get_forms( true );
 
 		echo "<p><label for=\" " . $this->get_field_id('title') . "\">" . __('Form', 'caldera-forms') . ": </label><select style=\"width:100%;\" name=\"" . $this->get_field_name('form') . "\">\r\n";
 		echo "<option value=\"\"></option>\r\n";
@@ -95,7 +102,10 @@ class Caldera_Forms_Widget extends WP_Widget {
 }
 
 function caldera_forms_register_widget() {
-	register_widget( 'Caldera_Forms_Widget' );
+	if( ! did_action( 'caldera_forms_widget_init' ) ){
+		register_widget( 'Caldera_Forms_Widget' );
+	}
+
 }
 
 add_action( 'widgets_init', 'caldera_forms_register_widget' );
