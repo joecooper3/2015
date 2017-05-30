@@ -301,7 +301,8 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "Gill Sans MT", "Gill Sans", sans-serif;
+  font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
+  letter-spacing: 0.01em;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -1969,13 +1970,39 @@ and open the template in the editor.
 
 .entry-content-single {
   margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.entry-content-single img {
+  margin-bottom: 30px;
 }
 .entry-content-single h3 {
   font-face: akzRoman;
   font-weight: normal;
+  max-width: 600px;
+  width: 100%;
 }
 .entry-content-single h3 a, .entry-content-single h3 a:visited {
   font-family: akzMed;
+}
+.entry-content-single p, .entry-content-single ul {
+  font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  width: 100%;
+  max-width: 600px;
+}
+.entry-content-single p {
+  margin: 12px 0;
+}
+.entry-content-single ul {
+  margin: 10px 0;
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+.entry-content-single ul li {
+  margin: 10px 0;
 }
 .entry-content-single a, .entry-content-single a:visited {
   color: #404040;

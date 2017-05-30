@@ -20,11 +20,37 @@ and open the template in the editor.
 
 .entry-content-single {
     margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    img {
+        margin-bottom: 30px;
+    }
     h3 {
         font-face: akzRoman;
         font-weight: normal;
+        max-width: 600px;
+        width: 100%;
         a, a:visited {
             font-family: akzMed;
+        }
+    }
+    p, ul {
+        font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+        width: 100%;
+        max-width: 600px;
+    }
+    p {
+        margin: 12px 0;
+    }
+    ul {
+        margin: 10px 0;
+        box-sizing: border-box;
+        padding-right: 30px;
+        li {
+            margin: 10px 0;
         }
     }
     a, a:visited {
@@ -40,7 +66,7 @@ and open the template in the editor.
     a:hover {
         color: $color5;
         background: 0 0;
-    }
+    } 
 }
 
 .entry-meta {
