@@ -38,7 +38,7 @@
             ));
             ?>
         </div><!-- .entry-content -->
-
+           
         <footer class="entry-footer">
             <?php caseslegit_entry_footer(); ?>
         </footer><!-- .entry-footer -->

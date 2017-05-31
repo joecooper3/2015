@@ -25,7 +25,7 @@ and open the template in the editor.
         color: $color1;
     }
 }
-.prog-citations-bottom-container {
+.prog-citations-bottom-container, .news-citations-bottom-container {
     flex: 100%;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ and open the template in the editor.
         font-family:akzMed;
         font-size: 1.1rem;
     }
-    .prog-citations-bottom {
+    .prog-citations-bottom, .news-citations-bottom {
         font-size:0.7rem;
         flex: 2 0 800px;
         max-width: 700px;
@@ -55,6 +55,9 @@ and open the template in the editor.
     .cit-arrow {
         margin-left: 5px;
     }
+}
+.news-citations-bottom-container {
+    margin: 50px 0;
 }
 .serv-container {
     .prog-citations-bottom-container {

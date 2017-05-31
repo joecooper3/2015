@@ -30,7 +30,6 @@
 <a href="https://twitter.com/casesnyc"><i class="fa fa-twitter-square"></i></a>
                     <a href="http://www.facebook.com/casesnyc"><i class="fa fa-facebook-square"></i></a>
                     <a href="http://www.linkedin.com/companies/659695"><i class="fa fa-linkedin-square"></i></a>
-                    <a href="http://www.youtube.com/user/casesnyc/"><i class="fa fa-youtube-square"></i></a>
 </div>
 <div class="footadd">
     <div class="footadditem"><p>151 Lawrence Street<br>

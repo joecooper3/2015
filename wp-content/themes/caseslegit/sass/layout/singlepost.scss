@@ -70,6 +70,13 @@ and open the template in the editor.
         color: $color5;
         background: 0 0;
     } 
+    .cit-number {
+        vertical-align: super;
+        font-size: 0.65em;
+        background: none;
+        color: $color1;
+        text-decoration: none;
+    }
 }
 
 .entry-meta {

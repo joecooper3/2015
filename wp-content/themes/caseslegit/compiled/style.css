@@ -2021,6 +2021,13 @@ and open the template in the editor.
   color: #D18300;
   background: 0 0;
 }
+.entry-content-single .cit-number {
+  vertical-align: super;
+  font-size: 0.65em;
+  background: none;
+  color: #002B55;
+  text-decoration: none;
+}
 
 .entry-meta {
   font-family: akzMed;
@@ -3450,36 +3457,40 @@ and open the template in the editor.
   color: #002B55;
 }
 
-.prog-citations-bottom-container {
+.prog-citations-bottom-container, .news-citations-bottom-container {
   flex: 100%;
   display: flex;
   justify-content: center;
   font-family: akzRoman;
 }
-.prog-citations-bottom-container h2 {
+.prog-citations-bottom-container h2, .news-citations-bottom-container h2 {
   font-family: akzMed;
   font-size: 1.1rem;
 }
-.prog-citations-bottom-container .prog-citations-bottom {
+.prog-citations-bottom-container .prog-citations-bottom, .prog-citations-bottom-container .news-citations-bottom, .news-citations-bottom-container .prog-citations-bottom, .news-citations-bottom-container .news-citations-bottom {
   font-size: 0.7rem;
   flex: 2 0 800px;
   max-width: 700px;
   margin-right: 100px;
   border-top: 2.0px solid #ccc;
 }
-.prog-citations-bottom-container .prog-citations-bottom p {
+.prog-citations-bottom-container .prog-citations-bottom p, .prog-citations-bottom-container .news-citations-bottom p, .news-citations-bottom-container .prog-citations-bottom p, .news-citations-bottom-container .news-citations-bottom p {
   margin-bottom: 1.0em;
 }
-.prog-citations-bottom-container .prog-citations-bottom .cit-number {
+.prog-citations-bottom-container .prog-citations-bottom .cit-number, .prog-citations-bottom-container .news-citations-bottom .cit-number, .news-citations-bottom-container .prog-citations-bottom .cit-number, .news-citations-bottom-container .news-citations-bottom .cit-number {
   font-size: 0.5em;
 }
-.prog-citations-bottom-container .prog-citations-bottom-spacer {
+.prog-citations-bottom-container .prog-citations-bottom-spacer, .news-citations-bottom-container .prog-citations-bottom-spacer {
   flex: 1 0 250px;
   margin: 0;
   max-width: 250px;
 }
-.prog-citations-bottom-container .cit-arrow {
+.prog-citations-bottom-container .cit-arrow, .news-citations-bottom-container .cit-arrow {
   margin-left: 5px;
+}
+
+.news-citations-bottom-container {
+  margin: 50px 0;
 }
 
 .serv-container .prog-citations-bottom-container .prog-citations-bottom {
