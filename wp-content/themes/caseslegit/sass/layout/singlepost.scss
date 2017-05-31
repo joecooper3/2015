@@ -23,7 +23,7 @@ and open the template in the editor.
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    img {
+    img:first-child {
         margin-bottom: 30px;
     }
     h3 {
@@ -44,6 +44,9 @@ and open the template in the editor.
     }
     p {
         margin: 12px 0;
+    }
+    p:last-child {
+        margin-bottom: 40px;
     }
     ul {
         margin: 10px 0;
