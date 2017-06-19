@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Dec 15, 2015, 2:37:57 PM
     Author     : Joe Cooper
 */
@@ -15,11 +15,11 @@ and open the template in the editor.
 
 }
 .asidetitle {
-    font-family: akzSemiBold;
+    font-family: akzBold;
     display: block;
     text-align: left;
     color: $color1;
-    font-size: 0.9rem;
+    font-size: 15px;
     text-transform: uppercase;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -36,20 +36,20 @@ and open the template in the editor.
 
 
     aside {
-        font-family:akzRoman;
-        font-size:0.85rem;
+        font-family:gillBook;
+        font-size:15px;
         margin: 0 auto;
         padding: 10px 10px 10px 10px;
         width: 350px;
         text-align: center;
         border-bottom: 3.0px solid #ddd;
         em {
-            font-family: akzSemiBold;
+            font-family: gillMed;
             font-style: normal;
         }
         li {
             padding-right:0;
-        }  
+        }
     }
     .bodybox {
         flex: 2 0 auto;
@@ -82,7 +82,7 @@ and open the template in the editor.
 
     .longer {
         text-align: left;
-        p { 
+        p {
             font-size: 0.85rem;
             padding-left: 15px;
             padding-right: 15px;
@@ -97,7 +97,7 @@ and open the template in the editor.
         border-bottom: 3.0px solid #ddd;
     }
     p {
-        font-size: 1.1rem;     
+        font-size: 1.1rem;
 
     }
     ul {
@@ -110,9 +110,9 @@ and open the template in the editor.
 }
 
 .infog-numbers {
-    font-size: 1.8rem;
+    font-size: 35px;
     color: $color1;
-    font-family: akzSemiBold;
+    font-family: akzBold;
 }
 
 /* Related Programs Widget */
@@ -159,9 +159,10 @@ and open the template in the editor.
             margin: 10px 0 0 0;
         }
         a {
-            font-family: akzMed;
+            font-family: gillMed;
+            border-bottom: 1.0px solid $color1;
         }
-        
+
     }
 }
 
@@ -192,8 +193,8 @@ aside {
 
 .relprog-title {
     flex: 1 100%;
-    font-family: akzMed;
-    font-size: 1.2rem;
+    font-family: akzBold;
+    font-size: 18px;
     margin: 20px 0px;
     padding: 0 0 5px 0;
     color: $color1;
@@ -249,7 +250,7 @@ aside {
         }
         .bodybox {
             flex: 1 0 100%;
-        }   
+        }
         .infogbox {
             flex: 1 0 100%;
             align-self: center;
