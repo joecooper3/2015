@@ -43,7 +43,7 @@ New York, NY 10027<br>
 (212) 553-6300
         </p></div>
 </div>
-<p>&copy; 2016 CASES</p></div><!-- #colophon -->
+<p>&copy; 2017 CASES</p></div><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
