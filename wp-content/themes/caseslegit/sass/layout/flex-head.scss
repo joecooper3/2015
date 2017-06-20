@@ -3,12 +3,14 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Jun 18, 2015, 5:18:46 PM
     Author     : joe.cooper
 */
 #page {
     margin: 0px;
+    display: flex;
+    flex-flow: column nowrap;
 }
 #responsiveCheck {
     display: none;
@@ -116,15 +118,15 @@ input[type="search"] {
     background-color: $color4;
     margin-left: 5px;
     align-self: stretch;
-    
+
 }
 .collapsed {
     background-color: $color1 !important;
 }
 .error404 .search-submit,
 .search .search-submit,
-.search-box .search-submit { 
-    display: none; 
+.search-box .search-submit {
+    display: none;
 }
 
 .all-prog-nav {
@@ -142,7 +144,7 @@ input[type="search"] {
     position:fixed;
     width:100%;
     z-index: 99999;
-    
+
 }
 .both-row-fade {
     display: flex;
@@ -213,29 +215,29 @@ input[type="search"] {
         order: 3;
         max-width: 750px;
     }
-    
+
 }
 
 /* Medium screens */
 @media all and (max-width: 1030px) {
 
-    
+
     #masthead {padding-left: 5px; padding-right: 5px;}
 }
 
 @media all and (max-width: 900px) {
-    .site-branding { 
-        order: 1; 
-        align-self: center; 
+    .site-branding {
+        order: 1;
+        align-self: center;
         flex: none;
     }
-    .main-navigation { 
-        order: 2; 
+    .main-navigation {
+        order: 2;
         align-self: center;
-        flex: none; 
+        flex: none;
     }
-    
-    .search-box-wrapper { 
+
+    .search-box-wrapper {
     }
     #masthead {align-content: center;}
     .search-box .search-field {float: none;}
@@ -280,9 +282,9 @@ input[type="search"] {
         padding: 0;
         background: $mywhite;
     }
-    .main-navigation { 
+    .main-navigation {
         ul {
-            display: none; 
+            display: none;
             padding-left: 0;
 
             li {
@@ -312,7 +314,7 @@ input[type="search"] {
                 &:hover > ul,
                 &.focus > ul {
                     left: auto;
-                } 
+                }
                 }
                 ul {
                     display: none;
@@ -328,9 +330,9 @@ input[type="search"] {
                         flex: 1 0 500px;
                         &:hover > ul,
                             &.focus > ul {
-                            left: auto; 
-                        } 
-                    } 
+                            left: auto;
+                        }
+                    }
 
                 }
             }
@@ -339,9 +341,9 @@ input[type="search"] {
         .sub-menu { display: none; }
 
         .menu-toggle {
-            display: block; 
-            background-color: $color1; 
-            color: white; 
+            display: block;
+            background-color: $color1;
+            color: white;
             text-decoration: none;
             text-transform: uppercase;
             font-family: akzMed;
@@ -356,7 +358,7 @@ input[type="search"] {
         .site-title {color: blue;}
     }
     .main-navigation ul ul li:hover {left: auto;}
-    #socialMedia { 
+    #socialMedia {
         display: none;
     }
     .search-box {
@@ -364,7 +366,7 @@ input[type="search"] {
     }
 }
 @media all and (max-width: 575px) {
-    .site-branding { 
+    .site-branding {
         flex: 1 1 150px;
         padding: 0;
     }

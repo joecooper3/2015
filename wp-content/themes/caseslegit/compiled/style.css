@@ -914,12 +914,14 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Jun 18, 2015, 5:18:46 PM
     Author     : joe.cooper
 */
 #page {
   margin: 0px;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 #responsiveCheck {
