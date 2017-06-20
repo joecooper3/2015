@@ -3,6 +3,7 @@
 sitemap.xml
 sitemap.xml.gz
 wp-config.php
+backup/
 clinic-newsletters/
 court-newsletters/
 Hover-master/

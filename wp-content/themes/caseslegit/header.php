@@ -43,13 +43,13 @@
 
             <!-- .site-branding -->
 
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+            <button id="menu-toggle-traveler" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
               <?php esc_html_e('', 'caseslegit'); ?>
               <i class="fa fa-bars"></i></button>
 
               <nav id="site-navigation-fade" class="main-navigation" role="navigation">
 
-                <div class="total-navigation"><?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+                <div class="total-navigation"><?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu-traveler')); ?>
                   <div class="social-media-menu-container"><a href="https://www.facebook.com/casesnyc/"  class="nopad" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="http://www.twitter.com/casesnyc/" class="nopad" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                   </div>
@@ -82,7 +82,7 @@
                 alt="CASES logo"></a></h1>
               </div><!-- .site-branding -->
 
-              <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+              <button id="menu-toggle-main" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                 <?php esc_html_e('', 'caseslegit'); ?>
                 <i class="fa fa-bars"></i></button>
 
