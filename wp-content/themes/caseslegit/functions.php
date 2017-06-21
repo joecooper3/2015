@@ -47,7 +47,7 @@ function caseslegit_setup() {
         add_image_size('news_m', 700, 525, true);
         add_image_size('news_l', 1400, 1050, true);
         add_image_size('news_xl', 2100, 1575, true);
-       
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'caseslegit' ),
@@ -94,12 +94,12 @@ add_action( 'after_setup_theme', 'caseslegit_setup' );
 function responsive_background() {
      // call the global post variable
     global $post;
- 
+
     if ( has_post_thumbnail( $post->ID ) ) : // checks whether the post has the featured image set
- 
+
     // get the post thumbnail ID for the page or post
     $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
- 
+
     // store the image sizes in an array. You can also add your own image sizes with the add_image_size function
     $img_sizes = array( 'serv-xs', 'serv-s', 'serv-m', 'serv-l', 'serv-xl' );
 
@@ -180,32 +180,19 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
  * Enqueue scripts and styles.
  */
 function caseslegit_scripts() {
-	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri() );
-        
-       /* wp_enqueue_style( 'caseslegit-hober', get_template_directory_uri() . '/hover.css' ); */
-        
+	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri(), array(), '3.0.8' );
+
         wp_enqueue_style( 'caseslegit-icons', get_template_directory_uri() . '/css/font-awesome.min.css' );
 
-	/* wp_enqueue_script( 'caseslegit-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true ); */
-
-       /*  wp_enqueue_script( 'caseslegit-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20150623', true ); 
-        
-        wp_enqueue_script( 'caseslegit-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('caseslegit-superfish'), '20150623', true ); */
-        
-       /* wp_enqueue_script( 'caseslegit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true ); */
-
       wp_enqueue_script( 'caseslegit-mobile-nav', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20150624', true );
-        
+
        wp_enqueue_script( 'caseslegit-mobile-nav2', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true );
-       
+
        wp_enqueue_script( 'smooth-scrolling', get_template_directory_uri() . '/js/smoothscroll.js', array('jquery'), '20170530', true );
-       
-       /* wp_enqueue_script( 'caseslegit-referrals', get_template_directory_uri() . '/js/referrals.js', array('jquery'), '20160316', true ); */
-        
+
         wp_enqueue_script( 'my-picturefill', get_template_directory_uri() . '/js/picturefill.min.js', '20150710', false);
-        
-       /* wp_enqueue_script( 'boxes', get_template_directory_uri() . '/js/boxes.js', array('jquery'), '20160102', true); */
-        
+
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

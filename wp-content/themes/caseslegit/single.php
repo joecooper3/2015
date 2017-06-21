@@ -7,9 +7,7 @@
 
 get_header(); ?>
 
-<main id="main" class="site-main" role="main">
-  <div class="article-whole">
-
+<main id="main" class="article-whole" role="main">
     <?php while (have_posts()) : the_post(); ?>
 
 
@@ -35,7 +33,6 @@ get_header(); ?>
     <?php endwhile; // End of the loop. ?>
   </div>
   <?php get_sidebar('article'); ?>
-</div>
 </main><!-- #main -->
 
 

@@ -3,209 +3,219 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
-    Created on : Jul 1, 2015, 12:22:01 PM
-    Author     : joe.cooper
+/*
+Created on : Jul 1, 2015, 12:22:01 PM
+Author     : joe.cooper
 */
 
 .entry-header-single {
-    margin: 0;
-    padding: 1px 0 0 0;
-    flex: 1 100%;
+  margin: 0;
+  padding: 1px 0 0 0;
+  flex: 1 100%;
+  display: block;
+  h1 {
     display: block;
-    h1 {
-        color: $color1;
-    }
+    color: $color1;
+  }
 }
 
 .entry-content-single {
-    margin: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    img:first-child {
-        margin-bottom: 30px;
-    }
-    h3 {
-        font-face: akzRoman;
-        font-weight: normal;
-        max-width: 600px;
-        width: 100%;
-        a, a:visited {
-            font-family: akzMed;
-        }
-    }
-    p, ul {
-        font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
-        font-size: 18px;
-        letter-spacing: 0.01em;
-        width: 100%;
-        max-width: 600px;
-    }
-    p {
-        margin: 12px 0;
-    }
-    p:last-child {
-        margin-bottom: 40px;
-    }
-    ul {
-        margin: 10px 0;
-        box-sizing: border-box;
-        padding-right: 30px;
-        li {
-            margin: 10px 0;
-        }
-    }
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  img:first-child {
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-face: akzRoman;
+    font-weight: normal;
+    max-width: 600px;
+    width: 100%;
     a, a:visited {
-        color: #404040;
-        background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
-        background-size: .05em 1px,.05em 1px,1px 1px;
-        background-repeat: no-repeat,no-repeat,repeat-x;
-        background-position: 0 95%,100% 95%,0 95%;
-        transition: color .15s;
-        font-weight: 500;
-        font-family: gillMed;
+      font-family: akzMed;
     }
-    a:hover {
-        color: $color5;
-        background: 0 0;
-    } 
-    .cit-number {
-        vertical-align: super;
-        font-size: 0.65em;
-        background: none;
-        color: $color1;
-        text-decoration: none;
+  }
+  p, ul {
+    font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    width: 100%;
+    max-width: 600px;
+  }
+  p {
+    margin: 12px 0;
+  }
+  p:last-child {
+    margin-bottom: 40px;
+  }
+  ul {
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding-right: 30px;
+    li {
+      margin: 10px 0;
     }
+  }
+  a, a:visited {
+    color: #404040;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-position: 0 95%,100% 95%,0 95%;
+    transition: color .15s;
+    font-weight: 500;
+    font-family: gillMed;
+  }
+  a:hover {
+    color: $color5;
+    background: 0 0;
+  }
+  .cit-number {
+    vertical-align: super;
+    font-size: 0.65em;
+    background: none;
+    color: $color1;
+    text-decoration: none;
+  }
 }
 
 .entry-meta {
-    font-family: akzMed;
-    font-size: 1.0rem;
-    margin: 0 0 20px 0;
+  font-family: akzMed;
+  font-size: 1.0rem;
+  margin: 0 0 20px 0;
 }
 
 .article-whole {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #FDFDFD;
+
 }
 
 .article-container {
-    flex: 5 0 auto;
-    max-width: 700px;
-    margin: 0 auto;
+  flex: 5 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-article { 
-    padding: 0;
-    
+article {
+  padding: 0;
+
 }
 
-.serv-body, .entry-content-prog, .entry-content-resources { 
-    a {
-        color: #404040;
-        background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($color1,$color1);
-        background-size: .05em 1px,.05em 1px,1px 1px;
-        background-repeat: no-repeat,no-repeat,repeat-x;
-        background-position: 0 95%,100% 95%,0 95%;
-        transition: color .15s;
-        font-weight: 500;
-        font-family: gillMed;
-        img {
-            background: 0 0;
-            border-bottom: 0;
-        }
-        &:hover {
-            color: $color5;
-            background: 0 0;
-        }
+.serv-body, .entry-content-prog, .entry-content-resources {
+  a {
+    color: #404040;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($color1,$color1);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-position: 0 95%,100% 95%,0 95%;
+    transition: color .15s;
+    font-weight: 500;
+    font-family: gillMed;
+    img {
+      background: 0 0;
+      border-bottom: 0;
     }
+    &:hover {
+      color: $color5;
+      background: 0 0;
+    }
+  }
 }
 aside {
-        a {
-            background: 0;
-            font-weight: bold;
-        }
-    }
-    
+  a {
+    background: 0;
+    font-weight: bold;
+  }
+}
+
 .widget_recent_entries {
-        ul {
-            li {
-                a, a:visited {
-                    font-family: akzRoman;
-                }
-            }
-        }
+  ul {
+    li {
+      a, a:visited {
+        font-family: akzRoman;
+      }
     }
+  }
+}
 
 .widget-area {
-    margin: 0 auto;
-    flex: 2 0 auto;
-    max-width: 280px;
-    
-    aside {
-        border-top: 3.0px solid $color1;
-        border-bottom: 1.5px solid #AAA;
-        margin-bottom: 4.0rem;
+  margin: 0 auto;
+  flex: 2 0 auto;
+  max-width: 280px;
+
+  aside {
+    border-top: 3.0px solid $color1;
+    border-bottom: 1.5px solid #AAA;
+    margin-bottom: 4.0rem;
+  }
+
+  h1 {
+    border-bottom: 1.5px solid #AAA;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    margin: 5px 0 20px 0;
+
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 0 20px 0;
     }
-    
-    h1 {
-        border-bottom: 1.5px solid #AAA;
-        font-size: 1.2rem;
-        padding-bottom: 5px;
-        margin: 5px 0 20px 0;
-        
-    }
-    ul { 
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li {
-            margin: 0 0 20px 0;
-        }
-    }
+  }
 }
 
 .textwidget {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .posted-on::before {
-    content: url(images/lilsq.svg);
-    display: inline-block;
-    width: 12px;
-    margin: 0 10px 0 20px;
+  content: url(images/lilsq.svg);
+  display: inline-block;
+  width: 12px;
+  margin: 0 10px 0 20px;
 }
 
 @media all and (max-width: 900px) {
-    .article-whole {
-        flex-flow: column wrap;
-    }
+  .article-whole {
+    flex-flow: column wrap;
+  }
 }
 
 @media all and (max-width: 710px) {
-    .entry-content-single {
-        p {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        ul {
-            margin-left: 1.0em;
-            padding-right: 30px;
-        }
+  .entry-header-single {
+    h1 {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 25px;
     }
+  }
+  .entry-content-single {
+    h1, h2, h3, p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    ul {
+      margin-left: 1.0em;
+      padding-right: 30px;
+    }
+  }
 }
 
 @media all and (min-width: 1450px) {
-    .article-whole {
-        justify-content: center;
-    }
-    .article-container {
-        margin-right: 50px;
-    }
-    .widget-area {
-        margin-left: 50px;
-    }
+  .article-whole {
+    justify-content: center;
+  }
+  .article-container {
+    margin-right: 50px;
+  }
+  .widget-area {
+    margin-left: 50px;
+  }
 }

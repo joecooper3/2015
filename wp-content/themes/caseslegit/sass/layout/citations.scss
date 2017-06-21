@@ -4,80 +4,101 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /*
-    Created on : Aug 9, 2016, 11:31:38 AM
-    Author     : coopers
+Created on : Aug 9, 2016, 11:31:38 AM
+Author     : coopers
 */
 .serv-body {
-    .cit-number {
-        vertical-align: super;
-        font-size: 0.65em;
-        background: none;
-        font-family:akzMed;
-        color: $color1;
-    }
+  .cit-number {
+    vertical-align: super;
+    font-size: 0.65em;
+    background: none;
+    font-family:akzMed;
+    color: $color1;
+  }
 }
 .entry-content-prog {
-    .cit-number {
-        vertical-align: super;
-        font-size: 0.65em;
-        background: none;
-        font-family:akzMed;
-        color: $color1;
-    }
+  .cit-number {
+    vertical-align: super;
+    font-size: 0.65em;
+    background: none;
+    font-family:akzMed;
+    color: $color1;
+  }
 }
 .prog-citations-bottom-container, .news-citations-bottom-container {
-    flex: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: gillBook;
-    h2 {
-        font-family:akzBold;
-        font-size: 20px;
+  flex: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: gillBook;
+  h2 {
+    font-family:akzBold;
+    font-size: 20px;
+  }
+  .prog-citations-bottom, .news-citations-bottom {
+    font-size:12px;
+    flex: 1 0 100%;
+    width: 100%;
+    max-width: 700px;
+    margin-right: 100px;
+    border-top: 2.0px solid #ccc;
+    p {
+      margin-bottom:1.0em;
+      overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
     }
-    .prog-citations-bottom, .news-citations-bottom {
-        font-size:12px;
-        flex: 2 0 800px;
-        max-width: 700px;
-        margin-right: 100px;
-        border-top: 2.0px solid #ccc;
-        p {
-            margin-bottom:1.0em;
-        }
-        .cit-number {
-            font-size: 0.5em;
-        }
+    .cit-number {
+      font-size: 0.5em;
     }
-    .prog-citations-bottom-spacer {
-        flex: 1 0 250px;
-        margin: 0;
-        max-width: 250px;
-    }
-    .cit-arrow {
-        margin-left: 5px;
-    }
+  }
+  .prog-citations-bottom-spacer {
+    flex: 1 0 250px;
+    margin: 0;
+    max-width: 250px;
+  }
+  .cit-arrow {
+    margin-left: 5px;
+  }
 }
 .news-citations-bottom-container {
-    margin: 50px 0;
+  margin: 50px 10px;
 }
 .serv-container {
-    .prog-citations-bottom-container {
-        .prog-citations-bottom {
-            border-top: 0;
-        }
+  .prog-citations-bottom-container {
+    .prog-citations-bottom {
+      border-top: 0;
     }
+  }
 
 }
 @media all and (max-width: 1140px) {
-    .prog-citations-bottom-container {
-        margin-top: 40px;
-        .prog-citations-bottom {
-            margin-right: 0;
-            flex: 100%;
-            padding: 0 30px;
-        }
-        .prog-citations-bottom-spacer {
-            display: none;
-        }
+  .news-citations-bottom-container {
+    margin-top: 40px;
+    .news-citations-bottom {
+      margin-right: 0;
+      flex: 100%;
+      padding: 0 10px;
     }
+    .news-citations-bottom-spacer {
+      display: none;
+    }
+  }
+  .prog-citations-bottom-container {
+    margin-top: 40px;
+    .prog-citations-bottom {
+      margin-right: 0;
+      flex: 100%;
+      padding: 0 30px;
+    }
+    .prog-citations-bottom-spacer {
+      display: none;
+    }
+  }
 
 }
