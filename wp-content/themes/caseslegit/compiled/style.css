@@ -897,9 +897,9 @@ Author     : joe.cooper
 #page {
   margin: 0px;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
 }
-#page #masthead, #page #content, #page #footer {
+#page #masthead, #page #content, #page .footer {
   flex: 1 0 100%;
 }
 
@@ -1944,12 +1944,26 @@ Author     : joe.cooper
 .entry-header-single {
   margin: 0;
   padding: 1px 0 0 0;
-  flex: 1 100%;
-  display: block;
+  flex: 1 1 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 .entry-header-single h1 {
+  padding: 0 30px;
   display: block;
   color: #002B55;
+  flex: 1 1 100%;
+}
+
+.entry-title {
+  max-width: 1200px;
+}
+
+.entry-meta {
+  font-family: akzMed;
+  font-size: 1.0rem;
+  margin: 0 0 20px 0;
+  max-width: 1200px;
 }
 
 .entry-content-single {
@@ -2013,12 +2027,6 @@ Author     : joe.cooper
   text-decoration: none;
 }
 
-.entry-meta {
-  font-family: akzMed;
-  font-size: 1.0rem;
-  margin: 0 0 20px 0;
-}
-
 .article-whole {
   padding: 0;
   display: flex;
@@ -2028,8 +2036,10 @@ Author     : joe.cooper
 }
 
 .article-container {
-  flex: 5 0 auto;
-  max-width: 700px;
+  flex: 1 1 720px;
+  width: 100%;
+  max-width: 720px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -2098,14 +2108,13 @@ aside a {
   content: url(images/lilsq.svg);
   display: inline-block;
   width: 12px;
-  margin: 0 10px 0 20px;
+  margin: 0 10px 0 40px;
 }
 
-@media all and (max-width: 900px) {
+/* @media all and (max-width: 900px) {
   .article-whole {
-    flex-flow: column wrap;
   }
-}
+} */
 @media all and (max-width: 710px) {
   .entry-header-single h1 {
     padding-left: 20px;

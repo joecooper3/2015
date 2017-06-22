@@ -10,8 +10,8 @@ Author     : joe.cooper
 #page {
   margin: 0px;
   display: flex;
-  flex-flow: column nowrap;
-  #masthead, #content, #footer {
+  flex-flow: row wrap;
+  #masthead, #content, .footer {
     flex: 1 0 100%
   }
 }
