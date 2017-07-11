@@ -1994,6 +1994,9 @@ Author     : joe.cooper
 .entry-content-single p {
   margin: 12px 0;
 }
+.entry-content-single p img.size-large {
+  margin: 30px 0;
+}
 .entry-content-single p:last-child {
   margin-bottom: 40px;
 }

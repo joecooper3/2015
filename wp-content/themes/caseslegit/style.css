@@ -579,8 +579,9 @@ a:hover, a:active {
 }
 .main-navigation li {
   float: left;
-  -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   position: relative;
 }
 .main-navigation li:hover > a, .main-navigation li.focus > a {
@@ -606,36 +607,45 @@ a:hover, a:active {
 }
 
 .total-navigation {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu-main-container {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   float: left;
   margin-right: 20px;
 }
 
 .social-media-menu-container {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media all and (max-width: 900px) {
   .menu-main-container {
-    -ms-flex-pack: center;
-        justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /* Small menu. */
@@ -906,14 +916,17 @@ Author     : joe.cooper
 */
 #page {
   margin: 0px;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 #page #masthead, #page #content, #page .footer {
-  -ms-flex: 1 0 100%;
-      flex: 1 0 100%;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
 }
 
 #responsiveCheck {
@@ -926,6 +939,7 @@ Author     : joe.cooper
 #masthead {
   width: 100%;
   background-color: #fdfdfd;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -933,23 +947,29 @@ Author     : joe.cooper
 .nav-container {
   padding: 20px 0;
   margin: 0 auto;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex: 1 0 100%;
-      flex: 1 0 100%;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #fdfdfd;
   max-width: 1200px;
 }
 
 .site-branding {
-  -ms-flex: 0 0 400px;
-      flex: 0 0 400px;
+  -webkit-flex: 0 0 400px;
+      -ms-flex: 0 0 400px;
+          flex: 0 0 400px;
   max-width: 380px;
   margin: 0 15px 0 10px;
   padding-right: 10px;
@@ -957,8 +977,9 @@ Author     : joe.cooper
 }
 
 .main-navigation {
-  -ms-flex: 1 1 650px;
-      flex: 1 1 650px;
+  -webkit-flex: 1 1 650px;
+      -ms-flex: 1 1 650px;
+          flex: 1 1 650px;
   background-color: #002B55;
   max-width: 750px;
 }
@@ -1005,8 +1026,9 @@ input[type="search"] {
 }
 
 .search-box-wrapper {
-  -ms-flex: 2 0 100%;
-      flex: 2 0 100%;
+  -webkit-flex: 2 0 100%;
+      -ms-flex: 2 0 100%;
+          flex: 2 0 100%;
 }
 
 .search-box-wrapper2 {
@@ -1034,8 +1056,9 @@ input[type="search"] {
   padding: 8px 10px;
   background-color: #194D7F;
   margin-left: 5px;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
 }
 
 .collapsed {
@@ -1063,10 +1086,12 @@ input[type="search"] {
 }
 
 .both-row-fade {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   width: 100%;
 }
 
@@ -1078,21 +1103,26 @@ input[type="search"] {
 .nav-container-fade {
   padding: 0;
   margin: 0 auto;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #002B55;
   max-width: 1200px;
 }
 
 .site-branding-fade {
-  -ms-flex: 0 0 250px;
-      flex: 0 0 250px;
+  -webkit-flex: 0 0 250px;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
   max-width: 250px;
   margin: 0 15px 0 5px;
   padding: 5px 10px;
@@ -1115,8 +1145,9 @@ input[type="search"] {
 #search-link-fade {
   background-color: #194D7F;
   margin-left: 5px;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
 }
 
 #search-container-fade {
@@ -1132,13 +1163,15 @@ input[type="search"] {
   }
 
   .nav-container {
-    -ms-flex-pack: center;
-        justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   #search-container {
-    -ms-flex-order: 3;
-        order: 3;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
     max-width: 750px;
   }
 }
@@ -1151,26 +1184,33 @@ input[type="search"] {
 }
 @media all and (max-width: 900px) {
   .site-branding {
-    -ms-flex-order: 1;
-        order: 1;
-    -ms-flex-item-align: center;
-        align-self: center;
-    -ms-flex: none;
-        flex: none;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
   }
 
   .main-navigation {
-    -ms-flex-order: 2;
-        order: 2;
-    -ms-flex-item-align: center;
-        align-self: center;
-    -ms-flex: none;
-        flex: none;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
   }
 
   #masthead {
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
   }
 
   .search-box .search-field {
@@ -1186,17 +1226,21 @@ input[type="search"] {
 /* Medium 2 screens? */
 @media all and (max-width: 716px) {
   .nav-container {
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .menu-main-container {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-flow: column wrap;
-        flex-flow: column wrap;
-    -ms-flex: 100%;
-        flex: 100%;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     margin: 0;
   }
 
@@ -1218,8 +1262,9 @@ input[type="search"] {
   .menu-toggle {
     width: 50px;
     height: 50px;
-    -ms-flex-order: 2;
-        order: 2;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
     margin-bottom: 20px;
     color: #002B55;
     font-size: 2.3em;
@@ -1235,8 +1280,9 @@ input[type="search"] {
   .main-navigation ul li {
     clear: both;
     float: none;
-    -ms-flex: 1 0 500px;
-        flex: 1 0 500px;
+    -webkit-flex: 1 0 500px;
+        -ms-flex: 1 0 500px;
+            flex: 1 0 500px;
   }
   .main-navigation ul ul {
     display: none;
@@ -1253,8 +1299,9 @@ input[type="search"] {
   .main-navigation ul ul li {
     clear: both;
     float: none;
-    -ms-flex: 1 0 500px;
-        flex: 1 0 500px;
+    -webkit-flex: 1 0 500px;
+        -ms-flex: 1 0 500px;
+            flex: 1 0 500px;
   }
   .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
     left: auto;
@@ -1270,8 +1317,9 @@ input[type="search"] {
   .main-navigation ul ul ul li {
     clear: both;
     float: none;
-    -ms-flex: 1 0 500px;
-        flex: 1 0 500px;
+    -webkit-flex: 1 0 500px;
+        -ms-flex: 1 0 500px;
+            flex: 1 0 500px;
   }
   .main-navigation ul ul ul li:hover > ul, .main-navigation ul ul ul li.focus > ul {
     left: auto;
@@ -1312,14 +1360,16 @@ input[type="search"] {
 }
 @media all and (max-width: 575px) {
   .site-branding {
-    -ms-flex: 1 1 150px;
-        flex: 1 1 150px;
+    -webkit-flex: 1 1 150px;
+        -ms-flex: 1 1 150px;
+            flex: 1 1 150px;
     padding: 0;
   }
 
   .menu-toggle {
-    -ms-flex: 1 1 50px;
-        flex: 1 1 50px;
+    -webkit-flex: 1 1 50px;
+        -ms-flex: 1 1 50px;
+            flex: 1 1 50px;
     margin: 0;
     max-width: 70px;
     padding: 0;
@@ -1350,36 +1400,45 @@ and open the template in the editor.
 
 /* Top image through referral buttons */
 #leadimage-container {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 40px 0 0 0;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .locat-container {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex: 1;
-      flex: 1;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   margin: 0 20px;
 }
 
 .locat-square {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #002B55;
   font-family: akzSemiBold;
   font-size: 1.5rem;
@@ -1415,12 +1474,15 @@ and open the template in the editor.
 }
 
 .locat-shade {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 55%;
   background-size: cover;
   background-position: center;
@@ -1491,8 +1553,10 @@ and open the template in the editor.
 .hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -1557,8 +1621,9 @@ and open the template in the editor.
 /* Medium screens */
 @media all and (max-width: 980px) {
   #leadimage-container {
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     background: none;
     height: auto;
   }
@@ -1586,21 +1651,25 @@ and open the template in the editor.
   }
 
   #leadimage-container {
-    -ms-flex-direction: column;
-        flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 10px 0 0 0;
   }
 
   .locat-container {
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-align: center;
-        align-items: center;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .locat-square {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     color: #fdfdfd;
     font-size: 1.0rem;
   }
@@ -1624,8 +1693,9 @@ and open the template in the editor.
   }
 
   .locat-caption {
-    -ms-flex: 2;
-        flex: 2;
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
     padding-left: 10px;
   }
 
@@ -1640,6 +1710,7 @@ and open the template in the editor.
 }
 /* News and Infographics */
 #bigboycontainer {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 0 0;
@@ -1650,8 +1721,9 @@ and open the template in the editor.
 }
 
 #newsstories {
-  -ms-flex: 1;
-      flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #fdfdfd;
   margin: 25px 0 25px 12px;
   padding: 15px 25px 25px 25px;
@@ -1702,8 +1774,9 @@ and open the template in the editor.
 }
 
 #maininfo {
-  -ms-flex: 3;
-      flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
   font-family: 'akzRoman';
   font-size: 1.2rem;
   background-color: #fdfdfd;
@@ -1762,24 +1835,30 @@ and open the template in the editor.
 }
 
 .infog-container {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .infog-boxfp {
-  -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .infog-link {
-  -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   width: 100%;
   padding: 10px 0 5px 0;
   margin-bottom: 25px;
@@ -1792,26 +1871,32 @@ and open the template in the editor.
 
 @media all and (max-width: 955px) {
   #bigboycontainer {
-    -ms-flex-flow: column wrap;
-        flex-flow: column wrap;
-    -ms-flex-align: center;
-        align-items: center;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   #maininfo {
-    -ms-flex-order: 1;
-        order: 1;
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     margin: 25px 0 25px 0;
     padding: 25px 25px;
   }
 
   #newsstories {
-    -ms-flex-order: 2;
-        order: 2;
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding: 20px 50px 0 50px;
     margin: 0 0 25px 0;
   }
@@ -1854,13 +1939,15 @@ and open the template in the editor.
 /* Big screens */
 @media all and (min-width: 1450px) {
   #maininfo {
-    -ms-flex: 2;
-        flex: 2;
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
   }
 
   #newsstories {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 
   #newsstories {
@@ -1891,20 +1978,24 @@ and open the template in the editor.
 }
 
 .menu-footer-menu-container ul {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: left;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 .menu-footer-menu-container ul li {
-  -ms-flex: 1 0 150px;
-      flex: 1 0 150px;
+  -webkit-flex: 1 0 150px;
+      -ms-flex: 1 0 150px;
+          flex: 1 0 150px;
   text-transform: uppercase;
   font-size: 10pt;
   font-family: akzSemiBold;
@@ -1936,8 +2027,9 @@ and open the template in the editor.
   cursor: pointer;
 }
 .menu-footer-menu-container ul li ul .clinic-label {
-  -ms-flex: 1 0 150px;
-      flex: 1 0 150px;
+  -webkit-flex: 1 0 150px;
+      -ms-flex: 1 0 150px;
+          flex: 1 0 150px;
   text-transform: uppercase;
   font-size: 10pt;
   font-family: akzSemiBold;
@@ -1985,6 +2077,7 @@ and open the template in the editor.
 }
 
 .footadd {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -1992,8 +2085,9 @@ and open the template in the editor.
   margin: 0 auto;
 }
 .footadd .footadditem {
-  -ms-flex: 1;
-      flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2026,19 +2120,23 @@ Author     : joe.cooper
 .entry-header-single {
   margin: 0;
   padding: 1px 0 0 0;
-  -ms-flex: 1 1 100%;
-      flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 .entry-header-single h1 {
   padding: 0 30px;
   display: block;
   color: #002B55;
-  -ms-flex: 1 1 100%;
-      flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 
 .entry-title {
@@ -2054,12 +2152,15 @@ Author     : joe.cooper
 
 .entry-content-single {
   margin: 0;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .entry-content-single img:first-child {
   margin-bottom: 30px;
@@ -2082,6 +2183,9 @@ Author     : joe.cooper
 }
 .entry-content-single p {
   margin: 12px 0;
+}
+.entry-content-single p img.size-large {
+  margin: 30px 0;
 }
 .entry-content-single p:last-child {
   margin-bottom: 40px;
@@ -2118,18 +2222,22 @@ Author     : joe.cooper
 
 .article-whole {
   padding: 0;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   background-color: #FDFDFD;
 }
 
 .article-container {
-  -ms-flex: 1 1 720px;
-      flex: 1 1 720px;
+  -webkit-flex: 1 1 720px;
+      -ms-flex: 1 1 720px;
+          flex: 1 1 720px;
   width: 100%;
   max-width: 720px;
   padding: 0 10px;
@@ -2170,8 +2278,9 @@ aside a {
 
 .widget-area {
   margin: 0 auto;
-  -ms-flex: 2 0 auto;
-      flex: 2 0 auto;
+  -webkit-flex: 2 0 auto;
+      -ms-flex: 2 0 auto;
+          flex: 2 0 auto;
   max-width: 280px;
 }
 .widget-area aside {
@@ -2227,8 +2336,9 @@ aside a {
 }
 @media all and (min-width: 1450px) {
   .article-whole {
-    -ms-flex-pack: center;
-        justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .article-container {
@@ -2277,17 +2387,20 @@ and open the template in the editor.
 .progContainer {
   width: 100%;
   margin: 0px 0 0 0;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .progContainer .content-area {
   box-sizing: content-box;
 }
 .progContainer .entry-content-serv {
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .progContainer .sidebar-about {
   margin: 0;
@@ -2298,8 +2411,9 @@ and open the template in the editor.
 
 .entry-content-prog {
   padding: 50px;
-  -ms-flex: 2 0 800px;
-      flex: 2 0 800px;
+  -webkit-flex: 2 0 800px;
+      -ms-flex: 2 0 800px;
+          flex: 2 0 800px;
   max-width: 700px;
 }
 .entry-content-prog ul {
@@ -2358,16 +2472,21 @@ and open the template in the editor.
 }
 
 .sidebar-program {
-  -ms-flex: 1 0 250px;
-      flex: 1 0 250px;
+  -webkit-flex: 1 0 250px;
+      -ms-flex: 1 0 250px;
+          flex: 1 0 250px;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
   margin: 0;
 }
 .sidebar-program aside {
@@ -2375,8 +2494,9 @@ and open the template in the editor.
   font-size: 0.85rem;
   padding: 40px 10px 0px 10px;
   border-bottom: 3.0px solid #ddd;
-  -ms-flex: 1 0 250px;
-      flex: 1 0 250px;
+  -webkit-flex: 1 0 250px;
+      -ms-flex: 1 0 250px;
+          flex: 1 0 250px;
 }
 .sidebar-program aside em {
   font-family: akzSemiBold;
@@ -2430,8 +2550,12 @@ and open the template in the editor.
   list-style-type: none;
   padding-left: 20px;
   font-size: 1.1rem;
-  column-count: 2;
-  column-gap: 30px;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 .all-programs ul {
   list-style-type: none;
@@ -2439,10 +2563,12 @@ and open the template in the editor.
 
 @media all and (max-width: 1140px) {
   .sidebar-program {
-    -ms-flex: 2 0 800px;
-        flex: 2 0 800px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-flex: 2 0 800px;
+        -ms-flex: 2 0 800px;
+            flex: 2 0 800px;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 
   .progContainer .sidebar-about {
@@ -2458,8 +2584,9 @@ and open the template in the editor.
   }
 
   .entry-content-prog {
-    -ms-flex: 2 0 100%;
-        flex: 2 0 100%;
+    -webkit-flex: 2 0 100%;
+        -ms-flex: 2 0 100%;
+            flex: 2 0 100%;
   }
 }
 @media all and (max-width: 500px) {
@@ -2468,7 +2595,9 @@ and open the template in the editor.
   }
 
   .all-programs {
-    column-count: 1;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
   }
 }
 /*--------------------------------------------------------------
@@ -2484,6 +2613,7 @@ and open the template in the editor.
     Author     : Joe Cooper
 */
 .entry-content-serv {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -2503,14 +2633,18 @@ and open the template in the editor.
 }
 
 .serv-body {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   padding-top: 20px;
   max-width: 1200px;
@@ -2532,14 +2666,16 @@ and open the template in the editor.
   padding-right: 0;
 }
 .serv-body .bodybox {
-  -ms-flex: 2 0 auto;
-      flex: 2 0 auto;
+  -webkit-flex: 2 0 auto;
+      -ms-flex: 2 0 auto;
+          flex: 2 0 auto;
   max-width: 800px;
   padding: 0 50px;
 }
 .serv-body .infogbox {
-  -ms-flex: 1 0 300px;
-      flex: 1 0 300px;
+  -webkit-flex: 1 0 300px;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
   margin: 0 auto;
 }
 .serv-body .longer {
@@ -2577,14 +2713,18 @@ and open the template in the editor.
 
 /* Related Programs Widget */
 #intelliwidget-4 {
-  -ms-flex: 1 100%;
-      flex: 1 100%;
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #intelliwidget-4 a {
   background: 0 0;
@@ -2597,8 +2737,9 @@ and open the template in the editor.
 }
 
 .intelliwidget4-container {
-  -ms-flex: 1 0 200px;
-      flex: 1 0 200px;
+  -webkit-flex: 1 0 200px;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
   max-width: 200px;
   color: #002B55;
   margin: 0px 20px 10px 20px;
@@ -2615,8 +2756,12 @@ and open the template in the editor.
   list-style-type: none;
   text-align: left;
   font-size: 1.1rem;
-  column-count: 2;
-  column-gap: 30px;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   margin-bottom: 25px;
 }
 .serv-body .relprog-list li {
@@ -2651,8 +2796,9 @@ aside .clinic-link:hover {
 }
 
 .relprog-title {
-  -ms-flex: 1 100%;
-      flex: 1 100%;
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
   font-family: akzBold;
   font-size: 18px;
   margin: 20px 0px;
@@ -2673,14 +2819,17 @@ aside .clinic-link:hover {
 }
 
 .clinictable {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   text-align: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   padding-bottom: 15px;
 }
@@ -2710,14 +2859,17 @@ aside .clinic-link:hover {
     margin: 0 auto;
   }
   .serv-body .bodybox {
-    -ms-flex: 1 0 100%;
-        flex: 1 0 100%;
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
   }
   .serv-body .infogbox {
-    -ms-flex: 1 0 100%;
-        flex: 1 0 100%;
-    -ms-flex-item-align: center;
-        align-self: center;
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
   }
 }
 @media all and (max-width: 800px) {
@@ -2740,8 +2892,9 @@ aside .clinic-link:hover {
   }
 
   .entry-content-serv {
-    -ms-flex-direction: column;
-        flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media all and (max-width: 400px) {
@@ -2780,10 +2933,12 @@ and open the template in the editor.
     Author     : Joe Cooper
 */
 .about-container {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -2803,8 +2958,9 @@ and open the template in the editor.
 }
 
 .leadimage-container3 {
-  -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   position: relative;
 }
 .leadimage-container3 h1 {
@@ -2824,13 +2980,15 @@ and open the template in the editor.
   background-color: #fdfdfd;
   padding: 0 50px;
   max-width: 900px;
-  -ms-flex: 1 1 700px;
-      flex: 1 1 700px;
+  -webkit-flex: 1 1 700px;
+      -ms-flex: 1 1 700px;
+          flex: 1 1 700px;
 }
 
 .sidebar-about {
-  -ms-flex: 1 1 300px;
-      flex: 1 1 300px;
+  -webkit-flex: 1 1 300px;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
   max-width: 300px;
   margin: 0 auto;
   padding: 0 20px;
@@ -2878,24 +3036,30 @@ and open the template in the editor.
 }
 
 .keystaff-description {
-  -ms-flex: 100%;
-      flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
 }
 
 .keystaff-grid {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .keystaff-grid .keystaff-item {
   display: block;
-  -ms-flex: 1 0 130px;
-      flex: 1 0 130px;
+  -webkit-flex: 1 0 130px;
+      -ms-flex: 1 0 130px;
+          flex: 1 0 130px;
   max-width: 130px;
   height: 130px;
   margin: 3px;
@@ -2913,14 +3077,18 @@ and open the template in the editor.
   font-size: 0.7rem;
   font-family: akzRoman;
   color: #fdfdfd;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   transition: opacity 0.3s ease;
   opacity: 0;
   padding: 4px;
@@ -2995,12 +3163,15 @@ and open the template in the editor.
 }
 
 .keystaff-content {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   padding-top: 30px;
   width: 100%;
 }
@@ -3101,8 +3272,9 @@ and open the template in the editor.
   }
 }
 .keystaff-lg-portrait {
-  -ms-flex: 1 0 300px;
-      flex: 1 0 300px;
+  -webkit-flex: 1 0 300px;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
   background-size: cover;
   background-position: center top;
   max-width: 300px;
@@ -3121,8 +3293,9 @@ and open the template in the editor.
   }
 }
 .keystaff-words {
-  -ms-flex: 1 0 550px;
-      flex: 1 0 550px;
+  -webkit-flex: 1 0 550px;
+      -ms-flex: 1 0 550px;
+          flex: 1 0 550px;
   max-width: 750px;
   padding-left: 40px;
 }
@@ -3146,16 +3319,21 @@ and open the template in the editor.
   background-color: #fdfdfd;
   padding: 0 25px;
   max-width: 1200px;
-  -ms-flex: 2 1 500px;
-      flex: 2 1 500px;
+  -webkit-flex: 2 1 500px;
+      -ms-flex: 2 1 500px;
+          flex: 2 1 500px;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .entry-content-keystaff ul {
   list-style: none;
@@ -3186,18 +3364,21 @@ and open the template in the editor.
 
 @media all and (max-width: 1070px) {
   .entry-content-keystaff {
-    -ms-flex-order: 2;
-        order: 2;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
   }
 
   .keystaff-description {
-    -ms-flex-order: 3;
-        order: 3;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
   }
 
   .sidebar-keystaff {
-    -ms-flex-order: 4;
-        order: 4;
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 /* I'm the idiotic way Wordpress makes everything a paragraph */
@@ -3283,8 +3464,9 @@ tbody.collapse.in {
   background-color: #fdfdfd;
   padding: 0 50px;
   max-width: 900px;
-  -ms-flex: 2 1 500px;
-      flex: 2 1 500px;
+  -webkit-flex: 2 1 500px;
+      -ms-flex: 2 1 500px;
+          flex: 2 1 500px;
   font-size: 1.1rem;
 }
 .entry-content-resources .donatebutton {
@@ -3316,31 +3498,40 @@ tbody.collapse.in {
 }
 
 .directory {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .directory .info-at-cases {
-  -ms-flex: 100%;
-      flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
   margin-top: 30px;
   font-family: akzMed;
 }
 .directory .dir-row {
-  -ms-flex: 1 100%;
-      flex: 1 100%;
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -ms-flex-align: start;
-      align-items: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: akzSemiBold;
   font-size: 1.7rem;
   color: #002B55;
@@ -3349,14 +3540,16 @@ tbody.collapse.in {
   border-bottom: 2.0px solid #aaa;
 }
 .directory .dir-item {
-  -ms-flex: 1 0 225px;
-      flex: 1 0 225px;
+  -webkit-flex: 1 0 225px;
+      -ms-flex: 1 0 225px;
+          flex: 1 0 225px;
   margin: 10px 10px 10px 0;
   max-width: 225px;
 }
 .directory .dir-four {
-  -ms-flex: 1 0 50%;
-      flex: 1 0 50%;
+  -webkit-flex: 1 0 50%;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
   max-width: 50%;
 }
 .directory strong {
@@ -3389,23 +3582,28 @@ and open the template in the editor.
 .social-media-container {
   left: 0;
   top: 0;
-  -ms-flex: 1 0 50px;
-      flex: 1 0 50px;
+  -webkit-flex: 1 0 50px;
+      -ms-flex: 1 0 50px;
+          flex: 1 0 50px;
   position: relative;
   padding-top: 125px;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   margin: 0 10px 0 10px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
   max-width: 50px;
 }
 
 .social-item {
-  -ms-flex: 1 0 0px;
-      flex: 1 0 0px;
+  -webkit-flex: 1 0 0px;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0px;
   text-align: center;
   border: 1.0px solid #eee;
   margin: 2px;
@@ -3418,11 +3616,13 @@ and open the template in the editor.
 
 @media all and (max-width: 900px) {
   .social-media-container {
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     padding-top: 0;
-    -ms-flex-order: 2;
-        order: 2;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
     margin: 0 auto;
   }
 
@@ -3452,8 +3652,9 @@ and open the template in the editor.
     Author     : coopers
 */
 .entry-content-referrals {
-  -ms-flex: 1 0 300px;
-      flex: 1 0 300px;
+  -webkit-flex: 1 0 300px;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
   padding: 0 30px 0 30px;
 }
 .entry-content-referrals .nath-clinic-ref {
@@ -3596,8 +3797,9 @@ and open the template in the editor.
     Author     : joe.cooper
 */
 .entry-content-archives {
-  -ms-flex: 1 0 700px;
-      flex: 1 0 700px;
+  -webkit-flex: 1 0 700px;
+      -ms-flex: 1 0 700px;
+          flex: 1 0 700px;
   padding: 0 60px 0 60px;
   max-width: 850px;
 }
@@ -3631,12 +3833,15 @@ Author     : coopers
 }
 
 .prog-citations-bottom-container, .news-citations-bottom-container {
-  -ms-flex: 100%;
-      flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: gillBook;
 }
 .prog-citations-bottom-container h2, .news-citations-bottom-container h2 {
@@ -3645,8 +3850,9 @@ Author     : coopers
 }
 .prog-citations-bottom-container .prog-citations-bottom, .prog-citations-bottom-container .news-citations-bottom, .news-citations-bottom-container .prog-citations-bottom, .news-citations-bottom-container .news-citations-bottom {
   font-size: 12px;
-  -ms-flex: 1 0 100%;
-      flex: 1 0 100%;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
   width: 100%;
   max-width: 700px;
   margin-right: 100px;
@@ -3660,6 +3866,7 @@ Author     : coopers
   word-break: break-all;
   word-break: break-word;
   -ms-hyphens: auto;
+  -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
@@ -3667,8 +3874,9 @@ Author     : coopers
   font-size: 0.5em;
 }
 .prog-citations-bottom-container .prog-citations-bottom-spacer, .news-citations-bottom-container .prog-citations-bottom-spacer {
-  -ms-flex: 1 0 250px;
-      flex: 1 0 250px;
+  -webkit-flex: 1 0 250px;
+      -ms-flex: 1 0 250px;
+          flex: 1 0 250px;
   margin: 0;
   max-width: 250px;
 }
@@ -3690,8 +3898,9 @@ Author     : coopers
   }
   .news-citations-bottom-container .news-citations-bottom {
     margin-right: 0;
-    -ms-flex: 100%;
-        flex: 100%;
+    -webkit-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     padding: 0 10px;
   }
   .news-citations-bottom-container .news-citations-bottom-spacer {
@@ -3703,8 +3912,9 @@ Author     : coopers
   }
   .prog-citations-bottom-container .prog-citations-bottom {
     margin-right: 0;
-    -ms-flex: 100%;
-        flex: 100%;
+    -webkit-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     padding: 0 30px;
   }
   .prog-citations-bottom-container .prog-citations-bottom-spacer {
