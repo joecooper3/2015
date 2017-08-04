@@ -73,6 +73,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   font-family: gillBook;
   src: url("fonts/gillsans/GillBook.otf") format("opentype");
 }
+@font-face {
+  font-family: gillBookIta;
+  src: url("fonts/gillsans/GillBookIta.otf") format("opentype");
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -318,7 +322,7 @@ p {
 }
 
 dfn, cite, em, i {
-  font-style: italic;
+  font-family: gillBookIta;
 }
 
 blockquote {

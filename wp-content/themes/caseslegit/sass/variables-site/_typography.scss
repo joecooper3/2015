@@ -41,6 +41,10 @@
     font-family: gillBook;
     src: url('fonts/gillsans/GillBook.otf') format('opentype');
 }
+@font-face {
+    font-family: gillBookIta;
+    src: url('fonts/gillsans/GillBookIta.otf') format('opentype');
+}
 
 $font__main: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
