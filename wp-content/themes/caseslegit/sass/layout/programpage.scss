@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Jul 31, 2015, 2:55:40 PM
     Author     : joe.cooper
 */
@@ -13,36 +13,18 @@ and open the template in the editor.
     padding-bottom: 30px;
 }
 
-.leadimage-container2 {
-    display: block;
-    position: relative;
-    height: 450px;
-    margin: 0 auto;
-    h1 {
-        width: 100%;
-        display: block;
-        font-size: 3.0rem;
-        position: absolute;
-        margin: 0;
-        padding: 50px 0 10px 50px;
-        bottom: 0px;
-        color: $mywhite;
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
-    }
-}
-
 .progContainer {
     width:100%;
     margin: 0px 0 0 0;
    justify-content: center;
-   
+
    .content-area {
        box-sizing: content-box;
    }
    .entry-content-serv {
        flex-flow: row wrap;
        justify-content: center;
-       
+
    }
    .sidebar-about {
        margin: 0;
@@ -52,7 +34,7 @@ and open the template in the editor.
    }
 }
 .entry-content-prog {
-    
+
     padding: 50px;
     flex: 2 0 800px;
     max-width: 700px;
@@ -64,9 +46,9 @@ and open the template in the editor.
     }
 }
 .citation:before {
-    
+
     font-family: FontAwesome;
-    content: "\f02e";  
+    content: "\f02e";
     white-space: nowrap;
     font-size: 50%;
     cursor: pointer;
@@ -130,11 +112,11 @@ and open the template in the editor.
         }
         ul {
             margin:15px 0 20px 0;
-            
+
         }
         li {
             padding-right:0;
-        }  
+        }
         img {
             padding-top: 10px;
         }
@@ -161,8 +143,8 @@ and open the template in the editor.
     ul {
                 padding-left: 20px;
                 font-size: 0.65rem;
-                
-                
+
+
             }
 }
 .cepcontact {
@@ -204,11 +186,11 @@ and open the template in the editor.
 @media all and (max-width: 800px) {
     .progContainer {
         .entry-content-serv {
-            
+
             box-sizing: border-box;
         }
     }
-    
+
     .entry-content-prog {
         flex: 2 0 100%;
     }

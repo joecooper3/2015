@@ -2250,31 +2250,13 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Jul 31, 2015, 2:55:40 PM
     Author     : joe.cooper
 */
 .main2 {
   background-color: #fdfdfd;
   padding-bottom: 30px;
-}
-
-.leadimage-container2 {
-  display: block;
-  position: relative;
-  height: 450px;
-  margin: 0 auto;
-}
-.leadimage-container2 h1 {
-  width: 100%;
-  display: block;
-  font-size: 3.0rem;
-  position: absolute;
-  margin: 0;
-  padding: 50px 0 10px 50px;
-  bottom: 0px;
-  color: #fdfdfd;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
 .progContainer {
@@ -2491,6 +2473,25 @@ and open the template in the editor.
   display: flex;
   width: 100%;
   height: auto;
+}
+
+.leadimage-container2 {
+  display: block;
+  position: relative;
+  height: 450px;
+  margin: 0 auto;
+}
+.leadimage-container2 .entry-header {
+  width: 100%;
+  display: block;
+  font-size: 3.0rem;
+  font-family: akzBold;
+  position: absolute;
+  margin: 0;
+  padding: 50px 0 10px 50px;
+  bottom: 0px;
+  color: #fdfdfd;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
 .asidetitle {
@@ -3229,7 +3230,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Dec 29, 2015, 6:02:13 PM
     Author     : Joe Cooper
 */
@@ -3267,9 +3268,18 @@ tbody.collapse.in {
 }
 .faqs .qcont {
   border-bottom: 1.0px solid #aaa;
-  padding: 20px 0 0 0;
+  padding: 20px 0 0;
 }
-.faqs #a1, .faqs #a2, .faqs #a3, .faqs #a4, .faqs #a5, .faqs #a6, .faqs #a7, .faqs #a8, .faqs #a9, .faqs #a10 {
+.faqs #a1,
+.faqs #a10,
+.faqs #a2,
+.faqs #a3,
+.faqs #a4,
+.faqs #a5,
+.faqs #a6,
+.faqs #a7,
+.faqs #a8,
+.faqs #a9 {
   margin-bottom: 20px;
 }
 
@@ -3310,6 +3320,28 @@ tbody.collapse.in {
   background-color: #194D7F;
   color: #fdfdfd;
   box-shadow: none;
+}
+.entry-content-resources .amazon-smile img {
+  max-width: 350px;
+}
+.entry-content-resources .amazon-smile .centering {
+  text-align: center;
+}
+.entry-content-resources .amazon-smile .centering a {
+  background: none;
+}
+.entry-content-resources .amazon-smile .centering .donatebutton {
+  background-color: #002B55;
+}
+.entry-content-resources .amazon-smile .centering .donatebutton:hover {
+  background-color: #194D7F;
+}
+.entry-content-resources .amazon-smile .donatebutton {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
+.entry-content-resources .topSpace {
+  margin-top: 50px;
 }
 .entry-content-resources .srSearch {
   height: 50px;

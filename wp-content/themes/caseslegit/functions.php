@@ -180,7 +180,7 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
  * Enqueue scripts and styles.
  */
 function caseslegit_scripts() {
-	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri(), array(), '3.0.22' );
+	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri(), array(), '3.0.24' );
 
         wp_enqueue_style( 'caseslegit-icons', get_template_directory_uri() . '/css/font-awesome.min.css' );
 
