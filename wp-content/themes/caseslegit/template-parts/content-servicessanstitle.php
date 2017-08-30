@@ -24,10 +24,10 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 
 ?>
     <style type="text/css" media="screen">
-        .serv-bgimage { 
-            background: url(<?php echo $src[0]; ?>); 
-            background-size: cover; 
-            background-position: center; 
+        .serv-bgimage {
+            background: url(<?php echo $src[0]; ?>);
+            background-size: cover;
+            background-position: center;
             <?php if( get_field('background-position_attribute') ): ?>
             background-position: <?php the_field('background-position_attribute') ?>;
             <?php endif; ?>
@@ -55,8 +55,7 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
     </style>
     <div class="leadimage-container2 serv-bgimage">
         
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">' ); ?></h1>
+		<?php the_title( '<header class="entry-header">' ); ?>
         </header><!-- .entry-header --></div>
 	<div class="entry-content-serv">
             <div class="social-media-container">
@@ -78,10 +77,10 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
              <div class="outcomes bodybox"><h2>Outcomes</h2>
             <p><?php the_field('outcomes') ?></p></div>
              <div class="outcomes-infographic infogbox">
-            <?php the_field('outcomes_infographic') ?></div>	
+            <?php the_field('outcomes_infographic') ?></div>
          <?php get_sidebar('relprog'); ?>
          </div>
-            
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'caseslegit' ),
@@ -92,7 +91,7 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
         <?php if( get_field('citations') ): ?>
 <div class="prog-citations-bottom-container">
             <div class="prog-citations-bottom"><h2>References</h2>
-                <?php the_field('citations') ?></div>  
+                <?php the_field('citations') ?></div>
             <div class="prog-citations-bottom-spacer"></div>
         </div>
         <?php endif; ?>
@@ -100,4 +99,3 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 		<?php edit_post_link( esc_html__( 'Edit', 'caseslegit' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-

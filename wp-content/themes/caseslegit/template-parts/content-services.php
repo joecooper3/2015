@@ -56,7 +56,7 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
     <div class="leadimage-container2 serv-bgimage">
 
 
-		<?php the_title( '<header class="entry-header">' ); ?> Services</h1>
+		<?php the_title( '<header class="entry-header">' ); ?> Services
     <!-- .entry-header --></div>
 	<div class="entry-content-serv">
             <div class="social-media-container">
