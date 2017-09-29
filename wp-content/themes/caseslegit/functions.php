@@ -123,6 +123,30 @@ function caseslegit_content_width() {
 add_action( 'after_setup_theme', 'caseslegit_content_width', 0 );
 
 /**
+* Custom post types
+*/
+
+$keystaffArgs = array(
+  'labels'	=>	array(
+            'all_items'           => 	'All Key Staff',
+						'menu_name'	          =>	'Key Staff',
+						'singular_name'       =>	'Key Staff',
+					 	'edit_item'           =>	'Edit Key Staff Member',
+					 	'new_item'            =>	'New Key Staff Member',
+					 	'view_item'           =>	'View Key Staff Member',
+					 	'items_archive'       =>	'Key Staff Archive',
+					 	'search_items'        =>	'Search Key Staff',
+					 	'not_found'	          =>	'No entries found',
+					 	'not_found_in_trash'  =>	'No entries found in trash'
+					),
+	'supports'		=>	array( 'title', 'editor', 'thumbnail' ),
+	'menu_position'	=>	20,
+	'public'		=>	true,
+	'menu_icon' => 'dashicons-id-alt'
+);
+register_post_type( 'keystaff', $keystaffArgs );
+
+/**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
