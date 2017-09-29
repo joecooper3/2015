@@ -365,6 +365,10 @@ big {
   font-size: 125%;
 }
 
+strong {
+  font-family: gillMed;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -2287,7 +2291,7 @@ and open the template in the editor.
       flex: 2 0 800px;
   max-width: 700px;
 }
-.entry-content-prog ul {
+.entry-content-prog ol, .entry-content-prog ul {
   margin: 0;
 }
 .entry-content-prog li {
