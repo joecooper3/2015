@@ -30,6 +30,7 @@ wp-content/wp-cache-config.php
 wp-content/plugins/
 wp-content/uploads/
 wp-content/themes/caseslegit/.sass-cache/*
+wp-content/themes/caseslegit/compiled/
 wp-content/themes/caseslegit/node_modules/
 wp-includes/
 
