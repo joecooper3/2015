@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: CASES Legit
 Theme URI: http://underscores.me/
@@ -224,9 +225,9 @@ select {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type=button],
+input[type=reset],
+input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -246,24 +247,24 @@ input {
   line-height: normal;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox],
+input[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type="search"] {
+input[type=search] {
   -webkit-appearance: textfield;
   box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -449,58 +450,58 @@ table {
 # Forms
 --------------------------------------------------------------*/
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type=button],
+input[type=reset],
+input[type=submit] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
   background: #002B55;
   color: #fdfdfd;
   line-height: 1;
-  padding: .6em 1em .4em;
+  padding: 0.6em 1em 0.4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
   border-color: #ccc #bbb #aaa;
 }
 button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
+input[type=button]:active,
+input[type=button]:focus,
+input[type=reset]:active,
+input[type=reset]:focus,
+input[type=submit]:active,
+input[type=submit]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
 textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
 textarea:focus {
   color: #111;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search] {
   padding: 3px;
 }
 
@@ -663,11 +664,15 @@ a:hover, a:active {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
   float: right;
   text-align: right;
   width: 50%;
@@ -841,7 +846,7 @@ object {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*=wp-image-] {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -922,7 +927,7 @@ Author     : joe.cooper
 
 #responsiveCheck {
   display: none;
-  content: 'X';
+  content: "X";
   width: 51px;
   height: 51px;
 }
@@ -1003,7 +1008,7 @@ Author     : joe.cooper
 }
 
 /* Search Box */
-input[type="search"] {
+input[type=search] {
   box-sizing: border-box;
   width: 100%;
 }
@@ -1213,7 +1218,7 @@ input[type="search"] {
   }
 
   #responsiveCheck {
-    content: 'S';
+    content: "S";
     width: 50px;
   }
 
@@ -1395,7 +1400,7 @@ and open the template in the editor.
 }
 
 .locat-square:before {
-  content: '';
+  content: "";
   padding-top: 100%;
   display: table;
 }
@@ -1440,7 +1445,7 @@ and open the template in the editor.
 }
 
 .locat-shade:before {
-  content: '';
+  content: "";
   float: left;
   display: table;
   padding-top: 100%;
@@ -1485,7 +1490,7 @@ and open the template in the editor.
 
 .news-archive-link {
   font-family: akzMed;
-  font-size: 1.0rem;
+  font-size: 1rem;
   display: block;
   text-align: center;
   margin-bottom: 20px;
@@ -1606,7 +1611,7 @@ and open the template in the editor.
     -ms-flex: 1;
         flex: 1;
     color: #fdfdfd;
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
   .locat-square a, .locat-square a:visited {
     color: #fdfdfd;
@@ -1708,7 +1713,7 @@ and open the template in the editor.
 #maininfo {
   -ms-flex: 3;
       flex: 3;
-  font-family: 'akzRoman';
+  font-family: "akzRoman";
   font-size: 1.2rem;
   background-color: #fdfdfd;
   margin: 25px 13px 25px 0;
@@ -1787,11 +1792,11 @@ and open the template in the editor.
   width: 100%;
   padding: 10px 0 5px 0;
   margin-bottom: 25px;
-  border-bottom: 2.0px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 .infog-link p {
   text-align: right;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 @media all and (max-width: 955px) {
@@ -1831,11 +1836,11 @@ and open the template in the editor.
   }
 
   #maininfo {
-    font-size: 1.0rem;
+    font-size: 1rem;
     padding: 25px 5px;
   }
   #maininfo .emp {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 
   #submaininfo p {
@@ -2051,7 +2056,7 @@ Author     : joe.cooper
 
 .entry-meta {
   font-family: akzMed;
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin: 0 0 20px 0;
   max-width: 1200px;
 }
@@ -2074,10 +2079,12 @@ Author     : joe.cooper
   max-width: 600px;
   width: 100%;
 }
-.entry-content-single h3 a, .entry-content-single h3 a:visited {
+.entry-content-single h3 a,
+.entry-content-single h3 a:visited {
   font-family: akzMed;
 }
-.entry-content-single p, .entry-content-single ul {
+.entry-content-single p,
+.entry-content-single ul {
   font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
   font-size: 18px;
   letter-spacing: 0.01em;
@@ -2101,13 +2108,14 @@ Author     : joe.cooper
 .entry-content-single ul li {
   margin: 10px 0;
 }
-.entry-content-single a, .entry-content-single a:visited {
+.entry-content-single a,
+.entry-content-single a:visited {
   color: #404040;
-  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
-  background-size: .05em 1px,.05em 1px,1px 1px;
-  background-repeat: no-repeat,no-repeat,repeat-x;
-  background-position: 0 95%,100% 95%,0 95%;
-  transition: color .15s;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002b55, #002b55);
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-position: 0 95%, 100% 95%, 0 95%;
+  transition: color 0.15s;
   font-weight: 500;
   font-family: gillMed;
 }
@@ -2131,7 +2139,7 @@ Author     : joe.cooper
       flex-flow: row wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
 }
 
 .article-container {
@@ -2152,21 +2160,27 @@ article {
   padding: 0;
 }
 
-.serv-body a, .entry-content-prog a, .entry-content-resources a {
+.serv-body a,
+.entry-content-prog a,
+.entry-content-resources a {
   color: #404040;
   background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
-  background-size: .05em 1px,.05em 1px,1px 1px;
-  background-repeat: no-repeat,no-repeat,repeat-x;
-  background-position: 0 95%,100% 95%,0 95%;
-  transition: color .15s;
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-position: 0 95%, 100% 95%, 0 95%;
+  transition: color 0.15s;
   font-weight: 500;
   font-family: gillMed;
 }
-.serv-body a img, .entry-content-prog a img, .entry-content-resources a img {
+.serv-body a img,
+.entry-content-prog a img,
+.entry-content-resources a img {
   background: 0 0;
   border-bottom: 0;
 }
-.serv-body a:hover, .entry-content-prog a:hover, .entry-content-resources a:hover {
+.serv-body a:hover,
+.entry-content-prog a:hover,
+.entry-content-resources a:hover {
   color: #D18300;
   background: 0 0;
 }
@@ -2176,7 +2190,8 @@ aside a {
   font-weight: bold;
 }
 
-.widget_recent_entries ul li a, .widget_recent_entries ul li a:visited {
+.widget_recent_entries ul li a,
+.widget_recent_entries ul li a:visited {
   font-family: akzRoman;
 }
 
@@ -2188,11 +2203,11 @@ aside a {
 }
 .widget-area aside {
   border-top: 3px solid #002B55;
-  border-bottom: 1.5px solid #AAA;
-  margin-bottom: 4.0rem;
+  border-bottom: 1.5px solid #aaa;
+  margin-bottom: 4rem;
 }
 .widget-area h1 {
-  border-bottom: 1.5px solid #AAA;
+  border-bottom: 1.5px solid #aaa;
   font-size: 1.2rem;
   padding-bottom: 5px;
   margin: 5px 0 20px 0;
@@ -2217,6 +2232,88 @@ aside a {
   margin: 0 10px 0 40px;
 }
 
+.qa-container,
+.qa-container-bottom {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  padding: 20px 10px;
+}
+.qa-container .qa-row,
+.qa-container-bottom .qa-row {
+  -ms-flex: 1 100%;
+      flex: 1 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  margin: 15px 0;
+}
+.qa-container .qa-row .letter,
+.qa-container-bottom .qa-row .letter {
+  -ms-flex: 0 0 90px;
+      flex: 0 0 90px;
+  max-width: 100px;
+}
+.qa-container .qa-row .letter img,
+.qa-container-bottom .qa-row .letter img {
+  width: 65px;
+  margin-bottom: 0;
+}
+.qa-container .qa-row .qa-text,
+.qa-container-bottom .qa-row .qa-text {
+  -ms-flex: 1 1 300px;
+      flex: 1 1 300px;
+  font-size: 18px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 0 0 0 10px;
+}
+.qa-container .qa-row .qa-text p,
+.qa-container-bottom .qa-row .qa-text p {
+  margin: 0 0 15px 0;
+}
+.qa-container .qa-row .qa-text h3,
+.qa-container-bottom .qa-row .qa-text h3 {
+  margin: 0 0 14px 0;
+}
+
+.qa-container {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.qa-container-bottom {
+  margin-bottom: 40px;
+}
+
+.testing-qa-styling {
+  background-color: lightyellow;
+}
+
+@media all and (max-width: 710px) {
+  .qa-container .qa-row .qa-text,
+.qa-container-bottom .qa-row .qa-text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .qa-container .qa-row .qa-text h3,
+.qa-container-bottom .qa-row .qa-text h3 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .qa-container .qa-row .qa-text p,
+.qa-container-bottom .qa-row .qa-text p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media all and (max-width: 429px) {
+  .qa-container .letter,
+.qa-container-bottom .letter {
+    padding: 0 0 20px 10px;
+  }
+}
 /* @media all and (max-width: 900px) {
   .article-whole {
   }
@@ -2228,12 +2325,15 @@ aside a {
     font-size: 25px;
   }
 
-  .entry-content-single h1, .entry-content-single h2, .entry-content-single h3, .entry-content-single p {
+  .entry-content-single h1,
+.entry-content-single h2,
+.entry-content-single h3,
+.entry-content-single p {
     padding-left: 20px;
     padding-right: 20px;
   }
   .entry-content-single ul {
-    margin-left: 1.0em;
+    margin-left: 1em;
     padding-right: 30px;
   }
 }
@@ -2305,7 +2405,7 @@ and open the template in the editor.
 
 .citation:before {
   font-family: FontAwesome;
-  content: "\f02e";
+  content: "";
   white-space: nowrap;
   font-size: 50%;
   cursor: pointer;
@@ -2346,7 +2446,7 @@ and open the template in the editor.
 
 .prog-emp {
   font-family: akzMed;
-  font-size: 1.0rem;
+  font-size: 1rem;
   color: #002B55;
   display: inline;
 }
@@ -2368,7 +2468,7 @@ and open the template in the editor.
   font-family: akzRoman;
   font-size: 0.85rem;
   padding: 40px 10px 0px 10px;
-  border-bottom: 3.0px solid #ddd;
+  border-bottom: 3px solid #ddd;
   -ms-flex: 1 0 250px;
       flex: 1 0 250px;
 }
@@ -2393,7 +2493,7 @@ and open the template in the editor.
 }
 .sidebar-program aside .phonenumber .progname {
   font-family: akzRoman;
-  font-size: 1.0rem;
+  font-size: 1rem;
   color: #001B35;
 }
 
@@ -2493,7 +2593,7 @@ and open the template in the editor.
 .leadimage-container2 .entry-header {
   width: 100%;
   display: block;
-  font-size: 3.0rem;
+  font-size: 3rem;
   font-family: akzBold;
   position: absolute;
   margin: 0;
@@ -2535,7 +2635,7 @@ and open the template in the editor.
   padding: 10px 10px 10px 10px;
   width: 350px;
   text-align: center;
-  border-bottom: 3.0px solid #ddd;
+  border-bottom: 3px solid #ddd;
 }
 .serv-body aside em {
   font-family: gillMed;
@@ -2569,7 +2669,7 @@ and open the template in the editor.
   color: #002B55;
   padding-bottom: 10px;
   width: 70%;
-  border-bottom: 3.0px solid #ddd;
+  border-bottom: 3px solid #ddd;
 }
 .serv-body p {
   font-size: 1.1rem;
@@ -2605,7 +2705,7 @@ and open the template in the editor.
 
 .intelliwidget4-title {
   font-family: akzRoman;
-  font-size: 1.0rem;
+  font-size: 1rem;
   padding: 5px 0 0 0;
 }
 
@@ -2616,7 +2716,7 @@ and open the template in the editor.
   color: #002B55;
   margin: 0px 20px 10px 20px;
   padding: 0 20px 0 20px;
-  border: 1.0px solid #ccc;
+  border: 1px solid #ccc;
   transition: all 0.7s ease 0s;
 }
 .intelliwidget4-container:hover {
@@ -2649,7 +2749,7 @@ aside .clinic-link {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.0rem;
+  font-size: 1rem;
   box-shadow: none;
   border-radius: 3px;
   transition: all 0.3s ease 0s;
@@ -2776,7 +2876,7 @@ aside .clinic-link:hover {
     height: 200px;
   }
   .leadimage-container2 h1 {
-    font-size: 2.0rem;
+    font-size: 2rem;
     padding: 0 0 10px 10px;
   }
 }
@@ -2801,11 +2901,11 @@ and open the template in the editor.
   margin: 0 auto;
 }
 .about-container h2 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   color: #002B55;
   width: 70%;
   margin: 40px 0 10px 0;
-  border-bottom: 3.0px solid #ddd;
+  border-bottom: 3px solid #ddd;
 }
 .about-container ul {
   margin: 0;
@@ -3145,7 +3245,7 @@ and open the template in the editor.
   margin-bottom: 0;
 }
 .keystaff-words h3 {
-  border-bottom: 2.0px solid #aaa;
+  border-bottom: 2px solid #aaa;
   width: 80%;
   font-family: akzRoman;
   margin-top: 0;
@@ -3227,7 +3327,7 @@ and open the template in the editor.
 }
 @media all and (max-width: 500px) {
   .leadimage-container3 h1 {
-    font-size: 2.0rem;
+    font-size: 2rem;
     margin-left: 25px;
   }
 }
@@ -3276,7 +3376,7 @@ tbody.collapse.in {
   font-size: 1.3rem;
 }
 .faqs .qcont {
-  border-bottom: 1.0px solid #aaa;
+  border-bottom: 1px solid #aaa;
   padding: 20px 0 0;
 }
 .faqs #a1,
@@ -3390,7 +3490,7 @@ tbody.collapse.in {
   color: #002B55;
   padding-bottom: 5px;
   margin-top: 20px;
-  border-bottom: 2.0px solid #aaa;
+  border-bottom: 2px solid #aaa;
 }
 .directory .dir-item {
   -ms-flex: 1 0 225px;
@@ -3451,7 +3551,7 @@ and open the template in the editor.
   -ms-flex: 1 0 0px;
       flex: 1 0 0px;
   text-align: center;
-  border: 1.0px solid #eee;
+  border: 1px solid #eee;
   margin: 2px;
 }
 .social-item .fa {
@@ -3511,7 +3611,7 @@ and open the template in the editor.
   font-weight: 700;
 }
 
-.ref-container input[type="text"] {
+.ref-container input[type=text] {
   padding: 10px;
   font-size: 18px;
   font-family: akzSemiBold;
@@ -3521,7 +3621,7 @@ and open the template in the editor.
   transition: border 0.3s;
   max-width: 300px;
 }
-.ref-container input[type="text"]:focus {
+.ref-container input[type=text]:focus {
   border-bottom: solid 2px #002B55;
   border-color: #002B55;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 8px rgba(0, 43, 85, 0.4);
@@ -3547,7 +3647,7 @@ and open the template in the editor.
   text-transform: none;
 }
 .ref-container .caldera-grid .program-check .checkbox label {
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-family: akzMed;
   color: #002B55;
   text-transform: none;
@@ -3577,14 +3677,14 @@ and open the template in the editor.
   font-family: akzSemiBold;
   background-color: #fafafa;
   border-radius: 10px;
-  border: 3.0px solid #e1e1e1;
+  border: 3px solid #e1e1e1;
   text-align: center;
   box-sizing: border-box;
 }
 .program-check:hover {
   background-color: #f3f3f3;
 }
-.program-check input[type="checkbox"] {
+.program-check input[type=checkbox] {
   display: none;
 }
 .program-check .custom-checkbox {
@@ -3694,10 +3794,10 @@ Author     : coopers
   width: 100%;
   max-width: 700px;
   margin-right: 100px;
-  border-top: 2.0px solid #ccc;
+  border-top: 2px solid #ccc;
 }
 .prog-citations-bottom-container .prog-citations-bottom p, .prog-citations-bottom-container .news-citations-bottom p, .news-citations-bottom-container .prog-citations-bottom p, .news-citations-bottom-container .news-citations-bottom p {
-  margin-bottom: 1.0em;
+  margin-bottom: 1em;
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;

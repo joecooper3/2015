@@ -26,7 +26,7 @@ Author     : joe.cooper
 }
 .entry-meta {
   font-family: akzMed;
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin: 0 0 20px 0;
   max-width: 1200px;
 }
@@ -44,11 +44,13 @@ Author     : joe.cooper
     font-weight: normal;
     max-width: 600px;
     width: 100%;
-    a, a:visited {
+    a,
+    a:visited {
       font-family: akzMed;
     }
   }
-  p, ul {
+  p,
+  ul {
     font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
     font-size: 18px;
     letter-spacing: 0.01em;
@@ -72,13 +74,15 @@ Author     : joe.cooper
       margin: 10px 0;
     }
   }
-  a, a:visited {
+  a,
+  a:visited {
     color: #404040;
-    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#002B55, #002B55);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    background-position: 0 95%,100% 95%,0 95%;
-    transition: color .15s;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+      linear-gradient(#002b55, #002b55);
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 0 95%, 100% 95%, 0 95%;
+    transition: color 0.15s;
     font-weight: 500;
     font-family: gillMed;
   }
@@ -100,8 +104,7 @@ Author     : joe.cooper
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  background-color: #FDFDFD;
-
+  background-color: #fdfdfd;
 }
 
 .article-container {
@@ -114,22 +117,23 @@ Author     : joe.cooper
     display: flex;
     margin: 10px 0 30px 0;
   }
-
 }
 
 article {
   padding: 0;
-
 }
 
-.serv-body, .entry-content-prog, .entry-content-resources {
+.serv-body,
+.entry-content-prog,
+.entry-content-resources {
   a {
     color: #404040;
-    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($color1,$color1);
-    background-size: .05em 1px,.05em 1px,1px 1px;
-    background-repeat: no-repeat,no-repeat,repeat-x;
-    background-position: 0 95%,100% 95%,0 95%;
-    transition: color .15s;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+      linear-gradient($color1, $color1);
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 0 95%, 100% 95%, 0 95%;
+    transition: color 0.15s;
     font-weight: 500;
     font-family: gillMed;
     img {
@@ -152,7 +156,8 @@ aside {
 .widget_recent_entries {
   ul {
     li {
-      a, a:visited {
+      a,
+      a:visited {
         font-family: akzRoman;
       }
     }
@@ -165,17 +170,16 @@ aside {
   max-width: 280px;
 
   aside {
-    border-top: 3.0px solid $color1;
-    border-bottom: 1.5px solid #AAA;
-    margin-bottom: 4.0rem;
+    border-top: 3px solid $color1;
+    border-bottom: 1.5px solid #aaa;
+    margin-bottom: 4rem;
   }
 
   h1 {
-    border-bottom: 1.5px solid #AAA;
+    border-bottom: 1.5px solid #aaa;
     font-size: 1.2rem;
     padding-bottom: 5px;
     margin: 5px 0 20px 0;
-
   }
   ul {
     list-style: none;
@@ -198,6 +202,77 @@ aside {
   margin: 0 10px 0 40px;
 }
 
+.qa-container,
+.qa-container-bottom {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px 10px;
+  .qa-row {
+    flex: 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 15px 0;
+    .letter {
+      flex: 0 0 90px;
+      max-width: 100px;
+      img {
+        width: 65px;
+        margin-bottom: 0;
+      }
+    }
+    .qa-text {
+      flex: 1 1 300px;
+      font-size: 18px;
+      align-self: center;
+      padding: 0 0 0 10px;
+      p {
+        margin: 0 0 15px 0;
+      }
+      h3 {
+        margin: 0 0 14px 0;
+      }
+    }
+  }
+}
+.qa-container {
+  border-bottom: 1px solid #eaeaea;
+}
+.qa-container-bottom {
+  margin-bottom: 40px;
+}
+
+.testing-qa-styling {
+  background-color: lightyellow;
+}
+
+@media all and (max-width: 710px) {
+  .qa-container,
+  .qa-container-bottom {
+    .qa-row {
+      .qa-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        h3 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        p {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 429px) {
+  .qa-container,
+  .qa-container-bottom {
+    .letter {
+      padding: 0 0 20px 10px;
+    }
+  }
+}
+
 /* @media all and (max-width: 900px) {
   .article-whole {
   }
@@ -212,12 +287,15 @@ aside {
     }
   }
   .entry-content-single {
-    h1, h2, h3, p {
+    h1,
+    h2,
+    h3,
+    p {
       padding-left: 20px;
       padding-right: 20px;
     }
     ul {
-      margin-left: 1.0em;
+      margin-left: 1em;
       padding-right: 30px;
     }
   }
