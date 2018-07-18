@@ -2188,6 +2188,42 @@ aside a {
   background-color: lightyellow;
 }
 
+.factoid-container {
+  background-color: #fbf9f9;
+  max-width: 600px;
+  font-family: gillBook, "Gill Sans", "Gill Sans MT", sans-serif;
+  padding: 30px 40px 20px 40px;
+  margin: 30px 0 40px 0;
+  box-sizing: border-box;
+}
+.factoid-container h2 {
+  text-transform: uppercase;
+  font-family: "Work Sans";
+  color: #002b55;
+  border-bottom: 2px solid #002b55;
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 18px;
+}
+.factoid-container ul {
+  list-style: none;
+  margin: 30px 0 0 0;
+}
+.factoid-container ul li {
+  display: flex;
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.factoid-container ul li:before {
+  content: url("https://www.cases.org/wp-content/themes/caseslegit/images/lilsq2.svg");
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 6px 20px 0 0;
+  flex: 0 0 20px;
+}
+
 @media all and (max-width: 710px) {
   .qa-container .qa-row .qa-text,
 .qa-container-bottom .qa-row .qa-text {
@@ -2209,6 +2245,15 @@ aside a {
   .qa-container .letter,
 .qa-container-bottom .letter {
     padding: 0 0 20px 10px;
+  }
+}
+@media all and (max-width: 550px) {
+  .entry-content-single .factoid-container {
+    padding: 30px 10px 20px 10px;
+  }
+  .entry-content-single .factoid-container ul {
+    margin-left: 0;
+    padding-left: 30px;
   }
 }
 /* @media all and (max-width: 900px) {
