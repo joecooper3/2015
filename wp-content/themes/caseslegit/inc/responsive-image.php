@@ -19,7 +19,7 @@ echo '<picture>';
  echo '<source srcset="' . $thumb_data['thumb_medium'] . ', ' . $thumb_data['thumb_large'] . ' 2x" media="(min-width: 400px)">';
  echo '<source srcset="' . $thumb_data['thumb_small'] . ', ' . $thumb_data['thumb_medium'] . ' 2x">';
  echo '<!--[if IE 9]></video><![endif]-->';
- echo '<img srcset="' . $thumb_data['thumb_small'] . ', ' . $thumb_data['thumb_medium'] . ' 2x" alt="' . $thumb_data['thumb_alt'] . '">';
+ echo '<img srcset="' . $thumb_data['thumb_small'] . ', ' . $thumb_data['thumb_medium'] . ' 2x" src="' . $thumb_data['thumb_small'] . '" alt="' . $attachment_id . $thumb_data['thumb_alt'] . '">';
  echo '</picture>';
 }
 

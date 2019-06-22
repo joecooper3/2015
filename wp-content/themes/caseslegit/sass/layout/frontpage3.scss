@@ -29,7 +29,7 @@ $sqlength: 300px;
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    padding: 10px 0 0 0;
+    padding: 40px 0 0 0;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -88,6 +88,16 @@ $sqlength: 300px;
     background-position: center; 
     background-color: rgba(255,255,255,0.8);
     border: 3.0px solid $color1;
+    -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.locat-shade:hover {
+    background-color: rgba(255,255,255,1);
 }
 
 .locat-shade:before {
@@ -121,6 +131,7 @@ $sqlength: 300px;
     padding: 10px;
     margin: 30px 20px 20px 20px;
     background-color: $color1;
+    transition: 0.3s ease;
     }
     a:hover, a:focus {
         background-color: $color4;
@@ -129,6 +140,14 @@ $sqlength: 300px;
         float: right;
         margin: 4px 5px 0 0;
     }
+}
+
+.news-archive-link {
+    font-family: akzMed;
+    font-size: 1.0rem;
+    display: block;
+    text-align:center;
+    margin-bottom: 20px;
 }
 
 /* Underline From Center */
@@ -144,7 +163,27 @@ $sqlength: 300px;
   position: relative;
   overflow: hidden;
 }
-.hvr-underline-from-center:before {
+.hvr-underline-from-center-before {
+  content: "";
+  position: absolute;
+  z-index: 12;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #002b55;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center-before:hover {
+  left: 0;
+  right: 0;
+}
+/* .hvr-underline-from-center:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -163,6 +202,12 @@ $sqlength: 300px;
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
+} */
+
+.nav-previous {
+    font-family: akzBold;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 /* This is just for the headings in the locat squares, because I'm dumb */
@@ -208,6 +253,7 @@ $sqlength: 300px;
     }
     #leadimage-container {
         flex-direction: column;
+        padding: 10px 0 0 0;
     }
     .locat-container {
         flex-direction: row;
@@ -217,6 +263,12 @@ $sqlength: 300px;
         flex: 1;
         color: $mywhite;
         font-size: 1.0rem;
+        a, a:visited {
+            color: $mywhite;
+        }
+        a:hover {
+            color: $color1;
+        }
     }
     .locat-shade {
         width: 100%;
@@ -246,6 +298,7 @@ $sqlength: 300px;
 
 
 
+
 /* News and Infographics */
 
 #bigboycontainer {
@@ -254,6 +307,7 @@ $sqlength: 300px;
     padding: 0;
     background-color: $color1;
     background-color: rgba(0,43,85,0);
+
     /* box-shadow: 5px 5px 2px #888888; */
 }
 
@@ -262,6 +316,8 @@ $sqlength: 300px;
     background-color: $mywhite;
     margin: 25px 0 25px 12px;
     padding: 15px 25px 25px 25px;
+    max-width: 400px;
+    
     p {
         margin: 0;
         padding: 0;
@@ -310,13 +366,13 @@ $sqlength: 300px;
 #maininfo {
     flex: 3;
     font-family: 'akzRoman';
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background-color: $mywhite;
     margin: 25px 13px 25px 0;
     padding: 25px 25px 25px 70px;
     .emp {
         color: $color1;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: akzSemiBold;
         
     }
@@ -326,7 +382,7 @@ $sqlength: 300px;
     }
 }
 #submaininfo {
-    max-width: 950px;
+    max-width: 800px;
     float: right;
     img {
         width: 100%;
@@ -354,7 +410,7 @@ $sqlength: 300px;
     text-align: center;
     font-family: akzSemiBold;
     list-style: none;
-    margin: 0 0 30px 0;
+    margin: 30px 0 30px 0;
     padding: 0;
     li {
         display: inline;
@@ -394,17 +450,19 @@ $sqlength: 300px;
 @media all and (max-width: 955px) {
     #bigboycontainer {
         flex-flow: column wrap;
+        align-items: center;
     }
     
     #maininfo {
         order: 1;
-        flex: 1 0 100%;
+        flex: 1;
         margin: 25px 0 25px 0;
         padding: 25px 25px;
     }
     
     #newsstories {
         order: 2;
+        flex: 1;
         padding: 20px 50px 0 50px;
         margin: 0 0 25px 0;
     }
@@ -446,5 +504,22 @@ $sqlength: 300px;
         li.dot {
                 display:none;
             }
+    }
+}
+
+    /* Big screens */
+@media all and (min-width: 1450px) {
+    #maininfo {
+        flex: 2;
+    }
+    #newsstories {
+        flex: 1;
+    }
+    #newsstories {
+        max-width: none;
+        .featured-bgimage, article {
+            max-width: 400px;
+        }
+        
     }
 }

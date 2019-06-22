@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Dec 15, 2015, 2:37:57 PM
     Author     : Joe Cooper
 */
@@ -12,47 +12,64 @@ and open the template in the editor.
     display: flex;
     width: 100%;
     height: auto;
-    
+
+}
+
+.leadimage-container2 {
+    display: block;
+    position: relative;
+    height: 450px;
+    margin: 0 auto;
+    .entry-header {
+        width: 100%;
+        display: block;
+        font-size: 3.0rem;
+        font-family: akzBold;
+        position: absolute;
+        margin: 0;
+        padding: 50px 0 10px 50px;
+        bottom: 0px;
+        color: $mywhite;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    }
+}
+.asidetitle {
+    font-family: akzBold;
+    display: block;
+    text-align: left;
+    color: $color1;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2.0px solid $color1;
 }
 .serv-body {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding-top: 20px;
     max-width: 1200px;
-    
-    
+
+
     aside {
-        font-family:akzRoman;
-        font-size:0.85rem;
+        font-family:gillBook;
+        font-size:15px;
         margin: 0 auto;
         padding: 10px 10px 10px 10px;
         width: 350px;
         text-align: center;
         border-bottom: 3.0px solid #ddd;
         em {
-            font-family: akzSemiBold;
+            font-family: gillMed;
             font-style: normal;
         }
         li {
-        padding-right:0;
+            padding-right:0;
         }
-        
     }
-    
- .asidetitle {
-    font-family: akzSemiBold;
-    display: block;
-    text-align: left;
-    color: $color1;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 2.0px solid $color1;
-}
     .bodybox {
         flex: 2 0 auto;
         max-width: 800px;
@@ -62,29 +79,35 @@ and open the template in the editor.
         flex: 1 0 300px;
         margin: 0 auto;
     }
-    
+
     .challenge {
-       
+
     }
     .challenge-infographic {
-      
+
     }
     .approach {
-        
+
     }
     .approach-infographic {
-        
+
     }
     .outcomes {
-        
+
     }
     .outcomes-infographic {
-        
+
     }
-    
+
     .longer {
-            text-align: left;
+        text-align: left;
+        p {
+            font-size: 0.85rem;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: auto;
         }
+    }
     h2 {
         clear: none;
         color: $color1;
@@ -93,8 +116,8 @@ and open the template in the editor.
         border-bottom: 3.0px solid #ddd;
     }
     p {
-        font-size: 1.1rem;     
-        
+        font-size: 1.1rem;
+
     }
     ul {
         margin: 0;
@@ -102,13 +125,13 @@ and open the template in the editor.
     li {
         padding-right:50px;
         margin:10px 0;
-        }
+    }
 }
 
 .infog-numbers {
-    font-size: 1.8rem;
+    font-size: 35px;
     color: $color1;
-    font-family: akzSemiBold;
+    font-family: akzBold;
 }
 
 /* Related Programs Widget */
@@ -118,6 +141,9 @@ and open the template in the editor.
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    a {
+        background: 0 0;
+    }
 }
 
 .intelliwidget4-title {
@@ -129,48 +155,136 @@ and open the template in the editor.
 .intelliwidget4-container {
     flex: 1 0 200px;
     max-width: 200px;
+    color: $color1;
     margin: 0px 20px 10px 20px;
     padding: 0 20px 0 20px;
     border: 1.0px solid #ccc;
+    transition: all 0.7s ease 0s;
+    &:hover {
+        background-color: #eee;
+        box-shadow: none;
+    }
+}
+
+.serv-body {
+    .relprog-list {
+        list-style-type: none;
+        text-align: left;
+        font-size: 1.1rem;
+        column-count: 2;
+        column-gap: 30px;
+        margin-bottom: 25px;
+        li {
+            margin: 10px 0 0 0;
+        }
+        a {
+            font-family: gillMed;
+            border-bottom: 1.0px solid $color1;
+        }
+
+    }
+}
+
+aside {
+    .clinic-link {
+            background-color: $color1;
+            font-family: akzMed;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.0rem;
+            box-shadow: none;
+            border-radius: 3px;
+            transition: all 0.3s ease 0s;
+            &:visited {
+                color: $mywhite;
+            }
+            &:hover {
+                background-color: $color4;
+                color: $mywhite;
+                box-shadow: none;
+            }
+        }
 }
 
 .relprog-title {
     flex: 1 100%;
-    font-family: akzMed;
-    font-size: 1.2rem;
+    font-family: akzBold;
+    font-size: 18px;
     margin: 20px 0px;
     padding: 0 0 5px 0;
     color: $color1;
-    border-bottom: 1.0px solid #aaa;
 }
+.relprog-line {
+    background-color: #aaa;
+    height: 1px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.refbutton {
+    text-align: center;
+}
+
+.clinictable {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    a, a:visited {
+        font-family: akzMed;
+        color: $color1;
+        background: none;
+
+    }
+    h5 {
+        padding-top:10px;
+        margin: 0;
+    }
+
+}
+
+.serv-emp {
+    font-family: akzMed;
+    font-size: 1.1rem;
+    color: $color1;
+    display: inline;
+}
+
 
 /* Responsive queries etc etc */
 
 @media all and (max-width: 1000px) {
- .serv-body {
-     max-width: 1000px;
-     aside {
-         margin: 0 auto;
-     }
-    .bodybox {
-        flex: 1 0 100%;
-    }   
-    .infogbox {
-        flex: 1 0 100%;
-        margin: 50px 100px;
-        align-self: center;
+    .serv-body {
+        max-width: 1000px;
+        aside {
+            margin: 0 auto;
+        }
+        .bodybox {
+            flex: 1 0 100%;
+        }
+        .infogbox {
+            flex: 1 0 100%;
+            align-self: center;
+        }
     }
-}
 }
 @media all and (max-width: 800px) {
     .serv-body {
-        margin: 20px;
+        margin: 0 20px 20px 20px;
         max-width: 100%;
         .bodybox {
             padding: 0 20px;
         }
         .infogbox {
-        margin: 10px 0 50px 0;
+            margin: 10px 0 50px 0;
         }
     }
     .leadimage-container2 {
@@ -178,6 +292,9 @@ and open the template in the editor.
         h1 {
             font-size: 2.2rem;
         }
+    }
+    .entry-content-serv {
+        flex-direction: column;
     }
 }
 
@@ -192,15 +309,15 @@ and open the template in the editor.
             padding: 0 10px;
         }
         .infogbox {
-        margin: 10px 0 50px 0;
-    }
+            margin: 10px 0 50px 0;
+        }
     }
     .leadimage-container2 {
-    height: 200px;
-    h1 {
-        font-size: 2.0rem;
-        padding: 0 0 10px 10px;
-    }
-    
+        height: 200px;
+        h1 {
+            font-size: 2.0rem;
+            padding: 0 0 10px 10px;
+        }
+
     }
 }

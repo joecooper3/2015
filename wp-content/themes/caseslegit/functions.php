@@ -39,15 +39,15 @@ function caseslegit_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-        add_image_size('serv_xs', 400, 200, true);
-        add_image_size('serv_s', 800, 350, true);
-        add_image_size('serv_m', 1280, 350, true);
-        add_image_size('serv_l', 1800, 700, true);
-        add_image_size('serv_xl', 2400, 1050, true);
+        add_image_size('serv_xs', 401);
+        add_image_size('serv_s', 801);
+        add_image_size('serv_m', 1281);
+        add_image_size('serv_l', 1801);
+        add_image_size('serv_xl', 2401);
         add_image_size('news_m', 700, 525, true);
         add_image_size('news_l', 1400, 1050, true);
         add_image_size('news_xl', 2100, 1575, true);
-       
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'caseslegit' ),
@@ -94,12 +94,12 @@ add_action( 'after_setup_theme', 'caseslegit_setup' );
 function responsive_background() {
      // call the global post variable
     global $post;
- 
+
     if ( has_post_thumbnail( $post->ID ) ) : // checks whether the post has the featured image set
- 
+
     // get the post thumbnail ID for the page or post
     $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
- 
+
     // store the image sizes in an array. You can also add your own image sizes with the add_image_size function
     $img_sizes = array( 'serv-xs', 'serv-s', 'serv-m', 'serv-l', 'serv-xl' );
 
@@ -121,6 +121,30 @@ function caseslegit_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'caseslegit_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'caseslegit_content_width', 0 );
+
+/**
+* Custom post types
+*/
+
+$keystaffArgs = array(
+  'labels'	=>	array(
+            'all_items'           => 	'All Key Staff',
+						'menu_name'	          =>	'Key Staff',
+						'singular_name'       =>	'Key Staff',
+					 	'edit_item'           =>	'Edit Key Staff Member',
+					 	'new_item'            =>	'New Key Staff Member',
+					 	'view_item'           =>	'View Key Staff Member',
+					 	'items_archive'       =>	'Key Staff Archive',
+					 	'search_items'        =>	'Search Key Staff',
+					 	'not_found'	          =>	'No entries found',
+					 	'not_found_in_trash'  =>	'No entries found in trash'
+					),
+	'supports'		=>	array( 'title', 'editor', 'thumbnail' ),
+	'menu_position'	=>	20,
+	'public'		=>	true,
+	'menu_icon' => 'dashicons-id-alt'
+);
+register_post_type( 'keystaff', $keystaffArgs );
 
 /**
  * Register widget area.
@@ -180,28 +204,19 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
  * Enqueue scripts and styles.
  */
 function caseslegit_scripts() {
-	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri() );
-        
-        wp_enqueue_style( 'caseslegit-hober', get_template_directory_uri() . '/hover.css' );
-        
-        wp_enqueue_style( 'caseslegit-icons', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'caseslegit-style', get_stylesheet_uri(), array(), '3.1.1' );
 
-	/* wp_enqueue_script( 'caseslegit-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true ); */
+        wp_enqueue_style( 'caseslegit-icons', get_template_directory_uri() . '/css/font-awesome.min.css' );
 
-        wp_enqueue_script( 'caseslegit-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20150623', true ); 
-        
-        wp_enqueue_script( 'caseslegit-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('caseslegit-superfish'), '20150623', true );
-        
-       /* wp_enqueue_script( 'caseslegit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true ); */
+      wp_enqueue_script( 'caseslegit-mobile-nav', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20150624', true );
 
-        wp_enqueue_script( 'caseslegit-mobile-nav', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20150624', true ); 
-        
-        wp_enqueue_script( 'caseslegit-mobile-nav2', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true ); 
-        
+       wp_enqueue_script( 'caseslegit-mobile-nav2', get_template_directory_uri() . '/js/mobilemenu.js', array('jquery'), '20150624', true );
+
+       wp_enqueue_script( 'smooth-scrolling', get_template_directory_uri() . '/js/smoothscroll.js', array('jquery'), '20170530', true );
+
         wp_enqueue_script( 'my-picturefill', get_template_directory_uri() . '/js/picturefill.min.js', '20150710', false);
-        
-        wp_enqueue_script( 'boxes', get_template_directory_uri() . '/js/boxes.js', array('jquery'), '20160102', true);
-        
+
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

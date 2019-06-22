@@ -30,28 +30,28 @@ and open the template in the editor.
 }
 
 .leadimage-container3 {
-   flex: 0 0 100%;
-   position: relative; 
+    flex: 0 0 100%;
+    position: relative; 
     h1 {
         width: 60%;
         max-width: 800px;
         display: block;
-        font-size: 3.5rem;
+        font-size: 3.1rem;
         position: relative;
         margin: 0 0 30px 50px;
-        padding: 10px 0 10px 0;
+        padding: 10px 0 0 0;
         bottom: 0px;
         color: $color1;
         border-bottom: 3.0px solid $color1;
     }
-    
+
 }
 
 .entry-content-about {
     background-color: $mywhite;
     padding: 0 50px;
     max-width: 900px;
-    flex: 2 1 500px;
+    flex: 1 1 700px;
 }
 
 .sidebar-about {
@@ -73,8 +73,8 @@ and open the template in the editor.
 .intelliwidget3-title {
     font-size: 1.2rem;
     padding: 5px 0;
-        border-top: 3.0px solid $color1;
-        border-bottom: 1.5px solid #aaa;
+    border-top: 3.0px solid $color1;
+    border-bottom: 1.5px solid #aaa;
 }
 
 .intelliwidget3-container {
@@ -107,6 +107,313 @@ and open the template in the editor.
     margin: 0 30px 0 0;
 }
 
+.keystaff-description {
+    flex: 100%;
+}
+
+.keystaff-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    .keystaff-item {
+        display: block;
+        flex: 1 0 130px;
+        max-width: 130px;
+        height: 130px;
+        margin: 3px;
+        position: relative;
+        background-position: center; 
+        background-size: cover;
+        padding: 5px;
+
+        .keystaff-shade {
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: rgba(0,43,85,0.7);
+            font-size: 0.7rem;
+            font-family:akzRoman;
+            color: $mywhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column nowrap;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            padding: 4px;
+            &:hover{
+                opacity: 1;
+            }
+            strong {
+                font-family: akzSemiBold;
+                display: inline;
+                font-size: 0.8rem;
+            }
+            br {
+                content: "";
+            }
+        }
+        .keystaff-portrait {
+            width:100%;
+        }
+    }
+    .active {
+        border: 5.0px solid $color1;
+    }
+    .joel {
+        background-image: url("images/keystaff/joelsq2x.jpg");
+    }
+    .joe {
+        background-image: url("images/keystaff/itme.jpg");
+    }
+    .rukia {
+        background-image: url("images/keystaff/rukiasq2x.jpg");
+    }
+    .quinn {
+        background-image: url("images/keystaff/quinnsq2x.jpg");
+    }
+    .joanna {
+        background-image: url("images/keystaff/joannasq2x.jpg");
+    }
+    .aml {
+        background-image:url("images/keystaff/amlsq2x.jpg");
+    }
+    .lucie {
+        background-image:url("images/keystaff/luciesq2x.jpg");
+    }
+    .rebeccalw {
+        background-image:url("images/keystaff/rebeccalwsq2x.jpg");
+    }
+    .loyal {
+        background-image:url("images/keystaff/loyalsq2x.jpg");
+    }
+    .jessica {
+        background-image:url("images/keystaff/jessicasq2x.jpg");
+    }
+    .rob {
+        background-image:url("images/keystaff/robsq2x.jpg");
+    }
+    .george {
+        background-image:url("images/keystaff/georgesq2x.jpg");
+    }
+    .rebecca {
+        background-image:url("images/keystaff/rebeccasq2x.jpg");
+    }
+    .holly {
+        background-image:url("images/keystaff/hollysq2x.jpg");
+    }
+    .dawn {
+        background-image:url("images/keystaff/dawnsq2x.jpg");
+    }
+    .karen {
+        background-image:url("images/keystaff/karensq2x.jpg");
+    }
+    .mardoche {
+        background-image:url("images/keystaff/mardochesq1x.jpg");
+    }
+}
+.keystaff-content {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-top: 30px;
+    width: 100%;
+    .aml {
+        background-image:url("images/keystaff/amlsq1x.jpg");
+    }
+    .lucie {
+        background-image:url("images/keystaff/luciesq1x.jpg");
+    }
+    .rob {
+        background-image:url("images/keystaff/robsq1x.jpg");
+    }
+    .jessica {
+        background-image:url("images/keystaff/jessicalg1x.jpg");
+    }
+    .rebeccalw {
+        background-image:url("images/keystaff/rebeccalwlg1x.jpg");
+    }
+    .quinn {
+        background-image:url("images/keystaff/quinnlg1x.jpg");
+    }
+    .loyal {
+        background-image:url("images/keystaff/loyallg1x.jpg");
+    }
+    .joel {
+        background-image:url("images/keystaff/joelsq1x.jpg");
+    }
+    .george {
+        background-image:url("images/keystaff/georgesq1x.jpg");
+    }
+    .rukia {
+        background-image:url("images/keystaff/rukiasq1x.jpg");
+    }
+    .rebecca {
+        background-image:url("images/keystaff/rebeccasq1x.jpg");
+    }
+    .holly {
+        background-image:url("images/keystaff/hollysq1x.jpg");
+    }
+    .joanna {
+        background-image:url("images/keystaff/joannasq1x.jpg");
+    }
+    .dawn {
+        background-image:url("images/keystaff/dawnsq1x.jpg");
+    }
+    .karen {
+        background-image:url("images/keystaff/karensq1x.jpg");
+    }
+    .mardoche {
+        background-image:url("images/keystaff/mardochesq1x.jpg");
+    }
+}
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    .keystaff-content {
+        .lucie {
+            background-image:url("images/keystaff/luciesq2x.jpg");
+        }
+        .rob {
+            background-image:url("images/keystaff/robsq2x.jpg");
+        }
+        .jessica {
+            background-image:url("images/keystaff/jessicasq2x.jpg");
+        }
+        .rebeccalw {
+            background-image:url("images/keystaff/rebeccalwsq2x.jpg");
+        }
+        .quinn {
+            background-image:url("images/keystaff/quinnsq2x.jpg");
+        }
+        .loyal {
+            background-image:url("images/keystaff/loyalsq2x.jpg");
+        }
+        .joel {
+            background-image:url("images/keystaff/joelsq2x.jpg");
+        }
+        .george {
+            background-image:url("images/keystaff/georgesq2x.jpg");
+        }
+        .rebecca {
+            background-image:url("images/keystaff/rebeccasq2x.jpg");
+        }
+        .holly {
+            background-image:url("images/keystaff/hollysq2x.jpg");
+        }
+        .joanna {
+            background-image:url("images/keystaff/joannasq2x.jpg");
+        }
+        .dawn {
+            background-image:url("images/keystaff/dawnsq2x.jpg");
+        }
+        .rukia {
+            background-image:url("images/keystaff/rukiasq2x.jpg");
+        }
+        .aml {
+            background-image:url("images/keystaff/amlsq2x.jpg");
+        }
+        .karen {
+            background-image:url("images/keystaff/karensq2x.jpg");
+        }
+    }
+}
+
+.keystaff-lg-portrait {
+    flex: 1 0 300px; 
+    background-size: cover;
+    background-position: center top;
+    max-width: 300px;
+    height: 300px;  
+    margin-top: 20px;
+    border-radius: 150px;
+
+}
+
+@media all and (max-width: 1150px) {
+    .keystaff-lg-portrait {
+        max-width: 275px;
+        height: 275px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        border-radius: 50%;
+    }
+}
+
+.keystaff-words {
+    flex: 1 0 550px;
+    max-width: 750px;
+    padding-left: 40px;
+    h2 {
+
+        margin-top: 0;
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    h3 {
+        border-bottom: 2.0px solid #aaa;
+
+        width: 80%;
+        font-family: akzRoman;
+        margin-top: 0;
+        padding-bottom: 10px;
+    }
+    p {
+        padding-right: 25px;
+    }
+}
+
+.entry-content-keystaff {
+    background-color: $mywhite;
+    padding: 0 25px;
+    max-width: 1200px;
+    flex: 2 1 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    ul {
+        list-style: none;
+        list-style-type: none;
+    }
+}
+.clinic-link {
+    background-color: $color1;
+    font-family: akzMed;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    box-shadow: none;
+    transition: all 0.3s ease 0s;
+    &:visited {
+        color: $mywhite;
+    }
+    &:hover {
+        background-color: $color4;
+        color: $mywhite;
+        box-shadow: none;
+    }
+}
+
+@media all and (max-width: 1070px) {
+    .entry-content-keystaff {
+        order: 2;
+    }
+    .keystaff-description {
+        order: 3;
+    }
+    .sidebar-keystaff {
+        order: 4;
+    }
+}
+
 /* I'm the idiotic way Wordpress makes everything a paragraph */
 
 .thankswp {
@@ -119,4 +426,13 @@ and open the template in the editor.
         max-width: 500px;
         margin-top: 30px;
     }
+}
+
+@media all and (max-width: 500px) {
+    .leadimage-container3 {
+        h1 {
+            font-size: 2.0rem;
+            margin-left: 25px;
+        }
+    } 
 }

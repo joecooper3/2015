@@ -38,18 +38,39 @@ and open the template in the editor.
                 display: block;
                 padding-top: 5px;
                 border-top: 2.0px solid $mywhite;
+                a:hover {
+                    cursor: default;
+                }
                 ul {
                     display: list-item;
                     padding-top: 10px;
                     li {
                         font-family: "Gill Sans", "Gill Sans MT", sans-serif;
-                        margin-bottom:5px;
+                        margin-bottom:10px;
                         font-size:10pt;
                         padding: 0 0 0 5px;
                         border-top: 0;
                         text-transform: none;
                         border-right: 0;
                         margin-right: 0;
+                        line-height: 15px;
+                        a:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    .clinic-label {
+                       flex: 1 0 150px;
+                text-transform:uppercase;
+                font-size:10pt;
+                font-family: akzSemiBold;
+                margin: 25px 10px 15px 10px;
+                max-width: 150px;
+                display: block;
+                padding: 5px 0 0 0;
+                border-top: 2.0px solid $mywhite; 
+                a:hover {
+                    cursor: default;
+                }
                     }
                 }
             }
@@ -87,6 +108,16 @@ padding: 0 30px 0 0;
 
 .footmobi {
     display: none;
+}
+
+.footadd {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    .footadditem {
+        flex: 1;
+    }
 }
 
 @media only screen and (max-width: 767px) { 

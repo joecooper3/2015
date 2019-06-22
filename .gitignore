@@ -3,13 +3,22 @@
 sitemap.xml
 sitemap.xml.gz
 wp-config.php
+backup/
+clinic-newsletters/
+court-newsletters/
+Hover-master/
+nbproject/
+wp-admin/
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
 wp-content/blogs.dir/
 wp-content/cases2015/
 wp-content/caseswp/
+wp-content/connections_images/
+wp-content/connections_templates/
 wp-content/pinboard/
+wp-content/connections_templates/
 wp-content/responsive-child/
 wp-content/twentyeleven/
 wp-content/twentyfourteen/
@@ -18,7 +27,12 @@ wp-content/twentytwelve/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/wp-cache-config.php
-wp-content/plugins/hello.php
+wp-content/plugins/
+wp-content/uploads/
+wp-content/themes/caseslegit/.sass-cache/*
+wp-content/themes/caseslegit/compiled/
+wp-content/themes/caseslegit/node_modules/
+wp-includes/
 
 /readme.html
 /license.txt

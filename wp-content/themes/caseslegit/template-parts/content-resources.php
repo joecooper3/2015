@@ -7,15 +7,45 @@
 
 ?>
 <?php
-$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' ); ?>
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_original, false, '' );
+$src_xs = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xs, false, '' );
+$src_s = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_s, false, '' );
+$src_m = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_m, false, '' );
+$src_l = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_l, false, '' );
+$src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl, false, '' );
+
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <style type="text/css" media="screen">
         .resc-bgimage { 
-         background: url(<?php echo $src[0]; ?>); 
-         background-size: cover; 
-         background-position: center;
-         height: 300px;
+            background: url(<?php echo $src[0]; ?>); 
+            background-size: cover; 
+            background-position: center; 
+            <?php if( get_field('background-position_attribute') ): ?>
+            background-position: <?php the_field('background-position_attribute') ?>;
+            <?php endif; ?>
+            height: 300px;
+        }
+        @media all and (max-width: 1800px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_l[0]; ?>);
+            }
+        }
+        @media all and (max-width: 1200px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_m[0]; ?>);
+            }
+        }
+        @media all and (max-width: 800px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_s[0]; ?>);
+            }
+        }
+        @media all and (max-width: 400px) {
+            .resc-bgimage {
+                background-image: url(<?php echo $src_xs[0]; ?>);
+            }
         }
     </style>
 <div class="about-container">
@@ -23,9 +53,14 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $thumb_ori
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">' ); ?></h1>
         </header><!-- .entry-header --></div>
+    <div class="social-media-container">
+            <div class="social-item"><?php if(function_exists('wp_print')) { print_link(); } ?></div>
+            <div class="social-item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook-square"></i></a></div>
+            <div class="social-item"><a href="http://twitter.com/share?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>">
+                    <i class="fa fa-twitter"></i></a></div>
+        </div>
 	<div class="entry-content-resources">
             <div class="resc-bgimage"></div>
-		<?php if(function_exists('wp_print')) { print_link(); } ?>
                 <?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

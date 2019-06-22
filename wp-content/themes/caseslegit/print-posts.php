@@ -62,7 +62,7 @@ $src_xl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), serv_xl
 
 			<span class="hat">
 				<strong>
-                                    <span dir="ltr"><img src="wp-content/themes/caseslegit/images/logo-m.png" width="400px"/> 
+                                    <span dir="ltr"><img src="http://www.cases.org/wp-content/themes/caseslegit/images/logo-m.png" width="400px"/> 
                         </span> 
 				</strong>
 			</span>

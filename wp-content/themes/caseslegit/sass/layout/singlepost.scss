@@ -3,108 +3,360 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
-    Created on : Jul 1, 2015, 12:22:01 PM
-    Author     : joe.cooper
+/*
+Created on : Jul 1, 2015, 12:22:01 PM
+Author     : joe.cooper
 */
 
 .entry-header-single {
-    margin: 0;
-    padding: 1px 0 0 0;
-    flex: 1 100%;
+  margin: 0;
+  padding: 1px 0 0 0;
+  flex: 1 1 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  h1 {
+    padding: 0 30px;
     display: block;
-    h1 {
-        color: $color1;
-    }
+    color: $color1;
+    flex: 1 1 100%;
+  }
+}
+.entry-title {
+  max-width: 1200px;
+}
+.entry-meta {
+  font-family: akzMed;
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  max-width: 1200px;
 }
 
 .entry-content-single {
-    margin: 0;
-    h3 {
-        font-face: akzRoman;
-        font-weight: normal;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  img:first-child {
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-face: akzRoman;
+    font-weight: normal;
+    max-width: 600px;
+    width: 100%;
+    a,
+    a:visited {
+      font-family: akzMed;
     }
-}
-
-.entry-meta {
-    font-family: akzMed;
-    font-size: 1.0rem;
-    margin: 0 0 20px 0;
+  }
+  p,
+  ul {
+    font-family: gillBook, "Gill Sans MT", "Gill Sans", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    width: 100%;
+    max-width: 600px;
+  }
+  p {
+    margin: 12px 0;
+    img.size-large {
+      margin: 30px 0;
+    }
+  }
+  p:last-child {
+    margin-bottom: 40px;
+  }
+  ul {
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding-right: 30px;
+    li {
+      margin: 10px 0;
+    }
+  }
+  a,
+  a:visited {
+    color: #404040;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+      linear-gradient(#002b55, #002b55);
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 0 95%, 100% 95%, 0 95%;
+    transition: color 0.15s;
+    font-weight: 500;
+    font-family: gillMed;
+  }
+  a:hover {
+    color: $color5;
+    background: 0 0;
+  }
+  .cit-number {
+    vertical-align: super;
+    font-size: 0.65em;
+    background: none;
+    color: $color1;
+    text-decoration: none;
+  }
 }
 
 .article-whole {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #fdfdfd;
 }
 
 .article-container {
-    flex: 5 0 auto;
-    max-width: 700px;
-    margin: 0 auto;
+  flex: 1 1 720px;
+  width: 100%;
+  max-width: 720px;
+  padding: 0 10px;
+  margin: 0 auto;
+  .nav-links {
+    display: flex;
+    margin: 10px 0 30px 0;
+  }
 }
 
-article { 
-    padding: 0;
-    a {
-        font-weight: bold;
+article {
+  padding: 0;
+}
+
+.serv-body,
+.entry-content-prog,
+.entry-content-resources {
+  a {
+    color: #404040;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+      linear-gradient($color1, $color1);
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 0 95%, 100% 95%, 0 95%;
+    transition: color 0.15s;
+    font-weight: 500;
+    font-family: gillMed;
+    img {
+      background: 0 0;
+      border-bottom: 0;
     }
+    &:hover {
+      color: $color5;
+      background: 0 0;
+    }
+  }
+}
+aside {
+  a {
+    background: 0;
+    font-weight: bold;
+  }
+}
+
+.widget_recent_entries {
+  ul {
+    li {
+      a,
+      a:visited {
+        font-family: akzRoman;
+      }
+    }
+  }
 }
 
 .widget-area {
-    margin: 0 auto;
-    flex: 2 0 auto;
-    max-width: 280px;
-    
-    aside {
-        border-top: 3.0px solid $color1;
-        border-bottom: 1.5px solid #AAA;
-        margin-bottom: 4.0rem;
+  margin: 0 auto;
+  flex: 2 0 auto;
+  max-width: 280px;
+
+  aside {
+    border-top: 3px solid $color1;
+    border-bottom: 1.5px solid #aaa;
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    border-bottom: 1.5px solid #aaa;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    margin: 5px 0 20px 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 0 20px 0;
     }
-    
-    h1 {
-        border-bottom: 1.5px solid #AAA;
-        font-size: 1.2rem;
-        padding-bottom: 5px;
-        margin: 5px 0 20px 0;
-        
-    }
-    ul { 
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li {
-            margin: 0 0 20px 0;
-        }
-    }
+  }
 }
 
 .textwidget {
-    padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .posted-on::before {
-    content: url(images/lilsq.svg);
-    display: inline-block;
-    width: 12px;
-    margin: 0 10px 0 20px;
+  content: url(images/lilsq.svg);
+  display: inline-block;
+  width: 12px;
+  margin: 0 10px 0 40px;
 }
 
-@media all and (max-width: 900px) {
-    .article-whole {
-        flex-flow: column wrap;
+.qa-container,
+.qa-container-bottom {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px 10px;
+  .qa-row {
+    flex: 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 15px 0;
+    .letter {
+      flex: 0 0 90px;
+      max-width: 100px;
+      img {
+        width: 65px;
+        margin-bottom: 0;
+      }
     }
+    .qa-text {
+      flex: 1 1 300px;
+      font-size: 18px;
+      align-self: center;
+      padding: 0 0 0 10px;
+      p {
+        margin: 0 0 15px 0;
+      }
+      h3 {
+        margin: 0 0 14px 0;
+      }
+    }
+  }
+}
+.qa-container {
+  border-bottom: 1px solid #eaeaea;
+}
+.qa-container-bottom {
+  margin-bottom: 40px;
+}
+
+.testing-qa-styling {
+  background-color: lightyellow;
+}
+
+.factoid-container {
+  background-color: #fbf9f9;
+  max-width: 600px;
+  font-family: gillBook, 'Gill Sans', 'Gill Sans MT', sans-serif;
+  padding: 30px 40px 20px 40px;
+  margin: 30px 0 40px 0;
+  box-sizing: border-box;
+  h2 {
+    text-transform: uppercase;
+    font-family: 'Work Sans';
+    color: #002b55;
+    border-bottom: 2.0px solid #002b55;
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-size: 18px;
+  }
+  ul {
+    list-style: none;
+    margin: 30px 0 0 0;
+    li {
+      display: flex;
+      margin: 20px 0;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    li:before {
+      content: url('https://www.cases.org/wp-content/themes/caseslegit/images/lilsq2.svg');
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin: 6px 20px 0 0;
+      flex: 0 0 20px;
+    }
+  }
+}
+
+@media all and (max-width: 710px) {
+  .qa-container,
+  .qa-container-bottom {
+    .qa-row {
+      .qa-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        h3 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        p {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 429px) {
+  .qa-container,
+  .qa-container-bottom {
+    .letter {
+      padding: 0 0 20px 10px;
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .entry-content-single { 
+    .factoid-container {
+    padding: 30px 10px 20px 10px;
+    ul {
+      margin-left: 0;
+      padding-left: 30px;
+    }
+  }
+ }
+}
+
+/* @media all and (max-width: 900px) {
+  .article-whole {
+  }
+} */
+
+@media all and (max-width: 710px) {
+  .entry-header-single {
+    h1 {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 25px;
+    }
+  }
+  .entry-content-single {
+    h1,
+    h2,
+    h3,
+    p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    ul {
+      margin-left: 1em;
+      padding-right: 30px;
+    }
+  }
 }
 
 @media all and (min-width: 1450px) {
-    .article-whole {
-        justify-content: center;
-    }
-    .article-container {
-        margin-right: 50px;
-    }
-    .widget-area {
-        margin-left: 50px;
-    }
+  .article-whole {
+    justify-content: center;
+  }
+  .article-container {
+    margin-right: 50px;
+  }
+  .widget-area {
+    margin-left: 50px;
+  }
 }

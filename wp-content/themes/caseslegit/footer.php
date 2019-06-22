@@ -9,15 +9,15 @@
 
 ?>
 
-</div><!-- #content --></div>
+</div><!-- #content -->
 <div class="footer">
 	<div class="footitemsub">
             <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
 </div>
-	
+
 <div class="footmobi">
-	
-	<a href="http://www.casesnyc.org/test/sitemap-2/">Mobile Sitemap</a>
+
+	<a href="https://www.cases.org/sitemap/">Mobile Sitemap</a>
 
 	</div>
 
@@ -30,13 +30,22 @@
 <a href="https://twitter.com/casesnyc"><i class="fa fa-twitter-square"></i></a>
                     <a href="http://www.facebook.com/casesnyc"><i class="fa fa-facebook-square"></i></a>
                     <a href="http://www.linkedin.com/companies/659695"><i class="fa fa-linkedin-square"></i></a>
-                    <a href="http://www.youtube.com/user/casesnyc/"><i class="fa fa-youtube-square"></i></a>
 </div>
-<p>151 Lawrence Street<br>
+<div class="footadd">
+    <div class="footadditem"><p>151 Lawrence Street<br>
+            3rd Floor<br>
 Brooklyn, NY 11201<br>
 (212) 553-6300
-</p>
-<p>&copy; 2016 CASES</p></div><!-- #colophon -->
+        </p></div>
+<div class="footadditem"><p>2090 Adam Clayton Powell, Jr. Boulevard<br>
+        4th Floor<br>
+New York, NY 10027<br>
+(212) 553-6300
+        </p></div>
+</div>
+<p>&copy; 2018 CASES</p>
+</div>
+</div><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
